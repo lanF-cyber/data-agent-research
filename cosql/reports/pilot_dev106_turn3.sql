@@ -1,0 +1,1 @@
+SELECT GovernmentForm, SUM(Population) AS Population FROM country GROUP BY GovernmentForm HAVING AVG(LifeExpectancy) > 72;

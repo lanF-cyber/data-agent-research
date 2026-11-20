@@ -1,0 +1,160 @@
+id,database,category_zh,symptom,observation,reference_rows,predicted_rows
+dev5_turn1,dog_kennels,实体拼写、空格、编码与匹配方式,different_values_or_order,实际gender存文本0/1，女性对应哪一个尚无已核实字典；预测使用female因此未命中。参考完全没有女性限制，分差包含值编码与参考范围两种因素。,1,1
+dev5_turn2,dog_kennels,实体拼写、空格、编码与匹配方式,different_row_count,实际gender存文本0/1，预测继续用f/female筛选仍为空；参考仍取所有接受治疗的狗。不能靠猜0或1完成业务语义修正。,9,0
+dev5_turn3,dog_kennels,存储类型、数值转换与缺失值,different_values_or_order,同一最高体重在参考中是文本9.48，预测CAST后为数值9.48，比较器判类型不等。,1,1
+dev6_turn2,course_teach,统计总体与零记录/外连接,different_values_or_order,预测统计course中10门课程，参考统计course_arrange中6条安排；统计对象不一致。,1,1
+dev6_turn3,course_teach,统计总体与零记录/外连接,different_row_count,预测保留没有授课安排的教师，参考内连接仅统计有安排的教师。,5,7
+dev7_turn4,battle_death,实体拼写、空格、编码与匹配方式,different_row_count,用户写Baldwin 1，参考匹配Baldwin I；预测按数字1做LIKE，未命中。,1,0
+dev11_turn2,world_1,去重与计数单位,different_row_count,预测DISTINCT返回539个地区，参考按875条城市记录保留重复地区。,875,539
+dev14_turn2,employee_hire_evaluation,题意与参考查询冲突或歧义,different_columns,索尔按追问只取上一问谈到的商店名字。参考返回商店表里的全部六个字段。,9,9
+dev14_turn3,employee_hire_evaluation,统计总体与零记录/外连接,different_columns,索尔保留九家商店，包括聘用人数为零的店，还一并显示店名。参考从聘用记录统计，只返回有聘用记录的六家对应的数量。,6,9
+dev19_turn2,flight_2,题意与参考查询冲突或歧义,different_row_count,索尔把题目的澄清理解成航空公司所属国为美国，查到 12 家。参考条件直接指定了 United Airlines 一家。,1,12
+dev22_turn2,student_transcripts_tracking,统计总体与零记录/外连接,different_row_count,索尔从全体课程出发，保留无人选课的课程，并列最少的一起返回。参考从选课表出发，仅在有选课记录的课程里取一门。,1,5
+dev23_turn2,concert_singer,统计总体与零记录/外连接,different_row_count,预测保留全部9个场馆及零场演唱会，参考只返回有演唱会的5个场馆。,5,9
+dev23_turn3,concert_singer,题意与参考查询冲突或歧义,different_row_count,题目和数据库使用Stark's Park，预测正确转义引号并返回10104，参考用Stark s Park返回空。,0,1
+dev25_turn2,flight_2,实体拼写、空格、编码与匹配方式,different_row_count,索尔沿用上一问自己排在前面的三家公司，再用目的地编号去匹配机场以查国家。航班表的目的地编号带空格，直接连接查不到。参考查询选取了另三家公司，返回的是目的地机场编号。,3,0
+dev36_turn1,flight_2,实体拼写、空格、编码与匹配方式,different_row_count,索尔试图用起飞机场编号连接机场表来查名称。航班里的编号有前导空格，连接后为空。参考直接读取航班表里的起飞机场编号。,100,0
+dev36_turn3,flight_2,实体拼写、空格、编码与匹配方式,different_columns,索尔沿用联合航空的范围，再用目的地编号连接机场表取城市和名称。两表的编号写法有空格差异，结果为空。参考不限航空公司，直接读取同号航班的目的地编号。,2,0
+dev36_turn4,flight_2,跨轮指代与条件保留/释放,different_columns,索尔沿用前一问的联合航空限制，只查出 APG。机场编号连接仍因空格对不上，城市和名称是空值。参考在全部航班里查同一航班号，因此还有 ABQ。,2,1
+dev39_turn1,course_teach,实体拼写、空格、编码与匹配方式,different_row_count,索尔用小写 math 做等值匹配，课程表里写的是 Math。参考用库中的写法找到两名教师。,2,0
+dev39_turn2,course_teach,去重与计数单位,different_row_count,两条相关的数学课记录都在 6 May 开始。索尔把同一天的结果去重，参考保留两条。,2,1
+dev42_turn1,pets_1,去重与计数单位,different_row_count,学号 1002 的学生养两只狗。索尔返回一次这个学号，参考每条饲养关系返回一次。,2,1
+dev42_turn3,pets_1,去重与计数单位,different_row_count,两条养狗记录都指向 Tracy，年龄为 19。索尔按学生姓名和年龄去重，参考保留两条相同记录。,2,1
+dev53_turn3,dog_kennels,去重与计数单位,different_row_count,索尔通过体型表把代码换成 Large 和 Medium，并只显示各类一次。参考给每只斗牛犬的体型代码，共七条。,7,2
+dev60_turn1,car_1,存储类型、数值转换与缺失值,different_values_or_order,预测排除非数字马力再求平均，参考把原字段直接AVG；缺失/非数值记录处理不同。,1,1
+dev60_turn2,car_1,返回字段与表示形式,different_columns,预测显示车名及马力，参考显示汽车编号；返回同一目标也会因列契约不同失败。,1,1
+dev60_turn4,car_1,题意与参考查询冲突或歧义,different_columns,问题问哪些车，预测返回车型和加速值，参考只统计数量39。,1,39
+dev65_turn1,student_transcripts_tracking,题意与参考查询冲突或歧义,different_columns,题面问发布时间，索尔取最早的时间。参考取同一份成绩单所在的整行，还返回成绩单编号和详情。,1,1
+dev66_turn2,wta_1,题意与参考查询冲突或歧义,different_columns,问题问最年轻获胜者的积分，参考选loser_rank_points；预测选winner_rank_points且按胜者分组。,3,3
+dev66_turn3,wta_1,分组粒度与聚合表示,different_columns,预测每位胜者取最年轻获胜年龄再选3人，参考直接取3条比赛记录；另多返回姓名。,3,3
+dev71_turn3,pets_1,统计总体与零记录/外连接,different_row_count,索尔显示所有姓 Smith 的学生，无宠物的那人也占一行。参考只保留能和饲养关系对上的学生，因此少一行。,1,2
+dev72_turn3,pets_1,逻辑条件作用域与集合量词,different_row_count,预测在上轮有宠物的两人中找拥有非猫宠物者；参考排除养猫者，连没有宠物的人也包含。,33,1
+dev78_turn2,course_teach,题意与参考查询冲突或歧义,different_values_or_order,两边都按教师统计所教课程数。题目要教师编号，索尔返回编号，参考返回姓名。,5,5
+dev79_turn1,orchestra,实体拼写、空格、编码与匹配方式,different_row_count,索尔要求演出类型精确等于小写 audition。参考按包含 audition 的文字匹配，查到五个日期。,5,0
+dev82_turn3,wta_1,返回字段与表示形式,different_columns,两边都查到 2013 年有 12 场比赛。索尔只给数量，参考给年份和数量。,1,1
+dev82_turn4,wta_1,返回字段与表示形式,different_columns,两边都查到 2016 年有 158 场比赛。索尔只给数量，参考把 2016 也列了出来。,1,1
+dev82_turn5,wta_1,跨轮指代与条件保留/释放,different_values_or_order,索尔把「那些比赛」理解成上一问的 2016 年比赛，数出 119 场硬地比赛。参考直接统计所有年份，共 205 场。,1,1
+dev83_turn2,car_1,返回字段与表示形式,different_columns,两边都取每家车厂的国家编号，索尔为区分车厂多显示了车厂本身的编号。,22,22
+dev85_turn1,museum_visit,实体拼写、空格、编码与匹配方式,different_row_count,两条查询都按姓名取会员等级。库里的 Gonzalo Higuaín 末尾带一个空格，参考条件带这个空格，索尔的等值条件查不到。,1,0
+dev85_turn6,museum_visit,跨轮指代与条件保留/释放,different_columns,索尔把全体访客按年龄和会员等级排序，只显示名字。参考查询沿用了等级大于 4 的条件，并显示姓名和等级。,3,6
+dev86_turn1,world_1,并列极值与未指定排序,different_values_or_order,加拿大和美国都以 12 种语言并列榜首。索尔取了加拿大，参考取了美国。题面未给出并列时的取法。,1,1
+dev86_turn6,world_1,返回字段与表示形式,different_columns,两边都取北美国家和地区的官方语言。索尔在语言旁多显示了国家或地区名称。,35,35
+dev91_turn2,real_estate_properties,实体拼写、空格、编码与匹配方式,different_row_count,索尔用 HSE 和 APT 查类别，库里实际存的是 House 和 Apartment。参考还把超过一间房的限制只用在公寓上，因此查出了八处。,8,0
+dev91_turn3,real_estate_properties,逻辑条件作用域与集合量词,different_row_count,收到上一问的空表后，索尔改用房产类别表找房屋和公寓，但两类都要求超过一间房。参考允许只有一间房的房屋，因此多了 the cole。,8,7
+dev93_turn1,car_1,实体拼写、空格、编码与匹配方式,different_values_or_order,预测匹配Germany，参考使用库内小写germany，预测计数为0。,1,1
+dev93_turn2,car_1,返回字段与表示形式,different_values_or_order,两边均找到4家德国车企，预测给FullName，参考给Maker简称。,4,4
+dev93_turn4,car_1,返回字段与表示形式,different_values_or_order,两边均找到4家美国车企，预测给FullName，参考给Maker简称。,4,4
+dev97_turn1,singer,题意与参考查询冲突或歧义,different_values_or_order,两边找到的是同两位歌手。题目要求歌手编号，索尔返回 3 和 8，参考查询返回姓名 Alice Walton 和 Abigail Johnson。,2,2
+dev98_turn2,singer,返回字段与表示形式,different_columns,两边都查到两位歌手的国籍为 United States。参考结果只保留国籍，索尔额外显示姓名。,2,2
+dev98_turn3,singer,返回字段与表示形式,different_columns,"两边都按净资产选中 Christy Walton。题目问谁，参考只显示姓名，索尔多显示了净资产 2,880 万。",1,1
+dev98_turn4,singer,题意与参考查询冲突或歧义,different_columns,"两边都在查 Christy Walton。索尔用 2,880 万和门槛比较，直接返回 No，参考保留姓名和金额供人作判断。",1,1
+dev98_turn5,singer,题意与参考查询冲突或歧义,different_values_or_order,"题面问最低净资产，索尔算到 2,630 万。参考取达到这一数额的歌手姓名 Alice Walton。",1,1
+dev103_turn5,concert_singer,去重与计数单位,different_row_count,索尔按场馆去重，取五个不同的场馆及位置。参考从演唱会记录逐条返回场馆，Somerset Park 因有多场演唱会而出现两次。,6,5
+dev107_turn3,tvshow,跨轮指代与条件保留/释放,different_row_count,索尔把「这些频道播哪些动画」理解成上一问选中的频道播出的所有动画，共七部。参考直接限定导演为 Ben Jones，共四部。,4,7
+dev108_turn1,cre_Doc_Template_Mgt,统计总体与零记录/外连接,different_values_or_order,索尔从文档表取得每份文档的编号。参考从段落表取每段所属的文档编号，会重复有多段的文档，也会跳过没有段落的文档。,15,15
+dev108_turn2,cre_Doc_Template_Mgt,统计总体与零记录/外连接,different_row_count,索尔保留库里的 15 份文档，包含段落数为零的文档。参考只统计段落表里出现过的 10 份。,10,15
+dev108_turn3,cre_Doc_Template_Mgt,统计总体与零记录/外连接,different_row_count,两边按文档编号排序。索尔延续上一问，保留没有段落的文档，参考仍只统计有段落的文档。,10,15
+dev110_turn4,flight_2,题意与参考查询冲突或歧义,different_values_or_order,问题问机场城市，预测按城市统计并返回城市；参考按目的地机场代码统计并返回代码。,1,1
+dev115_turn1,tvshow,题意与参考查询冲突或歧义,different_row_count,最后的问题要求全部频道及编号，预测查询TV_Channel；参考从cartoon查询频道关联和动画编号。,12,15
+dev115_turn2,tvshow,返回字段与表示形式,different_columns,两边均找到3个非意大利语频道，预测额外返回编号及语言。,3,3
+dev122_turn1,cre_Doc_Template_Mgt,题意与参考查询冲突或歧义,different_columns,题目同时要模板编号和文档编号，索尔两项都给，还保留未关联文档的模板。参考从文档表取关联的模板编号这一列。,15,23
+dev122_turn2,cre_Doc_Template_Mgt,分组粒度与聚合表示,different_row_count,索尔按模板合并该模板的文档编号，连空模板一起列出，每个模板一行。参考按文档列出模板编号和文档编号，每份文档一行。,15,20
+dev122_turn4,cre_Doc_Template_Mgt,跨轮指代与条件保留/释放,different_row_count,索尔给上一问的八份未关联文档的模板补上类别代码。参考从已关联文档的模板查代码，返回的是另一组模板。,15,8
+dev123_turn2,dog_kennels,存储类型、数值转换与缺失值,different_values_or_order,两边都找接受过治疗的狗中年龄最小的。索尔先把年龄转成实数，查到数字 1.0，参考查询直接使用字段，返回文本形式的 1。,1,1
+dev123_turn3,dog_kennels,存储类型、数值转换与缺失值,different_values_or_order,两边的筛选和最大年龄一致。索尔把年龄转成数字 9.0，参考结果的 9 保留为文本。,1,1
+dev125_turn2,pets_1,返回字段与表示形式,different_columns,两边都找到了年龄最小的 Susan Lee。索尔把姓和名拼成一列，参考分为姓、名两列。,1,1
+dev128_turn6,wta_1,逻辑条件作用域与集合量词,different_values_or_order,"索尔先查到目标球员的惯用手编码，再把该球员本人从数量中减掉，得到 14,192 人。参考按相同编码数所有球员，包含本人。",1,1
+dev129_turn2,battle_death,返回字段与表示形式,different_columns,两边都查到这三场战役的结果是 Bulgarian victory。索尔在结果前多列了战役名。,3,3
+dev129_turn3,battle_death,返回字段与表示形式,different_columns,三场战役的保加利亚方指挥官都是 Kaloyan。索尔还附上三场战役的名称，参考只返回指挥官。,3,3
+dev129_turn4,battle_death,返回字段与表示形式,different_columns,两边的三个日期一致。索尔让日期和战役名逐行对应，参考只显示日期。,3,3
+dev129_turn5,battle_death,返回字段与表示形式,different_columns,两边查到同样的拉丁方指挥官。索尔同时显示战役名称，参考只取指挥官。,3,3
+dev134_turn1,student_transcripts_tracking,分组粒度与聚合表示,different_columns,索尔在每名学生的同一个学期内数不同学位项目，找到 Frida Aisha Huel。参考按每名学生的全部入学记录数筛选，找到三人，还带了学号。,3,1
+dev134_turn2,student_transcripts_tracking,分组粒度与聚合表示,different_row_count,两边沿用前一问各自的统计范围。索尔给同一学期读两个项目的学生学号 7，参考给有两条入学记录的学生学号 4、9、14。,3,1
+dev134_turn4,student_transcripts_tracking,实体拼写、空格、编码与匹配方式,different_row_count,题目把名字写作 Timothy。学生表存的是 Timmothy，参考照库中的拼法查到了首次注册日期。,1,0
+dev136_turn1,orchestra,去重与计数单位,different_values_or_order,索尔把同一家唱片公司只算一次，得到 11 家。参考统计唱片公司字段有值的乐团记录，得到 12 条。,1,1
+dev139_turn3,network_1,去重与计数单位,different_row_count,索尔查有朋友的学生，每人一行。参考从朋友表逐条返回学生姓名，一个人的多条朋友关系会重复显示这人。,20,14
+dev140_turn1,student_transcripts_tracking,题意与参考查询冲突或歧义,different_row_count,索尔用题面要求的 Bachelor 查入学学期，参考查询筛的是 Master。,6,4
+dev149_turn2,museum_visit,分组粒度与聚合表示,different_row_count,预测汇总同一访客两次购票得24，参考保留20与4两条访问记录。,2,1
+dev149_turn3,museum_visit,分组粒度与聚合表示,different_row_count,预测汇总总消费530.42，参考保留320.44与209.98两次记录。,2,1
+dev151_turn1,wta_1,分组粒度与聚合表示,different_values_or_order,预测按不同胜者取各自最年轻的比赛，参考取年龄最小的3条比赛，可能重复同一胜者。,3,3
+dev151_turn2,wta_1,分组粒度与聚合表示,different_values_or_order,预测延续每位胜者一场比赛的口径，参考仍按比赛记录排序取3条。,3,3
+dev151_turn3,wta_1,分组粒度与聚合表示,different_columns,前文选定比赛集合不同，预测另保留胜者名，因此行值和列契约同时不同。,3,3
+dev152_turn4,dog_kennels,返回字段与表示形式,different_columns,两边取了同一批 15 名专业人员及其所在州。索尔同时给姓、名和州，参考给名字和州。,15,15
+dev152_turn5,dog_kennels,返回字段与表示形式,different_columns,两边筛出同样两位 Indiana 的专业人员。索尔给两个人的姓和名，参考只给名字。,2,2
+dev153_turn3,battle_death,跨轮指代与条件保留/释放,different_values_or_order,预测沿用上轮死亡人数最多的事件，参考突然筛note包含East，当前提问历史未明确East。,1,1
+dev154_turn1,battle_death,字段/关系方向与连接依据,different_values_or_order,问题中的death situations被预测映射到note，参考映射到killed数值，业务含义有歧义。,11,11
+dev154_turn3,battle_death,分组粒度与聚合表示,different_columns,预测分别求死亡人数及受伤人数总和，参考统计事件条数11；统计单位不同。,1,1
+dev158_turn1,world_1,逻辑条件作用域与集合量词,different_row_count,预测找不存在英语记录的国家，参考只筛非英语记录，仍可能包含也说英语的国家。,924,179
+dev158_turn3,world_1,统计总体与零记录/外连接,different_row_count,预测LEFT JOIN保留无语言记录的国家，参考只返回存在语言记录的国家，差6行。,251,257
+dev158_turn4,world_1,返回字段与表示形式,different_columns,同样9个国家，预测多返回国家名称，参考仅返回代码。,9,9
+dev165_turn2,world_1,跨轮指代与条件保留/释放,different_row_count,索尔把前一问的亚洲范围带到了这一问，在亚洲查不到占比为 9.5% 的语言。参考放开到全球，查到 English 和 Afrikaans。,2,0
+dev165_turn4,world_1,题意与参考查询冲突或歧义,different_values_or_order,"索尔按题面查 Aruba 的国民生产总值，得 828。参考查的是 Angola，得 6,648。",1,1
+dev166_turn1,concert_singer,题意与参考查询冲突或歧义,different_values_or_order,两边都找歌曲发行年高于平均值的记录。题面问歌手姓名，索尔给了姓名，参考给的是歌曲名。,4,4
+dev167_turn1,orchestra,返回字段与表示形式,different_columns,两边查到了相同的 12 个乐团。索尔还把对应的指挥姓名一并显示，参考只显示乐团。,12,12
+dev171_turn2,poker_player,跨轮指代与条件保留/释放,different_values_or_order,预测把上一轮收入大于300000保留到总人数问题，参考统计全部5名选手。,1,1
+dev172_turn1,student_transcripts_tracking,实体拼写、空格、编码与匹配方式,different_values_or_order,预测用North Carolina或NC，参考用实际编码NorthCarolina，预测为0。,1,1
+dev172_turn2,student_transcripts_tracking,实体拼写、空格、编码与匹配方式,different_row_count,预测继续使用未命中的州编码，未返回对应姓名。,3,0
+dev172_turn3,student_transcripts_tracking,实体拼写、空格、编码与匹配方式,different_row_count,错误州编码继续传播到未入学查询；预测还按degree_program_id非空判断，非完全同一条件。,2,0
+dev173_turn2,voter_1,字段/关系方向与连接依据,different_row_count,索尔从投票电话的前三位查实际区号，取到 718。参考从选票记录里取州，再列出对应州的所有区号。,14,1
+dev173_turn3,voter_1,字段/关系方向与连接依据,different_row_count,索尔仍按投票电话读区号，得到 620、714。参考把选票中的州连到州的区号表，再逐票返回，共 50 条。,50,2
+dev173_turn4,voter_1,字段/关系方向与连接依据,different_row_count,前两问中两名参赛者的投票电话区号没有交集，索尔返回空表。参考先把选票按州展开成州内的所有区号，再取交集，得到 14 个。,14,0
+dev181_turn5,tvshow,跨轮指代与条件保留/释放,different_row_count,预测保留意大利语和music条件，参考返回所有频道；those的指向需按完整对话审核。,15,12
+dev183_turn1,pets_1,去重与计数单位,different_row_count,预测去重学生姓氏，参考每条饲养关系返回一次，3行变2行。,3,2
+dev184_turn3,orchestra,返回字段与表示形式,different_columns,两边都按乐团数量从少到多排唱片格式。索尔把用来排序的数量也显示了，参考只显示格式。,3,3
+dev186_turn4,museum_visit,去重与计数单位,different_row_count,预测去重访客姓名年龄，参考按消费记录返回，3行变2行。,3,2
+dev189_turn1,flight_2,并列极值与未指定排序,different_values_or_order,原库的十二家航空公司各有 100 条航班。索尔从并列里取了 United Airlines，参考取了 Virgin America。,1,1
+dev194_turn2,cre_Doc_Template_Mgt,分组粒度与聚合表示,different_columns,参考GROUP BY每份文档任取一段文本；预测返回所有符合条件文档的段落并附文档ID。,9,12
+dev195_turn1,course_teach,返回字段与表示形式,different_columns,同一最年轻教师，预测多返回编号、年龄和家乡，参考仅姓名。,1,1
+dev200_turn1,network_1,题意与参考查询冲突或歧义,different_row_count,题目问所有高中生的学号，索尔从高中生表列出 16 个。参考从朋友表逐条读其中的学生学号，返回 20 条朋友关系上的编号。,20,16
+dev204_turn3,flight_2,实体拼写、空格、编码与匹配方式,different_row_count,预测匹配CVO，参考匹配带前导空格的 CVO；预测为空，且另使用DISTINCT。,18,0
+dev205_turn1,tvshow,实体拼写、空格、编码与匹配方式,different_row_count,索尔用题面里小写的 love 等词精确匹配标题。库里的标题写作 A Love of a Lifetime，参考查到了对应频道 Sky Radio。,1,0
+dev205_turn2,tvshow,字段/关系方向与连接依据,different_row_count,索尔去频道表用剧集标题找频道名，查到空表。参考用剧集表的剧集标题筛选，从该条剧集记录读出观众数。,1,0
+dev205_turn3,tvshow,题意与参考查询冲突或歧义,different_values_or_order,两边查同一部剧集。索尔从评分字段取到 5.8，参考取每周名次 43。,1,1
+dev215_turn1,concert_singer,实体拼写、空格、编码与匹配方式,different_row_count,库里的姓名写作 Joe Sharp。索尔照题面用 Joe sharp 做等值比较，查不到这名歌手。,1,0
+dev216_turn2,car_1,跨轮指代与条件保留/释放,different_row_count,索尔把上一问的通用汽车范围沿用到这一问，得到五个车型。参考只保留重量筛选条件，覆盖所有厂商，得到十三个。,13,5
+dev216_turn3,car_1,跨轮指代与条件保留/释放,different_values_or_order,索尔放开到所有厂商，返回全局最高马力车辆的车名 pontiac grand prix 和车型 pontiac。参考仍限定通用汽车，返回车型 pontiac 和厂商简称 gm。,1,1
+dev216_turn4,car_1,存储类型、数值转换与缺失值,different_values_or_order,每加仑里程字段包含文本 null。索尔先转成数字，筛出 66 条。参考直接和门槛比较，文本 null 也被算进去了，得到 67 条。,1,1
+dev216_turn5,car_1,存储类型、数值转换与缺失值,different_values_or_order,索尔先把每加仑里程转成数字，最高的是每加仑 38 英里的 oldsmobile cutlass ciera (diesel)。参考按原文本排序，把写成 null 的 chevrolet chevelle concours (sw) 排到最前。,1,1
+dev219_turn4,network_1,去重与计数单位,different_values_or_order,朋友学号这一列有 20 条记录。索尔数了全部出现次数，参考对学号去重，数出 15 个。,1,1
+dev225_turn3,student_transcripts_tracking,并列极值与未指定排序,different_values_or_order,15 个日期各出现一次。索尔在次数相同的候选里按日期取最早的一个，参考查询仅按次数排序后取一条。,1,1
+dev228_turn1,network_1,字段/关系方向与连接依据,different_row_count,喜欢关系表分别存发出喜欢的人和收到喜欢的人。索尔查收到至少两个喜欢的学生。参考查主动喜欢至少两人的学生，原库里没有这样的学生。,0,2
+dev228_turn2,network_1,字段/关系方向与连接依据,different_row_count,索尔查恰好收到一次喜欢的人。参考数发出喜欢的关系，要求至少一次。,10,6
+dev228_turn3,network_1,字段/关系方向与连接依据,different_row_count,索尔沿用上一问对收到一次喜欢的理解，取六个学号。参考沿用主动喜欢至少一人的筛选，取十个学号。,10,6
+dev242_turn3,car_1,返回字段与表示形式,different_columns,同一洲europe，参考返回洲名和国家数，预测只返回洲名。,1,1
+dev244_turn1,tvshow,题意与参考查询冲突或歧义,different_columns,两边找到 Todd Casey 编剧的同两部动画。索尔只给片名，参考返回两条动画记录的所有七列。,2,2
+dev244_turn3,tvshow,返回字段与表示形式,different_columns,索尔给原名单中的两个片名加上频道编号。参考只取频道编号 706 和 700。,2,2
+dev248_turn1,wta_1,分组粒度与聚合表示,different_row_count,预测按player_id分别求和，参考按first_name分组而合并同名球员，2775行与1580行。,1580,2775
+dev251_turn4,museum_visit,返回字段与表示形式,different_columns,两条查询都筛会员等级大于 4 的访客，并按等级从高到低排。索尔在姓名旁多显示了等级。,3,3
+dev252_turn1,wta_1,返回字段与表示形式,different_columns,"两边都为 2,775 位球员取名字和平均排名。索尔额外显示了球员编号。",2775,2775
+dev252_turn2,wta_1,返回字段与表示形式,different_columns,两边都按要求补上球员的姓。索尔沿用上一问的输出，球员编号仍然多出一列。,2775,2775
+dev252_turn3,wta_1,返回字段与表示形式,different_columns,两边找到 487 位左手球员。索尔把姓和名拼成一个全名，参考分两列给。,487,487
+dev252_turn5,wta_1,分组粒度与聚合表示,different_row_count,索尔按球员编号分开算每位左手球员的平均排名，给 148 条。参考按名字分组，合并了同名球员，共 131 条。,131,148
+dev253_turn2,network_1,题意与参考查询冲突或歧义,different_columns,问题形式为是否存在，预测返回布尔1，参考返回没有朋友的学生全行。,2,1
+dev254_turn3,network_1,跨轮指代与条件保留/释放,different_values_or_order,前两问只问学生总数和九年级人数。索尔沿用九年级这个年级，查到 9，参考直接按 Kyle 的姓名找出 12 年级。此前的题目没有点名 Kyle。,1,1
+dev255_turn1,concert_singer,题意与参考查询冲突或歧义,different_row_count,题面最后写的是 concern，索尔只列出了全部场馆。参考按与演唱会有关的问法处理，排除办过演唱会的场馆。,4,9
+dev261_turn1,student_transcripts_tracking,实体拼写、空格、编码与匹配方式,different_row_count,预测匹配带空格North Carolina，实际参考编码NorthCarolina，结果为空。,3,0
+dev261_turn2,student_transcripts_tracking,实体拼写、空格、编码与匹配方式,different_row_count,同一州编码差异传播至查询名字。,3,0
+dev261_turn3,student_transcripts_tracking,实体拼写、空格、编码与匹配方式,different_row_count,同一州编码差异传播至未注册项目的姓氏查询。,2,0
+dev261_turn4,student_transcripts_tracking,实体拼写、空格、编码与匹配方式,different_row_count,预测仍因州编码为空；参考EXCEPT左右分别是first_name和last_name，本身另有可疑比较。,3,0
+dev268_turn5,network_1,跨轮指代与条件保留/释放,different_row_count,库里有两个 Jordan。索尔沿第 2 问和第 3 问锁定与 Kyle 相连的那一个，查到 Logan。参考仅凭名字筛两个 Jordan，又查到了 Tiffany 和 Gabriel。,3,1
+dev269_turn1,car_1,实体拼写、空格、编码与匹配方式,different_row_count,预测使用Europe，库中参考为europe；参考还限制存在车企的国家。,5,0
+dev269_turn2,car_1,统计总体与零记录/外连接,different_row_count,预测保留没有制造商的欧洲国家，参考只返回有制造商的5国，预测6国。,5,6
+dev269_turn3,car_1,返回字段与表示形式,different_columns,相同两个满足至少3家车企的国家，预测额外返回数量。,2,2
+dev269_turn7,car_1,返回字段与表示形式,different_columns,相同4家美国车企，预测额外返回简称和国家，参考仅全名。,4,4
+dev272_turn2,tvshow,存储类型、数值转换与缺失值,different_values_or_order,预测尝试解析日期后排序，参考直接按原始日期文本排序，选中的动画不同；需审核日期格式与解析表达式。,1,1
+dev272_turn3,tvshow,跨轮指代与条件保留/释放,different_values_or_order,预测按自己上一轮选出的动画查频道700，参考沿另一个动画给701；对象差异由上轮传递。,1,1
+dev272_turn4,tvshow,跨轮指代与条件保留/释放,different_values_or_order,沿上轮不同动画查制作编号，预测101参考102；不是一个新的独立查码错误。,1,1
+dev273_turn1,singer,返回字段与表示形式,different_columns,同一批1945年前歌手，预测仅姓名，参考要求整行。,3,3
+dev273_turn2,singer,返回字段与表示形式,different_columns,同一批1955年后歌手，预测仅姓名，参考要求整行。,2,2
+dev273_turn3,singer,返回字段与表示形式,different_columns,同一批1945年前歌手国籍，预测额外带姓名。,3,3
+dev273_turn4,singer,跨轮指代与条件保留/释放,different_columns,追问after1955，预测切到1955年后；参考将1945年前与1955年后合并，另有输出列差异。,5,2
+dev273_turn5,singer,返回字段与表示形式,different_columns,同一符合条件的美国歌手，预测姓名，参考整行。,1,1
+dev273_turn6,singer,跨轮指代与条件保留/释放,different_columns,预测将美国歌手年龄条件改成1955年后，参考合并前后两个年龄段。,2,1
+dev273_turn7,singer,返回字段与表示形式,different_columns,同一符合条件法国歌手，预测姓名，参考整行。,1,1
+dev273_turn8,singer,跨轮指代与条件保留/释放,different_columns,预测切到1955年后法国歌手而为空，参考把1945年前法国歌手也保留。,1,0
+dev273_turn9,singer,返回字段与表示形式,different_columns,同一符合条件智利歌手，预测姓名，参考整行。,1,1
+dev277_turn1,cre_Doc_Template_Mgt,统计总体与零记录/外连接,different_values_or_order,索尔从文档表出发，让没有段落的文档也参与排名，取文档 0。参考从段落表出发，只给已有段落的文档排序，取文档 3。,1,1
+dev280_turn1,tvshow,逻辑条件作用域与集合量词,different_row_count,索尔先找没有播过 Todd Casey 动画的频道，再取这些频道所在的国家。参考按国家排除，只要某国有任一频道播过就排除整个国家。,1,3
+dev280_turn2,tvshow,实体拼写、空格、编码与匹配方式,different_row_count,索尔按题面把片名写作 the rise of blue beetle 做等值匹配。库中的标题为 The Rise of the Blue Beetle!，带另一个 the 和感叹号，参考查出导演 Ben Jones。,1,0
+dev282_turn1,pets_1,去重与计数单位,different_values_or_order,索尔按学号去重后数人数，参考数养狗的记录。两条养狗记录属于同一个学生。,1,1
+dev292_turn1,world_1,题意与参考查询冲突或歧义,different_row_count,两边都按相同条件找 1930 年以前的官方语言。题面问有哪些，索尔列出 40 个语言名，参考统计为 40 种。,1,40

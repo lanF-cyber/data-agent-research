@@ -1,0 +1,369 @@
+{
+  "model": "gpt-6-sol",
+  "provider": "tingo-research-only-gpt-6",
+  "dev_sha256": "fd93ff8534f1fb4031b1ff52e8520c98aa8d082162599061e753b44ea26ce96d",
+  "tool": "Harness native PowerShell invoking local SQLite",
+  "workspace": "One regular Windows directory per dialogue with a read-only database copy.",
+  "powershell_policy": "read-only (Windows file-write restriction; not filesystem read isolation)",
+  "terminal_calls_limit_per_question": 6,
+  "question_timeout_seconds": 120,
+  "sqlite_cli_version": "3.50.6 2025-09-22 18:50:24 9cc554372371e07bf01d8070a64d461ac85b91be6eef0e642ed129a0c7fa8105 (32-bit)",
+  "dialogues": [
+    {
+      "dev_index": 275,
+      "database": "world_1",
+      "sha256": "17b986695f16786d58d66f85e49dba87bdfe72953207ab9b1b49da9d2301ef65",
+      "workspace": "workspaces\\dev_275",
+      "prompts": [
+        "数据库位于 `./world_1.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nHi, what is the population of the Caribbean?",
+        "What continents have an average life expectancy shorter than 72?",
+        "Can you give me the total population for each of those continents?",
+        "What is the average life expectancy of those continents?",
+        "Find the average life expectancy and total population for each continent where the average life expectancy is shorter than 72?"
+      ]
+    },
+    {
+      "dev_index": 188,
+      "database": "museum_visit",
+      "sha256": "3217aee38d8e3661d374bf025591b7164a1179c568ef5d20f3c338035fc6e1dd",
+      "workspace": "workspaces\\dev_188",
+      "prompts": [
+        "数据库位于 `./museum_visit.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nWhats the level of membership customer id 1 has?",
+        "What is the name of customer id 1?",
+        "What is the age of customer id 1?"
+      ]
+    },
+    {
+      "dev_index": 257,
+      "database": "poker_player",
+      "sha256": "63fffd7b68524f07a742a74b74b95a4ba178e6419f3574b9ee78b8dda1df46ba",
+      "workspace": "workspaces\\dev_257",
+      "prompts": [
+        "数据库位于 `./poker_player.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nTo which nationality does the people_id 1 belongs to ?",
+        "Tell me the birthday date of Teodor Salparov ?",
+        "Tell me the earnings of the people id 5?",
+        "What is the money rank of the tallest poker player ?"
+      ]
+    },
+    {
+      "dev_index": 254,
+      "database": "network_1",
+      "sha256": "bec92cd9a68d6f23469a0df246429299f44caaf75eab12275784e0bb7d0aa9ca",
+      "workspace": "workspaces\\dev_254",
+      "prompts": [
+        "数据库位于 `./network_1.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nHow many students are there?",
+        "How many students have grade 9",
+        "What is his grade?"
+      ]
+    },
+    {
+      "dev_index": 282,
+      "database": "pets_1",
+      "sha256": "8ffe0ea9b3b034ca8860a2f18300a98c7583ce2522ea195726a04803f675e5bb",
+      "workspace": "workspaces\\dev_282",
+      "prompts": [
+        "数据库位于 `./pets_1.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nhi, what number of students have a dog as a pet?",
+        "and what about the number that have a cat as a pet?",
+        "Great. Can you tell me the first names of these 3 students?"
+      ]
+    },
+    {
+      "dev_index": 277,
+      "database": "cre_Doc_Template_Mgt",
+      "sha256": "9c3fdd03d8795ecde60aae782ce50c4fb1d6c03de1401fcdd6dc177342a53df5",
+      "workspace": "workspaces\\dev_277",
+      "prompts": [
+        "数据库位于 `./cre_Doc_Template_Mgt.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nWhat is the document id with least number of paragraphs?",
+        "and the document with the most number of paragraphs?",
+        "how many paragraphs are in that document with id of 2394?",
+        "What are the paragraph texts of those three paragraphs?"
+      ]
+    },
+    {
+      "dev_index": 280,
+      "database": "tvshow",
+      "sha256": "1212c2e75cf1dcf3aeb4055331a85298b073d8a613ead77975b13bd3346b9fc4",
+      "workspace": "workspaces\\dev_280",
+      "prompts": [
+        "数据库位于 `./tvshow.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nwhich countries tv channels are not playing any cartoon written todd casey",
+        "who directed the cartoon the rise of blue beetle  written by Michael Jelenic\t?",
+        "whats the package option for TV channels in itally?"
+      ]
+    },
+    {
+      "dev_index": 225,
+      "database": "student_transcripts_tracking",
+      "sha256": "5a1f4928a1fd36f6edb31c4f054203b2e2fab6b18e5951c4f5633628f82a8e56",
+      "workspace": "workspaces\\dev_225",
+      "prompts": [
+        "数据库位于 `./student_transcripts_tracking.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nCan you list the transcript date that appears least often?",
+        "How many times does the transcript date 1975-05-06 12:04:47\tshow up in the table?",
+        "Which transcript date shows up the most number of times?"
+      ]
+    },
+    {
+      "dev_index": 97,
+      "database": "singer",
+      "sha256": "5c1b72755d148c294b26d7b479307e8799b93485ac918720f953e2ab84d59a0a",
+      "workspace": "workspaces\\dev_97",
+      "prompts": [
+        "数据库位于 `./singer.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nCan you list all the singer ids that aren't present in the song table?"
+      ]
+    },
+    {
+      "dev_index": 57,
+      "database": "voter_1",
+      "sha256": "815bf1611b8a32f649d292a6138562f1761a0c10cb256e20f6561199cff31531",
+      "workspace": "workspaces\\dev_57",
+      "prompts": [
+        "数据库位于 `./voter_1.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nCan you tell me what the total number of votes are for the states of \"NY\" and \"CA\"?",
+        "Thank you!  Can you provide me with a list of all of the different contestant numbers?",
+        "Okay.  How many vote IDs correspond to contestant number 5?"
+      ]
+    },
+    {
+      "dev_index": 91,
+      "database": "real_estate_properties",
+      "sha256": "5d0bd83afa93a843e68f892d8430fe625d7ed2508aae00a341926b0b5b478a29",
+      "workspace": "workspaces\\dev_91",
+      "prompts": [
+        "数据库位于 `./real_estate_properties.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nWhat are the names of the properties with more that one room?",
+        "What are the names of the properties that are either houses or apartments with more than one room?",
+        "How many rooms do each of those have?",
+        "What is the average agreed selling price of all houses with more than one room?"
+      ]
+    },
+    {
+      "dev_index": 25,
+      "database": "flight_2",
+      "sha256": "db777ba6488ae2b515cb138d71ff23c4533e5fd0355854648a1102faff3fb7af",
+      "workspace": "workspaces\\dev_25",
+      "prompts": [
+        "数据库位于 `./flight_2.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nFind all airlines that have fewer than 200 flights.",
+        "what country is their destination of the first three?"
+      ]
+    },
+    {
+      "dev_index": 123,
+      "database": "dog_kennels",
+      "sha256": "ea5fbc6cf6aaf500371c5c121c339d9802ba6f5fbecd948a5274c0b487a9f486",
+      "workspace": "workspaces\\dev_123",
+      "prompts": [
+        "数据库位于 `./dog_kennels.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nTell me how many dogs have gone through any treatments.",
+        "Tell me how old the youngest is. | Do you mean the youngest among those that have gone through any treatment? | yes",
+        "And how old is the oldest that has gone through any treatment?",
+        "How about the average age? | Do you mean the average age of those that have gone through any treatment? | yes"
+      ]
+    },
+    {
+      "dev_index": 80,
+      "database": "wta_1",
+      "sha256": "8f20747456d7748674b4f05432f3de96446ced95b8bd5a6fd01284f6c28f727c",
+      "workspace": "workspaces\\dev_80",
+      "prompts": [
+        "数据库位于 `./wta_1.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nCan you show the birth date of player id 200002?",
+        "What is the first name of player id 200001?",
+        "Can you show the codes of countries that have more than 50 players?"
+      ]
+    },
+    {
+      "dev_index": 285,
+      "database": "course_teach",
+      "sha256": "da45fcdde64ac2b9330146506b7653ad4417489d8e496e509045e1b02245d793",
+      "workspace": "workspaces\\dev_285",
+      "prompts": [
+        "数据库位于 `./course_teach.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nhow many course id numbers",
+        "what are the courses",
+        "great, how many teachers available to conduct the course",
+        "which teacher takes math class"
+      ]
+    },
+    {
+      "dev_index": 190,
+      "database": "battle_death",
+      "sha256": "12569f4493a9655639c4ea86ba4bd8a4ea6411e1b8ae0e1fdf3d6a995344265d",
+      "workspace": "workspaces\\dev_190",
+      "prompts": [
+        "数据库位于 `./battle_death.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nHi there!  Can you show me a list of all of the battle ids and the corresponding battle names?",
+        "Great!  Can you filter this list to show just the battle IDs and battle names of the battles that had more than 10 deaths associated with them?",
+        "Wonderful!  Can you update this list to include the date of each of these three battles?"
+      ]
+    },
+    {
+      "dev_index": 16,
+      "database": "car_1",
+      "sha256": "9d851e396e02997a1de073ae982fe1e4b1769fdffce2fac6e325857a3a938709",
+      "workspace": "workspaces\\dev_16",
+      "prompts": [
+        "数据库位于 `./car_1.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nCan you list all the continents?",
+        "Okay, now can you list the number of countries belonging to each continent, including the continent id as well?"
+      ]
+    },
+    {
+      "dev_index": 215,
+      "database": "concert_singer",
+      "sha256": "4fa1ba5ab4577e895271088b1dc44aa94be88e25a54293317a67584112ef059d",
+      "workspace": "workspaces\\dev_215",
+      "prompts": [
+        "数据库位于 `./concert_singer.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nwhat is the age of Joe sharp",
+        "How many US Singers?",
+        "How many Male Singers?"
+      ]
+    },
+    {
+      "dev_index": 167,
+      "database": "orchestra",
+      "sha256": "13b64af1cf6fcbd34953a44f951b2bf79bedc000b344549212dac1a9345e2f86",
+      "workspace": "workspaces\\dev_167",
+      "prompts": [
+        "数据库位于 `./orchestra.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nPlease answer the question.what is the orchestra of conductor? | Do you want all the orchestras of all conductors? | yes",
+        "what is the name of all conductors?",
+        "What is the age of Colin Davis?"
+      ]
+    },
+    {
+      "dev_index": 10,
+      "database": "employee_hire_evaluation",
+      "sha256": "760fec5cc872ef0cdf99242614f05c93dbd00d422ac9da87ea64fcf555be7373",
+      "workspace": "workspaces\\dev_10",
+      "prompts": [
+        "数据库位于 `./employee_hire_evaluation.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nWhich district has the largest number of products?",
+        "What is the manager's name of that shop?",
+        "How many products did he produce at that shop?",
+        "Where is the location of that district?",
+        "What is the shop ID number?"
+      ]
+    },
+    {
+      "dev_index": 292,
+      "database": "world_1",
+      "sha256": "17b986695f16786d58d66f85e49dba87bdfe72953207ab9b1b49da9d2301ef65",
+      "workspace": "workspaces\\dev_292",
+      "prompts": [
+        "数据库位于 `./world_1.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nwhat are the official unique official language spoken in the country | In which country? | what are the unique official languages spoken that are found before 1930",
+        "what is the total number of unique official languages spoken in the countries that are founded before 1930"
+      ]
+    },
+    {
+      "dev_index": 85,
+      "database": "museum_visit",
+      "sha256": "3217aee38d8e3661d374bf025591b7164a1179c568ef5d20f3c338035fc6e1dd",
+      "workspace": "workspaces\\dev_85",
+      "prompts": [
+        "数据库位于 `./museum_visit.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nWhat is the membership level of Gonzalo Higuaín ?",
+        "whose membership level is 5?",
+        "how many numbers of persons whose membership level is greater than 5?",
+        "What is the age of membership level 8?",
+        "how many persons who have membership level greater than 4?",
+        "please sort the names of persons whose age from old to young according to the membership level?"
+      ]
+    },
+    {
+      "dev_index": 231,
+      "database": "poker_player",
+      "sha256": "63fffd7b68524f07a742a74b74b95a4ba178e6419f3574b9ee78b8dda1df46ba",
+      "workspace": "workspaces\\dev_231",
+      "prompts": [
+        "数据库位于 `./poker_player.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nCan you list all the names of the poker players ordered by the final tables in ascending order please?",
+        "What are the nationalities of the poker players ordered by the final tables in ascending order?",
+        "What is the name of the poker player with the highest earnings?",
+        "What about the poker player with the lowest earnings?",
+        "What was his best finish?"
+      ]
+    },
+    {
+      "dev_index": 268,
+      "database": "network_1",
+      "sha256": "bec92cd9a68d6f23469a0df246429299f44caaf75eab12275784e0bb7d0aa9ca",
+      "workspace": "workspaces\\dev_268",
+      "prompts": [
+        "数据库位于 `./network_1.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nShow the names of all of the high schoolers.",
+        "Which of the high schoolers are friends with Kyle?",
+        "What is Kyle's ID?",
+        "Who has the ID 1709?",
+        "Who else is Jordan friends with?",
+        "Who is friends with Gabriel?"
+      ]
+    },
+    {
+      "dev_index": 125,
+      "database": "pets_1",
+      "sha256": "8ffe0ea9b3b034ca8860a2f18300a98c7583ce2522ea195726a04803f675e5bb",
+      "workspace": "workspaces\\dev_125",
+      "prompts": [
+        "数据库位于 `./pets_1.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nHow many female students are on the list?",
+        "What is the full names of least aged students on the list?",
+        "Find the average age of students who do not have any pet?",
+        "What is the city code of student id 1003?"
+      ]
+    },
+    {
+      "dev_index": 31,
+      "database": "cre_Doc_Template_Mgt",
+      "sha256": "9c3fdd03d8795ecde60aae782ce50c4fb1d6c03de1401fcdd6dc177342a53df5",
+      "workspace": "workspaces\\dev_31",
+      "prompts": [
+        "数据库位于 `./cre_Doc_Template_Mgt.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nCan I get all the documents with 'w' in them | Do you want documents with 'w' in the name or description? | Description pls",
+        "Ok can I get just their names",
+        "I need the template ids too oops"
+      ]
+    },
+    {
+      "dev_index": 30,
+      "database": "tvshow",
+      "sha256": "1212c2e75cf1dcf3aeb4055331a85298b073d8a613ead77975b13bd3346b9fc4",
+      "workspace": "workspaces\\dev_30",
+      "prompts": [
+        "数据库位于 `./tvshow.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nWhich titles were directed by Ben Jones or Brandon Vietti?",
+        "What are their original air dates?",
+        "Who are the writers of these cartoons?"
+      ]
+    },
+    {
+      "dev_index": 140,
+      "database": "student_transcripts_tracking",
+      "sha256": "5a1f4928a1fd36f6edb31c4f054203b2e2fab6b18e5951c4f5633628f82a8e56",
+      "workspace": "workspaces\\dev_140",
+      "prompts": [
+        "数据库位于 `./student_transcripts_tracking.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nWhich semester did bachelor students enroll? List the id.",
+        "What is the degree summary description of student with id 14?"
+      ]
+    },
+    {
+      "dev_index": 98,
+      "database": "singer",
+      "sha256": "5c1b72755d148c294b26d7b479307e8799b93485ac918720f953e2ab84d59a0a",
+      "workspace": "workspaces\\dev_98",
+      "prompts": [
+        "数据库位于 `./singer.sqlite`。请在当前目录用终端做只读查询。\n\n接下来会按顺序发送同一段对话的问题。遇到追问，沿用上文已经确定的对象、范围和条件，按本轮要求调整。遇到新话题，按当前问题确定查询范围。结合上文仍无法确定指代时，先问一个具体的澄清问题。\n\n每个可回答的问题，先简短回答，再用一个 SQL 代码块附上一条可以直接运行的最终 SQLite 查询。查询结果只返回本轮要求的字段和记录，按题意保留顺序和数值精度。辅助信息可以写在正文里。\n\nWhat are the names of the singers who were born in either 1948 or 1949?",
+        "What is their citizenship?",
+        "Of the singers that were born in 1948 or 1949, which had the highest net worth?",
+        "Did she have a net worth that was over 30 million?",
+        "What was the lowest net worth of any singer who was born between 1948 and 1949?"
+      ]
+    }
+  ],
+  "comparison": {
+    "harness_profile": "sdk-minimal",
+    "prompt_version": "followup",
+    "planned_dialogues": 29,
+    "planned_turns": 101,
+    "reused_turns": 14,
+    "autonomous_reference_plan": "reports/2026-11-19_gpt6sol_autonomous_101/plan.json",
+    "autonomous_reference_plan_sha256": "466d420c1000faee43f0dc5aa205e9e037740d3a637b366221621b9645c42385",
+    "autonomous_reference_log": "reports/2026-11-19_gpt6sol_autonomous_101/turns.jsonl",
+    "autonomous_reference_log_sha256": "3b5b0f131258e8bed40f1232f7aefb3421cd0029a31c476e3845754e6a8f5c4b",
+    "reused_dialogues": [
+      275,
+      254,
+      280,
+      31
+    ],
+    "new_dialogues": 25,
+    "new_turns": 87,
+    "pilot_plan": "reports/2026-11-19_gpt6sol_followup_14/plan.json",
+    "pilot_plan_sha256": "cda70e2f0a0743af21d6d2e414a67a18b48250423c054bbb0675076b0978104e",
+    "pilot_log": "reports/2026-11-19_gpt6sol_followup_14/turns.jsonl",
+    "pilot_log_sha256": "34f2c5aa6dab47b7245f74e27df06e3b71f64547f574669b8e787950004763fb"
+  }
+}

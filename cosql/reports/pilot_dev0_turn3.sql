@@ -1,0 +1,1 @@
+SELECT c.FullName FROM car_makers AS c JOIN model_list AS m ON m.Maker = c.Id GROUP BY c.Id, c.FullName HAVING COUNT(m.ModelId) >= 3;

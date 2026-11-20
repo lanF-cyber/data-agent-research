@@ -1,0 +1,7 @@
+* text=auto
+*.json -text
+*.jsonl -text
+*.csv -text
+*.toml -text
+/cosql/answer_submission_mcp.py -text
+/cosql/answer_submission_eval101.py -text

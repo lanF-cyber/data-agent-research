@@ -1,0 +1,2295 @@
+{
+  "model": "gpt-6-sol",
+  "provider": "tingo-research-only-gpt-6",
+  "harness_profile": "sdk-minimal",
+  "mcp_sdk": "1.26.0",
+  "mcp_tool": "mcp__cosql__submit_answer",
+  "terminal_limit": 6,
+  "submission_limit": 2,
+  "dev_sha256": "fd93ff8534f1fb4031b1ff52e8520c98aa8d082162599061e753b44ea26ce96d",
+  "baseline_log": "reports/2026-11-19_gpt6sol_followup_101/turns.jsonl",
+  "baseline_sha256": "300cf09296f3c83890789de4b5c009fd01eae9c863c96bcc6c49077fa4d2f8e4",
+  "dialogues": [
+    {
+      "dev_index": 275,
+      "database": "world_1",
+      "sha256": "17b986695f16786d58d66f85e49dba87bdfe72953207ab9b1b49da9d2301ef65",
+      "turns": [
+        {
+          "id": "dev275_turn1",
+          "turn": 1,
+          "question": "Hi, what is the population of the Caribbean?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "population",
+              "populationtotal",
+              "sumpopulation",
+              "totalpopulation"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev275_turn2",
+          "turn": 2,
+          "question": "What continents have an average life expectancy shorter than 72?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "continent"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev275_turn3",
+          "turn": 3,
+          "question": "Can you give me the total population for each of those continents?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "population",
+              "populationtotal",
+              "sumpopulation",
+              "totalpopulation"
+            ],
+            [
+              "continent"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev275_turn4",
+          "turn": 4,
+          "question": "What is the average life expectancy of those continents?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "averagelifeexpectancy",
+              "avglifeexpectancy",
+              "lifeexpectancy"
+            ],
+            [
+              "continent"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev275_turn5",
+          "turn": 5,
+          "question": "Find the average life expectancy and total population for each continent where the average life expectancy is shorter than 72?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "population",
+              "populationtotal",
+              "sumpopulation",
+              "totalpopulation"
+            ],
+            [
+              "averagelifeexpectancy",
+              "avglifeexpectancy",
+              "lifeexpectancy"
+            ],
+            [
+              "continent"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 188,
+      "database": "museum_visit",
+      "sha256": "3217aee38d8e3661d374bf025591b7164a1179c568ef5d20f3c338035fc6e1dd",
+      "turns": [
+        {
+          "id": "dev188_turn1",
+          "turn": 1,
+          "question": "Whats the level of membership customer id 1 has?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "levelofmembership",
+              "membershiplevel"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev188_turn2",
+          "turn": 2,
+          "question": "What is the name of customer id 1?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev188_turn3",
+          "turn": 3,
+          "question": "What is the age of customer id 1?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "age",
+              "ageyears",
+              "conductorage",
+              "customerage",
+              "singerage",
+              "visitorage"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 257,
+      "database": "poker_player",
+      "sha256": "63fffd7b68524f07a742a74b74b95a4ba178e6419f3574b9ee78b8dda1df46ba",
+      "turns": [
+        {
+          "id": "dev257_turn1",
+          "turn": 1,
+          "question": "To which nationality does the people_id 1 belongs to ?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "nationality"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev257_turn2",
+          "turn": 2,
+          "question": "Tell me the birthday date of Teodor Salparov ?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "birthdate"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev257_turn3",
+          "turn": 3,
+          "question": "Tell me the earnings of the people id 5?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "earnings"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev257_turn4",
+          "turn": 4,
+          "question": "What is the money rank of the tallest poker player ?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "moneyrank"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 254,
+      "database": "network_1",
+      "sha256": "bec92cd9a68d6f23469a0df246429299f44caaf75eab12275784e0bb7d0aa9ca",
+      "turns": [
+        {
+          "id": "dev254_turn1",
+          "turn": 1,
+          "question": "How many students are there?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "count",
+              "numberofstudents",
+              "studentcount",
+              "totalcount",
+              "totalstudents"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev254_turn2",
+          "turn": 2,
+          "question": "How many students have grade 9",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "count",
+              "grade9count",
+              "ninthgradecount",
+              "studentcount",
+              "totalcount"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev254_turn3",
+          "turn": 3,
+          "question": "What is his grade?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "invalid_sql_reply",
+          "answer_fields": [
+            [
+              "grade"
+            ]
+          ],
+          "old_core_correct": false
+        }
+      ]
+    },
+    {
+      "dev_index": 282,
+      "database": "pets_1",
+      "sha256": "8ffe0ea9b3b034ca8860a2f18300a98c7583ce2522ea195726a04803f675e5bb",
+      "turns": [
+        {
+          "id": "dev282_turn1",
+          "turn": 1,
+          "question": "hi, what number of students have a dog as a pet?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_values_or_order",
+          "answer_fields": [
+            [
+              "count",
+              "totalcount"
+            ]
+          ],
+          "old_core_correct": false
+        },
+        {
+          "id": "dev282_turn2",
+          "turn": 2,
+          "question": "and what about the number that have a cat as a pet?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "catownercount",
+              "count",
+              "studentcount",
+              "studentswithcats",
+              "totalcount"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev282_turn3",
+          "turn": 3,
+          "question": "Great. Can you tell me the first names of these 3 students?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "firstname",
+              "fname",
+              "givenname"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 277,
+      "database": "cre_Doc_Template_Mgt",
+      "sha256": "9c3fdd03d8795ecde60aae782ce50c4fb1d6c03de1401fcdd6dc177342a53df5",
+      "turns": [
+        {
+          "id": "dev277_turn1",
+          "turn": 1,
+          "question": "What is the document id with least number of paragraphs?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_values_or_order",
+          "answer_fields": [
+            [
+              "documentid"
+            ]
+          ],
+          "old_core_correct": false
+        },
+        {
+          "id": "dev277_turn2",
+          "turn": 2,
+          "question": "and the document with the most number of paragraphs?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "documentid"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev277_turn3",
+          "turn": 3,
+          "question": "how many paragraphs are in that document with id of 2394?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "count",
+              "countparagraphid",
+              "paragraphcount",
+              "totalcount"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev277_turn4",
+          "turn": 4,
+          "question": "What are the paragraph texts of those three paragraphs?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "paragraphtext"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 280,
+      "database": "tvshow",
+      "sha256": "1212c2e75cf1dcf3aeb4055331a85298b073d8a613ead77975b13bd3346b9fc4",
+      "turns": [
+        {
+          "id": "dev280_turn1",
+          "turn": 1,
+          "question": "which countries tv channels are not playing any cartoon written todd casey",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_row_count",
+          "answer_fields": [
+            [
+              "country"
+            ]
+          ],
+          "old_core_correct": false
+        },
+        {
+          "id": "dev280_turn2",
+          "turn": 2,
+          "question": "who directed the cartoon the rise of blue beetle  written by Michael Jelenic\t?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "directedby",
+              "director",
+              "directorname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev280_turn3",
+          "turn": 3,
+          "question": "whats the package option for TV channels in itally?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "packageoption"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 225,
+      "database": "student_transcripts_tracking",
+      "sha256": "5a1f4928a1fd36f6edb31c4f054203b2e2fab6b18e5951c4f5633628f82a8e56",
+      "turns": [
+        {
+          "id": "dev225_turn1",
+          "turn": 1,
+          "question": "Can you list the transcript date that appears least often?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "transcriptdate"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev225_turn2",
+          "turn": 2,
+          "question": "How many times does the transcript date 1975-05-06 12:04:47\tshow up in the table?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "count",
+              "occurrencecount",
+              "totalcount"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev225_turn3",
+          "turn": 3,
+          "question": "Which transcript date shows up the most number of times?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_row_count",
+          "answer_fields": [
+            [
+              "transcriptdate"
+            ]
+          ],
+          "old_core_correct": false
+        }
+      ]
+    },
+    {
+      "dev_index": 97,
+      "database": "singer",
+      "sha256": "5c1b72755d148c294b26d7b479307e8799b93485ac918720f953e2ab84d59a0a",
+      "turns": [
+        {
+          "id": "dev97_turn1",
+          "turn": 1,
+          "question": "Can you list all the singer ids that aren't present in the song table?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_values_or_order",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": false
+        }
+      ]
+    },
+    {
+      "dev_index": 57,
+      "database": "voter_1",
+      "sha256": "815bf1611b8a32f649d292a6138562f1761a0c10cb256e20f6561199cff31531",
+      "turns": [
+        {
+          "id": "dev57_turn1",
+          "turn": 1,
+          "question": "Can you tell me what the total number of votes are for the states of \"NY\" and \"CA\"?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_columns",
+          "answer_fields": [
+            [
+              "count",
+              "totalcount",
+              "totalnumberofvotes",
+              "totalvotecount",
+              "totalvotes",
+              "votecount"
+            ]
+          ],
+          "old_core_correct": false
+        },
+        {
+          "id": "dev57_turn2",
+          "turn": 2,
+          "question": "Thank you!  Can you provide me with a list of all of the different contestant numbers?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_row_count",
+          "answer_fields": [
+            [
+              "contestantnumber"
+            ]
+          ],
+          "old_core_correct": false
+        },
+        {
+          "id": "dev57_turn3",
+          "turn": 3,
+          "question": "Okay.  How many vote IDs correspond to contestant number 5?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_values_or_order",
+          "answer_fields": [
+            [
+              "count",
+              "totalcount"
+            ]
+          ],
+          "old_core_correct": false
+        }
+      ]
+    },
+    {
+      "dev_index": 91,
+      "database": "real_estate_properties",
+      "sha256": "5d0bd83afa93a843e68f892d8430fe625d7ed2508aae00a341926b0b5b478a29",
+      "turns": [
+        {
+          "id": "dev91_turn1",
+          "turn": 1,
+          "question": "What are the names of the properties with more that one room?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "propertyname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev91_turn2",
+          "turn": 2,
+          "question": "What are the names of the properties that are either houses or apartments with more than one room?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_row_count",
+          "answer_fields": [
+            [
+              "propertyname"
+            ]
+          ],
+          "old_core_correct": false
+        },
+        {
+          "id": "dev91_turn3",
+          "turn": 3,
+          "question": "How many rooms do each of those have?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_row_count",
+          "answer_fields": [
+            [
+              "propertyname"
+            ],
+            [
+              "roomcount"
+            ]
+          ],
+          "old_core_correct": false
+        },
+        {
+          "id": "dev91_turn4",
+          "turn": 4,
+          "question": "What is the average agreed selling price of all houses with more than one room?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "averageagreedsellingprice",
+              "avgagreedsellingprice",
+              "avgsellingprice"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 25,
+      "database": "flight_2",
+      "sha256": "db777ba6488ae2b515cb138d71ff23c4533e5fd0355854648a1102faff3fb7af",
+      "turns": [
+        {
+          "id": "dev25_turn1",
+          "turn": 1,
+          "question": "Find all airlines that have fewer than 200 flights.",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "airline"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev25_turn2",
+          "turn": 2,
+          "question": "what country is their destination of the first three?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_values_or_order",
+          "answer_fields": [
+            [
+              "airline"
+            ],
+            [
+              "destairport"
+            ]
+          ],
+          "old_core_correct": false
+        }
+      ]
+    },
+    {
+      "dev_index": 123,
+      "database": "dog_kennels",
+      "sha256": "ea5fbc6cf6aaf500371c5c121c339d9802ba6f5fbecd948a5274c0b487a9f486",
+      "turns": [
+        {
+          "id": "dev123_turn1",
+          "turn": 1,
+          "question": "Tell me how many dogs have gone through any treatments.",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "count",
+              "dogcount",
+              "dogstreated",
+              "totalcount",
+              "treateddogcount"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev123_turn2",
+          "turn": 2,
+          "question": "Tell me how old the youngest is. | Do you mean the youngest among those that have gone through any treatment? | yes",
+          "category": "primary",
+          "contract": "age",
+          "old_strict": false,
+          "old_reason": "different_values_or_order",
+          "answer_fields": [
+            [
+              "age",
+              "ageyears",
+              "minage",
+              "youngestage"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev123_turn3",
+          "turn": 3,
+          "question": "And how old is the oldest that has gone through any treatment?",
+          "category": "primary",
+          "contract": "age",
+          "old_strict": false,
+          "old_reason": "different_values_or_order",
+          "answer_fields": [
+            [
+              "age",
+              "ageyears",
+              "maxage",
+              "oldestage"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev123_turn4",
+          "turn": 4,
+          "question": "How about the average age? | Do you mean the average age of those that have gone through any treatment? | yes",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "averageage",
+              "avgage"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 80,
+      "database": "wta_1",
+      "sha256": "8f20747456d7748674b4f05432f3de96446ced95b8bd5a6fd01284f6c28f727c",
+      "turns": [
+        {
+          "id": "dev80_turn1",
+          "turn": 1,
+          "question": "Can you show the birth date of player id 200002?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "birthdate"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev80_turn2",
+          "turn": 2,
+          "question": "What is the first name of player id 200001?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "firstname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev80_turn3",
+          "turn": 3,
+          "question": "Can you show the codes of countries that have more than 50 players?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "country",
+              "countrycode"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 285,
+      "database": "course_teach",
+      "sha256": "da45fcdde64ac2b9330146506b7653ad4417489d8e496e509045e1b02245d793",
+      "turns": [
+        {
+          "id": "dev285_turn1",
+          "turn": 1,
+          "question": "how many course id numbers",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "count",
+              "countcourseid",
+              "coursecount",
+              "courseidcount",
+              "totalcount"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev285_turn2",
+          "turn": 2,
+          "question": "what are the courses",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "course"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev285_turn3",
+          "turn": 3,
+          "question": "great, how many teachers available to conduct the course",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "count",
+              "countteacherid",
+              "teachercount",
+              "totalcount"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev285_turn4",
+          "turn": 4,
+          "question": "which teacher takes math class",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 190,
+      "database": "battle_death",
+      "sha256": "12569f4493a9655639c4ea86ba4bd8a4ea6411e1b8ae0e1fdf3d6a995344265d",
+      "turns": [
+        {
+          "id": "dev190_turn1",
+          "turn": 1,
+          "question": "Hi there!  Can you show me a list of all of the battle ids and the corresponding battle names?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battleid",
+              "highschoolerid",
+              "id",
+              "kyleid",
+              "schoolid",
+              "studentid"
+            ],
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev190_turn2",
+          "turn": 2,
+          "question": "Great!  Can you filter this list to show just the battle IDs and battle names of the battles that had more than 10 deaths associated with them?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battleid",
+              "highschoolerid",
+              "id",
+              "kyleid",
+              "schoolid",
+              "studentid"
+            ],
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev190_turn3",
+          "turn": 3,
+          "question": "Wonderful!  Can you update this list to include the date of each of these three battles?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battleid",
+              "highschoolerid",
+              "id",
+              "kyleid",
+              "schoolid",
+              "studentid"
+            ],
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ],
+            [
+              "date"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 16,
+      "database": "car_1",
+      "sha256": "9d851e396e02997a1de073ae982fe1e4b1769fdffce2fac6e325857a3a938709",
+      "turns": [
+        {
+          "id": "dev16_turn1",
+          "turn": 1,
+          "question": "Can you list all the continents?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "continent"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev16_turn2",
+          "turn": 2,
+          "question": "Okay, now can you list the number of countries belonging to each continent, including the continent id as well?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "contid",
+              "continentid"
+            ],
+            [
+              "continent"
+            ],
+            [
+              "count",
+              "countries",
+              "countrycount",
+              "numberofcountries",
+              "numcountries",
+              "totalcount"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 215,
+      "database": "concert_singer",
+      "sha256": "4fa1ba5ab4577e895271088b1dc44aa94be88e25a54293317a67584112ef059d",
+      "turns": [
+        {
+          "id": "dev215_turn1",
+          "turn": 1,
+          "question": "what is the age of Joe sharp",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "age",
+              "ageyears",
+              "conductorage",
+              "customerage",
+              "singerage",
+              "visitorage"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev215_turn2",
+          "turn": 2,
+          "question": "How many US Singers?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "americansingercount",
+              "count",
+              "singercount",
+              "totalcount",
+              "ussingercount"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev215_turn3",
+          "turn": 3,
+          "question": "How many Male Singers?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_values_or_order",
+          "answer_fields": [
+            [
+              "count",
+              "totalcount"
+            ]
+          ],
+          "old_core_correct": false
+        }
+      ]
+    },
+    {
+      "dev_index": 167,
+      "database": "orchestra",
+      "sha256": "13b64af1cf6fcbd34953a44f951b2bf79bedc000b344549212dac1a9345e2f86",
+      "turns": [
+        {
+          "id": "dev167_turn1",
+          "turn": 1,
+          "question": "Please answer the question.what is the orchestra of conductor? | Do you want all the orchestras of all conductors? | yes",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_columns",
+          "answer_fields": [
+            [
+              "orchestra",
+              "orchestraname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev167_turn2",
+          "turn": 2,
+          "question": "what is the name of all conductors?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev167_turn3",
+          "turn": 3,
+          "question": "What is the age of Colin Davis?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "age",
+              "ageyears",
+              "conductorage",
+              "customerage",
+              "singerage",
+              "visitorage"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 10,
+      "database": "employee_hire_evaluation",
+      "sha256": "760fec5cc872ef0cdf99242614f05c93dbd00d422ac9da87ea64fcf555be7373",
+      "turns": [
+        {
+          "id": "dev10_turn1",
+          "turn": 1,
+          "question": "Which district has the largest number of products?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "district"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev10_turn2",
+          "turn": 2,
+          "question": "What is the manager's name of that shop?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "managername"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev10_turn3",
+          "turn": 3,
+          "question": "How many products did he produce at that shop?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "numberofproducts",
+              "numberproducts",
+              "productcount",
+              "totalproducts"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev10_turn4",
+          "turn": 4,
+          "question": "Where is the location of that district?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "location"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev10_turn5",
+          "turn": 5,
+          "question": "What is the shop ID number?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "shopid"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 292,
+      "database": "world_1",
+      "sha256": "17b986695f16786d58d66f85e49dba87bdfe72953207ab9b1b49da9d2301ef65",
+      "turns": [
+        {
+          "id": "dev292_turn1",
+          "turn": 1,
+          "question": "what are the official unique official language spoken in the country | In which country? | what are the unique official languages spoken that are found before 1930",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_row_count",
+          "answer_fields": [
+            [
+              "count",
+              "countdistinctt2language",
+              "totalcount"
+            ]
+          ],
+          "old_core_correct": false
+        },
+        {
+          "id": "dev292_turn2",
+          "turn": 2,
+          "question": "what is the total number of unique official languages spoken in the countries that are founded before 1930",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "count",
+              "countdistinctt2language",
+              "languagecount",
+              "officiallanguagecount",
+              "totalcount",
+              "totaluniqueofficiallanguages"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 85,
+      "database": "museum_visit",
+      "sha256": "3217aee38d8e3661d374bf025591b7164a1179c568ef5d20f3c338035fc6e1dd",
+      "turns": [
+        {
+          "id": "dev85_turn1",
+          "turn": 1,
+          "question": "What is the membership level of Gonzalo Higuaín ?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "levelofmembership",
+              "membershiplevel"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev85_turn2",
+          "turn": 2,
+          "question": "whose membership level is 5?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev85_turn3",
+          "turn": 3,
+          "question": "how many numbers of persons whose membership level is greater than 5?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "count",
+              "membercount",
+              "personcount",
+              "totalcount",
+              "visitorcount"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev85_turn4",
+          "turn": 4,
+          "question": "What is the age of membership level 8?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "age",
+              "ageyears",
+              "conductorage",
+              "customerage",
+              "singerage",
+              "visitorage"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev85_turn5",
+          "turn": 5,
+          "question": "how many persons who have membership level greater than 4?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "count",
+              "membercount",
+              "personcount",
+              "totalcount",
+              "visitorcount"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev85_turn6",
+          "turn": 6,
+          "question": "please sort the names of persons whose age from old to young according to the membership level?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_columns",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ],
+            [
+              "levelofmembership",
+              "membershiplevel"
+            ]
+          ],
+          "old_core_correct": false
+        }
+      ]
+    },
+    {
+      "dev_index": 231,
+      "database": "poker_player",
+      "sha256": "63fffd7b68524f07a742a74b74b95a4ba178e6419f3574b9ee78b8dda1df46ba",
+      "turns": [
+        {
+          "id": "dev231_turn1",
+          "turn": 1,
+          "question": "Can you list all the names of the poker players ordered by the final tables in ascending order please?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev231_turn2",
+          "turn": 2,
+          "question": "What are the nationalities of the poker players ordered by the final tables in ascending order?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "nationality"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev231_turn3",
+          "turn": 3,
+          "question": "What is the name of the poker player with the highest earnings?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev231_turn4",
+          "turn": 4,
+          "question": "What about the poker player with the lowest earnings?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev231_turn5",
+          "turn": 5,
+          "question": "What was his best finish?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "bestfinish"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 268,
+      "database": "network_1",
+      "sha256": "bec92cd9a68d6f23469a0df246429299f44caaf75eab12275784e0bb7d0aa9ca",
+      "turns": [
+        {
+          "id": "dev268_turn1",
+          "turn": 1,
+          "question": "Show the names of all of the high schoolers.",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev268_turn2",
+          "turn": 2,
+          "question": "Which of the high schoolers are friends with Kyle?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_row_count",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": false
+        },
+        {
+          "id": "dev268_turn3",
+          "turn": 3,
+          "question": "What is Kyle's ID?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battleid",
+              "highschoolerid",
+              "id",
+              "kyleid",
+              "schoolid",
+              "studentid"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev268_turn4",
+          "turn": 4,
+          "question": "Who has the ID 1709?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev268_turn5",
+          "turn": 5,
+          "question": "Who else is Jordan friends with?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_row_count",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": false
+        },
+        {
+          "id": "dev268_turn6",
+          "turn": 6,
+          "question": "Who is friends with Gabriel?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_row_count",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": false
+        }
+      ]
+    },
+    {
+      "dev_index": 125,
+      "database": "pets_1",
+      "sha256": "8ffe0ea9b3b034ca8860a2f18300a98c7583ce2522ea195726a04803f675e5bb",
+      "turns": [
+        {
+          "id": "dev125_turn1",
+          "turn": 1,
+          "question": "How many female students are on the list?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "count",
+              "femalestudentcount",
+              "femalestudents",
+              "totalcount"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev125_turn2",
+          "turn": 2,
+          "question": "What is the full names of least aged students on the list?",
+          "category": "primary",
+          "contract": "full_name",
+          "old_strict": false,
+          "old_reason": "different_columns",
+          "answer_fields": [
+            [
+              "familyname",
+              "lastname",
+              "lname",
+              "surname"
+            ],
+            [
+              "firstname",
+              "fname",
+              "givenname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev125_turn3",
+          "turn": 3,
+          "question": "Find the average age of students who do not have any pet?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "averageage",
+              "avgage"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev125_turn4",
+          "turn": 4,
+          "question": "What is the city code of student id 1003?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "citycode"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 31,
+      "database": "cre_Doc_Template_Mgt",
+      "sha256": "9c3fdd03d8795ecde60aae782ce50c4fb1d6c03de1401fcdd6dc177342a53df5",
+      "turns": [
+        {
+          "id": "dev31_turn1",
+          "turn": 1,
+          "question": "Can I get all the documents with 'w' in them | Do you want documents with 'w' in the name or description? | Description pls",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_columns",
+          "answer_fields": [
+            [
+              "documentid"
+            ],
+            [
+              "templateid"
+            ],
+            [
+              "documentname"
+            ],
+            [
+              "documentdescription"
+            ],
+            [
+              "otherdetails"
+            ]
+          ],
+          "old_core_correct": false
+        },
+        {
+          "id": "dev31_turn2",
+          "turn": 2,
+          "question": "Ok can I get just their names",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "documentname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev31_turn3",
+          "turn": 3,
+          "question": "I need the template ids too oops",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "documentname"
+            ],
+            [
+              "templateid"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 30,
+      "database": "tvshow",
+      "sha256": "1212c2e75cf1dcf3aeb4055331a85298b073d8a613ead77975b13bd3346b9fc4",
+      "turns": [
+        {
+          "id": "dev30_turn1",
+          "turn": 1,
+          "question": "Which titles were directed by Ben Jones or Brandon Vietti?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "cartoontitle",
+              "episodetitle",
+              "title"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev30_turn2",
+          "turn": 2,
+          "question": "What are their original air dates?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "cartoontitle",
+              "episodetitle",
+              "title"
+            ],
+            [
+              "airdate",
+              "firstaired",
+              "originalairdate"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev30_turn3",
+          "turn": 3,
+          "question": "Who are the writers of these cartoons?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "cartoontitle",
+              "episodetitle",
+              "title"
+            ],
+            [
+              "writer",
+              "writername",
+              "writtenby"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 140,
+      "database": "student_transcripts_tracking",
+      "sha256": "5a1f4928a1fd36f6edb31c4f054203b2e2fab6b18e5951c4f5633628f82a8e56",
+      "turns": [
+        {
+          "id": "dev140_turn1",
+          "turn": 1,
+          "question": "Which semester did bachelor students enroll? List the id.",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_row_count",
+          "answer_fields": [
+            [
+              "semesterid"
+            ]
+          ],
+          "old_core_correct": false
+        },
+        {
+          "id": "dev140_turn2",
+          "turn": 2,
+          "question": "What is the degree summary description of student with id 14?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "degreesummary",
+              "degreesummarydescription"
+            ]
+          ],
+          "old_core_correct": true
+        }
+      ]
+    },
+    {
+      "dev_index": 98,
+      "database": "singer",
+      "sha256": "5c1b72755d148c294b26d7b479307e8799b93485ac918720f953e2ab84d59a0a",
+      "turns": [
+        {
+          "id": "dev98_turn1",
+          "turn": 1,
+          "question": "What are the names of the singers who were born in either 1948 or 1949?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev98_turn2",
+          "turn": 2,
+          "question": "What is their citizenship?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "citizenship",
+              "citizenshipcountry"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev98_turn3",
+          "turn": 3,
+          "question": "Of the singers that were born in 1948 or 1949, which had the highest net worth?",
+          "category": "primary",
+          "contract": "rows",
+          "old_strict": true,
+          "old_reason": "match",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev98_turn4",
+          "turn": 4,
+          "question": "Did she have a net worth that was over 30 million?",
+          "category": "primary",
+          "contract": "over_30_million",
+          "old_strict": false,
+          "old_reason": "different_columns",
+          "answer_fields": [
+            [
+              "over30million",
+              "exceeds30million",
+              "isover30million",
+              "answer",
+              "above30million",
+              "overthreshold",
+              "exceedsthreshold"
+            ]
+          ],
+          "old_core_correct": true
+        },
+        {
+          "id": "dev98_turn5",
+          "turn": 5,
+          "question": "What was the lowest net worth of any singer who was born between 1948 and 1949?",
+          "category": "excluded",
+          "contract": "rows",
+          "old_strict": false,
+          "old_reason": "different_values_or_order",
+          "answer_fields": [
+            [
+              "battlename",
+              "conductorname",
+              "customername",
+              "fullname",
+              "highschoolername",
+              "name",
+              "personname",
+              "playername",
+              "pokerplayername",
+              "singername",
+              "studentname",
+              "teachername",
+              "visitorname"
+            ]
+          ],
+          "old_core_correct": false
+        }
+      ]
+    }
+  ],
+  "protocol": "materialized-v2",
+  "submission_rules": "每轮请调用 mcp__cosql__submit_answer 提交一条最终的只读 SQLite 查询。工具会执行 SQL 并直接展示真实结果，省略 answer_rows，避免手抄。若查了辅助列，可用 answer_columns 指定要显示的 SQL 别名。查询应让结果直接回答当前问句。问合计就返回一个合计值，问分项才给分项。追问中的名单顺序按实际展示的结果，指向同名的人时按已经确认的身份查询，信息不足时提问澄清。提交成功后简短确认。",
+  "mcp_sha256": "ca4f9aa8699e54775b17e9cf135f84ecab7350c6596cb33f7a02792c0a8d756e",
+  "rubric_sha256": "e736911b08763aa3ead344d0852fdfcfc5edebaf9043501a551ee639833c078c",
+  "exclusions": {
+    "dev282_turn1": [
+      "reference",
+      "题目数养狗学生，参考数饲养记录。"
+    ],
+    "dev282_turn3": [
+      "premise",
+      "追问说有三名学生，原库实际是两名不同学生。"
+    ],
+    "dev97_turn1": [
+      "reference",
+      "题目要歌手编号，参考返回姓名。"
+    ],
+    "dev292_turn1": [
+      "reference",
+      "题目要语言名单，参考只返回数量。"
+    ],
+    "dev140_turn1": [
+      "reference",
+      "题目问本科，参考筛硕士。"
+    ],
+    "dev215_turn3": [
+      "reference",
+      "男歌手字段存 T/F，参考用 True 字符串。"
+    ],
+    "dev98_turn5": [
+      "reference",
+      "题目问最低净资产金额，参考返回人名。"
+    ],
+    "dev25_turn2": [
+      "context",
+      "前三家取决于上一问的排序，参考还用机场代码回答国家。"
+    ],
+    "dev254_turn3": [
+      "context",
+      "开发集回放缺了上文中的 Kyle。"
+    ],
+    "dev10_turn3": [
+      "premise",
+      "原库记录店铺产品数，无法确定经理个人生产量。"
+    ],
+    "dev280_turn1": [
+      "ambiguous",
+      "题目未明确要求全国的电视台都未播放，还是至少有一家未播放。"
+    ],
+    "dev277_turn1": [
+      "ambiguous",
+      "题目未说明是否纳入零段落文档。"
+    ],
+    "dev225_turn1": [
+      "ambiguous",
+      "所有成绩单日期并列最少，参考只认其中一个日期。"
+    ],
+    "dev225_turn3": [
+      "ambiguous",
+      "所有成绩单日期并列最多，参考只认其中一个日期。"
+    ],
+    "dev57_turn2": [
+      "ambiguous",
+      "所有选手编号的范围可能承接两州，或指整个投票表。"
+    ],
+    "dev57_turn3": [
+      "ambiguous",
+      "上一问范围未定，选手 5 的全表与两州计数不同。"
+    ],
+    "dev91_turn2": [
+      "ambiguous",
+      "题目的房间数限制是否同时约束住宅与公寓未讲清。"
+    ],
+    "dev91_turn3": [
+      "ambiguous",
+      "指代上一问的房产，继承了上一问的范围歧义。"
+    ],
+    "dev85_turn6": [
+      "ambiguous",
+      "会员等级是筛选条件还是排序条件未讲清。"
+    ],
+    "dev268_turn2": [
+      "ambiguous",
+      "好友关系的查询方向没有明确。"
+    ],
+    "dev268_turn5": [
+      "reference",
+      "指向与 Kyle 有关系的 Jordan，参考同时取了两位同名学生。"
+    ],
+    "dev268_turn6": [
+      "ambiguous",
+      "有两位 Gabriel，题目未指定，参考也混合两位的记录。"
+    ],
+    "dev31_turn1": [
+      "ambiguous",
+      "题目未明确列出匹配文档时需要整行记录还是文档名称。"
+    ]
+  }
+}

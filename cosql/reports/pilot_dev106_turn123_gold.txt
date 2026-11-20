@@ -1,0 +1,3 @@
+SELECT GovernmentForm, avg ( LifeExpectancy )  FROM country GROUP BY GovernmentForm	world_1
+SELECT GovernmentForm FROM country GROUP BY GovernmentForm HAVING avg ( LifeExpectancy )   >  72	world_1
+SELECT sum ( Population )  ,  GovernmentForm FROM country GROUP BY GovernmentForm HAVING avg ( LifeExpectancy )   >  72	world_1

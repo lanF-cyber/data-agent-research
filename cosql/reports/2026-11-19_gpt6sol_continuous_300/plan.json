@@ -1,0 +1,535 @@
+{
+  "dataset": "CoSQL sql_state_tracking dev",
+  "dev_sha256": "fd93ff8534f1fb4031b1ff52e8520c98aa8d082162599061e753b44ea26ce96d",
+  "tables_sha256": "a83b2c45a717b2123679f9e7a42a2039b9f4c3a976b46b1dffcf65f37e752c12",
+  "seed": 20261118,
+  "excluded_dev_indices": [
+    0,
+    106
+  ],
+  "checkpoint_turns": 101,
+  "target_turns": 300,
+  "checkpoint_dialogues": 29,
+  "dialogues": [
+    {
+      "dev_index": 275,
+      "database": "world_1",
+      "turns": 5
+    },
+    {
+      "dev_index": 188,
+      "database": "museum_visit",
+      "turns": 3
+    },
+    {
+      "dev_index": 257,
+      "database": "poker_player",
+      "turns": 4
+    },
+    {
+      "dev_index": 254,
+      "database": "network_1",
+      "turns": 3
+    },
+    {
+      "dev_index": 282,
+      "database": "pets_1",
+      "turns": 3
+    },
+    {
+      "dev_index": 277,
+      "database": "cre_Doc_Template_Mgt",
+      "turns": 4
+    },
+    {
+      "dev_index": 280,
+      "database": "tvshow",
+      "turns": 3
+    },
+    {
+      "dev_index": 225,
+      "database": "student_transcripts_tracking",
+      "turns": 3
+    },
+    {
+      "dev_index": 97,
+      "database": "singer",
+      "turns": 1
+    },
+    {
+      "dev_index": 57,
+      "database": "voter_1",
+      "turns": 3
+    },
+    {
+      "dev_index": 91,
+      "database": "real_estate_properties",
+      "turns": 4
+    },
+    {
+      "dev_index": 25,
+      "database": "flight_2",
+      "turns": 2
+    },
+    {
+      "dev_index": 123,
+      "database": "dog_kennels",
+      "turns": 4
+    },
+    {
+      "dev_index": 80,
+      "database": "wta_1",
+      "turns": 3
+    },
+    {
+      "dev_index": 285,
+      "database": "course_teach",
+      "turns": 4
+    },
+    {
+      "dev_index": 190,
+      "database": "battle_death",
+      "turns": 3
+    },
+    {
+      "dev_index": 16,
+      "database": "car_1",
+      "turns": 2
+    },
+    {
+      "dev_index": 215,
+      "database": "concert_singer",
+      "turns": 3
+    },
+    {
+      "dev_index": 167,
+      "database": "orchestra",
+      "turns": 3
+    },
+    {
+      "dev_index": 10,
+      "database": "employee_hire_evaluation",
+      "turns": 5
+    },
+    {
+      "dev_index": 292,
+      "database": "world_1",
+      "turns": 2
+    },
+    {
+      "dev_index": 85,
+      "database": "museum_visit",
+      "turns": 6
+    },
+    {
+      "dev_index": 231,
+      "database": "poker_player",
+      "turns": 5
+    },
+    {
+      "dev_index": 268,
+      "database": "network_1",
+      "turns": 6
+    },
+    {
+      "dev_index": 125,
+      "database": "pets_1",
+      "turns": 4
+    },
+    {
+      "dev_index": 31,
+      "database": "cre_Doc_Template_Mgt",
+      "turns": 3
+    },
+    {
+      "dev_index": 30,
+      "database": "tvshow",
+      "turns": 3
+    },
+    {
+      "dev_index": 140,
+      "database": "student_transcripts_tracking",
+      "turns": 2
+    },
+    {
+      "dev_index": 98,
+      "database": "singer",
+      "turns": 5
+    },
+    {
+      "dev_index": 51,
+      "database": "voter_1",
+      "turns": 4
+    },
+    {
+      "dev_index": 224,
+      "database": "real_estate_properties",
+      "turns": 4
+    },
+    {
+      "dev_index": 19,
+      "database": "flight_2",
+      "turns": 3
+    },
+    {
+      "dev_index": 152,
+      "database": "dog_kennels",
+      "turns": 5
+    },
+    {
+      "dev_index": 128,
+      "database": "wta_1",
+      "turns": 6
+    },
+    {
+      "dev_index": 178,
+      "database": "course_teach",
+      "turns": 3
+    },
+    {
+      "dev_index": 209,
+      "database": "battle_death",
+      "turns": 2
+    },
+    {
+      "dev_index": 138,
+      "database": "car_1",
+      "turns": 3
+    },
+    {
+      "dev_index": 166,
+      "database": "concert_singer",
+      "turns": 4
+    },
+    {
+      "dev_index": 136,
+      "database": "orchestra",
+      "turns": 5
+    },
+    {
+      "dev_index": 14,
+      "database": "employee_hire_evaluation",
+      "turns": 3
+    },
+    {
+      "dev_index": 165,
+      "database": "world_1",
+      "turns": 5
+    },
+    {
+      "dev_index": 251,
+      "database": "museum_visit",
+      "turns": 4
+    },
+    {
+      "dev_index": 58,
+      "database": "poker_player",
+      "turns": 4
+    },
+    {
+      "dev_index": 228,
+      "database": "network_1",
+      "turns": 3
+    },
+    {
+      "dev_index": 71,
+      "database": "pets_1",
+      "turns": 3
+    },
+    {
+      "dev_index": 122,
+      "database": "cre_Doc_Template_Mgt",
+      "turns": 4
+    },
+    {
+      "dev_index": 205,
+      "database": "tvshow",
+      "turns": 4
+    },
+    {
+      "dev_index": 134,
+      "database": "student_transcripts_tracking",
+      "turns": 4
+    },
+    {
+      "dev_index": 50,
+      "database": "singer",
+      "turns": 3
+    },
+    {
+      "dev_index": 173,
+      "database": "voter_1",
+      "turns": 4
+    },
+    {
+      "dev_index": 189,
+      "database": "flight_2",
+      "turns": 4
+    },
+    {
+      "dev_index": 94,
+      "database": "dog_kennels",
+      "turns": 3
+    },
+    {
+      "dev_index": 252,
+      "database": "wta_1",
+      "turns": 5
+    },
+    {
+      "dev_index": 78,
+      "database": "course_teach",
+      "turns": 3
+    },
+    {
+      "dev_index": 129,
+      "database": "battle_death",
+      "turns": 5
+    },
+    {
+      "dev_index": 216,
+      "database": "car_1",
+      "turns": 5
+    },
+    {
+      "dev_index": 103,
+      "database": "concert_singer",
+      "turns": 5
+    },
+    {
+      "dev_index": 184,
+      "database": "orchestra",
+      "turns": 3
+    },
+    {
+      "dev_index": 239,
+      "database": "employee_hire_evaluation",
+      "turns": 2
+    },
+    {
+      "dev_index": 211,
+      "database": "world_1",
+      "turns": 2
+    },
+    {
+      "dev_index": 35,
+      "database": "museum_visit",
+      "turns": 4
+    },
+    {
+      "dev_index": 40,
+      "database": "poker_player",
+      "turns": 3
+    },
+    {
+      "dev_index": 219,
+      "database": "network_1",
+      "turns": 6
+    },
+    {
+      "dev_index": 260,
+      "database": "pets_1",
+      "turns": 4
+    },
+    {
+      "dev_index": 160,
+      "database": "cre_Doc_Template_Mgt",
+      "turns": 4
+    },
+    {
+      "dev_index": 107,
+      "database": "tvshow",
+      "turns": 3
+    },
+    {
+      "dev_index": 65,
+      "database": "student_transcripts_tracking",
+      "turns": 1
+    },
+    {
+      "dev_index": 212,
+      "database": "singer",
+      "turns": 1
+    },
+    {
+      "dev_index": 36,
+      "database": "flight_2",
+      "turns": 4
+    },
+    {
+      "dev_index": 53,
+      "database": "dog_kennels",
+      "turns": 4
+    },
+    {
+      "dev_index": 82,
+      "database": "wta_1",
+      "turns": 5
+    },
+    {
+      "dev_index": 39,
+      "database": "course_teach",
+      "turns": 2
+    },
+    {
+      "dev_index": 99,
+      "database": "battle_death",
+      "turns": 4
+    },
+    {
+      "dev_index": 83,
+      "database": "car_1",
+      "turns": 2
+    },
+    {
+      "dev_index": 255,
+      "database": "concert_singer",
+      "turns": 2
+    },
+    {
+      "dev_index": 102,
+      "database": "orchestra",
+      "turns": 3
+    },
+    {
+      "dev_index": 142,
+      "database": "employee_hire_evaluation",
+      "turns": 3
+    },
+    {
+      "dev_index": 86,
+      "database": "world_1",
+      "turns": 7
+    },
+    {
+      "dev_index": 29,
+      "database": "museum_visit",
+      "turns": 1
+    },
+    {
+      "dev_index": 68,
+      "database": "poker_player",
+      "turns": 3
+    },
+    {
+      "dev_index": 139,
+      "database": "network_1",
+      "turns": 3
+    },
+    {
+      "dev_index": 42,
+      "database": "pets_1",
+      "turns": 3
+    },
+    {
+      "dev_index": 108,
+      "database": "cre_Doc_Template_Mgt",
+      "turns": 3
+    },
+    {
+      "dev_index": 244,
+      "database": "tvshow",
+      "turns": 3
+    },
+    {
+      "dev_index": 22,
+      "database": "student_transcripts_tracking",
+      "turns": 2
+    },
+    {
+      "dev_index": 79,
+      "database": "orchestra",
+      "turns": 1
+    },
+    {
+      "dev_index": 200,
+      "database": "network_1",
+      "turns": 1
+    }
+  ],
+  "skipped_when_too_long_to_fit": [
+    20,
+    204,
+    284,
+    206,
+    207,
+    153,
+    242,
+    23,
+    130,
+    249,
+    186,
+    101,
+    264,
+    183,
+    157,
+    181,
+    261,
+    273,
+    110,
+    5,
+    151,
+    6,
+    288,
+    93,
+    236,
+    54,
+    116,
+    11,
+    208,
+    26,
+    253,
+    34,
+    194,
+    115,
+    172,
+    256,
+    38,
+    241,
+    66,
+    195,
+    7,
+    60,
+    61,
+    174,
+    158,
+    149,
+    171
+  ],
+  "selection": "Continue the original seeded database round-robin order. Keep whole dialogues and skip those longer than the remaining budget.",
+  "baseline": "2026-11-18_gpt6sol_harness_baseline",
+  "baseline_sha256": {
+    "manifest.json": "834e5339ac3cf2607b37e9eef475e9b9f8e59a590b053b10dacaca413e361693",
+    "prompts.jsonl": "9bda513e9932f51be11b09d56a194375874e1a6192afc4f011c2ac8fc2bfa23b",
+    "scores.jsonl": "e9e170b3c8aba12ca4f482ba5e8fcae415575c98cd655285645db712e3e77fb6",
+    "responses.jsonl": "72f8d8b3b08494a713e27b1c28fd751d161462ee890c69ed8ed78ae07e349886"
+  },
+  "sqlite_sha256": {
+    "battle_death": "12569f4493a9655639c4ea86ba4bd8a4ea6411e1b8ae0e1fdf3d6a995344265d",
+    "car_1": "9d851e396e02997a1de073ae982fe1e4b1769fdffce2fac6e325857a3a938709",
+    "concert_singer": "4fa1ba5ab4577e895271088b1dc44aa94be88e25a54293317a67584112ef059d",
+    "course_teach": "da45fcdde64ac2b9330146506b7653ad4417489d8e496e509045e1b02245d793",
+    "cre_Doc_Template_Mgt": "9c3fdd03d8795ecde60aae782ce50c4fb1d6c03de1401fcdd6dc177342a53df5",
+    "dog_kennels": "ea5fbc6cf6aaf500371c5c121c339d9802ba6f5fbecd948a5274c0b487a9f486",
+    "employee_hire_evaluation": "760fec5cc872ef0cdf99242614f05c93dbd00d422ac9da87ea64fcf555be7373",
+    "flight_2": "db777ba6488ae2b515cb138d71ff23c4533e5fd0355854648a1102faff3fb7af",
+    "museum_visit": "3217aee38d8e3661d374bf025591b7164a1179c568ef5d20f3c338035fc6e1dd",
+    "network_1": "bec92cd9a68d6f23469a0df246429299f44caaf75eab12275784e0bb7d0aa9ca",
+    "orchestra": "13b64af1cf6fcbd34953a44f951b2bf79bedc000b344549212dac1a9345e2f86",
+    "pets_1": "8ffe0ea9b3b034ca8860a2f18300a98c7583ce2522ea195726a04803f675e5bb",
+    "poker_player": "63fffd7b68524f07a742a74b74b95a4ba178e6419f3574b9ee78b8dda1df46ba",
+    "real_estate_properties": "5d0bd83afa93a843e68f892d8430fe625d7ed2508aae00a341926b0b5b478a29",
+    "singer": "5c1b72755d148c294b26d7b479307e8799b93485ac918720f953e2ab84d59a0a",
+    "student_transcripts_tracking": "5a1f4928a1fd36f6edb31c4f054203b2e2fab6b18e5951c4f5633628f82a8e56",
+    "tvshow": "1212c2e75cf1dcf3aeb4055331a85298b073d8a613ead77975b13bd3346b9fc4",
+    "voter_1": "815bf1611b8a32f649d292a6138562f1761a0c10cb256e20f6561199cff31531",
+    "world_1": "17b986695f16786d58d66f85e49dba87bdfe72953207ab9b1b49da9d2301ef65",
+    "wta_1": "8f20747456d7748674b4f05432f3de96446ced95b8bd5a6fd01284f6c28f727c"
+  },
+  "evaluator_sha256": "93cd3da27089d377c94601dd261fbd103f4c4a275e66d4749621711b3704f530",
+  "provider": "tingo-research-only-gpt-6",
+  "model": "gpt-6-sol",
+  "feedback_row_limit": 100,
+  "metric": "original SQLite execution accuracy with official result_eq comparison, keep DISTINCT, score values, use reference ORDER BY for row order",
+  "dialogue_policy": "One Harness session per dialogue. First prompt matches the baseline. Wait for each answer, then send its actual SQLite result and the next question. The reference SQL and result stay local."
+}

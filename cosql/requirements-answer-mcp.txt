@@ -1,0 +1,2 @@
+# Only the structured-answer pilot needs the official MCP SDK.
+mcp==1.26.0

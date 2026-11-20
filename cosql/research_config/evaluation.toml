@@ -1,0 +1,7 @@
+output_dir = "../reports/2026-11-20_gpt6sol_answer_mcp_101/research"
+conditions = ["mcp-v2"]
+repeats = 1
+pass_threshold = 1.0
+
+[evaluator]
+function = "research_cosql:score_trial"

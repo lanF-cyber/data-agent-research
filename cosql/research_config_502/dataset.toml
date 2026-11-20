@@ -1,0 +1,4 @@
+[dataset]
+package = "../reports/2026-11-20_gpt6sol_answer_mcp_502/research-package"
+loader = "research_cosql:load_tasks"
+prepare = "research_cosql:prepare_task"

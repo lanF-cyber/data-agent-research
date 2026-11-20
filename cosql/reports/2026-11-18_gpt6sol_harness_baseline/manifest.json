@@ -1,0 +1,193 @@
+{
+  "seed": 20261118,
+  "dataset": "CoSQL sql_state_tracking dev",
+  "dev_sha256": "fd93ff8534f1fb4031b1ff52e8520c98aa8d082162599061e753b44ea26ce96d",
+  "tables_sha256": "a83b2c45a717b2123679f9e7a42a2039b9f4c3a976b46b1dffcf65f37e752c12",
+  "sampling": "Shuffle database order and each database's dialogues, then round-robin. Use complete dialogues until reaching at least 100 SQL turns.",
+  "excluded_dev_indices": [
+    0,
+    106
+  ],
+  "model": "gpt-6-sol",
+  "provider": "tingo-research-only-gpt-6",
+  "base_url": "https://intlapi.thingo.com.cn/v1",
+  "transport": "DeepSeek Harness SDK sdk-minimal, zero tools, fresh session per turn",
+  "history": "SQLite schema and user questions through the current turn",
+  "metric": "original SQLite execution accuracy with official result_eq comparison, keep DISTINCT, score values, use reference ORDER BY for row order",
+  "dialogues": [
+    {
+      "dev_index": 275,
+      "database": "world_1",
+      "turns": 5,
+      "partition": "pilot"
+    },
+    {
+      "dev_index": 188,
+      "database": "museum_visit",
+      "turns": 3,
+      "partition": "pilot"
+    },
+    {
+      "dev_index": 257,
+      "database": "poker_player",
+      "turns": 4,
+      "partition": "pilot"
+    },
+    {
+      "dev_index": 254,
+      "database": "network_1",
+      "turns": 3,
+      "partition": "pilot"
+    },
+    {
+      "dev_index": 282,
+      "database": "pets_1",
+      "turns": 3,
+      "partition": "pilot"
+    },
+    {
+      "dev_index": 277,
+      "database": "cre_Doc_Template_Mgt",
+      "turns": 4,
+      "partition": "pilot"
+    },
+    {
+      "dev_index": 280,
+      "database": "tvshow",
+      "turns": 3,
+      "partition": "pilot"
+    },
+    {
+      "dev_index": 225,
+      "database": "student_transcripts_tracking",
+      "turns": 3,
+      "partition": "pilot"
+    },
+    {
+      "dev_index": 97,
+      "database": "singer",
+      "turns": 1,
+      "partition": "pilot"
+    },
+    {
+      "dev_index": 57,
+      "database": "voter_1",
+      "turns": 3,
+      "partition": "pilot"
+    },
+    {
+      "dev_index": 91,
+      "database": "real_estate_properties",
+      "turns": 4,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 25,
+      "database": "flight_2",
+      "turns": 2,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 123,
+      "database": "dog_kennels",
+      "turns": 4,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 80,
+      "database": "wta_1",
+      "turns": 3,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 285,
+      "database": "course_teach",
+      "turns": 4,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 190,
+      "database": "battle_death",
+      "turns": 3,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 16,
+      "database": "car_1",
+      "turns": 2,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 215,
+      "database": "concert_singer",
+      "turns": 3,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 167,
+      "database": "orchestra",
+      "turns": 3,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 10,
+      "database": "employee_hire_evaluation",
+      "turns": 5,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 292,
+      "database": "world_1",
+      "turns": 2,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 85,
+      "database": "museum_visit",
+      "turns": 6,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 231,
+      "database": "poker_player",
+      "turns": 5,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 268,
+      "database": "network_1",
+      "turns": 6,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 125,
+      "database": "pets_1",
+      "turns": 4,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 31,
+      "database": "cre_Doc_Template_Mgt",
+      "turns": 3,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 30,
+      "database": "tvshow",
+      "turns": 3,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 140,
+      "database": "student_transcripts_tracking",
+      "turns": 2,
+      "partition": "extension"
+    },
+    {
+      "dev_index": 98,
+      "database": "singer",
+      "turns": 5,
+      "partition": "extension"
+    }
+  ]
+}

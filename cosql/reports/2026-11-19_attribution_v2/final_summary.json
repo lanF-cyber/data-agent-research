@@ -1,0 +1,255 @@
+{
+  "expanded": {
+    "complete": true,
+    "combined": {
+      "planned_dialogues": 143,
+      "databases": 20,
+      "planned_turns": 502,
+      "scored_turns": 502,
+      "passed_turns": 343,
+      "scored_dialogues": 143,
+      "passed_dialogues": 57,
+      "outcomes": {
+        "match": 343,
+        "different_values_or_order": 39,
+        "different_row_count": 67,
+        "different_columns": 53
+      }
+    },
+    "added_only": {
+      "planned_dialogues": 56,
+      "databases": 18,
+      "planned_turns": 202,
+      "scored_turns": 202,
+      "passed_turns": 137,
+      "scored_dialogues": 56,
+      "passed_dialogues": 25,
+      "outcomes": {
+        "match": 137,
+        "different_row_count": 25,
+        "different_values_or_order": 17,
+        "different_columns": 23
+      }
+    },
+    "inherited_only": {
+      "planned_dialogues": 87,
+      "databases": 20,
+      "planned_turns": 300,
+      "scored_turns": 300,
+      "passed_turns": 206,
+      "scored_dialogues": 87,
+      "passed_dialogues": 32,
+      "outcomes": {
+        "match": 206,
+        "different_values_or_order": 22,
+        "different_row_count": 42,
+        "different_columns": 30
+      }
+    },
+    "new_reported_tokens": 1257072,
+    "pending_dialogues": []
+  },
+  "audit_502_rescored": 502,
+  "score_drift": [],
+  "mechanism_counts": {
+    "original300": {
+      "question_reference": 16,
+      "population_coverage": 7,
+      "literal_grounding": 11,
+      "context_scope": 10,
+      "multiplicity": 9,
+      "projection": 20,
+      "ties": 3,
+      "predicate_scope": 3,
+      "aggregation_grain": 4,
+      "storage_type": 4,
+      "relation_mapping": 7
+    },
+    "added202": {
+      "literal_grounding": 13,
+      "storage_type": 3,
+      "population_coverage": 5,
+      "multiplicity": 3,
+      "question_reference": 6,
+      "projection": 15,
+      "aggregation_grain": 9,
+      "predicate_scope": 2,
+      "context_scope": 8,
+      "relation_mapping": 1
+    },
+    "all502": {
+      "literal_grounding": 24,
+      "storage_type": 7,
+      "population_coverage": 12,
+      "multiplicity": 12,
+      "question_reference": 22,
+      "context_scope": 18,
+      "projection": 35,
+      "aggregation_grain": 13,
+      "predicate_scope": 5,
+      "ties": 3,
+      "relation_mapping": 8
+    }
+  },
+  "labels": {
+    "projection": "返回字段与表示形式",
+    "literal_grounding": "实体拼写、空格、编码与匹配方式",
+    "storage_type": "存储类型、数值转换与缺失值",
+    "context_scope": "跨轮指代与条件保留/释放",
+    "question_reference": "题意与参考查询冲突或歧义",
+    "ties": "并列极值与未指定排序",
+    "multiplicity": "去重与计数单位",
+    "population_coverage": "统计总体与零记录/外连接",
+    "aggregation_grain": "分组粒度与聚合表示",
+    "relation_mapping": "字段/关系方向与连接依据",
+    "predicate_scope": "逻辑条件作用域与集合量词"
+  },
+  "expanded_dialogue_cluster_ci95": [
+    0.625,
+    0.738430583501006
+  ],
+  "pilot": {
+    "complete": true,
+    "arms": {
+      "G0": {
+        "scores": {
+          "planned_dialogues": 6,
+          "databases": 6,
+          "planned_turns": 25,
+          "scored_turns": 25,
+          "passed_turns": 14,
+          "scored_dialogues": 6,
+          "passed_dialogues": 0,
+          "outcomes": {
+            "different_row_count": 6,
+            "match": 14,
+            "different_columns": 4,
+            "different_values_or_order": 1
+          }
+        },
+        "sql_tool_calls": 0,
+        "model_calls": 25,
+        "reported_tokens": 138019
+      },
+      "G1": {
+        "scores": {
+          "planned_dialogues": 6,
+          "databases": 6,
+          "planned_turns": 25,
+          "scored_turns": 25,
+          "passed_turns": 14,
+          "scored_dialogues": 6,
+          "passed_dialogues": 0,
+          "outcomes": {
+            "match": 14,
+            "different_values_or_order": 2,
+            "different_row_count": 6,
+            "different_columns": 3
+          }
+        },
+        "sql_tool_calls": 0,
+        "model_calls": 25,
+        "reported_tokens": 143864
+      },
+      "G2": {
+        "scores": {
+          "planned_dialogues": 6,
+          "databases": 6,
+          "planned_turns": 25,
+          "scored_turns": 25,
+          "passed_turns": 15,
+          "scored_dialogues": 6,
+          "passed_dialogues": 0,
+          "outcomes": {
+            "match": 15,
+            "different_values_or_order": 2,
+            "different_columns": 4,
+            "different_row_count": 4
+          }
+        },
+        "sql_tool_calls": 0,
+        "model_calls": 25,
+        "reported_tokens": 169196
+      },
+      "G3": {
+        "scores": {
+          "planned_dialogues": 6,
+          "databases": 6,
+          "planned_turns": 25,
+          "scored_turns": 25,
+          "passed_turns": 12,
+          "scored_dialogues": 6,
+          "passed_dialogues": 1,
+          "outcomes": {
+            "match": 12,
+            "different_row_count": 5,
+            "different_columns": 7,
+            "different_values_or_order": 1
+          }
+        },
+        "sql_tool_calls": 1,
+        "model_calls": 26,
+        "reported_tokens": 161317
+      }
+    },
+    "interpretation": "Small purposively selected diagnostic cohort; G3 adds inference budget, not isolated pure tool effect. No corrected gold."
+  },
+  "pilot_paired": {
+    "G0": {
+      "passes": 14,
+      "improved_vs_G0": 0,
+      "regressed_vs_G0": 0,
+      "delta_cluster_bootstrap95": [
+        0.0,
+        0.0
+      ]
+    },
+    "G1": {
+      "passes": 14,
+      "improved_vs_G0": 3,
+      "regressed_vs_G0": 3,
+      "delta_cluster_bootstrap95": [
+        -0.19230769230769232,
+        0.19230769230769232
+      ]
+    },
+    "G2": {
+      "passes": 15,
+      "improved_vs_G0": 2,
+      "regressed_vs_G0": 1,
+      "delta_cluster_bootstrap95": [
+        0.0,
+        0.10714285714285714
+      ]
+    },
+    "G3": {
+      "passes": 12,
+      "improved_vs_G0": 1,
+      "regressed_vs_G0": 3,
+      "delta_cluster_bootstrap95": [
+        -0.3333333333333333,
+        0.13043478260869565
+      ]
+    }
+  },
+  "pilot_same25_prior_passes": 10,
+  "pilot_same25_G0_replay_passes": 14,
+  "original300_unchanged": true,
+  "sources_sha256": {
+    "reports\\2026-11-19_continuous_expanded_v2\\turns.jsonl": "4dcdd764230e76c8dffbbfe34cdd3c10501464967648de23a56456acb8e33187",
+    "reports\\2026-11-19_grounded_pilot_v2\\turns.jsonl": "f0acbe500414741141902d70abff4e17cd73792c579f45701de69bd00f3e6226",
+    "data\\cosql_dataset\\sql_state_tracking\\cosql_dev.json": "fd93ff8534f1fb4031b1ff52e8520c98aa8d082162599061e753b44ea26ce96d",
+    "run_expansion_v2.py": "c5a1b2c97380c2d0f32226323e77bbf1ab9357f8415a3ad970c0a010f56eac7a",
+    "run_grounded_pilot_v2.py": "40b0db5ab01f025d0206e87d36a6f48eb9f7c1ccaa8126a84087e055bf427d75",
+    "audit_attribution_v2.py": "8528fc0c017945ceb2702f93cffd2bd0c9f1e34fcf899fff4ce948d1e1ae9950",
+    "reports\\2026-11-19_attribution_v2\\added_case_notes_202.json": "162321dcd99080c0e9b877fbf0fed3febfbcdd0c60fd8ca1720b0c9cb6095117"
+  },
+  "limitations": [
+    "single assistant mechanism labels, independent adjudication pending",
+    "purposive six-dialogue pilot, not held-out generalization",
+    "model/provider route fixed but backend build and sampling defaults uncontrolled",
+    "G3 action protocol differs and permits more inference; no equal-compute control",
+    "original SQLite execution only, official multi-instance TS not installed/run",
+    "complete dev reference preflight is not full dev model evaluation"
+  ]
+}

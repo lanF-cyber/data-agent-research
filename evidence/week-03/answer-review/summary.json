@@ -1,0 +1,57 @@
+{
+  "scores": {
+    "all": {
+      "baseline": {
+        "questions": 502,
+        "passed": 458,
+        "failed": 44,
+        "pending": 0,
+        "rate": 0.9123505976095617
+      },
+      "mcp": {
+        "questions": 502,
+        "passed": 492,
+        "failed": 10,
+        "pending": 0,
+        "rate": 0.9800796812749004
+      }
+    },
+    "original_422": {
+      "baseline": {
+        "questions": 422,
+        "passed": 396,
+        "failed": 26,
+        "pending": 0,
+        "rate": 0.9383886255924171
+      },
+      "mcp": {
+        "questions": 422,
+        "passed": 417,
+        "failed": 5,
+        "pending": 0,
+        "rate": 0.9881516587677726
+      }
+    },
+    "original_80": {
+      "baseline": {
+        "questions": 80,
+        "passed": 62,
+        "failed": 18,
+        "pending": 0,
+        "rate": 0.775
+      },
+      "mcp": {
+        "questions": 80,
+        "passed": 75,
+        "failed": 5,
+        "pending": 0,
+        "rate": 0.9375
+      }
+    }
+  },
+  "sources_sha256": {
+    "baseline": "4dcdd764230e76c8dffbbfe34cdd3c10501464967648de23a56456acb8e33187",
+    "mcp": "4c6697955dce01dc561d8d86498151fb7302055b637cf209afa2fabb615ce82b"
+  },
+  "rules_sha256": "eb921dd860dae7f7870c071482ef035faea6b8be88735d19f7f3413a079b321c"
+}

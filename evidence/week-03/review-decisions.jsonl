@@ -1,0 +1,69 @@
+{"id":"dev254_turn3","verdict":"appropriate","reason":"准确指出上轮只谈九年级四人，无法知道 his 指谁，并具体追问是哪位学生。"}
+{"id":"dev282_turn1","verdict":"appropriate","reason":"数的是不同学生，原库同一学生有两条养狗记录，实际为 1 位。"}
+{"id":"dev282_turn3","verdict":"appropriate","reason":"明确指出只有两位而非三位，并提交可查证的 Linda、Tracy 名单。"}
+{"id":"dev277_turn1","verdict":"inappropriate","reason":"说明了并列时取最小 ID，却没有说明把零段落文档也纳入。0 号文档有零段落，而参考范围只含有段落记录的文档。"}
+{"id":"dev280_turn1","verdict":"inappropriate","reason":"Poland 是全国所有频道都没播过的答案。按至少一家频道未播还包括 Italy 和 United Kingdom，实际回复没说明采用的范围。"}
+{"id":"dev97_turn1","verdict":"appropriate","reason":"按歌手编号核对歌曲表是否有记录，交付的编号是 3 和 8。原参考只返回对应的歌手名字。"}
+{"id":"dev57_turn2","verdict":"appropriate","reason":"答复开头说明范围是纽约州和加州，按该范围给出不同选手编号 2 和 3。"}
+{"id":"dev57_turn3","verdict":"appropriate","reason":"明确说明 0 是仅按纽约和加州得到的选手 5 票数。全表仍可得 1，实际答复已交代采用的范围。"}
+{"id":"dev91_turn2","verdict":"inappropriate","reason":"取住宅和公寓都超过一个房间的 7 处结果是合理读法。回复复述了原有歧义，没有说明房间条件同时应用于两类。"}
+{"id":"dev91_turn3","verdict":"appropriate","reason":"明确承接上一轮的 7 处房产，逐一给出房间数，范围与前一问实际展示结果一致。"}
+{"id":"dev25_turn2","verdict":"appropriate","reason":"逐条核对上轮实际展示名单的前三家确为 AirTran、Allegiant 与 American，再经机场表查到三家目的地国家均为美国。"}
+{"id":"dev285_turn3","verdict":"appropriate","reason":"明确区分教师名册 7 人和已排课 5 人。提交的名册计数为 7，两个口径都与数据库核对一致。"}
+{"id":"dev10_turn3","verdict":"inappropriate","reason":"提供了店铺登记的 15,000 件产品，但未说明库里只有店铺总数，无法确认经理本人生产了多少。"}
+{"id":"dev292_turn1","verdict":"appropriate","reason":"说明将 1930 年以前理解为国家独立年份，实际交付 40 种官方语言的名单，参考仅给出数量 40。"}
+{"id":"dev85_turn6","verdict":"appropriate","reason":"明确采用上一问的会员等级大于 4 作为范围，再按年龄从大到小排序，三人可从库中核对。"}
+{"id":"dev268_turn2","verdict":"inappropriate","reason":"沿 Friend 的出向关系查到 Jordan 就直接回答。原库从反向还能查到 Jessica 和 Austin，回复未说明方向或先问清楚。"}
+{"id":"dev268_turn5","verdict":"appropriate","reason":"用 Kyle 的学号定位与其相连的那位 Jordan，再排除 Kyle，查到 Logan，避免混入另一位 Jordan 的好友。"}
+{"id":"dev268_turn6","verdict":"appropriate","reason":"指出 Gabriel 两位同名学生，按 1689、1911 分列好友，保留了区分对象的数据库证据。"}
+{"id":"dev31_turn1","verdict":"appropriate","reason":"按已澄清的描述字段查 w，说明两项的文档名和编号，对应库中实际匹配的两个文档。"}
+{"id":"dev140_turn1","verdict":"appropriate","reason":"确实筛 Bachelor，返回学期编号 2、9、13、15。参考按 Master 查了另一组学生。"}
+{"id":"dev98_turn5","verdict":"appropriate","reason":"对 1948 到 1949 年出生的歌手取净资产最小值并答 2,630 万美元，参考只给了 Alice Walton 的姓名。"}
+{"id":"dev19_turn2","verdict":"appropriate","reason":"说明把 USA 理解为航空公司所在国，列出库中 12 家美国航空公司，清楚交代了采用的范围。"}
+{"id":"dev128_turn6","verdict":"appropriate","reason":"把上一问的 206449 号球员从 U 组中排除，14,193 − 1 = 14,192，符合 other players。"}
+{"id":"dev166_turn1","verdict":"appropriate","reason":"用高于平均发行年的歌曲记录查歌手姓名，交付的四项是人名，参考的四项是歌曲名。"}
+{"id":"dev14_turn2","verdict":"appropriate","reason":"承接上问数据中 9 家商店，并交付 9 个商店名称。其余列不影响题目所要的名字。"}
+{"id":"dev122_turn1","verdict":"appropriate","reason":"同时交付模板编号和文档编号，并说明空值表示该模板没有关联文档。"}
+{"id":"dev122_turn4","verdict":"appropriate","reason":"承接刚才未关联文档的 8 个模板，逐个补类型代码，未切换到已经关联的模板。"}
+{"id":"dev205_turn3","verdict":"appropriate","reason":"承接上文的剧集和频道，从评分字段查到 5.8，不把每周名次 43 当作评分。"}
+{"id":"dev134_turn1","verdict":"appropriate","reason":"按学生和学期统计不同学位项目，再给出符合条件者的完整姓名 Frida Aisha Huel。"}
+{"id":"dev134_turn2","verdict":"appropriate","reason":"承接同一学期两个项目的范围，查到上一问学生的学号 7。"}
+{"id":"dev189_turn1","verdict":"inappropriate","reason":"AirTran Airways 的 100 场航班是真实并列值，但答复没有报告 12 家并列，亦没有说明按公司名排序取一家的规则。"}
+{"id":"dev252_turn5","verdict":"appropriate","reason":"承接上一轮的左手球员名单，按球员编号分别算平均排名，并说明没有排名记录的球员显示空值。"}
+{"id":"dev78_turn2","verdict":"appropriate","reason":"按已排课教师提交教师编号和不同课程数，5 行结果的统计对象正确。参考返回的是教师姓名。"}
+{"id":"dev216_turn4","verdict":"appropriate","reason":"先把每加仑里程转成数字，文本 null 未被误计入大于 15。按库中数据得到 66 辆而非参考的 67 辆。"}
+{"id":"dev216_turn5","verdict":"appropriate","reason":"按数值比较每加仑里程，查到 Oldsmobile Cutlass Ciera 与对应车型列，避开文本 null 被排在最前。"}
+{"id":"dev82_turn5","verdict":"appropriate","reason":"明确承接上轮 2016 年的 158 场比赛，在这一年查到 119 场硬地比赛。"}
+{"id":"dev255_turn1","verdict":"inappropriate","reason":"题目用 concern，需确认是否指 concert。答复只给了所有场馆，没有交代如何理解该词或提出澄清。"}
+{"id":"dev86_turn1","verdict":"inappropriate","reason":"加拿大确实与美国并列，查询只选了加拿大。给用户的回复没说明并列或字母排序取第一的依据。"}
+{"id":"dev244_turn1","verdict":"appropriate","reason":"明确按编剧 Todd Casey 列出两部动画的片名，所需作品均查对。"}
+{"id":"dev153_turn3","verdict":"appropriate","reason":"可见上一问明确定位死亡人数最多的事件 9。本问直接列出该事件和 29 人等详情，与上轮对象一致。"}
+{"id":"dev23_turn2","verdict":"appropriate","reason":"按照每个场馆都列出的范围返回 9 个场馆，明确展示其中 4 个为零场，计数在库中可复核。"}
+{"id":"dev181_turn5","verdict":"appropriate","reason":"明确用意大利语且内容为音乐的频道范围，承接前两问，查到 12 个系列。"}
+{"id":"dev261_turn4","verdict":"appropriate","reason":"按上一问的北卡罗来纳且未注册范围查出 Warren、Deon，参考把名字与姓氏作差，错误留下 Milton。"}
+{"id":"dev273_turn4","verdict":"appropriate","reason":"明确按 1955 年以后解读追问，再给两名歌手及各自的国籍。"}
+{"id":"dev273_turn6","verdict":"appropriate","reason":"同段第 4 问已说明相同追问表示切换到 1955 年以后。本问承接美国国籍，返回库中对应的 Abigail Johnson。"}
+{"id":"dev273_turn8","verdict":"appropriate","reason":"回复明确限定法国国籍和 1955 年以后，并说明这个条件下查不到记录。"}
+{"id":"dev110_turn4","verdict":"appropriate","reason":"按降落机场所对应的城市汇总，查到 Albany 57 班，明确交付城市而不是参考里的机场代码 AXG。"}
+{"id":"dev5_turn1","verdict":"inappropriate","reason":"库里只有文本 0 与 1，表定义和附带资料都未解释性别映射。答复把 1 直接说成雌性，因此 3 只能算一个未经证实的分组结果。"}
+{"id":"dev5_turn2","verdict":"inappropriate","reason":"续问的 6、2、1 岁可查到，但只对应上一问未经核实的 1 组，缺少用它指代雌性犬的依据。"}
+{"id":"dev151_turn1","verdict":"appropriate","reason":"说明按每位不同选手获胜的最低年龄来比较，给出三位不同选手，避免把 Madison Keys 的三场胜利算三人。"}
+{"id":"dev6_turn2","verdict":"inappropriate","reason":"课程目录的 10 门可以作为一种合理答案，但答复只给数字，没有说明采用目录口径，缺少与 6 条排课记录的区分。"}
+{"id":"dev6_turn3","verdict":"appropriate","reason":"明确说按不同课程数统计，并将未排课教师计为零。实际交付 7 位教师和相应课程数。"}
+{"id":"dev253_turn2","verdict":"inappropriate","reason":"‘有’是只查出向关系时的答案。按任一方向计入已有的好友关系，原库无人完全没有好友，答复未说明口径。"}
+{"id":"dev194_turn2","verdict":"appropriate","reason":"说明范围是上轮段落数 1 到 2 的文档，两段的文件按文档编号保留了每段文字。"}
+{"id":"dev115_turn1","verdict":"appropriate","reason":"按最后一句要求查电视频道表，交付 15 个频道名称与频道编号，避免把动画 ID 当作频道编号。"}
+{"id":"dev66_turn2","verdict":"appropriate","reason":"沿用上一轮的三位不同获胜者，明确取各自最年轻获胜那场的获胜者积分。"}
+{"id":"dev66_turn3","verdict":"appropriate","reason":"承接三位不同选手，说明采用最年轻获胜时的年龄，并保留各人的原始查询值。"}
+{"id":"dev60_turn4","verdict":"appropriate","reason":"交付了加速值大于 19 的 39 条车辆名称，参考只给 39 这个数量。"}
+{"id":"dev158_turn1","verdict":"appropriate","reason":"按国家排除含英语记录的国家，并明确答的是库里无英语记录的国家编码，未把同一国家的非英语语言行当成不同国家。"}
+{"id":"dev158_turn3","verdict":"appropriate","reason":"保持上一轮国家范围，说明无语言记录的代码会显示空值，也说明了库中 Creole English 与 English 的记录差别。"}
+{"id":"dev149_turn2","verdict":"appropriate","reason":"明确说是总数，将客户 5 的 20 张和 4 张相加，得到 24。"}
+{"id":"dev149_turn3","verdict":"appropriate","reason":"明确给出总消费，320.44 加 209.98 得 530.42，同时声明采用总额口径。"}
+{"id":"dev72_turn3","verdict":"appropriate","reason":"保持上轮的两个学号范围，再筛确实有非猫宠物者，仅返回 Tracy Kim。"}
+{"id":"dev28_turn1","verdict":"ordinary_failure","reason":"回复给了经过去空格核对的 47 班，没有向用户提出不必要的澄清。修正查询未成功交付有效的表格。"}
+{"id":"dev248_turn1","verdict":"appropriate","reason":"明确逐位球员按编号汇总，返回 2,775 人的名字和积分。参考按名字把同名球员合并成 1,580 行。"}
+{"id":"dev154_turn1","verdict":"appropriate","reason":"说明结果是该吨位船对应的 11 起记录，并同时提交船名、事件地点、死亡和受伤人数，可以对应两种读法。"}
+{"id":"dev154_turn3","verdict":"appropriate","reason":"把统计口径写明为死亡和受伤的人数，分别交付 85 和 5，完整回答了一种合理读法。"}
+{"id":"dev269_turn1","verdict":"appropriate","reason":"按欧洲所属洲查出全部六国，纳入库中没有制造商记录的俄罗斯，回复也说明这里指该库收录的国家。"}
+{"id":"dev269_turn2","verdict":"appropriate","reason":"保留上一问列出的欧洲六国，左连接保留俄罗斯并显示零家，明确了结果采用的范围。"}

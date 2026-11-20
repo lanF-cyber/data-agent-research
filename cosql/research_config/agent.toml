@@ -1,0 +1,10 @@
+[agent]
+runner = "research_cosql:execute"
+recorder = "research_cosql:Recorder"
+cost_tracking = true
+tools = ["pwsh", "mcp__cosql__submit_answer", "list_mcp_resources", "list_mcp_resource_templates", "read_mcp_resource"]
+
+[model]
+model = "gpt-6-sol"
+api_key_env = "TINGO_RESEARCH_ONLY_GPT_6_API_KEY"
+base_url = "https://intlapi.thingo.com.cn/v1"

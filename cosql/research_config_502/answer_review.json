@@ -1,0 +1,1513 @@
+{
+  "sources_sha256": {
+    "baseline": "4dcdd764230e76c8dffbbfe34cdd3c10501464967648de23a56456acb8e33187",
+    "mcp": "4c6697955dce01dc561d8d86498151fb7302055b637cf209afa2fabb615ce82b"
+  },
+  "questions": {
+    "dev280_turn2": {
+      "reason": "片名的冠词和标点与库里有出入。旧版未找到该片，核对片名和编剧可定位到导演 Ben Jones。",
+      "baseline": {
+        "points": 0,
+        "reason": "片名的冠词和标点与库里有出入。旧版未找到该片，核对片名和编剧可定位到导演 Ben Jones。"
+      }
+    },
+    "dev215_turn1": {
+      "reason": "姓名大小写不匹配，旧版返回空表。库中 Joe Sharp 的年龄是 52。",
+      "baseline": {
+        "points": 0,
+        "reason": "姓名大小写不匹配，旧版返回空表。库中 Joe Sharp 的年龄是 52。"
+      }
+    },
+    "dev85_turn1": {
+      "reason": "姓名在库里带前置空格。旧版返回空表，会员等级实际是 8。",
+      "baseline": {
+        "points": 0,
+        "reason": "姓名在库里带前置空格。旧版返回空表，会员等级实际是 8。"
+      }
+    },
+    "dev152_turn1": {
+      "reason": "15 人的全名与人员表逐一核对相符。把名字和姓氏合成一列自然地回答了题目。",
+      "contract": "full_name"
+    },
+    "dev152_turn2": {
+      "reason": "城市含 West 的人只有 Taryn Braun，完整姓名满足题目。",
+      "contract": "full_name"
+    },
+    "dev152_turn4": {
+      "reason": "题目要姓名和州。两版都给出 15 人的姓名和州，姓名写全也正确。",
+      "baseline": {
+        "points": 1,
+        "reason": "题目要姓名和州。两版都给出 15 人的姓名和州，姓名写全也正确。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "题目要姓名和州。两版都给出 15 人的姓名和州，姓名写全也正确。"
+      }
+    },
+    "dev152_turn5": {
+      "reason": "印第安纳州只有 Taryn Braun 和 Karley Hyatt。题目要姓名，提供全名足够。",
+      "baseline": {
+        "points": 1,
+        "reason": "印第安纳州只有 Taryn Braun 和 Karley Hyatt。题目要姓名，提供全名足够。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "印第安纳州只有 Taryn Braun 和 Karley Hyatt。题目要姓名，提供全名足够。"
+      }
+    },
+    "dev178_turn2": {
+      "reason": "两张表的教师及课程逐项相同，均按教师姓名升序。同一教师的两门课顺序由题目自由决定。",
+      "baseline": {
+        "points": 1,
+        "reason": "两张表的教师及课程逐项相同，均按教师姓名升序。同一教师的两门课顺序由题目自由决定。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "两张表的教师及课程逐项相同，均按教师姓名升序。同一教师的两门课顺序由题目自由决定。"
+      }
+    },
+    "dev178_turn3": {
+      "reason": "教师、课程和教师编号逐项相同，教师姓名的升序仍保持，同一教师名下课程顺序不限。",
+      "baseline": {
+        "points": 1,
+        "reason": "教师、课程和教师编号逐项相同，教师姓名的升序仍保持，同一教师名下课程顺序不限。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "教师、课程和教师编号逐项相同，教师姓名的升序仍保持，同一教师名下课程顺序不限。"
+      }
+    },
+    "dev136_turn1": {
+      "reason": "表中 12 条唱片公司记录有重复。题目问公司数量，两版按不同公司计数得到 11。",
+      "baseline": {
+        "points": 1,
+        "reason": "表中 12 条唱片公司记录有重复。题目问公司数量，两版按不同公司计数得到 11。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "表中 12 条唱片公司记录有重复。题目问公司数量，两版按不同公司计数得到 11。"
+      }
+    },
+    "dev136_turn3": {
+      "reason": "两版都按成立年份升序列出全部乐团，同一年成立的乐团内部次序可以互换。",
+      "baseline": {
+        "points": 1,
+        "reason": "两版都按成立年份升序列出全部乐团，同一年成立的乐团内部次序可以互换。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "两版都按成立年份升序列出全部乐团，同一年成立的乐团内部次序可以互换。"
+      }
+    },
+    "dev14_turn3": {
+      "reason": "题目问每家店。两版列全 9 家，包括实际雇员数为零的店，并把店名与人数对应。",
+      "baseline": {
+        "points": 1,
+        "reason": "题目问每家店。两版列全 9 家，包括实际雇员数为零的店，并把店名与人数对应。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "题目问每家店。两版列全 9 家，包括实际雇员数为零的店，并把店名与人数对应。"
+      }
+    },
+    "dev165_turn2": {
+      "reason": "紧跟亚洲人口，合理理解可限亚洲，亚洲无 9.5%。本轮同时说明亚洲无结果和全库的英语、南非荷兰语。",
+      "baseline": {
+        "points": 1,
+        "reason": "紧跟亚洲人口，合理理解可限亚洲，亚洲无 9.5%。本轮同时说明亚洲无结果和全库的英语、南非荷兰语。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "紧跟亚洲人口，合理理解可限亚洲，亚洲无 9.5%。本轮同时说明亚洲无结果和全库的英语、南非荷兰语。"
+      }
+    },
+    "dev228_turn1": {
+      "reason": "把点赞理解为收到的赞，按 liked_id 分组得到 Kris 和 Cassandra。参考统计了发出的赞。",
+      "baseline": {
+        "points": 1,
+        "reason": "把点赞理解为收到的赞，按 liked_id 分组得到 Kris 和 Cassandra。参考统计了发出的赞。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "把点赞理解为收到的赞，按 liked_id 分组得到 Kris 和 Cassandra。参考统计了发出的赞。"
+      }
+    },
+    "dev228_turn2": {
+      "reason": "沿用收到的赞，按恰好一个理解得到 6 位。这是对「1 like」的合理回答。",
+      "baseline": {
+        "points": 1,
+        "reason": "沿用收到的赞，按恰好一个理解得到 6 位。这是对「1 like」的合理回答。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "沿用收到的赞，按恰好一个理解得到 6 位。这是对「1 like」的合理回答。"
+      }
+    },
+    "dev228_turn3": {
+      "reason": "学号与各自上轮给出的 6 位收到恰好一个赞的学生逐一对应。",
+      "baseline": {
+        "points": 1,
+        "reason": "学号与各自上轮给出的 6 位收到恰好一个赞的学生逐一对应。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "学号与各自上轮给出的 6 位收到恰好一个赞的学生逐一对应。"
+      }
+    },
+    "dev71_turn3": {
+      "reason": "上轮姓 Smith 的人有两位。Linda 的宠物编号是 2001，Sarah 没有宠物记录，两版都保留了这两种情况。",
+      "baseline": {
+        "points": 1,
+        "reason": "上轮姓 Smith 的人有两位。Linda 的宠物编号是 2001，Sarah 没有宠物记录，两版都保留了这两种情况。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "上轮姓 Smith 的人有两位。Linda 的宠物编号是 2001，Sarah 没有宠物记录，两版都保留了这两种情况。"
+      }
+    },
+    "dev122_turn2": {
+      "reason": "保留了 20 个模板并明确对应文档。把同一模板的多个文档聚在一个单元格依然能读出对应关系。",
+      "baseline": {
+        "points": 1,
+        "reason": "保留了 20 个模板并明确对应文档。把同一模板的多个文档聚在一个单元格依然能读出对应关系。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "保留了 20 个模板并明确对应文档。把同一模板的多个文档聚在一个单元格依然能读出对应关系。"
+      }
+    },
+    "dev205_turn1": {
+      "reason": "旧版按大小写精确匹配片名返回空。实际剧集在 Sky Radio。",
+      "baseline": {
+        "points": 0,
+        "reason": "旧版按大小写精确匹配片名返回空。实际剧集在 Sky Radio。"
+      }
+    },
+    "dev205_turn2": {
+      "reason": "旧版把剧集名称当成频道名筛选。该集观众数据是 9.16 百万。",
+      "baseline": {
+        "points": 0,
+        "reason": "旧版把剧集名称当成频道名筛选。该集观众数据是 9.16 百万。"
+      }
+    },
+    "dev134_turn4": {
+      "reason": "题面给出的 Timothy 对应库里拼写为 Timmothy Anna Ward 的唯一记录。旧版的字面匹配返回空。",
+      "baseline": {
+        "points": 0,
+        "reason": "题面给出的 Timothy 对应库里拼写为 Timmothy Anna Ward 的唯一记录。旧版的字面匹配返回空。"
+      }
+    },
+    "dev173_turn2": {
+      "reason": "电话号码直接给出真正投票区号 718。按州连接会把州内未投票的其他区号也纳入。",
+      "baseline": {
+        "points": 1,
+        "reason": "电话号码直接给出真正投票区号 718。按州连接会把州内未投票的其他区号也纳入。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "电话号码直接给出真正投票区号 718。按州连接会把州内未投票的其他区号也纳入。"
+      }
+    },
+    "dev173_turn3": {
+      "reason": "从实际投票号码核对是 620 和 714。参考把这些州的其他区号也算进来。",
+      "baseline": {
+        "points": 1,
+        "reason": "从实际投票号码核对是 620 和 714。参考把这些州的其他区号也算进来。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "从实际投票号码核对是 620 和 714。参考把这些州的其他区号也算进来。"
+      }
+    },
+    "dev173_turn4": {
+      "reason": "前两问查出的实际电话区号没有交集，两版的空结果正确。",
+      "baseline": {
+        "points": 1,
+        "reason": "前两问查出的实际电话区号没有交集，两版的空结果正确。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "前两问查出的实际电话区号没有交集，两版的空结果正确。"
+      }
+    },
+    "dev189_turn2": {
+      "reason": "12 家航空公司各 100 班，都属于最少。单数问法给一家符合要求，列全并说明并列也正确。",
+      "baseline": {
+        "points": 1,
+        "reason": "12 家航空公司各 100 班，都属于最少。单数问法给一家符合要求，列全并说明并列也正确。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "12 家航空公司各 100 班，都属于最少。单数问法给一家符合要求，列全并说明并列也正确。"
+      }
+    },
+    "dev252_turn1": {
+      "reason": "两版都按球员独立身份计算平均排名，2775 条姓名和排名在按列对应后相同。编号是辅助信息。",
+      "baseline": {
+        "points": 1,
+        "reason": "两版都按球员独立身份计算平均排名，2775 条姓名和排名在按列对应后相同。编号是辅助信息。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "两版都按球员独立身份计算平均排名，2775 条姓名和排名在按列对应后相同。编号是辅助信息。"
+      }
+    },
+    "dev252_turn2": {
+      "reason": "在上一问的 2775 位球员记录中正确补上姓氏，按球员身份聚合，额外编号有助区分同名。",
+      "baseline": {
+        "points": 1,
+        "reason": "在上一问的 2775 位球员记录中正确补上姓氏，按球员身份聚合，额外编号有助区分同名。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "在上一问的 2775 位球员记录中正确补上姓氏，按球员身份聚合，额外编号有助区分同名。"
+      }
+    },
+    "dev252_turn3": {
+      "reason": "把名字与姓氏合成一列仍然是全名，487 位左手球员与库内逐一相符。",
+      "contract": "full_name"
+    },
+    "dev216_turn2": {
+      "reason": "「How about」可承接上一问的 General Motors，两版都在该厂商范围里应用重量阈值，得到相同五个型号。",
+      "baseline": {
+        "points": 1,
+        "reason": "「How about」可承接上一问的 General Motors，两版都在该厂商范围里应用重量阈值，得到相同五个型号。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "「How about」可承接上一问的 General Motors，两版都在该厂商范围里应用重量阈值，得到相同五个型号。"
+      }
+    },
+    "dev216_turn3": {
+      "reason": "按数值马力查到同一辆 Pontiac Grand Prix，给出了车型完整名称和库里的 Pontiac 型号字段，车名清楚。",
+      "baseline": {
+        "points": 1,
+        "reason": "按数值马力查到同一辆 Pontiac Grand Prix，给出了车型完整名称和库里的 Pontiac 型号字段，车名清楚。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "按数值马力查到同一辆 Pontiac Grand Prix，给出了车型完整名称和库里的 Pontiac 型号字段，车名清楚。"
+      }
+    },
+    "dev103_turn5": {
+      "reason": "问的是场馆，两版各列 5 个符合条件的场馆。Somerset Park 在符合条件的年份办了两场，无需重复报场馆。",
+      "baseline": {
+        "points": 1,
+        "reason": "问的是场馆，两版各列 5 个符合条件的场馆。Somerset Park 在符合条件的年份办了两场，无需重复报场馆。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "问的是场馆，两版各列 5 个符合条件的场馆。Somerset Park 在符合条件的年份办了两场，无需重复报场馆。"
+      }
+    },
+    "dev219_turn4": {
+      "reason": "「total number of Friend IDs」可数朋友字段总记录数，两版都得 20。按不同编号计数会得 15，原题未要求去重。",
+      "baseline": {
+        "points": 1,
+        "reason": "「total number of Friend IDs」可数朋友字段总记录数，两版都得 20。按不同编号计数会得 15，原题未要求去重。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "「total number of Friend IDs」可数朋友字段总记录数，两版都得 20。按不同编号计数会得 15，原题未要求去重。"
+      }
+    },
+    "dev107_turn3": {
+      "reason": "旧版列此前那些频道播出的所有七部片，新版延续同一话题限定 Ben Jones 得四部，两种范围都有之前对话的依据。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版列此前那些频道播出的所有七部片，新版延续同一话题限定 Ben Jones 得四部，两种范围都有之前对话的依据。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "旧版列此前那些频道播出的所有七部片，新版延续同一话题限定 Ben Jones 得四部，两种范围都有之前对话的依据。"
+      }
+    },
+    "dev36_turn1": {
+      "reason": "美国联合航空的始发机场有 62 个不同代码。旧版未清理连接键空格返回空，新版从实际航班读取并去重。",
+      "baseline": {
+        "points": 0,
+        "reason": "美国联合航空的始发机场有 62 个不同代码。旧版未清理连接键空格返回空，新版从实际航班读取并去重。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "美国联合航空的始发机场有 62 个不同代码。旧版未清理连接键空格返回空，新版从实际航班读取并去重。"
+      }
+    },
+    "dev36_turn3": {
+      "reason": "上文限定 United Airlines。其第 28 号航班的目的地是 ASY，旧版连接未匹配到机场，新版正确给了代码。",
+      "baseline": {
+        "points": 0,
+        "reason": "上文限定 United Airlines。其第 28 号航班的目的地是 ASY，旧版连接未匹配到机场，新版正确给了代码。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "上文限定 United Airlines。其第 28 号航班的目的地是 ASY，旧版连接未匹配到机场，新版正确给了代码。"
+      }
+    },
+    "dev36_turn4": {
+      "reason": "上一问仍在谈 United Airlines 的航班。第 29 号航班的目的地是 APG，附带未匹配到的城市信息不影响已给机场代码。",
+      "baseline": {
+        "points": 1,
+        "reason": "上一问仍在谈 United Airlines 的航班。第 29 号航班的目的地是 APG，附带未匹配到的城市信息不影响已给机场代码。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "上一问仍在谈 United Airlines 的航班。第 29 号航班的目的地是 APG，附带未匹配到的城市信息不影响已给机场代码。"
+      }
+    },
+    "dev53_turn2": {
+      "reason": "题目问体型。旧版按样本数量选最多的品种，新版按实际平均体重作答并说明了口径，得到 Husky。",
+      "baseline": {
+        "points": 0,
+        "reason": "题目问体型。旧版按样本数量选最多的品种，新版按实际平均体重作答并说明了口径，得到 Husky。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "题目问体型。旧版按样本数量选最多的品种，新版按实际平均体重作答并说明了口径，得到 Husky。"
+      }
+    },
+    "dev53_turn3": {
+      "reason": "题目问 Bulldog 有多大。两版分别给库里的大号和中号分类，以及实际平均体重，都是有根据的回答。",
+      "baseline": {
+        "points": 1,
+        "reason": "题目问 Bulldog 有多大。两版分别给库里的大号和中号分类，以及实际平均体重，都是有根据的回答。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "题目问 Bulldog 有多大。两版分别给库里的大号和中号分类，以及实际平均体重，都是有根据的回答。"
+      }
+    },
+    "dev82_turn3": {
+      "reason": "问题只问那一年多少场。两版均沿用 2013 年并得出 12 场，未再重复年份列不扣分。",
+      "baseline": {
+        "points": 1,
+        "reason": "问题只问那一年多少场。两版均沿用 2013 年并得出 12 场，未再重复年份列不扣分。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "问题只问那一年多少场。两版均沿用 2013 年并得出 12 场，未再重复年份列不扣分。"
+      }
+    },
+    "dev82_turn4": {
+      "reason": "2016 年共有 158 场，两版的合计一致。",
+      "baseline": {
+        "points": 1,
+        "reason": "2016 年共有 158 场，两版的合计一致。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "2016 年共有 158 场，两版的合计一致。"
+      }
+    },
+    "dev39_turn1": {
+      "reason": "库里课程叫 Math，旧版按小写字面精确匹配返回空，实际有两位教师。",
+      "baseline": {
+        "points": 0,
+        "reason": "库里课程叫 Math，旧版按小写字面精确匹配返回空，实际有两位教师。"
+      }
+    },
+    "dev39_turn2": {
+      "reason": "相关课程都在 6 May 开始。题目问日期，返回一次共同日期已覆盖答案。",
+      "baseline": {
+        "points": 1,
+        "reason": "相关课程都在 6 May 开始。题目问日期，返回一次共同日期已覆盖答案。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "相关课程都在 6 May 开始。题目问日期，返回一次共同日期已覆盖答案。"
+      }
+    },
+    "dev86_turn6": {
+      "reason": "新版按国家合并同一国家的多个官方语言，另标无记录，通过后可还原为与旧版一致的 35 对国家和语言。",
+      "baseline": {
+        "points": 1,
+        "reason": "新版按国家合并同一国家的多个官方语言，另标无记录，通过后可还原为与旧版一致的 35 对国家和语言。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "新版按国家合并同一国家的多个官方语言，另标无记录，通过后可还原为与旧版一致的 35 对国家和语言。"
+      }
+    },
+    "dev139_turn3": {
+      "reason": "旧版按关系表中的学生编号逐人取名。新版直接对名字去重，合并了同名的不同学生，和「所有高中生」要求不符。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版按关系表中的学生编号逐人取名。新版直接对名字去重，合并了同名的不同学生，和「所有高中生」要求不符。"
+      },
+      "mcp": {
+        "points": 0,
+        "reason": "旧版按关系表中的学生编号逐人取名。新版直接对名字去重，合并了同名的不同学生，和「所有高中生」要求不符。"
+      }
+    },
+    "dev42_turn1": {
+      "reason": "学生 1002 有两只狗但只是一位学生。两版都按学生去重，正确给一个学号。",
+      "baseline": {
+        "points": 1,
+        "reason": "学生 1002 有两只狗但只是一位学生。两版都按学生去重，正确给一个学号。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "学生 1002 有两只狗但只是一位学生。两版都按学生去重，正确给一个学号。"
+      }
+    },
+    "dev42_turn3": {
+      "reason": "题面说两人，原库实际只有 Tracy 一位学生有狗，年龄 19。两版均返回唯一真实的一人。",
+      "baseline": {
+        "points": 1,
+        "reason": "题面说两人，原库实际只有 Tracy 一位学生有狗，年龄 19。两版均返回唯一真实的一人。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "题面说两人，原库实际只有 Tracy 一位学生有狗，年龄 19。两版均返回唯一真实的一人。"
+      }
+    },
+    "dev108_turn1": {
+      "reason": "题目问文档编号，应查 Documents 的 15 个编号。参考从段落表取编号，重复部分文档并漏掉无段落文档。",
+      "baseline": {
+        "points": 1,
+        "reason": "题目问文档编号，应查 Documents 的 15 个编号。参考从段落表取编号，重复部分文档并漏掉无段落文档。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "题目问文档编号，应查 Documents 的 15 个编号。参考从段落表取编号，重复部分文档并漏掉无段落文档。"
+      }
+    },
+    "dev108_turn2": {
+      "reason": "问题问每份文档的段落数。两版都给前一问的 15 份文档并保留零段落，范围正确。",
+      "baseline": {
+        "points": 1,
+        "reason": "问题问每份文档的段落数。两版都给前一问的 15 份文档并保留零段落，范围正确。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "问题问每份文档的段落数。两版都给前一问的 15 份文档并保留零段落，范围正确。"
+      }
+    },
+    "dev108_turn3": {
+      "reason": "两版延续 15 份文档并按编号排序，零段落文档仍显示为 0。",
+      "baseline": {
+        "points": 1,
+        "reason": "两版延续 15 份文档并按编号排序，零段落文档仍显示为 0。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "两版延续 15 份文档并按编号排序，零段落文档仍显示为 0。"
+      }
+    },
+    "dev244_turn3": {
+      "reason": "同两部动画的频道代码为 706 和 700，对应 MTV Rocks 和 Sky Radio。两种写法都能明确识别频道。",
+      "baseline": {
+        "points": 1,
+        "reason": "同两部动画的频道代码为 706 和 700，对应 MTV Rocks 和 Sky Radio。两种写法都能明确识别频道。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "同两部动画的频道代码为 706 和 700，对应 MTV Rocks 和 Sky Radio。两种写法都能明确识别频道。"
+      }
+    },
+    "dev22_turn2": {
+      "reason": "可把零选课的课程纳入统计，最少是 0 人，有五门并列。两版都准确给出这五门。",
+      "baseline": {
+        "points": 1,
+        "reason": "可把零选课的课程纳入统计，最少是 0 人，有五门并列。两版都准确给出这五门。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "可把零选课的课程纳入统计，最少是 0 人，有五门并列。两版都准确给出这五门。"
+      }
+    },
+    "dev79_turn1": {
+      "reason": "库里五条是 Auditions 加序号，旧版写 Type 恰好等于 audition 得空，新版找齐五个日期。",
+      "baseline": {
+        "points": 0,
+        "reason": "库里五条是 Auditions 加序号，旧版写 Type 恰好等于 audition 得空，新版找齐五个日期。"
+      }
+    },
+    "dev204_turn2": {
+      "reason": "修整机场代码两端空格后也没有 CVO 到 DFW 的记录。两版都正确返回无航班。",
+      "baseline": {
+        "points": 1,
+        "reason": "修整机场代码两端空格后也没有 CVO 到 DFW 的记录。两版都正确返回无航班。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "修整机场代码两端空格后也没有 CVO 到 DFW 的记录。两版都正确返回无航班。"
+      }
+    },
+    "dev204_turn3": {
+      "reason": "库里 CVO 始发代码带前导空格，两版都直接和 CVO 比较而误报为空。去空格后确有多家航空公司。",
+      "baseline": {
+        "points": 0,
+        "reason": "库里 CVO 始发代码带前导空格，两版都直接和 CVO 比较而误报为空。去空格后确有多家航空公司。"
+      },
+      "mcp": {
+        "points": 0,
+        "reason": "库里 CVO 始发代码带前导空格，两版都直接和 CVO 比较而误报为空。去空格后确有多家航空公司。"
+      }
+    },
+    "dev284_turn2": {
+      "reason": "两版均查到了真实的人员和治疗描述。按种类去重可以回答，按每次治疗列出记录也合理，题目没要求去重。",
+      "baseline": {
+        "points": 1,
+        "reason": "两版均查到了真实的人员和治疗描述。按种类去重可以回答，按每次治疗列出记录也合理，题目没要求去重。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "两版均查到了真实的人员和治疗描述。按种类去重可以回答，按每次治疗列出记录也合理，题目没要求去重。"
+      }
+    },
+    "dev284_turn3": {
+      "reason": "每一行的治疗都是对应人员确实做过的。若同一人做了多次同类治疗，列出多个真实事件或者列一次治疗类别都可以。",
+      "baseline": {
+        "points": 1,
+        "reason": "每一行的治疗都是对应人员确实做过的。若同一人做了多次同类治疗，列出多个真实事件或者列一次治疗类别都可以。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "每一行的治疗都是对应人员确实做过的。若同一人做了多次同类治疗，列出多个真实事件或者列一次治疗类别都可以。"
+      }
+    },
+    "dev206_turn1": {
+      "reason": "排除未登记生日后最年轻的已知选手编号是 220156。旧版把空生日排在第一，新版的日期函数无法识别整数日期。",
+      "baseline": {
+        "points": 0,
+        "reason": "排除未登记生日后最年轻的已知选手编号是 220156。旧版把空生日排在第一，新版的日期函数无法识别整数日期。"
+      },
+      "mcp": {
+        "points": 0,
+        "reason": "排除未登记生日后最年轻的已知选手编号是 220156。旧版把空生日排在第一，新版的日期函数无法识别整数日期。"
+      },
+      "reference_sql": "SELECT player_id FROM players WHERE typeof(birth_date)='integer' ORDER BY birth_date DESC LIMIT 1",
+      "issue": "reference"
+    },
+    "dev153_turn2": {
+      "reason": "题目问哪起事件，编号 9、备注和 29 名死者已能识别最大事件，无需附船编号和受伤数。",
+      "baseline": {
+        "points": 1,
+        "reason": "题目问哪起事件，编号 9、备注和 29 名死者已能识别最大事件，无需附船编号和受伤数。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "题目问哪起事件，编号 9、备注和 29 名死者已能识别最大事件，无需附船编号和受伤数。"
+      }
+    },
+    "dev242_turn3": {
+      "reason": "题目问哪个洲，两版都给欧洲。是否附上 6 国的计数由答复选择。",
+      "baseline": {
+        "points": 1,
+        "reason": "题目问哪个洲，两版都给欧洲。是否附上 6 国的计数由答复选择。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "题目问哪个洲，两版都给欧洲。是否附上 6 国的计数由答复选择。"
+      }
+    },
+    "dev186_turn4": {
+      "reason": "两位符合条件的是 Fernando Gago 和 Arjen Robben。参考把同一人的两次消费重复列出，答人名时可以按人去重。",
+      "baseline": {
+        "points": 1,
+        "reason": "两位符合条件的是 Fernando Gago 和 Arjen Robben。参考把同一人的两次消费重复列出，答人名时可以按人去重。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "两位符合条件的是 Fernando Gago 和 Arjen Robben。参考把同一人的两次消费重复列出，答人名时可以按人去重。"
+      }
+    },
+    "dev264_turn1": {
+      "reason": "9 至 12 年级各有 4 人，都是并列最多。题目问一个年级，9 和 12 都符合。",
+      "baseline": {
+        "points": 1,
+        "reason": "9 至 12 年级各有 4 人，都是并列最多。题目问一个年级，9 和 12 都符合。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "9 至 12 年级各有 4 人，都是并列最多。题目问一个年级，9 和 12 都符合。"
+      }
+    },
+    "dev183_turn1": {
+      "reason": "题目只问姓氏，Smith 和 Kim 覆盖了所有符合条件的姓氏。相同的姓无需重复。",
+      "baseline": {
+        "points": 1,
+        "reason": "题目只问姓氏，Smith 和 Kim 覆盖了所有符合条件的姓氏。相同的姓无需重复。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "题目只问姓氏，Smith 和 Kim 覆盖了所有符合条件的姓氏。相同的姓无需重复。"
+      }
+    },
+    "dev261_turn1": {
+      "reason": "北卡罗来纳州在库里写成 NorthCarolina。旧版直接按带空格的写法查询，漏掉三位学生。",
+      "baseline": {
+        "points": 0,
+        "reason": "北卡罗来纳州在库里写成 NorthCarolina。旧版直接按带空格的写法查询，漏掉三位学生。"
+      }
+    },
+    "dev261_turn2": {
+      "reason": "承接同一批北卡学生，库里有三位，旧版因拼写问题仍为空。",
+      "baseline": {
+        "points": 0,
+        "reason": "承接同一批北卡学生，库里有三位，旧版因拼写问题仍为空。"
+      }
+    },
+    "dev261_turn3": {
+      "reason": "北卡而且未注册学位的学生实际有两位，旧版按错误的州名写法漏掉二人。",
+      "baseline": {
+        "points": 0,
+        "reason": "北卡而且未注册学位的学生实际有两位，旧版按错误的州名写法漏掉二人。"
+      }
+    },
+    "dev273_turn1": {
+      "reason": "题目问哪些歌手。两版都给全实际三人的姓名，参考附带的国籍和资产并非必需。",
+      "baseline": {
+        "points": 1,
+        "reason": "题目问哪些歌手。两版都给全实际三人的姓名，参考附带的国籍和资产并非必需。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "题目问哪些歌手。两版都给全实际三人的姓名，参考附带的国籍和资产并非必需。"
+      }
+    },
+    "dev273_turn2": {
+      "reason": "题目切换到 1955 年以后，两版都给出正确的两位歌手姓名。",
+      "baseline": {
+        "points": 1,
+        "reason": "题目切换到 1955 年以后，两版都给出正确的两位歌手姓名。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "题目切换到 1955 年以后，两版都给出正确的两位歌手姓名。"
+      }
+    },
+    "dev273_turn5": {
+      "reason": "美国籍且 1945 年前出生者为 Jacqueline Mars。姓名已完整回答。",
+      "baseline": {
+        "points": 1,
+        "reason": "美国籍且 1945 年前出生者为 Jacqueline Mars。姓名已完整回答。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "美国籍且 1945 年前出生者为 Jacqueline Mars。姓名已完整回答。"
+      }
+    },
+    "dev273_turn7": {
+      "reason": "法国籍且 1945 年前出生者为 Liliane Bettencourt。姓名已完整回答。",
+      "baseline": {
+        "points": 1,
+        "reason": "法国籍且 1945 年前出生者为 Liliane Bettencourt。姓名已完整回答。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "法国籍且 1945 年前出生者为 Liliane Bettencourt。姓名已完整回答。"
+      }
+    },
+    "dev273_turn9": {
+      "reason": "按题意的两个出生年份范围，满足条件的智利歌手只有 Iris Fontbona。",
+      "baseline": {
+        "points": 1,
+        "reason": "按题意的两个出生年份范围，满足条件的智利歌手只有 Iris Fontbona。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "按题意的两个出生年份范围，满足条件的智利歌手只有 Iris Fontbona。"
+      }
+    },
+    "dev110_turn3": {
+      "reason": "去掉机场代码前导空格再连接，Aberdeen 和 Abilene 合计 47 班。旧版查成 0。",
+      "baseline": {
+        "points": 0,
+        "reason": "去掉机场代码前导空格再连接，Aberdeen 和 Abilene 合计 47 班。旧版查成 0。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "去掉机场代码前导空格再连接，Aberdeen 和 Abilene 合计 47 班。旧版查成 0。"
+      },
+      "reference_sql": "SELECT COUNT(*) AS flight_count FROM flights f JOIN airports a ON TRIM(f.DestAirport)=TRIM(a.AirportCode) WHERE TRIM(a.City) IN ('Aberdeen','Abilene')",
+      "issue": "reference"
+    },
+    "dev5_turn3": {
+      "reason": "两岁狗的最大已知体重为 9.48。新版文字额外断言这是已治雌犬，库里 0 和 1 的性别编码无法支持该说明。",
+      "baseline": {
+        "points": 1,
+        "reason": "两岁狗的最大已知体重为 9.48。新版文字额外断言这是已治雌犬，库里 0 和 1 的性别编码无法支持该说明。"
+      },
+      "mcp": {
+        "points": 0,
+        "reason": "两岁狗的最大已知体重为 9.48。新版文字额外断言这是已治雌犬，库里 0 和 1 的性别编码无法支持该说明。"
+      }
+    },
+    "dev151_turn2": {
+      "reason": "按照上轮三位不同的最年轻获胜者，两版都用对应比赛给出姓名和排名。",
+      "baseline": {
+        "points": 1,
+        "reason": "按照上轮三位不同的最年轻获胜者，两版都用对应比赛给出姓名和排名。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "按照上轮三位不同的最年轻获胜者，两版都用对应比赛给出姓名和排名。"
+      }
+    },
+    "dev151_turn3": {
+      "reason": "两版从上一问对应的三场比赛取败者姓名，与各自上文选出的胜者一一对应。",
+      "baseline": {
+        "points": 1,
+        "reason": "两版从上一问对应的三场比赛取败者姓名，与各自上文选出的胜者一一对应。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "两版从上一问对应的三场比赛取败者姓名，与各自上文选出的胜者一一对应。"
+      }
+    },
+    "dev93_turn1": {
+      "reason": "旧版按 Germany 的大写字面查成 0，德国厂商实际为 4 家。",
+      "baseline": {
+        "points": 0,
+        "reason": "旧版按 Germany 的大写字面查成 0，德国厂商实际为 4 家。"
+      }
+    },
+    "dev93_turn2": {
+      "reason": "Volkswagen、BMW、Daimler Benz 和 Opel 是四家对应厂商。使用完整公司名正确。",
+      "baseline": {
+        "points": 1,
+        "reason": "Volkswagen、BMW、Daimler Benz 和 Opel 是四家对应厂商。使用完整公司名正确。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "Volkswagen、BMW、Daimler Benz 和 Opel 是四家对应厂商。使用完整公司名正确。"
+      }
+    },
+    "dev93_turn4": {
+      "reason": "美国厂商的全名与参考缩写指的是同四家公司。两版均正确识别。",
+      "baseline": {
+        "points": 1,
+        "reason": "美国厂商的全名与参考缩写指的是同四家公司。两版均正确识别。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "美国厂商的全名与参考缩写指的是同四家公司。两版均正确识别。"
+      }
+    },
+    "dev11_turn2": {
+      "reason": "题目问哪些区。两版返回全部 539 个不同区名，参考因一个区有多座符合条件的城市而重复列出。",
+      "baseline": {
+        "points": 1,
+        "reason": "题目问哪些区。两版返回全部 539 个不同区名，参考因一个区有多座符合条件的城市而重复列出。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "题目问哪些区。两版返回全部 539 个不同区名，参考因一个区有多座符合条件的城市而重复列出。"
+      }
+    },
+    "dev115_turn2": {
+      "reason": "这是一个有没有的问句。旧版给出三个符合条件的频道，新版执行计数为 3 并明确回答有，两个答法均够用。",
+      "baseline": {
+        "points": 1,
+        "reason": "这是一个有没有的问句。旧版给出三个符合条件的频道，新版执行计数为 3 并明确回答有，两个答法均够用。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "这是一个有没有的问句。旧版给出三个符合条件的频道，新版执行计数为 3 并明确回答有，两个答法均够用。"
+      }
+    },
+    "dev172_turn1": {
+      "reason": "北卡罗来纳州在库里写成 NorthCarolina，实际有 3 位。旧版查成 0。",
+      "baseline": {
+        "points": 0,
+        "reason": "北卡罗来纳州在库里写成 NorthCarolina，实际有 3 位。旧版查成 0。"
+      }
+    },
+    "dev172_turn2": {
+      "reason": "三位北卡学生真实存在，旧版沿用错误的州名写法返回空。",
+      "baseline": {
+        "points": 0,
+        "reason": "三位北卡学生真实存在，旧版沿用错误的州名写法返回空。"
+      }
+    },
+    "dev172_turn3": {
+      "reason": "上轮的三位学生中两位没有学位项目记录。旧版漏掉了整个北卡范围。",
+      "baseline": {
+        "points": 0,
+        "reason": "上轮的三位学生中两位没有学位项目记录。旧版漏掉了整个北卡范围。"
+      }
+    },
+    "dev256_turn2": {
+      "reason": "澳大利亚、智利、法国、德国都只有一位歌手。列一家或完整交代并列均符合单数提问。",
+      "baseline": {
+        "points": 1,
+        "reason": "澳大利亚、智利、法国、德国都只有一位歌手。列一家或完整交代并列均符合单数提问。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "澳大利亚、智利、法国、德国都只有一位歌手。列一家或完整交代并列均符合单数提问。"
+      }
+    },
+    "dev38_turn2": {
+      "reason": "上文问 United Airlines 到 Aberdeen 的航班。延续该航空公司，修整机场代码后得到其他 53 个城市，旧版连接返回空。",
+      "baseline": {
+        "points": 0,
+        "reason": "上文问 United Airlines 到 Aberdeen 的航班。延续该航空公司，修整机场代码后得到其他 53 个城市，旧版连接返回空。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "上文问 United Airlines 到 Aberdeen 的航班。延续该航空公司，修整机场代码后得到其他 53 个城市，旧版连接返回空。"
+      }
+    },
+    "dev7_turn4": {
+      "reason": "题目里的 Baldwin 1 对应库里的 Baldwin I，实际是 Battle of Adrianople。旧版用字面数字匹配失败。",
+      "baseline": {
+        "points": 0,
+        "reason": "题目里的 Baldwin 1 对应库里的 Baldwin I，实际是 Battle of Adrianople。旧版用字面数字匹配失败。"
+      }
+    },
+    "dev60_turn2": {
+      "reason": "按可用马力数值查得 Pontiac Grand Prix、230 马力。题目问哪辆车，给车名足够，参考用编号 39 表示同一辆。",
+      "baseline": {
+        "points": 1,
+        "reason": "按可用马力数值查得 Pontiac Grand Prix、230 马力。题目问哪辆车，给车名足够，参考用编号 39 表示同一辆。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "按可用马力数值查得 Pontiac Grand Prix、230 马力。题目问哪辆车，给车名足够，参考用编号 39 表示同一辆。"
+      }
+    },
+    "dev149_turn1": {
+      "reason": "规范化姓名两端的空格后能查到 Gonzalo Higuaín 为 35 岁。旧版与参考都因空格返回空。",
+      "baseline": {
+        "points": 0,
+        "reason": "规范化姓名两端的空格后能查到 Gonzalo Higuaín 为 35 岁。旧版与参考都因空格返回空。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "规范化姓名两端的空格后能查到 Gonzalo Higuaín 为 35 岁。旧版与参考都因空格返回空。"
+      },
+      "reference_sql": "SELECT Age FROM visitor WHERE TRIM(Name)='Gonzalo Higuaín'",
+      "issue": "reference"
+    },
+    "dev171_turn2": {
+      "reason": "紧接上一问的高收入玩家，沿用大于 300000 的范围合理。两版都查到 2 位，文字明确了范围。",
+      "baseline": {
+        "points": 1,
+        "reason": "紧接上一问的高收入玩家，沿用大于 300000 的范围合理。两版都查到 2 位，文字明确了范围。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "紧接上一问的高收入玩家，沿用大于 300000 的范围合理。两版都查到 2 位，文字明确了范围。"
+      }
+    },
+    "dev28_turn1": {
+      "reason": "终端执行的修订查询对机场码去空格后得到 47 班，和最终文字一致。旧版按带空格代码连接查成 0。",
+      "baseline": {
+        "points": 0,
+        "reason": "终端执行的修订查询对机场码去空格后得到 47 班，和最终文字一致。旧版按带空格代码连接查成 0。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "终端执行的修订查询对机场码去空格后得到 47 班，和最终文字一致。旧版按带空格代码连接查成 0。"
+      },
+      "reference_sql": "SELECT COUNT(*) AS flight_count FROM flights f JOIN airports a ON TRIM(f.DestAirport)=TRIM(a.AirportCode) WHERE TRIM(a.City) IN ('Aberdeen','Abilene')",
+      "issue": "reference"
+    },
+    "dev254_turn3": {
+      "reason": "可见上文没提到 Kyle 或具体某位学生。把九年级人数题直接答成这个学生读九年级是猜测。",
+      "baseline": {
+        "points": 0,
+        "reason": "可见上文没提到 Kyle 或具体某位学生。把九年级人数题直接答成这个学生读九年级是猜测。"
+      }
+    },
+    "dev282_turn1": {
+      "reason": "按不同学生计数得 1。参考把同一学生的两条养狗记录都计入。",
+      "baseline": {
+        "points": 1,
+        "reason": "按不同学生计数得 1。参考把同一学生的两条养狗记录都计入。"
+      }
+    },
+    "dev282_turn3": {
+      "reason": "可见上文的养狗和养猫学生只有 Linda 与 Tracy。答出两位实际对象比照着题面凑三位更符合事实。",
+      "baseline": {
+        "points": 1,
+        "reason": "可见上文的养狗和养猫学生只有 Linda 与 Tracy。答出两位实际对象比照着题面凑三位更符合事实。"
+      }
+    },
+    "dev277_turn1": {
+      "reason": "问题未剔除零段落文档。编号 0 的确是零段落的并列最小值，题目用单数，选一个并列答案足够。",
+      "baseline": {
+        "points": 1,
+        "reason": "问题未剔除零段落文档。编号 0 的确是零段落的并列最小值，题目用单数，选一个并列答案足够。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "问题未剔除零段落文档。编号 0 的确是零段落的并列最小值，题目用单数，选一个并列答案足够。"
+      }
+    },
+    "dev280_turn1": {
+      "reason": "旧版按至少一家频道未播得三国，新版按全国均未播得 Poland。原问没有明确量词，两种回答均有查库依据。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版按至少一家频道未播得三国，新版按全国均未播得 Poland。原问没有明确量词，两种回答均有查库依据。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "旧版按至少一家频道未播得三国，新版按全国均未播得 Poland。原问没有明确量词，两种回答均有查库依据。"
+      }
+    },
+    "dev225_turn1": {
+      "reason": "所有日期次数相同。单数问法允许返回一个并列最少的真实日期。",
+      "baseline": {
+        "points": 1,
+        "reason": "所有日期次数相同。单数问法允许返回一个并列最少的真实日期。"
+      }
+    },
+    "dev225_turn3": {
+      "reason": "所有日期都并列最多。旧版提供的日期是一个正确解。",
+      "baseline": {
+        "points": 1,
+        "reason": "所有日期都并列最多。旧版提供的日期是一个正确解。"
+      }
+    },
+    "dev97_turn1": {
+      "reason": "题意要编号，旧版反连接正确返回无歌曲记录的歌手编号 3 和 8。",
+      "baseline": {
+        "points": 1,
+        "reason": "题意要编号，旧版反连接正确返回无歌曲记录的歌手编号 3 和 8。"
+      }
+    },
+    "dev57_turn2": {
+      "reason": "可将 all the different contestant numbers 理解为整个表。旧版给出了该范围的三个编号。",
+      "baseline": {
+        "points": 1,
+        "reason": "可将 all the different contestant numbers 理解为整个表。旧版给出了该范围的三个编号。"
+      }
+    },
+    "dev57_turn3": {
+      "reason": "旧版延续上一问的全表范围，选手 5 有 1 条投票，口径和统计一致。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版延续上一问的全表范围，选手 5 有 1 条投票，口径和统计一致。"
+      }
+    },
+    "dev91_turn2": {
+      "reason": "旧版用 HSE 与 APT 未匹配到本库的 House 与 Apartment。新版按两类都须超过一间房的合理读法给出 7 处真实房产。",
+      "baseline": {
+        "points": 0,
+        "reason": "旧版用 HSE 与 APT 未匹配到本库的 House 与 Apartment。新版按两类都须超过一间房的合理读法给出 7 处真实房产。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "旧版用 HSE 与 APT 未匹配到本库的 House 与 Apartment。新版按两类都须超过一间房的合理读法给出 7 处真实房产。"
+      }
+    },
+    "dev91_turn3": {
+      "reason": "旧版在本轮修正类型筛选，给出了符合上一问房间条件的七处房产对应房间数。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版在本轮修正类型筛选，给出了符合上一问房间条件的七处房产对应房间数。"
+      }
+    },
+    "dev25_turn2": {
+      "reason": "旧版机场代码连接漏处理空格，没返回任一家航空公司的目的地国家。",
+      "baseline": {
+        "points": 0,
+        "reason": "旧版机场代码连接漏处理空格，没返回任一家航空公司的目的地国家。"
+      }
+    },
+    "dev285_turn3": {
+      "reason": "单报名册 7 张记录不足以断定哪些老师有能力或已安排教课。本轮新版区分名册与实际排课。",
+      "baseline": {
+        "points": 0,
+        "reason": "单报名册 7 张记录不足以断定哪些老师有能力或已安排教课。本轮新版区分名册与实际排课。"
+      }
+    },
+    "dev215_turn3": {
+      "reason": "库的男性编码是 T，实际 4 人。旧版按数值 1 统计为 0。",
+      "baseline": {
+        "points": 0,
+        "reason": "库的男性编码是 T，实际 4 人。旧版按数值 1 统计为 0。"
+      },
+      "reference_sql": "SELECT COUNT(*) AS male_singer_count FROM singer WHERE Is_male='T'",
+      "issue": "reference"
+    },
+    "dev10_turn3": {
+      "reason": "15,000 是店铺产品总量。单报店铺数无法回答经理本人生产多少。",
+      "baseline": {
+        "points": 0,
+        "reason": "15,000 是店铺产品总量。单报店铺数无法回答经理本人生产多少。"
+      }
+    },
+    "dev292_turn1": {
+      "reason": "旧版按国家的独立年份筛选并列出 40 种不同官方语言，交付了题目要求的名单。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版按国家的独立年份筛选并列出 40 种不同官方语言，交付了题目要求的名单。"
+      }
+    },
+    "dev85_turn6": {
+      "reason": "原问也可理解为先按年龄从老到少再按会员等级处理同龄。旧版的年龄降序和等级次排序是一种有依据的读法。",
+      "baseline": {
+        "points": 1,
+        "reason": "原问也可理解为先按年龄从老到少再按会员等级处理同龄。旧版的年龄降序和等级次排序是一种有依据的读法。"
+      }
+    },
+    "dev268_turn2": {
+      "reason": "按 Friend 表直接记在 Kyle 名下的关系，Jordan 确实符合。原问可按直接登记的好友理解，并未明确要求把关系双向合并。",
+      "baseline": {
+        "points": 1,
+        "reason": "按 Friend 表直接记在 Kyle 名下的关系，Jordan 确实符合。原问可按直接登记的好友理解，并未明确要求把关系双向合并。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "按 Friend 表直接记在 Kyle 名下的关系，Jordan 确实符合。原问可按直接登记的好友理解，并未明确要求把关系双向合并。"
+      }
+    },
+    "dev268_turn5": {
+      "reason": "旧版通过 Kyle 的学号锁定对应 Jordan，再查另一位好友 Logan，承接了上文身份。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版通过 Kyle 的学号锁定对应 Jordan，再查另一位好友 Logan，承接了上文身份。"
+      }
+    },
+    "dev268_turn6": {
+      "reason": "库里有两位 Gabriel。旧版把两人的好友混成一份名单，无法判断谁与哪一位 Gabriel 相连。",
+      "baseline": {
+        "points": 0,
+        "reason": "库里有两位 Gabriel。旧版把两人的好友混成一份名单，无法判断谁与哪一位 Gabriel 相连。"
+      }
+    },
+    "dev31_turn1": {
+      "reason": "按用户已澄清的描述字段找 w。旧版两条完整记录均符合条件。",
+      "baseline": {
+        "points": 1,
+        "reason": "按用户已澄清的描述字段找 w。旧版两条完整记录均符合条件。"
+      }
+    },
+    "dev140_turn1": {
+      "reason": "旧版筛本科学位并给出相关学期 2、9、13、15，符合题意。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版筛本科学位并给出相关学期 2、9、13、15，符合题意。"
+      }
+    },
+    "dev98_turn5": {
+      "reason": "正确查了净资产最小值 26.3 百万美元。",
+      "baseline": {
+        "points": 1,
+        "reason": "正确查了净资产最小值 26.3 百万美元。"
+      }
+    },
+    "dev19_turn2": {
+      "reason": "用户澄清的是美国国家范围。列出美国的 12 家航空公司是有依据的读法。",
+      "baseline": {
+        "points": 1,
+        "reason": "用户澄清的是美国国家范围。列出美国的 12 家航空公司是有依据的读法。"
+      }
+    },
+    "dev128_turn6": {
+      "reason": "旧版按上文明确的选手与手性查询，排除了该人，得到其他 14,192 位。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版按上文明确的选手与手性查询，排除了该人，得到其他 14,192 位。"
+      }
+    },
+    "dev166_turn1": {
+      "reason": "用高于平均发行年的记录找歌手，给出四个真实的歌手姓名。",
+      "baseline": {
+        "points": 1,
+        "reason": "用高于平均发行年的记录找歌手，给出四个真实的歌手姓名。"
+      }
+    },
+    "dev14_turn2": {
+      "reason": "旧版给出了此前九家商店的名字，列出名称即可。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版给出了此前九家商店的名字，列出名称即可。"
+      }
+    },
+    "dev165_turn4": {
+      "reason": "按 Aruba 与 GNP 字段准确查询，得到 828。",
+      "baseline": {
+        "points": 1,
+        "reason": "按 Aruba 与 GNP 字段准确查询，得到 828。"
+      }
+    },
+    "dev122_turn1": {
+      "reason": "同时返回模板编号和文档编号，保留未关联的模板。",
+      "baseline": {
+        "points": 1,
+        "reason": "同时返回模板编号和文档编号，保留未关联的模板。"
+      }
+    },
+    "dev122_turn4": {
+      "reason": "旧版对上轮未关联文档的八个模板补上类型代码，保留了上轮范围。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版对上轮未关联文档的八个模板补上类型代码，保留了上轮范围。"
+      }
+    },
+    "dev205_turn3": {
+      "reason": "查的是同一剧集的 Rating 字段，正确得到 5.8。",
+      "baseline": {
+        "points": 1,
+        "reason": "查的是同一剧集的 Rating 字段，正确得到 5.8。"
+      }
+    },
+    "dev134_turn1": {
+      "reason": "按学生和学期统计两个不同学位项目，正确识别 Frida Aisha Huel。",
+      "baseline": {
+        "points": 1,
+        "reason": "按学生和学期统计两个不同学位项目，正确识别 Frida Aisha Huel。"
+      }
+    },
+    "dev134_turn2": {
+      "reason": "延续同一学期两种项目的条件，查到学号 7。",
+      "baseline": {
+        "points": 1,
+        "reason": "延续同一学期两种项目的条件，查到学号 7。"
+      }
+    },
+    "dev189_turn1": {
+      "reason": "12 家均为 100 班。United Airlines 与 AirTran Airways 都并列最大，问一句 which airline 可给一个符合条件的实例。",
+      "baseline": {
+        "points": 1,
+        "reason": "12 家均为 100 班。United Airlines 与 AirTran Airways 都并列最大，问一句 which airline 可给一个符合条件的实例。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "12 家均为 100 班。United Airlines 与 AirTran Airways 都并列最大，问一句 which airline 可给一个符合条件的实例。"
+      }
+    },
+    "dev252_turn5": {
+      "reason": "上一问列的是所有左手球员，旧版内连接只保留有排名的 148 位，未交代遗漏的其他球员。",
+      "baseline": {
+        "points": 0,
+        "reason": "上一问列的是所有左手球员，旧版内连接只保留有排名的 148 位，未交代遗漏的其他球员。"
+      }
+    },
+    "dev78_turn2": {
+      "reason": "旧版给出教师编号和相应排课课程数，五组数据与库相符。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版给出教师编号和相应排课课程数，五组数据与库相符。"
+      }
+    },
+    "dev216_turn4": {
+      "reason": "能正确排除文本缺失值并按车辆独立编号计数，查得 66 辆。",
+      "baseline": {
+        "points": 1,
+        "reason": "能正确排除文本缺失值并按车辆独立编号计数，查得 66 辆。"
+      }
+    },
+    "dev216_turn5": {
+      "reason": "有效油耗从数值上比较得到 Oldsmobile Cutlass Ciera，名称和库中的车型字段足以指明汽车。",
+      "baseline": {
+        "points": 1,
+        "reason": "有效油耗从数值上比较得到 Oldsmobile Cutlass Ciera，名称和库中的车型字段足以指明汽车。"
+      }
+    },
+    "dev65_turn1": {
+      "reason": "旧版查询最早的成绩单日期，得到 1975-05-06 12:04:47。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版查询最早的成绩单日期，得到 1975-05-06 12:04:47。"
+      }
+    },
+    "dev82_turn5": {
+      "reason": "旧版把硬地比赛限定为上轮的 2016 年，得到 119 场。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版把硬地比赛限定为上轮的 2016 年，得到 119 场。"
+      }
+    },
+    "dev255_turn1": {
+      "reason": "原问写 concern，解释成演唱会时只有四个场馆符合。直接把全部九个场馆列出没有查证或澄清。",
+      "baseline": {
+        "points": 0,
+        "reason": "原问写 concern，解释成演唱会时只有四个场馆符合。直接把全部九个场馆列出没有查证或澄清。"
+      }
+    },
+    "dev86_turn1": {
+      "reason": "库中加拿大和美国各有 12 种语言。两版都给出真实的并列最大值，符合单数问法。",
+      "baseline": {
+        "points": 1,
+        "reason": "库中加拿大和美国各有 12 种语言。两版都给出真实的并列最大值，符合单数问法。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "库中加拿大和美国各有 12 种语言。两版都给出真实的并列最大值，符合单数问法。"
+      }
+    },
+    "dev244_turn1": {
+      "reason": "列全了 Todd Casey 编剧的两部动画，片名足够识别。",
+      "baseline": {
+        "points": 1,
+        "reason": "列全了 Todd Casey 编剧的两部动画，片名足够识别。"
+      }
+    },
+    "dev200_turn1": {
+      "reason": "按 Highschooler 的 ID 列全 16 位学生，未用好友表代理学生名单。",
+      "baseline": {
+        "points": 1,
+        "reason": "按 Highschooler 的 ID 列全 16 位学生，未用好友表代理学生名单。"
+      }
+    },
+    "dev153_turn3": {
+      "reason": "可见上文只定位到死亡人数最多的 9 号事件，完整列出这一事件符合上一问的请求。",
+      "baseline": {
+        "points": 1,
+        "reason": "可见上文只定位到死亡人数最多的 9 号事件，完整列出这一事件符合上一问的请求。"
+      }
+    },
+    "dev23_turn2": {
+      "reason": "从场馆表出发，给出 9 家场馆和演唱会计数，合理保留零场场馆。",
+      "baseline": {
+        "points": 1,
+        "reason": "从场馆表出发，给出 9 家场馆和演唱会计数，合理保留零场场馆。"
+      }
+    },
+    "dev23_turn3": {
+      "reason": "按正确带撇号的场馆名查到容量 10,104。",
+      "baseline": {
+        "points": 1,
+        "reason": "按正确带撇号的场馆名查到容量 10,104。"
+      }
+    },
+    "dev181_turn5": {
+      "reason": "用意大利语、音乐内容承接前两问的范围，正确枚举对应的 12 个频道。",
+      "baseline": {
+        "points": 1,
+        "reason": "用意大利语、音乐内容承接前两问的范围，正确枚举对应的 12 个频道。"
+      }
+    },
+    "dev261_turn4": {
+      "reason": "前一轮北卡且未注册应有 Warren、Deon。旧版仍按错误的州名拼写查成空。",
+      "baseline": {
+        "points": 0,
+        "reason": "前一轮北卡且未注册应有 Warren、Deon。旧版仍按错误的州名拼写查成空。"
+      }
+    },
+    "dev273_turn4": {
+      "reason": "将 and after 1955 理解为切换条件，可查到两人及国籍。",
+      "baseline": {
+        "points": 1,
+        "reason": "将 and after 1955 理解为切换条件，可查到两人及国籍。"
+      }
+    },
+    "dev273_turn6": {
+      "reason": "承接美国国籍并切换到 1955 年以后，返回 Abigail Johnson。",
+      "baseline": {
+        "points": 1,
+        "reason": "承接美国国籍并切换到 1955 年以后，返回 Abigail Johnson。"
+      }
+    },
+    "dev273_turn8": {
+      "reason": "此前问法国籍，切换到 1955 年以后时原库确实没有符合的法国歌手。",
+      "baseline": {
+        "points": 1,
+        "reason": "此前问法国籍，切换到 1955 年以后时原库确实没有符合的法国歌手。"
+      }
+    },
+    "dev110_turn4": {
+      "reason": "清理机场码后按城市计数得 Albany。尾部空格不改变城市的身份。",
+      "baseline": {
+        "points": 1,
+        "reason": "清理机场码后按城市计数得 Albany。尾部空格不改变城市的身份。"
+      }
+    },
+    "dev5_turn1": {
+      "reason": "性别实际存 0 和 1，按 female 字符串筛到 0 不能证明没有治疗过的母狗。",
+      "baseline": {
+        "points": 0,
+        "reason": "性别实际存 0 和 1，按 female 字符串筛到 0 不能证明没有治疗过的母狗。"
+      }
+    },
+    "dev5_turn2": {
+      "reason": "旧版用库中没有出现的性别文本筛选，所以返回空，无法说明有关狗的年龄。",
+      "baseline": {
+        "points": 0,
+        "reason": "旧版用库中没有出现的性别文本筛选，所以返回空，无法说明有关狗的年龄。"
+      }
+    },
+    "dev151_turn1": {
+      "reason": "按三位不同获胜选手统计获胜年龄，查出正确的 Madison Keys、Elina Svitolina、Garbine Muguruza。",
+      "baseline": {
+        "points": 1,
+        "reason": "按三位不同获胜选手统计获胜年龄，查出正确的 Madison Keys、Elina Svitolina、Garbine Muguruza。"
+      }
+    },
+    "dev6_turn2": {
+      "reason": "题目问有多少门课程，按课程目录数 10 门是直接合理的回答。6 条是排课记录数。",
+      "baseline": {
+        "points": 1,
+        "reason": "题目问有多少门课程，按课程目录数 10 门是直接合理的回答。6 条是排课记录数。"
+      },
+      "mcp": {
+        "points": 1,
+        "reason": "题目问有多少门课程，按课程目录数 10 门是直接合理的回答。6 条是排课记录数。"
+      }
+    },
+    "dev6_turn3": {
+      "reason": "旧版按人列出七位老师与课程数，两位零课教师也列入，符合逐位统计的合理范围。",
+      "baseline": {
+        "points": 1,
+        "reason": "旧版按人列出七位老师与课程数，两位零课教师也列入，符合逐位统计的合理范围。"
+      }
+    },
+    "dev253_turn2": {
+      "reason": "只检查以学生为源的一侧会把实际出现在关系另一侧的学生说成完全没朋友。需要说明单向口径。",
+      "baseline": {
+        "points": 0,
+        "reason": "只检查以学生为源的一侧会把实际出现在关系另一侧的学生说成完全没朋友。需要说明单向口径。"
+      }
+    },
+    "dev194_turn2": {
+      "reason": "根据已澄清的段落字段给出符合条件文档的所有段落文字，多段文档保留每段。",
+      "baseline": {
+        "points": 1,
+        "reason": "根据已澄清的段落字段给出符合条件文档的所有段落文字，多段文档保留每段。"
+      }
+    },
+    "dev115_turn1": {
+      "reason": "根据最后一句列了 15 个频道编号及频道名称，使用正确的频道表。",
+      "baseline": {
+        "points": 1,
+        "reason": "根据最后一句列了 15 个频道编号及频道名称，使用正确的频道表。"
+      }
+    },
+    "dev66_turn2": {
+      "reason": "三名选手的返回积分与各自最年轻获胜那场的获胜者积分相符。",
+      "baseline": {
+        "points": 1,
+        "reason": "三名选手的返回积分与各自最年轻获胜那场的获胜者积分相符。"
+      }
+    },
+    "dev66_turn3": {
+      "reason": "按三位不同获胜者的最小获胜年龄列出姓名和年龄，符合问法。",
+      "baseline": {
+        "points": 1,
+        "reason": "按三位不同获胜者的最小获胜年龄列出姓名和年龄，符合问法。"
+      }
+    },
+    "dev60_turn1": {
+      "reason": "从可用数值计算的平均马力为 105.0825，库里文本 null 没被算作零。",
+      "baseline": {
+        "points": 1,
+        "reason": "从可用数值计算的平均马力为 105.0825，库里文本 null 没被算作零。"
+      }
+    },
+    "dev60_turn4": {
+      "reason": "列出加速值大于 19 的车辆及数值，完整回答哪些车。",
+      "baseline": {
+        "points": 1,
+        "reason": "列出加速值大于 19 的车辆及数值，完整回答哪些车。"
+      }
+    },
+    "dev158_turn1": {
+      "reason": "按没有英语记录的国家反查，而非按语言行不等于英语筛选，可识别对应国家代码。",
+      "baseline": {
+        "points": 1,
+        "reason": "按没有英语记录的国家反查，而非按语言行不等于英语筛选，可识别对应国家代码。"
+      }
+    },
+    "dev158_turn3": {
+      "reason": "保持上轮的非共和国且无英语记录的国家范围，交付查到的语言并保留无记录的国家。",
+      "baseline": {
+        "points": 1,
+        "reason": "保持上轮的非共和国且无英语记录的国家范围，交付查到的语言并保留无记录的国家。"
+      }
+    },
+    "dev149_turn2": {
+      "reason": "数量可以按顾客合计，他的两次购票相加为 24 张。",
+      "baseline": {
+        "points": 1,
+        "reason": "数量可以按顾客合计，他的两次购票相加为 24 张。"
+      }
+    },
+    "dev149_turn3": {
+      "reason": "总消费是一种合理读法，旧版把两次实际消费加到 530.42。",
+      "baseline": {
+        "points": 1,
+        "reason": "总消费是一种合理读法，旧版把两次实际消费加到 530.42。"
+      }
+    },
+    "dev72_turn3": {
+      "reason": "限定上轮有宠物的两位，并保留实际有非猫宠物的 Tracy，范围和结果正确。",
+      "baseline": {
+        "points": 1,
+        "reason": "限定上轮有宠物的两位，并保留实际有非猫宠物的 Tracy，范围和结果正确。"
+      }
+    },
+    "dev272_turn1": {
+      "reason": "把英文月份文本按字母排序挑错了。最早播出实际是 2008-11-14 的 The Rise of the Blue Beetle!。",
+      "baseline": {
+        "points": 0,
+        "reason": "把英文月份文本按字母排序挑错了。最早播出实际是 2008-11-14 的 The Rise of the Blue Beetle!。"
+      }
+    },
+    "dev272_turn2": {
+      "reason": "最后播出的动画是 2009-02-27 的 Deep Cover for Batman!，旧版查到另一部。",
+      "baseline": {
+        "points": 0,
+        "reason": "最后播出的动画是 2009-02-27 的 Deep Cover for Batman!，旧版查到另一部。"
+      }
+    },
+    "dev272_turn3": {
+      "reason": "追问的是实际最晚播出的动画，应答频道 707。旧回答沿用上一问查错的片名，报了 700。",
+      "baseline": {
+        "points": 0,
+        "reason": "追问的是实际最晚播出的动画，应答频道 707。旧回答沿用上一问查错的片名，报了 700。"
+      }
+    },
+    "dev272_turn4": {
+      "reason": "实际最晚动画的制作编号是 112。旧版继续针对另一部动画返回 101。",
+      "baseline": {
+        "points": 0,
+        "reason": "实际最晚动画的制作编号是 112。旧版继续针对另一部动画返回 101。"
+      }
+    },
+    "dev248_turn1": {
+      "reason": "逐位球员按独立编号正确合计排名积分，未把同名不同人合并。",
+      "baseline": {
+        "points": 1,
+        "reason": "逐位球员按独立编号正确合计排名积分，未把同名不同人合并。"
+      }
+    },
+    "dev154_turn1": {
+      "reason": "death situations 可以问事故记录。旧版列出了该吨位所对应的 11 条事故备注。",
+      "baseline": {
+        "points": 1,
+        "reason": "death situations 可以问事故记录。旧版列出了该吨位所对应的 11 条事故备注。"
+      }
+    },
+    "dev154_turn3": {
+      "reason": "作为累计人员伤亡的合理读法，旧版分别正确合计 85 人死亡和 5 人受伤。",
+      "baseline": {
+        "points": 1,
+        "reason": "作为累计人员伤亡的合理读法，旧版分别正确合计 85 人死亡和 5 人受伤。"
+      }
+    },
+    "dev269_turn1": {
+      "reason": "库里欧洲用小写 europe。旧版按大写字面检索为空，实际有六国。",
+      "baseline": {
+        "points": 0,
+        "reason": "库里欧洲用小写 europe。旧版按大写字面检索为空，实际有六国。"
+      }
+    },
+    "dev269_turn2": {
+      "reason": "在本问正确按欧洲六国逐国统计，包含制造商数量为零的俄罗斯。",
+      "baseline": {
+        "points": 1,
+        "reason": "在本问正确按欧洲六国逐国统计，包含制造商数量为零的俄罗斯。"
+      }
+    },
+    "dev38_turn1": {
+      "reason": "修整机场代码后，联合航空飞往 Aberdeen 的实际数量是 3 班。两版都查成 0，参考也漏处理了带空格的代码。",
+      "baseline": {
+        "points": 0,
+        "reason": "修整机场代码后，联合航空飞往 Aberdeen 的实际数量是 3 班。两版都查成 0，参考也漏处理了带空格的代码。"
+      },
+      "mcp": {
+        "points": 0,
+        "reason": "修整机场代码后，联合航空飞往 Aberdeen 的实际数量是 3 班。两版都查成 0，参考也漏处理了带空格的代码。"
+      },
+      "reference_sql": "SELECT COUNT(*) AS flight_count FROM flights f JOIN airlines al ON f.Airline=al.uid JOIN airports ap ON TRIM(f.DestAirport)=TRIM(ap.AirportCode) WHERE al.Airline='United Airlines' AND TRIM(ap.City)='Aberdeen'",
+      "issue": "reference"
+    }
+  }
+}

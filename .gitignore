@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+*.sqlite
+*.sqlite3
+*.db
+/cosql/data/
+/cosql/upstream/
+/cosql/reports/*/research-package/
+/cosql/reports/*/research/
+/cosql/reports/*/semantic/
+/cosql/reports/*/shards/
+/cosql/reports/*/workspace/
+/cosql/reports/*/workspaces/
+/cosql/reports/pilot_*_score.txt

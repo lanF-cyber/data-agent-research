@@ -1,0 +1,119 @@
+{
+  "additional_issues": {
+    "dev5_turn1": ["reference", "题目只数接受过治疗的母狗，参考数所有接受过治疗的狗，未筛性别。"],
+    "dev5_turn2": ["reference", "their 承接前一问的母狗，参考取所有接受过治疗的狗的年龄。"],
+    "dev6_turn2": ["ambiguous", "课程目录有 10 门，排课表有 6 条安排。题面未说明数目录还是实际排课。"],
+    "dev6_turn3": ["ambiguous", "逐位统计教师授课数时，题目未说明是否列出没有排课的老师。"],
+    "dev14_turn2": ["reference", "追问只要商店名字，参考返回商店的完整六列。"],
+    "dev19_turn2": ["ambiguous", "USA airline 及给出的澄清可以指美国的航空公司，参考只取名为 United Airlines 的一家公司。"],
+    "dev23_turn2": ["ambiguous", "each stadium 是否包括零场演唱会的场馆未明确。"],
+    "dev23_turn3": ["reference", "原库名称带撇号 Stark's Park，参考以空格代替撇号，查不到容量。"],
+    "dev60_turn1": ["reference", "马力字段存为文本，有 6 条写着 null。参考 AVG 把这些占位计成 0，得到约 103.53，平均有效马力为 105.0825。"],
+    "dev60_turn4": ["reference", "题目问加速值超过 19 的车有哪些，参考只返回数量。"],
+    "dev65_turn1": ["reference", "题目问最早发布时间，参考返回完整成绩单记录。"],
+    "dev66_turn2": ["reference", "题目要获胜者积分，参考取的是败者积分。"],
+    "dev66_turn3": ["ambiguous", "最年轻的三个获胜者可以指三位不同选手，参考按三条比赛记录取年龄。"],
+    "dev72_turn3": ["reference", "追问在上轮有宠物的学生中找养非猫宠物的人，参考也包含从未养宠物的人。"],
+    "dev78_turn2": ["reference", "题目要教师编号及课程数，参考返回姓名及课程数。"],
+    "dev82_turn5": ["reference", "those 承接 2016 年的比赛，参考统计了所有年份的硬地比赛。"],
+    "dev86_turn1": ["ambiguous", "加拿大和美国并列拥有最多语言，问题未指定如何处理并列。"],
+    "dev110_turn4": ["reference", "题目要降落航班最多的机场所在城市，参考计算和返回的是机场代码。"],
+    "dev115_turn1": ["reference", "最后一句问全部电视频道及频道编号，参考取的是动画表中的动画编号。"],
+    "dev122_turn1": ["reference", "题目要求模板编号和关联的文档编号，参考只返回模板编号。"],
+    "dev122_turn4": ["reference", "追问要对上轮未关联文档的模板补类型，参考换成已关联模板。"],
+    "dev128_turn6": ["reference", "other players 要排除前一问的那位球员，参考把他也计入。"],
+    "dev134_turn1": ["reference", "题目要求同一学期就读两个学位项目，参考仅统计学生全部入学记录数。"],
+    "dev134_turn2": ["reference", "追问的学号应承接同学期就读两个项目的学生，参考仍按全部入学记录数筛。"],
+    "dev149_turn2": ["ambiguous", "同一访客有两次购票记录，题目未说明要分列还是加总。"],
+    "dev149_turn3": ["ambiguous", "同一访客有两次消费记录，题目未说明要分列还是加总。"],
+    "dev151_turn1": ["ambiguous", "三个最年轻获胜者可指不同的人，参考取三条获胜记录。"],
+    "dev153_turn3": ["context", "可见提问未提到 East，但参考突然按备注含 East 筛选。"],
+    "dev154_turn1": ["ambiguous", "death situations 可以指事件记录，也可以指死亡人数。"],
+    "dev154_turn3": ["ambiguous", "措辞可理解为统计事故次数，也可理解为分别合计死亡和受伤人数。"],
+    "dev158_turn1": ["reference", "题目排除说英语的国家，参考只排除语言表中的英语行，仍可能纳入同时说英语的国家。"],
+    "dev158_turn3": ["ambiguous", "既可以保留无语言记录的国家并标明未知，也可以只列库里查得到的语言。"],
+    "dev165_turn4": ["reference", "题目问 Aruba 的 GNP，参考却查询 Angola。"],
+    "dev166_turn1": ["reference", "题目要歌手姓名，参考返回歌曲名。"],
+    "dev181_turn5": ["ambiguous", "those TV Channels 可指最常用语言的频道，或指前两轮谈到的内容类别对应的频道。参考查询列全部频道。"],
+    "dev189_turn1": ["ambiguous", "十二家航空公司的航班数并列，题目未指定如何选一家。"],
+    "dev194_turn2": ["ambiguous", "符合条件的文件可能有两段文字，参考每份文档从多段中任取一段。"],
+    "dev200_turn1": ["reference", "题目要全体高中生的学号，参考返回朋友表的学号，受重复关系与未记录好友的影响。"],
+    "dev205_turn3": ["reference", "题目问剧集评分，参考取的是每周名次。"],
+    "dev216_turn4": ["reference", "参考直接比较油耗字段，把存为文本 null 的一行统计为大于 15。"],
+    "dev216_turn5": ["reference", "参考直接按油耗字段排序，将文本 null 排在实际最大数值之前。"],
+    "dev244_turn1": ["ambiguous", "列出动画可以给片名，也可以给记录详情，题目未规定字段。"],
+    "dev248_turn1": ["reference", "题目要求逐位选手汇总积分，参考按名字分组，合并了同名选手。"],
+    "dev252_turn5": ["reference", "逐位球员查平均排名，参考按名字分组，合并了同名球员。"],
+    "dev253_turn2": ["ambiguous", "可以直接回答有没有，也可以列出对应学生。好友关系的计入方向也未规定。"],
+    "dev255_turn1": ["ambiguous", "原题写 concern，参考按 concert 理解。用户真正想排除的关系未说明。"],
+    "dev261_turn4": ["reference", "参考排除已入学学生时用名字与姓氏作集合差，比较的是不同字段。"],
+    "dev269_turn1": ["reference", "题目问欧洲有哪些国家，参考多加了有汽车制造商的限定。"],
+    "dev269_turn2": ["ambiguous", "逐国数汽车制造商时，可列出没有制造商的国家并给零，参考只列有制造商的国家。"],
+    "dev272_turn1": ["reference", "首播日期用英文月名文本存储。参考按文本排序选出 2008 年 12 月 12 日，实际最早是 2008 年 11 月 14 日。"],
+    "dev272_turn2": ["reference", "参考按首播日期文本倒序取到 2008 年 11 月 21 日，实际最晚是 2009 年 2 月 27 日。"],
+    "dev272_turn3": ["reference", "问上轮最晚播出动画的频道，参考沿用错误的月名文本排序选片。"],
+    "dev272_turn4": ["reference", "问上轮最晚播出动画的制作编号，参考沿用错误的月名文本排序选片。"],
+    "dev273_turn4": ["ambiguous", "and after 1955 可能指切换到 1955 年以后，也可能指合并前一个年龄段。"],
+    "dev273_turn6": ["ambiguous", "美国歌手的追问同样可以切换或合并年龄段。"],
+    "dev273_turn8": ["ambiguous", "法国歌手的追问同样可以切换或合并年龄段。"],
+    "dev285_turn3": ["ambiguous", "问的是能教这些课的教师，数据库里有 7 位在册教师和 5 位已排课教师，可用性本身没有字段。"]
+  },
+  "acceptable_queries": {
+    "dev23_turn3": {
+      "sql": "SELECT Capacity FROM stadium WHERE Name = 'Stark''s Park'",
+      "aliases": ["capacity"], "allow_one": false
+    },
+    "dev60_turn1": {
+      "sql": "SELECT AVG(NULLIF(Horsepower, 'null')) FROM CARS_DATA",
+      "aliases": ["horsepower", "avg_horsepower", "average_horsepower"], "allow_one": false
+    },
+    "dev65_turn1": {
+      "sql": "SELECT MIN(transcript_date) FROM Transcripts",
+      "aliases": ["transcript_date", "first_transcript_date", "release_date"], "allow_one": false
+    },
+    "dev86_turn1": {
+      "sql": "WITH counts AS (SELECT c.Name, COUNT(*) AS n FROM country c JOIN countrylanguage l ON c.Code = l.CountryCode GROUP BY c.Code, c.Name) SELECT Name FROM counts WHERE n = (SELECT MAX(n) FROM counts)",
+      "aliases": ["name", "country", "country_name"], "allow_one": true
+    },
+    "dev165_turn4": {
+      "sql": "SELECT GNP FROM country WHERE Name = 'Aruba'",
+      "aliases": ["gnp", "gnp_rate"], "allow_one": false
+    },
+    "dev189_turn1": {
+      "sql": "WITH counts AS (SELECT a.Airline, COUNT(*) AS n FROM AIRLINES a JOIN FLIGHTS f ON a.uid = f.Airline GROUP BY a.uid, a.Airline) SELECT Airline FROM counts WHERE n = (SELECT MAX(n) FROM counts)",
+      "aliases": ["airline", "airline_name"], "allow_one": true
+    },
+    "dev200_turn1": {
+      "sql": "SELECT ID FROM Highschooler",
+      "aliases": ["id", "student_id", "highschooler_id"], "allow_one": false
+    },
+    "dev215_turn3": {
+      "sql": "SELECT COUNT(*) FROM singer WHERE Is_male = 'T'",
+      "aliases": ["count", "male_singers", "male_singer_count"], "allow_one": false
+    },
+    "dev225_turn1": {
+      "sql": "WITH counts AS (SELECT transcript_date, COUNT(*) AS n FROM Transcripts GROUP BY transcript_date) SELECT transcript_date FROM counts WHERE n = (SELECT MIN(n) FROM counts)",
+      "aliases": ["transcript_date", "date"], "allow_one": true
+    },
+    "dev225_turn3": {
+      "sql": "WITH counts AS (SELECT transcript_date, COUNT(*) AS n FROM Transcripts GROUP BY transcript_date) SELECT transcript_date FROM counts WHERE n = (SELECT MAX(n) FROM counts)",
+      "aliases": ["transcript_date", "date"], "allow_one": true
+    },
+    "dev272_turn1": {
+      "sql": "SELECT Title FROM Cartoon WHERE original_air_date = 'November14,2008'",
+      "aliases": ["title", "cartoon_title"], "allow_one": false
+    },
+    "dev272_turn2": {
+      "sql": "SELECT Title FROM Cartoon WHERE original_air_date = 'February27,2009'",
+      "aliases": ["title", "cartoon_title"], "allow_one": false
+    },
+    "dev272_turn3": {
+      "sql": "SELECT Channel FROM Cartoon WHERE original_air_date = 'February27,2009'",
+      "aliases": ["channel", "tv_channel"], "allow_one": false
+    },
+    "dev272_turn4": {
+      "sql": "SELECT Production_Code FROM Cartoon WHERE original_air_date = 'February27,2009'",
+      "aliases": ["production_code"], "allow_one": false
+    }
+  }
+}

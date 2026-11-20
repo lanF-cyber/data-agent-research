@@ -1,0 +1,148 @@
+{
+  "planned_dialogues": 143,
+  "completed_dialogues": 143,
+  "planned_turns": 502,
+  "completed_turns": 502,
+  "failed_dialogues": {},
+  "strict_execution": {
+    "old_correct": 343,
+    "new_correct": 325
+  },
+  "primary": {
+    "planned": 422,
+    "completed": 422,
+    "old_correct": 353,
+    "new_correct": 341,
+    "recovered": [
+      "dev280_turn2",
+      "dev215_turn1",
+      "dev85_turn1",
+      "dev165_turn2",
+      "dev205_turn1",
+      "dev205_turn2",
+      "dev134_turn4",
+      "dev252_turn1",
+      "dev252_turn2",
+      "dev107_turn3",
+      "dev39_turn1",
+      "dev242_turn3",
+      "dev261_turn1",
+      "dev261_turn2",
+      "dev261_turn3",
+      "dev93_turn1",
+      "dev172_turn1",
+      "dev172_turn2",
+      "dev172_turn3",
+      "dev7_turn4"
+    ],
+    "regressed": [
+      "dev152_turn1",
+      "dev152_turn2",
+      "dev152_turn4",
+      "dev152_turn5",
+      "dev178_turn2",
+      "dev178_turn3",
+      "dev166_turn3",
+      "dev136_turn3",
+      "dev189_turn2",
+      "dev129_turn4",
+      "dev184_turn3",
+      "dev211_turn2",
+      "dev53_turn2",
+      "dev99_turn4",
+      "dev255_turn2",
+      "dev86_turn6",
+      "dev42_turn2",
+      "dev204_turn1",
+      "dev284_turn2",
+      "dev284_turn3",
+      "dev206_turn1",
+      "dev153_turn2",
+      "dev249_turn1",
+      "dev249_turn3",
+      "dev264_turn1",
+      "dev110_turn3",
+      "dev115_turn2",
+      "dev256_turn2",
+      "dev38_turn2",
+      "dev149_turn1",
+      "dev28_turn1",
+      "dev269_turn3"
+    ]
+  },
+  "excluded": {
+    "reference": 40,
+    "premise": 2,
+    "context": 3,
+    "ambiguous": 35
+  },
+  "delivery": {
+    "mcp": 500,
+    "unverified": 2
+  },
+  "tokens": {
+    "input_tokens": 14357055,
+    "output_tokens": 147872,
+    "total_tokens": 14504927,
+    "cache_read_tokens": 11754240,
+    "cache_write_tokens": 0
+  },
+  "stage_seconds_across_dialogues": {
+    "prepare": 1.359,
+    "environment": 0.043,
+    "setup": 0,
+    "agent": 6759.201,
+    "evaluate": 12.837,
+    "cleanup": 0.001
+  },
+  "issue_handling": {
+    "planned": 80,
+    "reviewed": 80,
+    "appropriate": 68,
+    "accuracy": 0.85,
+    "by_kind": {
+      "ambiguous": {
+        "planned": 35,
+        "reviewed": 35,
+        "appropriate": 26,
+        "pending_review": 0,
+        "accuracy": 0.7428571428571429
+      },
+      "context": {
+        "planned": 3,
+        "reviewed": 3,
+        "appropriate": 3,
+        "pending_review": 0,
+        "accuracy": 1.0
+      },
+      "premise": {
+        "planned": 2,
+        "reviewed": 2,
+        "appropriate": 1,
+        "pending_review": 0,
+        "accuracy": 0.5
+      },
+      "reference": {
+        "planned": 40,
+        "reviewed": 40,
+        "appropriate": 38,
+        "pending_review": 0,
+        "accuracy": 0.95
+      }
+    },
+    "visible_issue_handling": {
+      "planned": 40,
+      "reviewed": 40,
+      "appropriate": 30,
+      "pending_review": 0,
+      "accuracy": 0.75
+    },
+    "unnecessary_clarification": {
+      "count": 0,
+      "pending_review": 0,
+      "planned_clear_questions": 422,
+      "rate": 0.0
+    }
+  },
+  "large_reference_tables": 12
+}
