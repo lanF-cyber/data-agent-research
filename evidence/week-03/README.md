@@ -3,6 +3,7 @@
 | 记录 | 用途 |
 | --- | --- |
 | [101 问同题对照](paired-101.csv) | 按题排列五种流程的得分和交付情况，1 表示通过或已交付。 |
+| [逐问耗时与 token](timing-and-tokens.csv) | 两批同题对照和其他小测的计时及用量，可复算效率表。 |
 | [502 问样本计划](frozen-plan.json) | 对话顺序、题目、SQLite 版本、预先筛查规则。 |
 | [502 问 MCP 预测](predictions.jsonl) | 逐问保存答复、最终 SQL、实际交付表、执行判分。 |
 | [502 问原基线](../../cosql/reports/2026-11-19_continuous_expanded_v2/turns.jsonl) | 逐问保存 SQL、原库结果和比较记录。 |
