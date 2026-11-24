@@ -1,0 +1,259 @@
+.h-workbench {
+  font-family: Inter, "Microsoft YaHei", sans-serif;
+  background: #f4f6f3;
+  color: #183029;
+  min-height: 100vh;
+  padding: 0 4vw 24px;
+}
+.h-workbench * {
+  box-sizing: border-box;
+}
+.h-workbench code,
+.h-workbench pre {
+  font-family: "Cascadia Mono", Consolas, monospace;
+}
+.h-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid #cdd8d2;
+  height: 41px;
+  color: #50635a;
+  font-size: 12px;
+}
+.h-top b {
+  color: #173f35;
+  font-size: 14px;
+}
+.h-top > code {
+  margin-left: auto;
+  color: #53675d;
+}
+.h-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 16px;
+  gap: 12px;
+}
+.h-title h1 {
+  font-size: 30px;
+  color: #173a31;
+  line-height: 1.18;
+  margin: 0 0 7px;
+  font-weight: 690;
+  letter-spacing: -0.04em;
+}
+.h-title p {
+  margin: 0;
+  color: #3a5247;
+  font-size: 14px;
+}
+.h-title p code {
+  font-size: 12px;
+  color: #5c7265;
+  padding-left: 8px;
+}
+.h-controls {
+  display: flex;
+  gap: 9px;
+}
+.h-controls button,
+.h-controls select {
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid #b5c8bc;
+  border-radius: 5px;
+  font-size: 13px;
+  background: white;
+  color: #244b3e;
+}
+.h-controls button {
+  background: #1b5948;
+  border-color: #1b5948;
+  font-weight: 650;
+  color: white;
+  cursor: pointer;
+}
+.h-controls :disabled {
+  opacity: 0.6;
+}
+.h-grid {
+  display: grid;
+  grid-template-columns: minmax(545px, 1.24fr) minmax(360px, 1fr);
+  gap: 16px;
+  max-width: 1550px;
+}
+.h-panel {
+  border: 1px solid #c6d3ca;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+.h-head,
+.h-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 17px;
+}
+.h-head {
+  border-bottom: 1px solid #d4dfd6;
+  min-height: 42px;
+}
+.h-head h2 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 680;
+}
+.h-head label,
+.h-head > span {
+  font-size: 12px;
+  color: #496153;
+}
+.h-head input {
+  accent-color: #236954;
+}
+.h-head > span.h-ok {
+  font-weight: 650;
+  color: #14654a;
+}
+.h-canvas {
+  height: 332px;
+  position: relative;
+  overflow: hidden;
+  background: #f9fbf7;
+}
+.h-canvas > div > div:last-child:not(:first-child) {
+  display: none;
+}
+.h-node {
+  width: 188px;
+  height: 76px;
+  border: 1px solid #8fad9f;
+  border-left: 4px solid #497d68;
+  border-radius: 6px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px;
+  padding: 6px 10px;
+  color: #1e3a30;
+  box-shadow: 0 2px 5px #184e3412;
+  cursor: grab;
+}
+.h-node code {
+  font-size: 10px;
+  color: #536f61;
+  line-height: 1.15;
+}
+.h-node strong {
+  font-size: 16px;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+.h-node small {
+  font-size: 11px;
+  line-height: 1.2;
+}
+.h-generate {
+  background: #e9f4eb;
+  border-color: #4c8265;
+}
+.h-lookup_value {
+  background: #f7f3e9;
+  border-color: #a98c46;
+}
+.h-foot {
+  border-top: 1px solid #d6dfd7;
+  font-size: 11px;
+  color: #586d60;
+}
+.h-results {
+  min-width: 0;
+}
+.h-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 15px 17px 8px;
+}
+.h-metrics div {
+  display: flex;
+  flex-direction: column;
+  padding: 2px 0 5px 11px;
+  border-left: 2px solid #b8cfc0;
+}
+.h-metrics b {
+  font-size: 24px;
+  line-height: 1.15;
+  color: #194c3b;
+}
+.h-metrics span,
+.h-id {
+  font-size: 11px;
+  color: #637166;
+}
+.h-results ol {
+  margin: 12px 18px;
+  padding-left: 22px;
+}
+.h-results li {
+  padding: 4px 0 6px 2px;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.h-results li code {
+  font-weight: 700;
+  color: #274f40;
+}
+.h-results li small {
+  display: block;
+  font-size: 12px;
+  color: #495f50;
+}
+.h-results details,
+.h-id,
+.h-empty,
+.h-err {
+  margin: 11px 18px;
+}
+.h-results summary {
+  cursor: pointer;
+  font-size: 12px;
+  color: #326451;
+}
+.h-results pre {
+  font-size: 11px;
+  white-space: pre-wrap;
+  padding: 8px;
+  background: #f1f5f1;
+}
+.h-id {
+  border-top: 1px solid #e0e7e0;
+  padding-top: 8px;
+}
+.h-err {
+  color: #9d3128;
+}
+.h-empty {
+  font-size: 13px;
+  color: #5f7064;
+}
+@media (max-width: 980px) {
+  .h-grid {
+    grid-template-columns: 1fr;
+  }
+  .h-title {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .h-workbench {
+    padding: 0 14px 16px;
+  }
+  .h-canvas {
+    overflow: auto;
+  }
+}

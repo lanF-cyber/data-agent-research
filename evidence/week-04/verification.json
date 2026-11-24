@@ -1,0 +1,403 @@
+{
+  "date": "2026-11-24",
+  "question_id": "dev36_turn1",
+  "database_sha256": "db777ba6488ae2b515cb138d71ff23c4533e5fd0355854648a1102faff3fb7af",
+  "flow_id": "@com.horsecoder.common.whuTalent.dataTesting.core/FLOW_RUN",
+  "browser": [
+    {
+      "page_http": 200,
+      "flow_http": 200,
+      "flow_business_status": 200,
+      "flow_result": true,
+      "browser_console_errors": 0,
+      "uncaught_exceptions": 0,
+      "failed_requests": 0,
+      "direct_receipt_matches_proxy": true,
+      "nodes": 5,
+      "edges": 4,
+      "case": "dev36_turn1",
+      "database": "flight_2",
+      "ticket": "ef4f4d6cd2f346eabbb6fa51d686fe2b",
+      "mode": "live",
+      "lookup": "on",
+      "survey_tables": 3,
+      "checks_used": 3,
+      "check_limit": 3,
+      "model_calls": 4,
+      "rows": 62,
+      "reference_distinct_airports": 62,
+      "set_match": true,
+      "memory_writes": 0,
+      "elapsed_seconds": 20.855,
+      "steps": [
+        {
+          "tool": "lookup_value",
+          "args": {
+            "table": "airlines",
+            "column": "uid",
+            "term": "United Airlines",
+            "refresh": false
+          },
+          "receipt": {
+            "verified": false,
+            "source": "database",
+            "field": [
+              "airlines",
+              "uid"
+            ],
+            "values": []
+          }
+        },
+        {
+          "tool": "check_context",
+          "args": {
+            "sql": "SELECT uid, Airline FROM airlines WHERE Airline LIKE '%United%'"
+          },
+          "receipt": {
+            "accepted": true,
+            "sample": [
+              [
+                1,
+                "United Airlines"
+              ]
+            ]
+          }
+        },
+        {
+          "tool": "check_context",
+          "args": {
+            "sql": "SELECT f.SourceAirport, a.AirportCode, a.AirportName FROM flights f LEFT JOIN airports a ON trim(f.SourceAirport) = trim(a.AirportCode) WHERE f.Airline = 1 LIMIT 5"
+          },
+          "receipt": {
+            "accepted": true,
+            "sample": [
+              [
+                " APG",
+                "APG",
+                "Phillips AAF "
+              ],
+              [
+                " ASY",
+                "ASY",
+                "Ashley "
+              ],
+              [
+                " CVO",
+                "CVO",
+                "Albany "
+              ]
+            ]
+          }
+        },
+        {
+          "tool": "submit_answer",
+          "args": {
+            "sql": "SELECT trim(f.SourceAirport) AS source_code, trim(a.AirportName) AS source_airport, COUNT(*) AS flights FROM flights AS f LEFT JOIN airports AS a ON trim(f.SourceAirport) = trim(a.AirportCode) WHERE f.Airline = (SELECT uid FROM airlines WHERE Airline = 'United Airlines') GROUP BY trim(f.SourceAirport), trim(a.AirportName) ORDER BY source_code"
+          },
+          "receipt": {
+            "accepted": true,
+            "row_count": 62,
+            "sample": [
+              [
+                "AAF",
+                "Municipal",
+                3
+              ],
+              [
+                "ABL",
+                "Ambler",
+                1
+              ],
+              [
+                "ABQ",
+                "Albuquerque International",
+                2
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "page_http": 200,
+      "flow_http": 200,
+      "flow_business_status": 200,
+      "flow_result": true,
+      "browser_console_errors": 0,
+      "uncaught_exceptions": 0,
+      "failed_requests": 0,
+      "direct_receipt_matches_proxy": true,
+      "nodes": 4,
+      "edges": 3,
+      "case": "dev36_turn1",
+      "database": "flight_2",
+      "ticket": "935ca24fa53e49dab32170098ee51c8d",
+      "mode": "live",
+      "lookup": "off",
+      "survey_tables": 3,
+      "checks_used": 1,
+      "check_limit": 3,
+      "model_calls": 2,
+      "rows": 62,
+      "reference_distinct_airports": 62,
+      "set_match": true,
+      "memory_writes": 0,
+      "elapsed_seconds": 36.016,
+      "steps": [
+        {
+          "tool": "check_context",
+          "args": {
+            "sql": "SELECT 'airline' AS kind, CAST(uid AS TEXT) AS code, Airline AS label FROM airlines WHERE lower(trim(Airline)) LIKE '%united%' UNION ALL SELECT 'airport' AS kind, quote(AirportCode) AS code, AirportName AS label FROM airports LIMIT 20"
+          },
+          "receipt": {
+            "accepted": true,
+            "sample": [
+              [
+                "airline",
+                "1",
+                "United Airlines"
+              ],
+              [
+                "airport",
+                "'APG'",
+                "Phillips AAF "
+              ],
+              [
+                "airport",
+                "'ABR'",
+                "Municipal "
+              ]
+            ]
+          }
+        },
+        {
+          "tool": "submit_answer",
+          "args": {
+            "sql": "SELECT trim(f.SourceAirport) AS source_airport_code, trim(a.AirportName) AS source_airport_name, trim(a.City) AS city, COUNT(*) AS flight_count FROM flights AS f JOIN airlines AS l ON f.Airline = l.uid LEFT JOIN airports AS a ON trim(f.SourceAirport) = trim(a.AirportCode) WHERE trim(l.Airline) = 'United Airlines' GROUP BY trim(f.SourceAirport), trim(a.AirportName), trim(a.City) ORDER BY source_airport_code"
+          },
+          "receipt": {
+            "accepted": true,
+            "row_count": 62,
+            "sample": [
+              [
+                "AAF",
+                "Municipal",
+                "Apalachicola",
+                3
+              ],
+              [
+                "ABL",
+                "Ambler",
+                "Ambler",
+                1
+              ],
+              [
+                "ABQ",
+                "Albuquerque International",
+                "Albuquerque",
+                2
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "replay": [
+    {
+      "direct_receipt_matches_proxy": true,
+      "case": "dev36_turn1",
+      "database": "flight_2",
+      "ticket": "9d5e35183897405da4d2090f1c042e4f",
+      "mode": "replay",
+      "lookup": "on",
+      "survey_tables": 3,
+      "checks_used": 2,
+      "check_limit": 3,
+      "model_calls": 0,
+      "rows": 62,
+      "reference_distinct_airports": 62,
+      "set_match": true,
+      "memory_writes": 1,
+      "elapsed_seconds": 0.023,
+      "steps": [
+        {
+          "tool": "lookup_value",
+          "args": {
+            "table": "airlines",
+            "column": "Airline",
+            "term": "United Airlines",
+            "refresh": false
+          },
+          "receipt": {
+            "verified": true,
+            "source": "database",
+            "field": [
+              "airlines",
+              "Airline"
+            ],
+            "values": [
+              "United Airlines"
+            ]
+          }
+        },
+        {
+          "tool": "check_context",
+          "args": {
+            "sql": "SELECT quote(AirportCode) FROM airports LIMIT 3"
+          },
+          "receipt": {
+            "accepted": true,
+            "sample": [
+              [
+                "'AAF'"
+              ],
+              [
+                "'ABI'"
+              ],
+              [
+                "'ABL'"
+              ]
+            ]
+          }
+        },
+        {
+          "tool": "submit_answer",
+          "args": {
+            "sql": "SELECT DISTINCT TRIM(f.SourceAirport) AS airport_code, TRIM(a.AirportName) AS airport_name FROM flights f JOIN airlines l ON f.Airline=l.uid LEFT JOIN airports a ON TRIM(f.SourceAirport)=TRIM(a.AirportCode) WHERE l.Airline='United Airlines' ORDER BY airport_code"
+          },
+          "receipt": {
+            "accepted": true,
+            "row_count": 62,
+            "sample": [
+              [
+                "AAF",
+                "Municipal"
+              ],
+              [
+                "ABL",
+                "Ambler"
+              ],
+              [
+                "ABQ",
+                "Albuquerque International"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "direct_receipt_matches_proxy": true,
+      "case": "dev36_turn1",
+      "database": "flight_2",
+      "ticket": "1dab2679e7e54cf8b407f7667f05d809",
+      "mode": "replay",
+      "lookup": "off",
+      "survey_tables": 3,
+      "checks_used": 1,
+      "check_limit": 3,
+      "model_calls": 0,
+      "rows": 62,
+      "reference_distinct_airports": 62,
+      "set_match": true,
+      "memory_writes": 0,
+      "elapsed_seconds": 0.032,
+      "steps": [
+        {
+          "tool": "check_context",
+          "args": {
+            "sql": "SELECT uid,Airline, (SELECT count(*) FROM flights f WHERE f.Airline=a.uid) n,(SELECT quote(AirportCode) FROM airports LIMIT 1) sample FROM airlines a WHERE trim(Airline) LIKE '%United%'"
+          },
+          "receipt": {
+            "accepted": true,
+            "sample": [
+              [
+                1,
+                "United Airlines",
+                100,
+                "'AAF'"
+              ]
+            ]
+          }
+        },
+        {
+          "tool": "submit_answer",
+          "args": {
+            "sql": "SELECT DISTINCT TRIM(f.SourceAirport) AS airport_code, TRIM(p.AirportName) AS airport_name FROM flights f JOIN airlines a ON f.Airline=a.uid LEFT JOIN airports p ON TRIM(f.SourceAirport)=p.AirportCode WHERE TRIM(a.Airline)='United Airlines' ORDER BY airport_code"
+          },
+          "receipt": {
+            "accepted": true,
+            "row_count": 62,
+            "sample": [
+              [
+                "AAF",
+                "Municipal"
+              ],
+              [
+                "ABL",
+                "Ambler"
+              ],
+              [
+                "ABQ",
+                "Albuquerque International"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "unmodified_upstream": {
+    "backend_commit": "58051d9b7e679e9730e0a431fc5229cc01f972dd",
+    "http_status": 700,
+    "business_status": 700,
+    "result": false,
+    "missing_result": "FLOW_NODE_RUN.result"
+  },
+  "screenshots": {
+    "backend.png": {
+      "sha256": "68898c43eee61ed25db5b755fe4472e3ffe7ba712faf20c1d04204fe0f046ae9",
+      "pixels": [
+        1473,
+        664
+      ]
+    },
+    "frontend.png": {
+      "sha256": "a230112a41fa62c4b2caff380fb4040c17dc3b7fb6dda1311b1238b8ff5dbc0d",
+      "pixels": [
+        1594,
+        1131
+      ]
+    }
+  },
+  "clean_reproduction": {
+    "fresh_source_checkouts": true,
+    "initial_empty_project_maven_repository": true,
+    "initial_empty_project_pnpm_store": true,
+    "preexisting": [
+      "Git",
+      "nvm-windows",
+      "Node 24.14.1 and 18.20.8",
+      "Python",
+      "editors",
+      "course Maven configuration and scheduler archive",
+      "CoSQL flight_2 database"
+    ],
+    "prepare_and_build_seconds": 280.665,
+    "startup_to_both_browser_replays_seconds": 17.142,
+    "wall_seconds_including_service_switch": 387.058,
+    "homepage": 200,
+    "console_and_page_errors": 0,
+    "failed_requests": 0,
+    "replay_on_rows": 62,
+    "replay_off_rows": 62
+  },
+  "checks": {
+    "maven_modules_built": 11,
+    "maven_test_execution": "skipped",
+    "new_route_typecheck": "passed",
+    "full_platform_typecheck": "failed",
+    "unchanged_upstream_source_diagnostics_observed": 85
+  }
+}

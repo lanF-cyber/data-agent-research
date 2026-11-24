@@ -1,5 +1,9 @@
 # 数据 Agent 研究
 
+## 第 4 周 · RSI 数据平台与 CoSQL Harness 联调
+
+五节点画布调度了一道 CoSQL 原题。现场生成的 SQL 返回 62 个始发机场，与独立查询的完整机场代码集合一致。[运行截图与实验结果](weeks/week-04/README.md) · [启动命令与依赖版本](weeks/week-04/reproduce.md)
+
 ## 第 3 周 · CoSQL 多轮数据库问答
 
 在 CoSQL 上比较 GPT-6 Sol 的提问、查库和交付方式，探索如何让正确率逐步逼近 100%。用同一批问题对照实验，逐题查清模型、参考答案和评分规则各会造成哪些失分。
@@ -38,6 +42,7 @@
 
 | 周次 | 研究主题 | 交付 |
 | --- | --- | --- |
+| 第 4 周 | RSI 环境与 CoSQL Harness 调度 | [报告与两张截图](weeks/week-04/README.md) · [复现](weeks/week-04/reproduce.md) · [运行回执](evidence/week-04/verification.json) |
 | 第 3 周 | CoSQL 多轮问答、MCP 交付与失分归因 | [报告](weeks/week-03/README.md) · [错例](weeks/week-03/cases.md) · [复算](weeks/week-03/reproduce.md) |
 
 周报告放在 `weeks/week-NN/`，用于复算的记录放在 `evidence/week-NN/`。CoSQL 实验代码集中在 [cosql/](cosql/)。

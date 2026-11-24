@@ -1,0 +1,52 @@
+{
+  "id": "dev36_turn1",
+  "database": "flight_2",
+  "database_sha256": "db777ba6488ae2b515cb138d71ff23c4533e5fd0355854648a1102faff3fb7af",
+  "recorded": {
+    "on": [
+      {
+        "tool": "lookup_value",
+        "args": {
+          "table": "airlines",
+          "column": "Airline",
+          "term": "United Airlines",
+          "refresh": false
+        }
+      },
+      {
+        "tool": "check_context",
+        "args": {
+          "sql": "SELECT quote(AirportCode) FROM airports LIMIT 3"
+        }
+      },
+      {
+        "tool": "submit_answer",
+        "args": {
+          "sql": "SELECT DISTINCT TRIM(f.SourceAirport) AS airport_code, TRIM(a.AirportName) AS airport_name FROM flights f JOIN airlines l ON f.Airline=l.uid LEFT JOIN airports a ON TRIM(f.SourceAirport)=TRIM(a.AirportCode) WHERE l.Airline='United Airlines' ORDER BY airport_code",
+          "text": "",
+          "followup": "",
+          "gap_key": ""
+        }
+      }
+    ],
+    "off": [
+      {
+        "tool": "check_context",
+        "args": {
+          "sql": "SELECT uid,Airline, (SELECT count(*) FROM flights f WHERE f.Airline=a.uid) n,(SELECT quote(AirportCode) FROM airports LIMIT 1) sample FROM airlines a WHERE trim(Airline) LIKE '%United%'"
+        }
+      },
+      {
+        "tool": "submit_answer",
+        "args": {
+          "sql": "SELECT DISTINCT TRIM(f.SourceAirport) AS airport_code, TRIM(p.AirportName) AS airport_name FROM flights f JOIN airlines a ON f.Airline=a.uid LEFT JOIN airports p ON TRIM(f.SourceAirport)=p.AirportCode WHERE TRIM(a.Airline)='United Airlines' ORDER BY airport_code",
+          "text": "These are the distinct departure airports listed for United Airlines.",
+          "followup": "",
+          "gap_key": ""
+        }
+      }
+    ]
+  },
+  "question": "what is the source airport for United Airlines?",
+  "catalog_notes": "flight_2：airports.City、AirportName、Country 各100条文本全部带尾空格，如 'Aberdeen '、'Phillips AAF '、'United States '；CountryAbbrev 同时有 'US ' 和 'US'，仅1条带尾空格。airlines.Country 12条为文本，样例 'USA'，不可直接与机场国家字段等值关联。flights.SourceAirport、DestAirport 各1200条文本全部带首空格，如 ' APG'、' ASY'；两列均声明外键指向 airports.AirportCode，后者未提供实值，等值关联前先核验空格。flights.Airline 与 airlines.uid 均为 INTEGER，但未见声明外键或实值验证。已巡检列未报告空字符串或混合类型。"
+}

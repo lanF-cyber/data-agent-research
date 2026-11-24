@@ -1,0 +1,60 @@
+{
+  "nodes": [
+    {
+      "id": "catalog",
+      "label": "接库巡检",
+      "detail": "表结构与存值摘要",
+      "x": 29,
+      "y": 25
+    },
+    {
+      "id": "generate",
+      "label": "生成 SQL",
+      "detail": "结合前文，可多次试查",
+      "x": 29,
+      "y": 132
+    },
+    {
+      "id": "lookup_value",
+      "label": "核对字段存值",
+      "detail": "实际写法返回生成节点",
+      "x": 262,
+      "y": 132
+    },
+    {
+      "id": "submit",
+      "label": "执行与交付",
+      "detail": "原库结果与必要补问",
+      "x": 29,
+      "y": 239
+    },
+    {
+      "id": "learn",
+      "label": "写回记忆",
+      "detail": "保存已核实的值",
+      "x": 262,
+      "y": 239
+    }
+  ],
+  "edges": [
+    [
+      "catalog",
+      "generate"
+    ],
+    [
+      "generate",
+      "lookup_value"
+    ],
+    [
+      "generate",
+      "submit"
+    ],
+    [
+      "submit",
+      "learn"
+    ]
+  ],
+  "optional_tools": {
+    "lookup_value": "lookup_value"
+  }
+}

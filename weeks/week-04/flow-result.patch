@@ -1,0 +1,65 @@
+diff --git a/core-flow/src/main/java/com/horsecoder/common/whuTalent/core/flow/Run/code/FlowCodeRun.java b/core-flow/src/main/java/com/horsecoder/common/whuTalent/core/flow/Run/code/FlowCodeRun.java
+index 0ebc7d4..e5b0761 100644
+--- a/core-flow/src/main/java/com/horsecoder/common/whuTalent/core/flow/Run/code/FlowCodeRun.java
++++ b/core-flow/src/main/java/com/horsecoder/common/whuTalent/core/flow/Run/code/FlowCodeRun.java
+@@ -5,0 +6,2 @@ import cc.eamon.open.flow.spring.FlowComponent;
++import com.fasterxml.jackson.databind.JsonNode;
++import com.fasterxml.jackson.databind.ObjectMapper;
+@@ -7 +9,5 @@ import cc.eamon.open.flow.spring.FlowComponent;
+-import java.lang.String;
++import java.io.IOException;
++import java.io.InputStream;
++import java.io.OutputStream;
++import java.net.HttpURLConnection;
++import java.net.URL;
+@@ -18,0 +25 @@ public class FlowCodeRun {
++    private static final ObjectMapper MAPPER = new ObjectMapper();
+@@ -28,11 +35,11 @@ public class FlowCodeRun {
+-    public void flowCodeRun(
+-            String structure
+-    ) {
+-        // 初始化流程出参
+-        String result = null;
+-        // TODO：开始流程
+-
+-
+-
+-
+-        // 结束流程
++    public void flowCodeRun(String structure) throws IOException {
++        JsonNode canvas = MAPPER.readTree(structure);
++        if (canvas == null || !canvas.path("elements").isArray() || !canvas.path("links").isArray()) {
++            throw new IllegalArgumentException("Expected canvas arrays: elements and links");
++        }
++        String result;
++        if ("cosql-harness".equals(canvas.path("id").asText())) {
++            result = dispatch(canvas);
++        } else {
++            result = "elements=" + canvas.get("elements").size() + ", links=" + canvas.get("links").size();
++        }
+@@ -40 +46,0 @@ public class FlowCodeRun {
+-
+@@ -42,0 +49,23 @@ public class FlowCodeRun {
++    private String dispatch(JsonNode canvas) throws IOException {
++        URL worker = new URL("http://127.0.0.1:3216/dispatch");
++        HttpURLConnection connection = (HttpURLConnection) worker.openConnection(java.net.Proxy.NO_PROXY);
++        connection.setInstanceFollowRedirects(false);
++        connection.setRequestMethod("POST");
++        connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
++        connection.setConnectTimeout(3000);
++        connection.setReadTimeout(8000);
++        connection.setDoOutput(true);
++        try {
++            try (OutputStream body = connection.getOutputStream()) {
++                MAPPER.writeValue(body, canvas);
++            }
++            if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
++                throw new IOException("Harness dispatch returned HTTP " + connection.getResponseCode());
++            }
++            try (InputStream receipt = connection.getInputStream()) {
++                return MAPPER.readTree(receipt).toString();
++            }
++        } finally {
++            connection.disconnect();
++        }
++    }
