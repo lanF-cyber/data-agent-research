@@ -5,3 +5,4 @@
 *.toml -text
 /cosql/answer_submission_mcp.py -text
 /cosql/answer_submission_eval101.py -text
+/weeks/week-04/reference-resolution/scope_harness.py text eol=lf

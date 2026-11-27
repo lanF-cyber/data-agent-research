@@ -1,0 +1,2380 @@
+{
+  "scoring_sha256": "f2ba8a55410b0634dae4b43481e8adaefce83d67d44c24e9d447a3842cc2db52",
+  "summary": {
+    "模型": "gpt-6.2-sol",
+    "同题整段重跑": {
+      "对话数": 16,
+      "有效平台运行": 32,
+      "真实模型调用": {
+        "contrast": 40,
+        "v3": 42
+      },
+      "目标": {
+        "题数": 26,
+        "旧版对": 11,
+        "新版对": 24,
+        "错转对": 13,
+        "都对": 11,
+        "都错": 2,
+        "对转错": 0
+      },
+      "连同前文": {
+        "题数": 36,
+        "旧版对": 19,
+        "新版对": 31,
+        "错转对": 13,
+        "都对": 18,
+        "都错": 4,
+        "对转错": 1
+      },
+      "storage": {
+        "题数": 21,
+        "旧版对": 8,
+        "新版对": 20,
+        "错转对": 12,
+        "都对": 8,
+        "都错": 1,
+        "对转错": 0
+      },
+      "other_followups": {
+        "题数": 3,
+        "旧版对": 1,
+        "新版对": 2,
+        "错转对": 1,
+        "都对": 1,
+        "都错": 1,
+        "对转错": 0
+      },
+      "historic_regressions": {
+        "题数": 2,
+        "旧版对": 2,
+        "新版对": 2,
+        "错转对": 0,
+        "都对": 2,
+        "都错": 0,
+        "对转错": 0
+      }
+    },
+    "固定错前文范围实验": [
+      {
+        "prefix_sha256": "035ffd7a597178b6ebcdd5b43f178de890c9b600d5abdab0584029b36a1badcd",
+        "facts_sha256": "067d5c4bb7664db386c94e307e1ac8499efcd6e161ffd9722dde3f1cfce4823b",
+        "tickets": [
+          "20babd2b68585fd4a6612f8071d973d6",
+          "c30de99dd9da55e38ee622c185f55acd"
+        ],
+        "rows": [
+          4,
+          35
+        ],
+        "passes": [
+          false,
+          true
+        ]
+      },
+      {
+        "prefix_sha256": "035ffd7a597178b6ebcdd5b43f178de890c9b600d5abdab0584029b36a1badcd",
+        "facts_sha256": "067d5c4bb7664db386c94e307e1ac8499efcd6e161ffd9722dde3f1cfce4823b",
+        "tickets": [
+          "b0580eaab27d582f904b52d46459cbac",
+          "40bf11340511520fb1dcc501ce674cc2"
+        ],
+        "rows": [
+          4,
+          35
+        ],
+        "passes": [
+          false,
+          true
+        ]
+      },
+      {
+        "prefix_sha256": "035ffd7a597178b6ebcdd5b43f178de890c9b600d5abdab0584029b36a1badcd",
+        "facts_sha256": "067d5c4bb7664db386c94e307e1ac8499efcd6e161ffd9722dde3f1cfce4823b",
+        "tickets": [
+          "b34386a9d6395ecfbfcc35e325d8b955",
+          "e2014808824d56b9babf65a099c951f8"
+        ],
+        "rows": [
+          4,
+          35
+        ],
+        "passes": [
+          false,
+          true
+        ]
+      }
+    ],
+    "合并后不同修复题号": [
+      "dev28_turn1",
+      "dev38_turn1",
+      "dev38_turn2",
+      "dev85_turn1",
+      "dev92_turn2",
+      "dev92_turn3",
+      "dev98_turn2",
+      "dev111_turn1",
+      "dev111_turn2",
+      "dev137_turn1",
+      "dev137_turn3",
+      "dev235_turn1",
+      "dev235_turn2",
+      "dev86_turn6"
+    ],
+    "结论": "按题号去重。固定错误前文的单轮干预和自然连续会话分别计算成功率。",
+    "发布参考敏感性": {
+      "发布输入相同": 13,
+      "发布参考仍错转对": 5,
+      "发布参考改判对转错": 7,
+      "发布参考都错": 1,
+      "发布参考都对": 0,
+      "输入前缀不同": [
+        "dev86_turn6"
+      ]
+    }
+  },
+  "database_sha256": {
+    "course_teach": "da45fcdde64ac2b9330146506b7653ad4417489d8e496e509045e1b02245d793",
+    "cre_Doc_Template_Mgt": "9c3fdd03d8795ecde60aae782ce50c4fb1d6c03de1401fcdd6dc177342a53df5",
+    "dog_kennels": "ea5fbc6cf6aaf500371c5c121c339d9802ba6f5fbecd948a5274c0b487a9f486",
+    "flight_2": "db777ba6488ae2b515cb138d71ff23c4533e5fd0355854648a1102faff3fb7af",
+    "museum_visit": "3217aee38d8e3661d374bf025591b7164a1179c568ef5d20f3c338035fc6e1dd",
+    "singer": "5c1b72755d148c294b26d7b479307e8799b93485ac918720f953e2ab84d59a0a",
+    "student_transcripts_tracking": "5a1f4928a1fd36f6edb31c4f054203b2e2fab6b18e5951c4f5633628f82a8e56",
+    "world_1": "17b986695f16786d58d66f85e49dba87bdfe72953207ab9b1b49da9d2301ef65",
+    "wta_1": "8f20747456d7748674b4f05432f3de96446ced95b8bd5a6fd01284f6c28f727c"
+  },
+  "version_graphs": {
+    "contrast": {
+      "elements": [
+        {
+          "id": "contrast"
+        }
+      ],
+      "links": []
+    },
+    "v3": {
+      "elements": [
+        {
+          "id": "catalog"
+        },
+        {
+          "id": "generate"
+        },
+        {
+          "id": "lookup_value"
+        },
+        {
+          "id": "submit"
+        },
+        {
+          "id": "learn"
+        }
+      ],
+      "links": [
+        {
+          "fromElementId": "catalog",
+          "toElementId": "generate"
+        },
+        {
+          "fromElementId": "generate",
+          "toElementId": "lookup_value"
+        },
+        {
+          "fromElementId": "generate",
+          "toElementId": "submit"
+        },
+        {
+          "fromElementId": "submit",
+          "toElementId": "learn"
+        }
+      ]
+    }
+  },
+  "source_sha256": {
+    "scope_harness.py": "214b7ff8d2938c6bba22f8e6582b38c8e145c4278b54607ae80a211578a296ea",
+    "value_flow.json": "7014f28fe6915c492377ad7fe3a72ff865c34816c4ec55693e4cef040f9c9afb"
+  },
+  "cases": [
+    {
+      "id": "dev28_turn1",
+      "group": "storage",
+      "database": "flight_2",
+      "users": [
+        [
+          "dev28_turn1",
+          "how many flights are landing in the city of aberdeen or abilene",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT COUNT(*) FROM Flights f JOIN Airports a ON TRIM(f.DestAirport) = TRIM(a.AirportCode) WHERE LOWER(TRIM(a.City)) IN ('aberdeen', 'abilene')",
+          "executable_sql": "SELECT COUNT(*) FROM Flights f JOIN Airports a ON TRIM(f.DestAirport) = TRIM(a.AirportCode) WHERE LOWER(TRIM(a.City)) IN ('aberdeen', 'abilene')",
+          "columns": [
+            "COUNT(*)"
+          ],
+          "rows": [
+            [
+              47
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "d80d30944532508c8bb4f9129fea229b",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS flight_count FROM flights AS f JOIN airports AS a ON f.DestAirport = a.AirportCode WHERE LOWER(a.City) IN ('aberdeen', 'abilene')",
+        "columns": [
+          "flight_count"
+        ],
+        "rows": [
+          [
+            0
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "a1bc3c5a8f31542aa18202753e2a422d",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS flight_count FROM flights f WHERE EXISTS (SELECT 1 FROM airports a WHERE TRIM(a.AirportCode)=TRIM(f.DestAirport) AND LOWER(TRIM(a.City)) IN ('aberdeen','abilene'))",
+        "columns": [
+          "flight_count"
+        ],
+        "rows": [
+          [
+            47
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "question_zh": "到达 Aberdeen 或 Abilene 的航班数",
+      "failure": "两城匹配后，航班与机场按带空格的代码关联失败。",
+      "context_role": "本轮已给全范围",
+      "published": {
+        "sql": "SELECT count ( * )  FROM Flights AS T1 JOIN Airports AS T2 ON T1.DestAirport   =   T2.AirportCode WHERE T2.city  like  \"%Aberdeen%\" OR T2.city  like  \"%Abilene%\"",
+        "executable_sql": "SELECT count ( * )  FROM Flights AS T1 JOIN Airports AS T2 ON T1.DestAirport   =   T2.AirportCode WHERE T2.city  like  \"%Aberdeen%\" OR T2.city  like  \"%Abilene%\"",
+        "columns": [
+          "count ( * )"
+        ],
+        "rows": [
+          [
+            0
+          ]
+        ],
+        "same_user_contract": true,
+        "passes": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "id": "dev38_turn1",
+      "group": "storage",
+      "database": "flight_2",
+      "users": [
+        [
+          "dev38_turn1",
+          "How many United Airlines flights go to the city called Aberdeen?",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT COUNT(*) FROM Flights f JOIN Airports a ON TRIM(f.DestAirport) = TRIM(a.AirportCode) JOIN Airlines l ON l.uid = f.Airline WHERE LOWER(TRIM(a.City)) = 'aberdeen' AND l.Airline = 'United Airlines'",
+          "executable_sql": "SELECT COUNT(*) FROM Flights f JOIN Airports a ON TRIM(f.DestAirport) = TRIM(a.AirportCode) JOIN Airlines l ON l.uid = f.Airline WHERE LOWER(TRIM(a.City)) = 'aberdeen' AND l.Airline = 'United Airlines'",
+          "columns": [
+            "COUNT(*)"
+          ],
+          "rows": [
+            [
+              3
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "8716eec9d80c5c10bd59110ee6fc7175",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS flight_count FROM flights f JOIN airlines a ON a.uid=f.Airline JOIN airports d ON d.AirportCode=f.DestAirport WHERE a.Airline='United Airlines' AND d.City='Aberdeen'",
+        "columns": [
+          "flight_count"
+        ],
+        "rows": [
+          [
+            0
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "082dcc56f85952069aad08b1d1547d92",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS flight_count FROM flights f JOIN airlines a ON f.Airline=a.uid JOIN airports p ON TRIM(f.DestAirport)=TRIM(p.AirportCode) WHERE TRIM(a.Airline)='United Airlines' AND TRIM(p.City)='Aberdeen'",
+        "columns": [
+          "flight_count"
+        ],
+        "rows": [
+          [
+            3
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "question_zh": "联合航空飞往 Aberdeen 的班数",
+      "failure": "目的机场码关联失败。",
+      "context_role": "本轮已给全范围",
+      "published": {
+        "sql": "SELECT count ( * )  FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport   =   T2.AirportCode JOIN AIRLINES AS T3 ON T3.uid   =   T1.Airline WHERE T2.City   =   \"Aberdeen\" AND T3.Airline   =   \"United Airlines\"",
+        "executable_sql": "SELECT count ( * )  FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport   =   T2.AirportCode JOIN AIRLINES AS T3 ON T3.uid   =   T1.Airline WHERE T2.City   =   \"Aberdeen\" AND T3.Airline   =   \"United Airlines\"",
+        "columns": [
+          "count ( * )"
+        ],
+        "rows": [
+          [
+            0
+          ]
+        ],
+        "same_user_contract": true,
+        "passes": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "id": "dev38_turn2",
+      "group": "storage",
+      "database": "flight_2",
+      "users": [
+        [
+          "dev38_turn1",
+          "How many United Airlines flights go to the city called Aberdeen?",
+          null
+        ],
+        [
+          "dev38_turn2",
+          "What other cities does United Airlines go to?",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT DISTINCT TRIM(a.City) FROM Flights f JOIN Airports a ON TRIM(f.DestAirport) = TRIM(a.AirportCode) JOIN Airlines l ON l.uid = f.Airline WHERE LOWER(TRIM(a.City)) <> 'aberdeen' AND l.Airline = 'United Airlines'",
+          "executable_sql": "SELECT DISTINCT TRIM(a.City) FROM Flights f JOIN Airports a ON TRIM(f.DestAirport) = TRIM(a.AirportCode) JOIN Airlines l ON l.uid = f.Airline WHERE LOWER(TRIM(a.City)) <> 'aberdeen' AND l.Airline = 'United Airlines'",
+          "columns": [
+            "TRIM(a.City)"
+          ],
+          "rows": [
+            [
+              "Abilene"
+            ],
+            [
+              "Adak Island"
+            ],
+            [
+              "Adrian"
+            ],
+            [
+              "Afton"
+            ],
+            [
+              "Ainsworth"
+            ],
+            [
+              "Akiachak"
+            ],
+            [
+              "Akiak"
+            ],
+            [
+              "Akron/Canton"
+            ],
+            [
+              "Alameda"
+            ],
+            [
+              "Alamogordo"
+            ],
+            [
+              "Alamosa"
+            ],
+            [
+              "Albany"
+            ],
+            [
+              "Albert Lea"
+            ],
+            [
+              "Albuquerque"
+            ],
+            [
+              "Aleknagik"
+            ],
+            [
+              "Aleneva"
+            ],
+            [
+              "Alexander City AL"
+            ],
+            [
+              "Alexandria Bay"
+            ],
+            [
+              "Algona"
+            ],
+            [
+              "Alice"
+            ],
+            [
+              "Aliceville AL"
+            ],
+            [
+              "Alitak"
+            ],
+            [
+              "Alliance"
+            ],
+            [
+              "Alpena"
+            ],
+            [
+              "Alpine"
+            ],
+            [
+              "Altus"
+            ],
+            [
+              "Alyeska"
+            ],
+            [
+              "Ambler"
+            ],
+            [
+              "Amchitka"
+            ],
+            [
+              "Amery"
+            ],
+            [
+              "Ames"
+            ],
+            [
+              "Amityville"
+            ],
+            [
+              "Amook"
+            ],
+            [
+              "Anacortes"
+            ],
+            [
+              "Anchorage"
+            ],
+            [
+              "Andrews"
+            ],
+            [
+              "Angel Fire"
+            ],
+            [
+              "Ann Arbor MI"
+            ],
+            [
+              "Annette Island"
+            ],
+            [
+              "Anniston"
+            ],
+            [
+              "Anthony"
+            ],
+            [
+              "Antlers"
+            ],
+            [
+              "Anvik"
+            ],
+            [
+              "Apalachicola"
+            ],
+            [
+              "Apple Valley"
+            ],
+            [
+              "Arapahoe"
+            ],
+            [
+              "Arcata"
+            ],
+            [
+              "Arctic Village"
+            ],
+            [
+              "Ardmore"
+            ],
+            [
+              "Ashland"
+            ],
+            [
+              "Ashley"
+            ],
+            [
+              "Astoria"
+            ],
+            [
+              "Athens"
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "8716eec9d80c5c10bd59110ee6fc7175",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT DISTINCT d.City FROM flights f JOIN airlines a ON a.uid=f.Airline JOIN airports d ON d.AirportCode=f.DestAirport WHERE a.Airline='United Airlines' AND d.City<>'Aberdeen' ORDER BY d.City",
+        "columns": [
+          "City"
+        ],
+        "rows": [],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "082dcc56f85952069aad08b1d1547d92",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT DISTINCT TRIM(p.City) AS city FROM flights f JOIN airlines a ON f.Airline=a.uid JOIN airports p ON TRIM(f.DestAirport)=TRIM(p.AirportCode) WHERE TRIM(a.Airline)='United Airlines' AND TRIM(p.City)<>'Aberdeen' ORDER BY city",
+        "columns": [
+          "city"
+        ],
+        "rows": [
+          [
+            "Abilene"
+          ],
+          [
+            "Adak Island"
+          ],
+          [
+            "Adrian"
+          ],
+          [
+            "Afton"
+          ],
+          [
+            "Ainsworth"
+          ],
+          [
+            "Akiachak"
+          ],
+          [
+            "Akiak"
+          ],
+          [
+            "Akron/Canton"
+          ],
+          [
+            "Alameda"
+          ],
+          [
+            "Alamogordo"
+          ],
+          [
+            "Alamosa"
+          ],
+          [
+            "Albany"
+          ],
+          [
+            "Albert Lea"
+          ],
+          [
+            "Albuquerque"
+          ],
+          [
+            "Aleknagik"
+          ],
+          [
+            "Aleneva"
+          ],
+          [
+            "Alexander City AL"
+          ],
+          [
+            "Alexandria Bay"
+          ],
+          [
+            "Algona"
+          ],
+          [
+            "Alice"
+          ],
+          [
+            "Aliceville AL"
+          ],
+          [
+            "Alitak"
+          ],
+          [
+            "Alliance"
+          ],
+          [
+            "Alpena"
+          ],
+          [
+            "Alpine"
+          ],
+          [
+            "Altus"
+          ],
+          [
+            "Alyeska"
+          ],
+          [
+            "Ambler"
+          ],
+          [
+            "Amchitka"
+          ],
+          [
+            "Amery"
+          ],
+          [
+            "Ames"
+          ],
+          [
+            "Amityville"
+          ],
+          [
+            "Amook"
+          ],
+          [
+            "Anacortes"
+          ],
+          [
+            "Anchorage"
+          ],
+          [
+            "Andrews"
+          ],
+          [
+            "Angel Fire"
+          ],
+          [
+            "Ann Arbor MI"
+          ],
+          [
+            "Annette Island"
+          ],
+          [
+            "Anniston"
+          ],
+          [
+            "Anthony"
+          ],
+          [
+            "Antlers"
+          ],
+          [
+            "Anvik"
+          ],
+          [
+            "Apalachicola"
+          ],
+          [
+            "Apple Valley"
+          ],
+          [
+            "Arapahoe"
+          ],
+          [
+            "Arcata"
+          ],
+          [
+            "Arctic Village"
+          ],
+          [
+            "Ardmore"
+          ],
+          [
+            "Ashland"
+          ],
+          [
+            "Ashley"
+          ],
+          [
+            "Astoria"
+          ],
+          [
+            "Athens"
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "question_zh": "联合航空还飞哪些其他城市，排除上轮 Aberdeen",
+      "failure": "旧 SQL 已排除 Aberdeen，机场码关联失败使其余城市全丢失。",
+      "context_role": "other cities 承接排除对象",
+      "published": {
+        "sql": "SELECT T2.city FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport   =   T2.AirportCode JOIN AIRLINES AS T3 ON T3.uid   =   T1.Airline where T2.city ! =   'Aberdeen' and T3.airline  =  \"United Airlines\"",
+        "executable_sql": "SELECT T2.city FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport   =   T2.AirportCode JOIN AIRLINES AS T3 ON T3.uid   =   T1.Airline where T2.city !=   'Aberdeen' and T3.airline  =  \"United Airlines\"",
+        "columns": [
+          "City"
+        ],
+        "rows": [],
+        "same_user_contract": true,
+        "passes": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "id": "dev85_turn1",
+      "group": "storage",
+      "database": "museum_visit",
+      "users": [
+        [
+          "dev85_turn1",
+          "What is the membership level of Gonzalo Higuaín ?",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT Level_of_membership FROM visitor WHERE name  =   \"Gonzalo Higuaín \"",
+          "executable_sql": "SELECT Level_of_membership FROM visitor WHERE name  =   \"Gonzalo Higuaín \"",
+          "columns": [
+            "Level_of_membership"
+          ],
+          "rows": [
+            [
+              8
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "fe3de9d39367581aa4641180c2d1bd33",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT Level_of_membership FROM visitor WHERE Name = 'Gonzalo Higuaín' COLLATE NOCASE",
+        "columns": [
+          "Level_of_membership"
+        ],
+        "rows": [],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "70dc93bd4f1154218477d2dcbb71a4d9",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT Level_of_membership FROM visitor WHERE TRIM(Name) = 'Gonzalo Higuaín'",
+        "columns": [
+          "Level_of_membership"
+        ],
+        "rows": [
+          [
+            8
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "question_zh": "Gonzalo Higuaín 的会员等级",
+      "failure": "姓名末尾有空格；大小写不敏感比较仍然匹配不到。",
+      "context_role": "本轮已给全范围",
+      "published": {
+        "sql": "SELECT Level_of_membership FROM visitor WHERE name  =   \"Gonzalo Higuaín \"",
+        "executable_sql": "SELECT Level_of_membership FROM visitor WHERE name  =   \"Gonzalo Higuaín \"",
+        "columns": [
+          "Level_of_membership"
+        ],
+        "rows": [
+          [
+            8
+          ]
+        ],
+        "same_user_contract": true,
+        "passes": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "id": "dev92_turn2",
+      "group": "storage",
+      "database": "flight_2",
+      "users": [
+        [
+          "dev92_turn1",
+          "How many airports are there?",
+          null
+        ],
+        [
+          "dev92_turn2",
+          "How many have departing flights?",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT count ( distinct sourceairport )  from flights",
+          "executable_sql": "SELECT count ( distinct sourceairport )  from flights",
+          "columns": [
+            "count ( distinct sourceairport )"
+          ],
+          "rows": [
+            [
+              100
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "dd58d28f4401596a922bc6d06e147875",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS airport_count FROM airports a WHERE EXISTS (SELECT 1 FROM flights f WHERE f.SourceAirport = a.AirportCode)",
+        "columns": [
+          "airport_count"
+        ],
+        "rows": [
+          [
+            0
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "c80b178d9a445dda9e95ddf71fccefad",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS airports_with_departing_flights FROM airports a WHERE EXISTS (SELECT 1 FROM flights f WHERE TRIM(f.SourceAirport)=TRIM(a.AirportCode))",
+        "columns": [
+          "airports_with_departing_flights"
+        ],
+        "rows": [
+          [
+            100
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "question_zh": "上轮的机场中有始发航班的机场数",
+      "failure": "旧版认出了被省略的是机场，未对齐始发机场码。",
+      "context_role": "省略的机场来自第 1 轮",
+      "published": {
+        "sql": "SELECT count ( distinct sourceairport )  from flights",
+        "executable_sql": "SELECT count ( distinct sourceairport )  from flights",
+        "columns": [
+          "count ( distinct sourceairport )"
+        ],
+        "rows": [
+          [
+            100
+          ]
+        ],
+        "same_user_contract": true,
+        "passes": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "id": "dev92_turn3",
+      "group": "storage",
+      "database": "flight_2",
+      "users": [
+        [
+          "dev92_turn1",
+          "How many airports are there?",
+          null
+        ],
+        [
+          "dev92_turn2",
+          "How many have departing flights?",
+          null
+        ],
+        [
+          "dev92_turn3",
+          "How many will arrive in ASY?",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT count ( * )  from flights where destairport like \"%ASY%\"",
+          "executable_sql": "SELECT count ( * )  from flights where destairport like \"%ASY%\"",
+          "columns": [
+            "count ( * )"
+          ],
+          "rows": [
+            [
+              19
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "dd58d28f4401596a922bc6d06e147875",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS arriving_flight_count FROM flights WHERE DestAirport = 'ASY'",
+        "columns": [
+          "arriving_flight_count"
+        ],
+        "rows": [
+          [
+            0
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "c80b178d9a445dda9e95ddf71fccefad",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS arriving_flights FROM flights WHERE TRIM(DestAirport) = 'ASY'",
+        "columns": [
+          "arriving_flights"
+        ],
+        "rows": [
+          [
+            19
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "question_zh": "到达 ASY 的航班数",
+      "failure": "两组都统计航班；旧版按 ASY 精确比较，漏掉库内空格。",
+      "context_role": "有省略，实证差异在存值",
+      "published": {
+        "sql": "SELECT count ( * )  from flights where destairport like \"%ASY%\"",
+        "executable_sql": "SELECT count ( * )  from flights where destairport like \"%ASY%\"",
+        "columns": [
+          "count ( * )"
+        ],
+        "rows": [
+          [
+            19
+          ]
+        ],
+        "same_user_contract": true,
+        "passes": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "id": "dev98_turn2",
+      "group": "other_followups",
+      "database": "singer",
+      "users": [
+        [
+          "dev98_turn1",
+          "What are the names of the singers who were born in either 1948 or 1949?",
+          null
+        ],
+        [
+          "dev98_turn2",
+          "What is their citizenship?",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT Citizenship FROM singer WHERE Birth_Year   =   1948 OR Birth_Year   =   1949",
+          "executable_sql": "SELECT Citizenship FROM singer WHERE Birth_Year   =   1948 OR Birth_Year   =   1949",
+          "columns": [
+            "Citizenship"
+          ],
+          "rows": [
+            [
+              "United States"
+            ],
+            [
+              "United States"
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "8804645e0b755620b8e453f76d85ff49",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT Name, Citizenship FROM singer WHERE Birth_Year IN (1948, 1949)",
+        "columns": [
+          "Name",
+          "Citizenship"
+        ],
+        "rows": [
+          [
+            "Christy Walton",
+            "United States"
+          ],
+          [
+            "Alice Walton",
+            "United States"
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "f6ad1cb807ad56eab7de44cbefb262db",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT Citizenship FROM singer WHERE Birth_Year IN (1948, 1949)",
+        "columns": [
+          "Citizenship"
+        ],
+        "rows": [
+          [
+            "United States"
+          ],
+          [
+            "United States"
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "question_zh": "前轮两名歌手的国籍，每人一行",
+      "failure": "两组都选对了歌手，旧版把前轮的姓名也带到了交付表。",
+      "context_role": "their 承接对象，本轮只问国籍",
+      "published": {
+        "sql": "SELECT Citizenship FROM singer WHERE Birth_Year   =   1948 OR Birth_Year   =   1949",
+        "executable_sql": "SELECT Citizenship FROM singer WHERE Birth_Year   =   1948 OR Birth_Year   =   1949",
+        "columns": [
+          "Citizenship"
+        ],
+        "rows": [
+          [
+            "United States"
+          ],
+          [
+            "United States"
+          ]
+        ],
+        "same_user_contract": true,
+        "passes": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "id": "dev111_turn1",
+      "group": "storage",
+      "database": "flight_2",
+      "users": [
+        [
+          "dev111_turn1",
+          "How many flights are arriving in the city called Aberdeen?",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT COUNT(*) FROM Flights f JOIN Airports a ON TRIM(f.DestAirport) = TRIM(a.AirportCode) WHERE LOWER(TRIM(a.City)) = 'aberdeen'",
+          "executable_sql": "SELECT COUNT(*) FROM Flights f JOIN Airports a ON TRIM(f.DestAirport) = TRIM(a.AirportCode) WHERE LOWER(TRIM(a.City)) = 'aberdeen'",
+          "columns": [
+            "COUNT(*)"
+          ],
+          "rows": [
+            [
+              21
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "636d73688ecf595e9b0982470a996a62",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS flight_count FROM flights f JOIN airports a ON f.DestAirport = a.AirportCode WHERE a.City = 'Aberdeen'",
+        "columns": [
+          "flight_count"
+        ],
+        "rows": [
+          [
+            0
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "f04cb4d3434e506c995bc30a23b2086c",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS arriving_flights FROM flights f WHERE EXISTS (SELECT 1 FROM airports a WHERE TRIM(a.AirportCode)=TRIM(f.DestAirport) AND TRIM(a.City)='Aberdeen')",
+        "columns": [
+          "arriving_flights"
+        ],
+        "rows": [
+          [
+            21
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "question_zh": "抵达 Aberdeen 的航班数",
+      "failure": "抵达机场码直接关联失败。",
+      "context_role": "本轮已给全范围",
+      "published": {
+        "sql": "SELECT count ( * )  FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport   =   T2.AirportCode WHERE T2.City   =   \"Aberdeen\"",
+        "executable_sql": "SELECT count ( * )  FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport   =   T2.AirportCode WHERE T2.City   =   \"Aberdeen\"",
+        "columns": [
+          "count ( * )"
+        ],
+        "rows": [
+          [
+            0
+          ]
+        ],
+        "same_user_contract": true,
+        "passes": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "id": "dev111_turn2",
+      "group": "storage",
+      "database": "flight_2",
+      "users": [
+        [
+          "dev111_turn1",
+          "How many flights are arriving in the city called Aberdeen?",
+          null
+        ],
+        [
+          "dev111_turn2",
+          "How many flights are there departing Aberdeen?",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT COUNT(*) FROM Flights f JOIN Airports a ON TRIM(f.SourceAirport) = TRIM(a.AirportCode) WHERE LOWER(TRIM(a.City)) = 'aberdeen'",
+          "executable_sql": "SELECT COUNT(*) FROM Flights f JOIN Airports a ON TRIM(f.SourceAirport) = TRIM(a.AirportCode) WHERE LOWER(TRIM(a.City)) = 'aberdeen'",
+          "columns": [
+            "COUNT(*)"
+          ],
+          "rows": [
+            [
+              21
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "636d73688ecf595e9b0982470a996a62",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS flight_count FROM flights f JOIN airports a ON f.SourceAirport = a.AirportCode WHERE a.City = 'Aberdeen'",
+        "columns": [
+          "flight_count"
+        ],
+        "rows": [
+          [
+            0
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "f04cb4d3434e506c995bc30a23b2086c",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS departing_flights FROM flights f WHERE EXISTS (SELECT 1 FROM airports a WHERE TRIM(a.AirportCode)=TRIM(f.SourceAirport) AND TRIM(a.City)='Aberdeen')",
+        "columns": [
+          "departing_flights"
+        ],
+        "rows": [
+          [
+            21
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "question_zh": "从 Aberdeen 起飞的航班数",
+      "failure": "方向已从抵达换成始发，旧版始发机场码仍未对齐。",
+      "context_role": "本轮点明城市与方向",
+      "published": {
+        "sql": "SELECT count ( * )  FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.sourceAirport   =   T2.AirportCode WHERE T2.City   =   \"Aberdeen\"",
+        "executable_sql": "SELECT count ( * )  FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.sourceAirport   =   T2.AirportCode WHERE T2.City   =   \"Aberdeen\"",
+        "columns": [
+          "count ( * )"
+        ],
+        "rows": [
+          [
+            0
+          ]
+        ],
+        "same_user_contract": true,
+        "passes": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "id": "dev137_turn1",
+      "group": "storage",
+      "database": "flight_2",
+      "users": [
+        [
+          "dev137_turn1",
+          "How many 'United Airlines' flights go to the Airport 'ASY'?",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT COUNT(*) FROM Flights f JOIN Airlines l ON l.uid = f.Airline WHERE l.Airline = 'United Airlines' AND TRIM(f.DestAirport) = 'ASY'",
+          "executable_sql": "SELECT COUNT(*) FROM Flights f JOIN Airlines l ON l.uid = f.Airline WHERE l.Airline = 'United Airlines' AND TRIM(f.DestAirport) = 'ASY'",
+          "columns": [
+            "COUNT(*)"
+          ],
+          "rows": [
+            [
+              1
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "4611001922cf59e394dc34a47e2bc0a3",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS flight_count FROM flights AS f JOIN airlines AS a ON a.uid = f.Airline WHERE a.Airline = 'United Airlines' AND f.DestAirport = 'ASY'",
+        "columns": [
+          "flight_count"
+        ],
+        "rows": [
+          [
+            0
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "a6b4f68267e45fb19b029839ae428016",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(*) AS flight_count FROM flights f JOIN airlines a ON f.Airline=a.uid WHERE a.Airline='United Airlines' AND TRIM(f.DestAirport)='ASY'",
+        "columns": [
+          "flight_count"
+        ],
+        "rows": [
+          [
+            1
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "question_zh": "联合航空到 ASY 的班数",
+      "failure": "目的机场码带空格。",
+      "context_role": "本轮已给全范围",
+      "published": {
+        "sql": "SELECT count ( * )  FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T2.Airline   =   T1.uid WHERE T1.Airline   =   \"United Airlines\" AND T2.DestAirport   =   \"ASY\"",
+        "executable_sql": "SELECT count ( * )  FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T2.Airline   =   T1.uid WHERE T1.Airline   =   \"United Airlines\" AND T2.DestAirport   =   \"ASY\"",
+        "columns": [
+          "count ( * )"
+        ],
+        "rows": [
+          [
+            0
+          ]
+        ],
+        "same_user_contract": true,
+        "passes": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "id": "dev137_turn3",
+      "group": "storage",
+      "database": "flight_2",
+      "users": [
+        [
+          "dev137_turn1",
+          "How many 'United Airlines' flights go to the Airport 'ASY'?",
+          null
+        ],
+        [
+          "dev137_turn2",
+          "What is the airline ID of United Airlines?",
+          null
+        ],
+        [
+          "dev137_turn3",
+          "How many airlines with airline id 1 go to the destination airport ASY?",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT count ( * )  FROM FLIGHTS WHERE airline  =  1 and DestAirport   =   \" ASY\"",
+          "executable_sql": "SELECT count ( * )  FROM FLIGHTS WHERE airline  =  1 and DestAirport   =   \" ASY\"",
+          "columns": [
+            "count ( * )"
+          ],
+          "rows": [
+            [
+              1
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "4611001922cf59e394dc34a47e2bc0a3",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(DISTINCT Airline) AS airline_count FROM flights WHERE Airline = 1 AND DestAirport = 'ASY'",
+        "columns": [
+          "airline_count"
+        ],
+        "rows": [
+          [
+            0
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "a6b4f68267e45fb19b029839ae428016",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT COUNT(DISTINCT a.uid) AS airline_count FROM airlines a JOIN flights f ON f.Airline=a.uid WHERE a.uid=1 AND TRIM(f.DestAirport)='ASY'",
+        "columns": [
+          "airline_count"
+        ],
+        "rows": [
+          [
+            1
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "question_zh": "航司 ID 1 去 ASY 的数量",
+      "failure": "ID 和目的地都已给出，旧 SQL 精确匹配 ASY 返回零。目前原库单例，航班数与航司数碰巧一致。",
+      "context_role": "本轮点明 ID 和目的地",
+      "published": {
+        "sql": "SELECT count ( * )  FROM FLIGHTS WHERE airline  =  1 and DestAirport   =   \" ASY\"",
+        "executable_sql": "SELECT count ( * )  FROM FLIGHTS WHERE airline  =  1 and DestAirport   =   \" ASY\"",
+        "columns": [
+          "count ( * )"
+        ],
+        "rows": [
+          [
+            1
+          ]
+        ],
+        "same_user_contract": true,
+        "passes": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "id": "dev235_turn1",
+      "group": "storage",
+      "database": "flight_2",
+      "users": [
+        [
+          "dev235_turn1",
+          "Can you list all the flight numbers that have a source airport value of AHD?",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT FlightNo FROM Flights WHERE TRIM(SourceAirport) = 'AHD'",
+          "executable_sql": "SELECT FlightNo FROM Flights WHERE TRIM(SourceAirport) = 'AHD'",
+          "columns": [
+            "FlightNo"
+          ],
+          "rows": [
+            [
+              54
+            ],
+            [
+              557
+            ],
+            [
+              787
+            ],
+            [
+              644
+            ],
+            [
+              461
+            ],
+            [
+              810
+            ],
+            [
+              653
+            ],
+            [
+              469
+            ],
+            [
+              929
+            ],
+            [
+              209
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "bdc6999f742b50bea4030d6b8e9ccbef",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT FlightNo FROM flights WHERE SourceAirport = 'AHD'",
+        "columns": [
+          "FlightNo"
+        ],
+        "rows": [],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "e7debf1360af5d1fa094819a89498ca5",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT FlightNo FROM flights WHERE TRIM(SourceAirport) = 'AHD' ORDER BY FlightNo",
+        "columns": [
+          "FlightNo"
+        ],
+        "rows": [
+          [
+            54
+          ],
+          [
+            209
+          ],
+          [
+            461
+          ],
+          [
+            469
+          ],
+          [
+            557
+          ],
+          [
+            644
+          ],
+          [
+            653
+          ],
+          [
+            787
+          ],
+          [
+            810
+          ],
+          [
+            929
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "question_zh": "从 AHD 起飞的航班号",
+      "failure": "始发地码存为带空格的字符串，旧版返回空表。",
+      "context_role": "本轮已给全范围",
+      "published": {
+        "sql": "SELECT FlightNo FROM FLIGHTS WHERE SourceAirport   =  \"AHD\"",
+        "executable_sql": "SELECT FlightNo FROM FLIGHTS WHERE SourceAirport   =  \"AHD\"",
+        "columns": [
+          "FlightNo"
+        ],
+        "rows": [],
+        "same_user_contract": true,
+        "passes": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "id": "dev235_turn2",
+      "group": "storage",
+      "database": "flight_2",
+      "users": [
+        [
+          "dev235_turn1",
+          "Can you list all the flight numbers that have a source airport value of AHD?",
+          null
+        ],
+        [
+          "dev235_turn2",
+          "Can you list the names of all the unique airlines that belong to those flight numbers?",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT DISTINCT l.Airline FROM Flights f JOIN Airlines l ON l.uid = f.Airline WHERE TRIM(f.SourceAirport) = 'AHD'",
+          "executable_sql": "SELECT DISTINCT l.Airline FROM Flights f JOIN Airlines l ON l.uid = f.Airline WHERE TRIM(f.SourceAirport) = 'AHD'",
+          "columns": [
+            "Airline"
+          ],
+          "rows": [
+            [
+              "United Airlines"
+            ],
+            [
+              "US Airways"
+            ],
+            [
+              "Delta Airlines"
+            ],
+            [
+              "Northwest Airlines"
+            ],
+            [
+              "JetBlue Airways"
+            ],
+            [
+              "Frontier Airlines"
+            ],
+            [
+              "AirTran Airways"
+            ],
+            [
+              "Virgin America"
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "bdc6999f742b50bea4030d6b8e9ccbef",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT DISTINCT a.Airline FROM airlines a JOIN flights f ON a.uid = f.Airline WHERE f.FlightNo IN (SELECT FlightNo FROM flights WHERE SourceAirport = 'AHD')",
+        "columns": [
+          "Airline"
+        ],
+        "rows": [],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "e7debf1360af5d1fa094819a89498ca5",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT DISTINCT a.Airline FROM flights f JOIN airlines a ON f.Airline = a.uid WHERE TRIM(f.SourceAirport) = 'AHD' ORDER BY a.Airline",
+        "columns": [
+          "Airline"
+        ],
+        "rows": [
+          [
+            "AirTran Airways"
+          ],
+          [
+            "Delta Airlines"
+          ],
+          [
+            "Frontier Airlines"
+          ],
+          [
+            "JetBlue Airways"
+          ],
+          [
+            "Northwest Airlines"
+          ],
+          [
+            "US Airways"
+          ],
+          [
+            "United Airlines"
+          ],
+          [
+            "Virgin America"
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "question_zh": "上轮 AHD 航班涉及的不同航司",
+      "failure": "旧 SQL 在子查询中重复使用未去空格的 AHD，又按航班号扩展；新版在连续对话中保留始发地限制。",
+      "context_role": "those flight numbers 承接第 1 轮",
+      "published": {
+        "sql": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid   =   T2.Airline WHERE T2.SourceAirport   =   \" AHD\"",
+        "executable_sql": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid   =   T2.Airline WHERE T2.SourceAirport   =   \" AHD\"",
+        "columns": [
+          "Airline"
+        ],
+        "rows": [
+          [
+            "United Airlines"
+          ],
+          [
+            "United Airlines"
+          ],
+          [
+            "United Airlines"
+          ],
+          [
+            "US Airways"
+          ],
+          [
+            "Delta Airlines"
+          ],
+          [
+            "Northwest Airlines"
+          ],
+          [
+            "JetBlue Airways"
+          ],
+          [
+            "Frontier Airlines"
+          ],
+          [
+            "AirTran Airways"
+          ],
+          [
+            "Virgin America"
+          ]
+        ],
+        "same_user_contract": true,
+        "passes": [
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "id": "dev86_turn6",
+      "group": "scope",
+      "database": "world_1",
+      "users": [
+        [
+          "dev86_turn1",
+          "Which countries have the largest number of recorded languages? List the names of all countries tied for the most.",
+          null
+        ],
+        [
+          "dev86_turn2",
+          "How many languages are spoken in Canada?",
+          null
+        ],
+        [
+          "dev86_turn3",
+          "What are the names of those languages?",
+          null
+        ],
+        [
+          "dev86_turn4",
+          "How many countries is Chinese spoken in?",
+          null
+        ],
+        [
+          "dev86_turn5",
+          "Which countries are in North America?",
+          null
+        ],
+        [
+          "dev86_turn6",
+          "What are the official languages of these countries?",
+          null
+        ]
+      ],
+      "expected": [
+        {
+          "sql": "SELECT LANGUAGE FROM countrylanguage WHERE countrycode in  ( SELECT Code FROM country WHERE Continent  =  \"North America\" )  and IsOfficial  =  \"T\"",
+          "executable_sql": "SELECT LANGUAGE FROM countrylanguage WHERE countrycode in  ( SELECT Code FROM country WHERE Continent  =  \"North America\" )  and IsOfficial  =  \"T\"",
+          "columns": [
+            "Language"
+          ],
+          "rows": [
+            [
+              "Dutch"
+            ],
+            [
+              "English"
+            ],
+            [
+              "Dutch"
+            ],
+            [
+              "Papiamento"
+            ],
+            [
+              "English"
+            ],
+            [
+              "English"
+            ],
+            [
+              "English"
+            ],
+            [
+              "English"
+            ],
+            [
+              "English"
+            ],
+            [
+              "French"
+            ],
+            [
+              "Spanish"
+            ],
+            [
+              "Spanish"
+            ],
+            [
+              "English"
+            ],
+            [
+              "Spanish"
+            ],
+            [
+              "French"
+            ],
+            [
+              "Danish"
+            ],
+            [
+              "Greenlandic"
+            ],
+            [
+              "Spanish"
+            ],
+            [
+              "Spanish"
+            ],
+            [
+              "French"
+            ],
+            [
+              "English"
+            ],
+            [
+              "English"
+            ],
+            [
+              "Spanish"
+            ],
+            [
+              "English"
+            ],
+            [
+              "French"
+            ],
+            [
+              "Spanish"
+            ],
+            [
+              "Spanish"
+            ],
+            [
+              "Spanish"
+            ],
+            [
+              "Spanish"
+            ],
+            [
+              "French"
+            ],
+            [
+              "English"
+            ],
+            [
+              "English"
+            ],
+            [
+              "English"
+            ],
+            [
+              "English"
+            ],
+            [
+              "English"
+            ]
+          ]
+        }
+      ],
+      "before": {
+        "ticket": "20babd2b68585fd4a6612f8071d973d6",
+        "passed": false,
+        "action": "submit_answer",
+        "sql": "SELECT l.Language AS official_language FROM country c JOIN countrylanguage l ON l.CountryCode=c.Code WHERE c.Name IN ('Canada','Costa Rica','United States') AND TRIM(l.IsOfficial)='T' ORDER BY c.Name,l.Language",
+        "columns": [
+          "official_language"
+        ],
+        "rows": [
+          [
+            "English"
+          ],
+          [
+            "French"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "English"
+          ]
+        ],
+        "note": "",
+        "followup": ""
+      },
+      "after": {
+        "ticket": "c30de99dd9da55e38ee622c185f55acd",
+        "passed": true,
+        "action": "submit_answer",
+        "sql": "SELECT l.Language AS \"Official language\" FROM country c JOIN countrylanguage l ON l.CountryCode=c.Code WHERE c.Continent='North America' AND l.IsOfficial='T' ORDER BY c.Name,l.Language",
+        "columns": [
+          "Official language"
+        ],
+        "rows": [
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "Dutch"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "French"
+          ],
+          [
+            "English"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "Danish"
+          ],
+          [
+            "Greenlandic"
+          ],
+          [
+            "French"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "French"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "French"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "English"
+          ],
+          [
+            "Dutch"
+          ],
+          [
+            "Papiamento"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "French"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ]
+        ],
+        "note": "The earlier query omitted North American countries without a Chinese-language entry; this result covers all North American countries.",
+        "followup": "Did you mean all North American countries or only the countries shown in the previous result?"
+      },
+      "frozen_last_answer": {
+        "sql": "SELECT c.Name FROM country c WHERE c.Continent='North America' AND EXISTS (SELECT 1 FROM countrylanguage l WHERE l.CountryCode=c.Code AND TRIM(l.Language)='Chinese') ORDER BY c.Name",
+        "columns": [
+          "Name"
+        ],
+        "rows": [
+          [
+            "Canada"
+          ],
+          [
+            "Costa Rica"
+          ],
+          [
+            "United States"
+          ]
+        ]
+      },
+      "selected_canvas": {
+        "id": "cosql-harness",
+        "experiment": "scope",
+        "mode": "live",
+        "operation": "start",
+        "questionId": "dev86_turn6",
+        "case": "original",
+        "arm": "selected",
+        "ticket": "c30de99dd9da55e38ee622c185f55acd",
+        "parent": "",
+        "elements": [
+          {
+            "id": "catalog"
+          },
+          {
+            "id": "generate"
+          },
+          {
+            "id": "lookup_value"
+          },
+          {
+            "id": "submit"
+          },
+          {
+            "id": "t5_set"
+          },
+          {
+            "id": "requested"
+          }
+        ],
+        "links": [
+          {
+            "fromElementId": "catalog",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "lookup_value"
+          },
+          {
+            "fromElementId": "lookup_value",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "submit"
+          },
+          {
+            "fromElementId": "t5_set",
+            "toElementId": "generate",
+            "cue": "these countries"
+          },
+          {
+            "fromElementId": "requested",
+            "toElementId": "generate",
+            "cue": "official languages"
+          }
+        ]
+      },
+      "selected_history": [
+        {
+          "turn": 5,
+          "kind": "set",
+          "cue": "these countries",
+          "user": "Which countries are in North America?",
+          "executed_sql": "SELECT c.Name FROM country c WHERE c.Continent='North America' AND EXISTS (SELECT 1 FROM countrylanguage l WHERE l.CountryCode=c.Code AND TRIM(l.Language)='Chinese') ORDER BY c.Name"
+        }
+      ],
+      "replications": [
+        {
+          "prefix_sha256": "035ffd7a597178b6ebcdd5b43f178de890c9b600d5abdab0584029b36a1badcd",
+          "facts_sha256": "067d5c4bb7664db386c94e307e1ac8499efcd6e161ffd9722dde3f1cfce4823b",
+          "tickets": [
+            "20babd2b68585fd4a6612f8071d973d6",
+            "c30de99dd9da55e38ee622c185f55acd"
+          ],
+          "rows": [
+            4,
+            35
+          ],
+          "passes": [
+            false,
+            true
+          ]
+        },
+        {
+          "prefix_sha256": "035ffd7a597178b6ebcdd5b43f178de890c9b600d5abdab0584029b36a1badcd",
+          "facts_sha256": "067d5c4bb7664db386c94e307e1ac8499efcd6e161ffd9722dde3f1cfce4823b",
+          "tickets": [
+            "b0580eaab27d582f904b52d46459cbac",
+            "40bf11340511520fb1dcc501ce674cc2"
+          ],
+          "rows": [
+            4,
+            35
+          ],
+          "passes": [
+            false,
+            true
+          ]
+        },
+        {
+          "prefix_sha256": "035ffd7a597178b6ebcdd5b43f178de890c9b600d5abdab0584029b36a1badcd",
+          "facts_sha256": "067d5c4bb7664db386c94e307e1ac8499efcd6e161ffd9722dde3f1cfce4823b",
+          "tickets": [
+            "b34386a9d6395ecfbfcc35e325d8b955",
+            "e2014808824d56b9babf65a099c951f8"
+          ],
+          "rows": [
+            4,
+            35
+          ],
+          "passes": [
+            false,
+            true
+          ]
+        }
+      ],
+      "question_zh": "第 5 轮所问北美国家的官方语言，每条关系只交语言列",
+      "failure": "固定前轮误列三国后，完整历史组沿用该名单。选中第 5 轮原问和查询、单列交付，重查整个北美并解释遗漏。",
+      "context_role": "these countries 指向原问题集合，也可明确指定已展示三国",
+      "published": {
+        "sql": "SELECT LANGUAGE FROM countrylanguage WHERE countrycode in  ( SELECT Code FROM country WHERE Continent  =  \"North America\" )  and IsOfficial  =  \"T\"",
+        "executable_sql": "SELECT LANGUAGE FROM countrylanguage WHERE countrycode in  ( SELECT Code FROM country WHERE Continent  =  \"North America\" )  and IsOfficial  =  \"T\"",
+        "columns": [
+          "Language"
+        ],
+        "rows": [
+          [
+            "Dutch"
+          ],
+          [
+            "English"
+          ],
+          [
+            "Dutch"
+          ],
+          [
+            "Papiamento"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "French"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "English"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "French"
+          ],
+          [
+            "Danish"
+          ],
+          [
+            "Greenlandic"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "French"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "English"
+          ],
+          [
+            "French"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "French"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ]
+        ],
+        "same_user_contract": false,
+        "passes": [
+          false,
+          true
+        ]
+      }
+    }
+  ],
+  "failed": [
+    {
+      "题号": "dev106_turn2",
+      "批次分组": "prefix",
+      "数据库": "world_1",
+      "原句": "Can you show me only those government forms whose average life expectancy is greater than 72?",
+      "本轮后续输入": "",
+      "此前用户消息": "[[\"dev106_turn1\",\"What is the average life expectancy for each government form?\",null]]",
+      "业务问题": "",
+      "原错因": "",
+      "上下文作用": "",
+      "判定": "都错",
+      "参考SQL": "SELECT GovernmentForm FROM country GROUP BY GovernmentForm HAVING avg ( LifeExpectancy )   >  72",
+      "期望行数": 17,
+      "期望结果": "[[\"Commonwealth of the US\"],[\"Constitutional Monarchy (Emirate)\"],[\"Constitutional Monarchy, Federation\"]]",
+      "旧版SQL": "SELECT GovernmentForm, AVG(LifeExpectancy) AS AverageLifeExpectancy FROM country GROUP BY GovernmentForm HAVING AVG(LifeExpectancy) > 72 ORDER BY GovernmentForm",
+      "旧版列": "[\"GovernmentForm\",\"AverageLifeExpectancy\"]",
+      "旧版行数": 17,
+      "旧结果": "[[\"Commonwealth of the US\",75.55],[\"Constitutional Monarchy (Emirate)\",76.1],[\"Constitutional Monarchy, Federation\",76.95]]",
+      "新版SQL": "SELECT GovernmentForm, AVG(LifeExpectancy) AS AverageLifeExpectancy FROM country GROUP BY GovernmentForm HAVING AVG(LifeExpectancy) > 72 ORDER BY GovernmentForm",
+      "新版列": "[\"GovernmentForm\",\"AverageLifeExpectancy\"]",
+      "新版行数": 17,
+      "新结果": "[[\"Commonwealth of the US\",75.55],[\"Constitutional Monarchy (Emirate)\",76.1],[\"Constitutional Monarchy, Federation\",76.95]]",
+      "期望整表SHA256": "fe89743f76990f2c85309934b32ce659bacd04351f92aa5b7d03588c49a4b81b",
+      "旧整表SHA256": "77a54e8feede466e3aa0606830f4394d05c9c7b93e3f6ea57ee6b9c4808ed294",
+      "新整表SHA256": "77a54e8feede466e3aa0606830f4394d05c9c7b93e3f6ea57ee6b9c4808ed294",
+      "旧版RSI运行号": "ee66af08814252a29fa3a57a87c0efaf",
+      "新版RSI运行号": "5dbdec85085b5a3c8722a65866d7762f"
+    },
+    {
+      "题号": "dev238_turn2",
+      "批次分组": "prefix",
+      "数据库": "dog_kennels",
+      "原句": "Thank you for that!  Can you tell me how many of these dogs were abandoned?",
+      "本轮后续输入": "",
+      "此前用户消息": "[[\"dev238_turn1\",\"Hello!  Can you tell me how many dogs have not gone through any treatment?\",null]]",
+      "业务问题": "",
+      "原错因": "",
+      "上下文作用": "",
+      "判定": "对转错",
+      "参考SQL": "SELECT count ( * )  FROM Dogs WHERE abandoned_yn  =  1 AND dog_id NOT IN  (  SELECT dog_id FROM Treatments  ) ",
+      "期望行数": 1,
+      "期望结果": "[[0]]",
+      "旧版SQL": "SELECT COUNT(*) AS abandoned_dogs_without_treatment FROM Dogs AS d WHERE UPPER(d.abandoned_yn) = 'Y' AND NOT EXISTS (SELECT 1 FROM Treatments AS t WHERE t.dog_id = d.dog_id)",
+      "旧版列": "[\"abandoned_dogs_without_treatment\"]",
+      "旧版行数": 1,
+      "旧结果": "[[0]]",
+      "新版SQL": "SELECT COUNT(CASE WHEN d.abandoned_yn='1' THEN 1 END) AS code_1_count, COUNT(CASE WHEN d.abandoned_yn='0' THEN 1 END) AS code_0_count FROM Dogs d WHERE NOT EXISTS (SELECT 1 FROM Treatments t WHERE t.dog_id=d.dog_id)",
+      "新版列": "[\"code_1_count\",\"code_0_count\"]",
+      "新版行数": 1,
+      "新结果": "[[0,6]]",
+      "期望整表SHA256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387",
+      "旧整表SHA256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387",
+      "新整表SHA256": "a2faaf7621329d52dc3e1a7da122fd5a43707b0b0ea768bc1365ca2230d178d4",
+      "旧版RSI运行号": "e15a77f818de57debb8add9897ef2026",
+      "新版RSI运行号": "62911742da7a54d4a72d30b488c74263"
+    },
+    {
+      "题号": "dev238_turn3",
+      "批次分组": "storage",
+      "数据库": "dog_kennels",
+      "原句": "Can you provide me with a list of all dog Ids for all of the abandoned dogs, as well as their associated treatment type code?",
+      "本轮后续输入": "",
+      "此前用户消息": "[[\"dev238_turn1\",\"Hello!  Can you tell me how many dogs have not gone through any treatment?\",null],[\"dev238_turn2\",\"Thank you for that!  Can you tell me how many of these dogs were abandoned?\",null]]",
+      "业务问题": "",
+      "原错因": "",
+      "上下文作用": "",
+      "判定": "都错",
+      "参考SQL": "SELECT T1.dog_id, T2.treatment_type_code FROM Dogs AS T1 JOIN Treatments AS T2 ON T1.dog_id  =  T2.dog_id WHERE abandoned_yn  =  1",
+      "期望行数": 6,
+      "期望结果": "[[14,\"WALK\"],[14,\"EXAM\"],[15,\"EXAM\"]]",
+      "旧版SQL": "SELECT d.dog_id, t.treatment_type_code FROM Dogs AS d LEFT JOIN Treatments AS t ON t.dog_id = d.dog_id WHERE UPPER(d.abandoned_yn) = 'Y' ORDER BY d.dog_id, t.treatment_type_code",
+      "旧版列": "[\"dog_id\",\"treatment_type_code\"]",
+      "旧版行数": 0,
+      "旧结果": "[]",
+      "新版SQL": "SELECT DISTINCT d.abandoned_yn AS abandonment_flag, d.dog_id, t.treatment_type_code FROM Dogs d LEFT JOIN Treatments t ON t.dog_id=d.dog_id WHERE d.abandoned_yn IN ('0','1') ORDER BY abandonment_flag DESC,d.dog_id,t.treatment_type_code",
+      "新版列": "[\"abandonment_flag\",\"dog_id\",\"treatment_type_code\"]",
+      "新版行数": 19,
+      "新结果": "[[\"1\",1,\"WALK\"],[\"1\",14,\"EXAM\"],[\"1\",14,\"WALK\"]]",
+      "期望整表SHA256": "bd0942debba0e6ab1c351fdcf0fd8fabde2ee1dbc61875c0a087c88ab1a429ef",
+      "旧整表SHA256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "新整表SHA256": "e2bb6e6207191e63d09b38ffd6b835f86ca3f49d42927ee91b4d2988909f322f",
+      "旧版RSI运行号": "e15a77f818de57debb8add9897ef2026",
+      "新版RSI运行号": "62911742da7a54d4a72d30b488c74263"
+    },
+    {
+      "题号": "dev252_turn1",
+      "批次分组": "prefix",
+      "数据库": "wta_1",
+      "原句": "Could you list the average ranking for each player with their first name?",
+      "本轮后续输入": "",
+      "此前用户消息": "[]",
+      "业务问题": "",
+      "原错因": "",
+      "上下文作用": "",
+      "判定": "都错",
+      "参考SQL": "SELECT avg ( ranking )  ,  T1.first_name FROM players AS T1 JOIN rankings AS T2 ON T1.player_id   =   T2.player_id GROUP BY T1.player_id",
+      "期望行数": 2775,
+      "期望结果": "[[186.76587795765877,\"Mirjana\"],[121.82273948075202,\"Tamarine\"],[196.02280912364947,\"Katarina\"]]",
+      "旧版SQL": "SELECT p.first_name, AVG(r.ranking) AS average_ranking FROM players AS p LEFT JOIN rankings AS r ON r.player_id = p.player_id GROUP BY p.player_id, p.first_name",
+      "旧版列": "[\"first_name\",\"average_ranking\"]",
+      "旧版行数": 20662,
+      "旧结果": "[[\"Martina\",null],[\"Mirjana\",186.76587795765877],[\"Justine\",null]]",
+      "新版SQL": "SELECT TRIM(p.first_name) AS first_name, AVG(r.ranking) AS average_ranking FROM players AS p LEFT JOIN rankings AS r ON r.player_id = p.player_id AND TRIM(CAST(r.player_id AS TEXT)) <> '' GROUP BY p.player_id ORDER BY first_name, p.player_id",
+      "新版列": "[\"first_name\",\"average_ranking\"]",
+      "新版行数": 20662,
+      "新结果": "[[\"\",null],[\"\",null],[\"\",null]]",
+      "期望整表SHA256": "9db5f5d49d21ff2ab6621d14cb05cf5e8a52e769cfdfdc7d0e2f655766558612",
+      "旧整表SHA256": "983346d8ceaf22f841258fcbf510ad3f11ce2d2650331fc9f0e088b19787d38e",
+      "新整表SHA256": "1e3b078b72243a89923482c5a6655d71255468eb4eb161b982eb3c5ff54cab63",
+      "旧版RSI运行号": "33195e59c71b531da9c85fe5ee170ca5",
+      "新版RSI运行号": "76b8dfc1e2d85f629bd2afab5c36495d"
+    },
+    {
+      "题号": "dev252_turn2",
+      "批次分组": "other_followups",
+      "数据库": "wta_1",
+      "原句": "Could you add in their last names please?",
+      "本轮后续输入": "",
+      "此前用户消息": "[[\"dev252_turn1\",\"Could you list the average ranking for each player with their first name?\",null]]",
+      "业务问题": "",
+      "原错因": "",
+      "上下文作用": "",
+      "判定": "都错",
+      "参考SQL": "SELECT avg ( ranking )  ,  T1.first_name, t1.last_name FROM players AS T1 JOIN rankings AS T2 ON T1.player_id   =   T2.player_id GROUP BY T1.player_id",
+      "期望行数": 2775,
+      "期望结果": "[[186.76587795765877,\"Mirjana\",\"Lucic\"],[121.82273948075202,\"Tamarine\",\"Tanasugarn\"],[196.02280912364947,\"Katarina\",\"Srebotnik\"]]",
+      "旧版SQL": "SELECT p.first_name, p.last_name, AVG(r.ranking) AS average_ranking FROM players AS p LEFT JOIN rankings AS r ON r.player_id = p.player_id GROUP BY p.player_id, p.first_name, p.last_name",
+      "旧版列": "[\"first_name\",\"last_name\",\"average_ranking\"]",
+      "旧版行数": 20662,
+      "旧结果": "[[\"Martina\",\"Hingis\",null],[\"Mirjana\",\"Lucic\",186.76587795765877],[\"Justine\",\"Henin\",null]]",
+      "新版SQL": "SELECT TRIM(p.first_name) AS first_name, TRIM(p.last_name) AS last_name, AVG(r.ranking) AS average_ranking FROM players p LEFT JOIN rankings r ON r.player_id = p.player_id AND TRIM(CAST(r.player_id AS TEXT)) <> '' GROUP BY p.player_id ORDER BY first_name, last_name, p.player_id",
+      "新版列": "[\"first_name\",\"last_name\",\"average_ranking\"]",
+      "新版行数": 20662,
+      "新结果": "[[\"\",\"Brown\",null],[\"\",\"Gratton\",null],[\"\",\"Marine\",null]]",
+      "期望整表SHA256": "352b7859cbecd3e88cb5382dedf1483ed3b31827e3a5f3fd16c760ed9454866f",
+      "旧整表SHA256": "3fc323bd328f335efcbe69126cea4e4906efa9646f79f48a0ae2840def2feff7",
+      "新整表SHA256": "a132ac2d5bb89c687023078f41581a44aaabb0dc80766ab29d2855673c70ca49",
+      "旧版RSI运行号": "33195e59c71b531da9c85fe5ee170ca5",
+      "新版RSI运行号": "76b8dfc1e2d85f629bd2afab5c36495d"
+    }
+  ]
+}

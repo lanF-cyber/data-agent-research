@@ -1,0 +1,16 @@
+.rr { max-width: 1180px; padding: 28px clamp(16px, 4vw, 50px) 56px; margin: auto; color: #18352c; font: 16px/1.6 Inter, "Microsoft YaHei", sans-serif; }
+.rr nav, .rr small, .rr-tickets { font-size: 13px; color: #4e665d; }
+.rr h1 { margin: 30px 0 8px; font-size: clamp(26px, 4vw, 36px); }
+.rr h2 { margin: 32px 0 12px; font-size: 22px; }
+.rr details { border-top: 1px solid #cdd8d2; }
+.rr summary { padding: 12px 4px; cursor: pointer; }
+.rr summary code { display: inline-block; min-width: 11ch; margin-right: 8px; }
+.rr summary:hover, .rr summary:focus-visible { background: #eff6f1; }
+.rr .rr-body { padding: 0 12px 12px; }
+.rr .rr-body p, .rr li { margin: 5px 0; }
+.rr .rr-tables { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 16px; }
+.rr .rr-scroll { max-height: 230px; overflow: auto; }
+.rr table { border-collapse: collapse; font-size: 14px; }
+.rr th, .rr td { text-align: left; border-bottom: 1px solid #dbe3df; padding: 5px 8px; vertical-align: top; overflow-wrap: anywhere; }
+.rr pre { font-size: 12px; white-space: pre-wrap; overflow-wrap: anywhere; padding: 10px; background: #f1f4f2; }
+.rr .rr-tickets { margin-top: 14px; overflow-wrap: anywhere; }

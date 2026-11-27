@@ -1,0 +1,272 @@
+{
+  "批次": {
+    "首轮": {
+      "总数": 43,
+      "原v3过": 30,
+      "缺项版过": 38,
+      "结果": {
+        "都对": 30,
+        "都错": 5,
+        "错转对": 8
+      }
+    },
+    "历史原问": {
+      "总数": 9,
+      "原v3过": 6,
+      "缺项版过": 8,
+      "结果": {
+        "都对": 6,
+        "错转对": 2,
+        "都错": 1
+      }
+    },
+    "收紧复测": {
+      "总数": 12,
+      "原v3过": 5,
+      "缺项版过": 12,
+      "结果": {
+        "错转对": 7,
+        "都对": 5
+      }
+    },
+    "遗留复测": {
+      "总数": 26,
+      "原v3过": 18,
+      "缺项版过": 17,
+      "结果": {
+        "都对": 17,
+        "都错": 8,
+        "对转错": 1
+      },
+      "目标": {
+        "总数": 14,
+        "原v3过": 6,
+        "缺项版过": 6,
+        "结果": {
+          "都错": 8,
+          "都对": 6
+        }
+      }
+    },
+    "dev252全段": {
+      "总数": 5,
+      "原v3过": 3,
+      "缺项版过": 5,
+      "结果": {
+        "错转对": 2,
+        "都对": 3
+      },
+      "目标": {
+        "总数": 3,
+        "原v3过": 3,
+        "缺项版过": 3,
+        "结果": {
+          "都对": 3
+        }
+      }
+    }
+  },
+  "原库正式台账": {
+    "通过": 625,
+    "待复测": 343,
+    "失分": 11
+  },
+  "累计原库问次对": 95,
+  "刚结束的三组": {
+    "错转对题号": {
+      "现行用户输入": [
+        "dev122_turn1",
+        "dev122_turn2",
+        "dev189_turn2",
+        "dev235_turn2",
+        "dev252_turn1",
+        "dev252_turn2"
+      ],
+      "历史问法": [
+        "dev6_turn3",
+        "dev202_turn1",
+        "dev245_turn5"
+      ],
+      "现行问句·固定澄清": [],
+      "人工反事实": [
+        "explicit-full",
+        "explicit-missing"
+      ]
+    },
+    "与此前14道RSI修复重复": [
+      "dev235_turn2"
+    ]
+  },
+  "合并本轮补测后": {
+    "错转对题号": {
+      "现行用户输入": [
+        "dev122_turn1",
+        "dev122_turn2",
+        "dev189_turn2",
+        "dev235_turn2",
+        "dev252_turn1",
+        "dev252_turn2"
+      ],
+      "历史问法": [
+        "dev6_turn3",
+        "dev202_turn1",
+        "dev245_turn5"
+      ],
+      "现行问句·固定澄清": [],
+      "人工反事实": [
+        "explicit-full",
+        "explicit-missing"
+      ]
+    },
+    "与此前14道RSI修复重复": [
+      "dev235_turn2"
+    ]
+  },
+  "遗留复测目标未过": [
+    "dev12_turn2",
+    "dev86_turn6",
+    "dev106_turn2",
+    "dev135_turn4",
+    "dev135_turn5",
+    "dev202_turn2",
+    "dev238_turn2",
+    "dev238_turn3"
+  ],
+  "遗留复测前文未过": [
+    "dev106_turn1"
+  ],
+  "各题最近核验仍未过": {
+    "现行用户输入": [
+      "dev12_turn2",
+      "dev86_turn6",
+      "dev106_turn1",
+      "dev106_turn2",
+      "dev135_turn4",
+      "dev135_turn5",
+      "dev202_turn2",
+      "dev238_turn2",
+      "dev238_turn3"
+    ],
+    "历史问法": [],
+    "现行问句·固定澄清": [],
+    "人工反事实": []
+  },
+  "原台账11题此次结果": {
+    "dev12_turn2": "都错",
+    "dev57_turn1": "都对",
+    "dev86_turn5": "都对",
+    "dev86_turn6": "都错",
+    "dev106_turn2": "都错",
+    "dev129_turn2": "都对",
+    "dev129_turn3": "都对",
+    "dev129_turn4": "都对",
+    "dev129_turn5": "都对",
+    "dev135_turn4": "都错",
+    "dev135_turn5": "都错"
+  },
+  "已筛查题号在五组中的覆盖": {
+    "筛查数": 65,
+    "现行输入已跑": 27,
+    "未跑现行输入": [
+      "dev33_turn2",
+      "dev46_turn1",
+      "dev63_turn2",
+      "dev65_turn1",
+      "dev66_turn1",
+      "dev66_turn2",
+      "dev66_turn3",
+      "dev71_turn3",
+      "dev76_turn6",
+      "dev83_turn2",
+      "dev114_turn3",
+      "dev121_turn2",
+      "dev128_turn3",
+      "dev134_turn1",
+      "dev158_turn4",
+      "dev172_turn3",
+      "dev173_turn2",
+      "dev173_turn3",
+      "dev187_turn4",
+      "dev197_turn4",
+      "dev220_turn1",
+      "dev225_turn1",
+      "dev225_turn3",
+      "dev242_turn3",
+      "dev253_turn2",
+      "dev253_turn3",
+      "dev253_turn4",
+      "dev255_turn2",
+      "dev256_turn2",
+      "dev258_turn1",
+      "dev261_turn3",
+      "dev261_turn4",
+      "dev264_turn1",
+      "dev270_turn2",
+      "dev271_turn2",
+      "dev280_turn1",
+      "dev283_turn1",
+      "dev287_turn2"
+    ]
+  },
+  "dev252第五轮首次与补充": {
+    "首次原问": "Would you also add in their rankings?",
+    "固定释放的用户补充": "Their average rankings.",
+    "两组使用同一补充": true,
+    "off": {
+      "first": {
+        "用户": "Would you also add in their rankings?",
+        "列": [
+          "last_name",
+          "average_ranking"
+        ],
+        "行数": 487,
+        "有NULL的行数": 339,
+        "按平均排名口径整表通过": true,
+        "说明": "As in your earlier request, rankings are averaged across each player’s recorded rankings. Players without ranking records have a NULL average.",
+        "实际追问": "",
+        "SQL": "SELECT TRIM(p.last_name) AS last_name, AVG(r.ranking) AS average_ranking FROM players p LEFT JOIN rankings r ON r.player_id = p.player_id AND r.player_id <> '' WHERE p.hand = 'L' GROUP BY p.player_id ORDER BY last_name, p.player_id"
+      },
+      "follow": {
+        "用户": "Their average rankings.",
+        "列": [
+          "last_name",
+          "average_ranking"
+        ],
+        "行数": 487,
+        "有NULL的行数": 339,
+        "按平均排名口径整表通过": true,
+        "说明": "Each average uses all recorded rankings for that player. NULL means no ranking records.",
+        "实际追问": "",
+        "SQL": "SELECT TRIM(p.last_name) AS last_name, AVG(r.ranking) AS average_ranking FROM players p LEFT JOIN rankings r ON r.player_id = p.player_id AND r.player_id <> '' WHERE p.hand = 'L' GROUP BY p.player_id ORDER BY last_name, p.player_id"
+      }
+    },
+    "on": {
+      "first": {
+        "用户": "Would you also add in their rankings?",
+        "列": [
+          "last_name",
+          "ranking"
+        ],
+        "行数": 35954,
+        "有NULL的行数": 339,
+        "按平均排名口径整表通过": false,
+        "说明": "Each recorded ranking is shown on its own row; players without ranking records are kept with a blank ranking.",
+        "实际追问": "",
+        "SQL": "SELECT p.last_name, NULLIF(r.ranking,'') AS ranking FROM players p LEFT JOIN rankings r ON r.player_id=p.player_id AND r.player_id<>'' WHERE TRIM(p.hand)='L' ORDER BY p.first_name,p.last_name,p.player_id,r.ranking_date"
+      },
+      "follow": {
+        "用户": "Their average rankings.",
+        "列": [
+          "last_name",
+          "average_ranking"
+        ],
+        "行数": 487,
+        "有NULL的行数": 339,
+        "按平均排名口径整表通过": true,
+        "说明": "All left-handed players are included, with a blank average for those without usable ranking data.",
+        "实际追问": "",
+        "SQL": "SELECT p.last_name, AVG(NULLIF(TRIM(r.ranking), '')) AS average_ranking FROM players p LEFT JOIN rankings r ON r.player_id = p.player_id AND r.player_id <> '' WHERE TRIM(p.hand) = 'L' GROUP BY p.player_id ORDER BY p.first_name, p.last_name, p.player_id"
+      }
+    }
+  }
+}

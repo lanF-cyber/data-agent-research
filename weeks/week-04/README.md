@@ -1,5 +1,7 @@
 # RSI 数据平台与 CoSQL Harness 联调
 
+第四周 4.2 研究用户在连续查询中何时另起范围、何时沿用上一问。9 段 CoSQL 对话提供了 14 个修复前后对照，另附评分分歧、剩余失分与自动编排方案。[4.2 多轮指代研究报告](reference-resolution/README.md) · [14 题逐项证据](../../evidence/week-04/reference-cases.csv)
+
 在 RSI 画布上调度 CoSQL 的现有查询框架，回答“联合航空有哪些始发机场？”浏览器发起请求，Java 流程把画布交给调度器，SQL 在 CoSQL 原始 `flight_2` 库执行。现场生成的查询返回 **62 个不同的机场代码**，与独立查询逐项一致。题号为 `dev36_turn1`。[启动命令与依赖版本](reproduce.md) · [结构化验收记录](../../evidence/week-04/verification.json)
 
 ## 运行截图

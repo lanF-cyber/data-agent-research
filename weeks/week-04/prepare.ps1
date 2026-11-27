@@ -79,10 +79,19 @@ if ($built -ne $installed) { throw 'Visual build and installed copy differ' }
 
 $route = Join-Path $front 'app\harness'
 $null = New-Item -ItemType Directory -Force -Path $route
-$files = @('platform\page.tsx', 'platform\layout.tsx', 'platform\harness.css', 'harness\workflow.json')
-foreach ($name in $files) {
+$null = New-Item -ItemType Directory -Force -Path (Join-Path $route 'versions')
+$files = @{
+    'platform\page.tsx' = 'page.tsx'
+    'platform\layout.tsx' = 'layout.tsx'
+    'platform\harness.css' = 'harness.css'
+    'harness\workflow.json' = 'workflow.json'
+    'reference-resolution\page.tsx' = 'versions\page.tsx'
+    'reference-resolution\versions.css' = 'versions\versions.css'
+    '..\..\evidence\week-04\reference-resolution.json' = 'versions\cases.json'
+}
+foreach ($name in $files.Keys) {
     $source = Join-Path $PSScriptRoot $name
-    $target = Join-Path $route ([IO.Path]::GetFileName($name))
+    $target = Join-Path $route $files[$name]
     if (Test-Path -LiteralPath $target) {
         if ((Get-FileHash $source).Hash -ne (Get-FileHash $target).Hash) { throw "Existing route file differs: $target" }
     } else {

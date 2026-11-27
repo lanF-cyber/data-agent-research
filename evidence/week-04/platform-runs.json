@@ -1,0 +1,2055 @@
+{
+  "flow": "@training.cosql/FLOW_HARNESS",
+  "model": "gpt-6.2-sol",
+  "scoring_sha256": "f2ba8a55410b0634dae4b43481e8adaefce83d67d44c24e9d447a3842cc2db52",
+  "targets": [
+    "dev28_turn1",
+    "dev38_turn1",
+    "dev38_turn2",
+    "dev85_turn1",
+    "dev92_turn2",
+    "dev92_turn3",
+    "dev111_turn1",
+    "dev111_turn2",
+    "dev137_turn1",
+    "dev137_turn3",
+    "dev172_turn1",
+    "dev172_turn2",
+    "dev172_turn3",
+    "dev206_turn1",
+    "dev235_turn1",
+    "dev235_turn2",
+    "dev238_turn3",
+    "dev261_turn1",
+    "dev261_turn2",
+    "dev261_turn3",
+    "dev261_turn4",
+    "dev39_turn2",
+    "dev98_turn2",
+    "dev252_turn2",
+    "dev2_turn2",
+    "dev106_turn3"
+  ],
+  "dialogues": [
+    {
+      "ticket": "ee66af08814252a29fa3a57a87c0efaf",
+      "arm": "contrast",
+      "structure_sha256": "71934b8ba232567719333d47cbb7e9f434a9877e1c7684385b8ef33ae109f193",
+      "database": "world_1",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 3,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev106_turn1",
+          "user": "What is the average life expectancy for each government form?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT GovernmentForm, AVG(LifeExpectancy) AS AverageLifeExpectancy FROM country GROUP BY GovernmentForm ORDER BY GovernmentForm",
+          "columns": [
+            "GovernmentForm",
+            "AverageLifeExpectancy"
+          ],
+          "rows": 35,
+          "table_sha256": "c27371e073d531a4512024d4f8e3f850df6e09dc6f16241f6d607b02f2ab796c",
+          "set_match": true
+        },
+        {
+          "id": "dev106_turn2",
+          "user": "Can you show me only those government forms whose average life expectancy is greater than 72?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT GovernmentForm, AVG(LifeExpectancy) AS AverageLifeExpectancy FROM country GROUP BY GovernmentForm HAVING AVG(LifeExpectancy) > 72 ORDER BY GovernmentForm",
+          "columns": [
+            "GovernmentForm",
+            "AverageLifeExpectancy"
+          ],
+          "rows": 17,
+          "table_sha256": "77a54e8feede466e3aa0606830f4394d05c9c7b93e3f6ea57ee6b9c4808ed294",
+          "set_match": false
+        },
+        {
+          "id": "dev106_turn3",
+          "user": "What is the population of each of those?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT GovernmentForm, SUM(Population) AS TotalPopulation FROM country GROUP BY GovernmentForm HAVING AVG(LifeExpectancy) > 72 ORDER BY GovernmentForm",
+          "columns": [
+            "GovernmentForm",
+            "TotalPopulation"
+          ],
+          "rows": 17,
+          "table_sha256": "c12731de070433db26ee8893972db27b6b0110c640293bdc55577632133c9f81",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "5dbdec85085b5a3c8722a65866d7762f",
+      "arm": "v3",
+      "structure_sha256": "78abab375090f0a958ccef965d3ba3ad329c4a95475b29a7709af13be7b82c31",
+      "database": "world_1",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 3,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev106_turn1",
+          "user": "What is the average life expectancy for each government form?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT GovernmentForm, AVG(LifeExpectancy) AS AverageLifeExpectancy FROM country GROUP BY GovernmentForm ORDER BY GovernmentForm",
+          "columns": [
+            "GovernmentForm",
+            "AverageLifeExpectancy"
+          ],
+          "rows": 35,
+          "table_sha256": "c27371e073d531a4512024d4f8e3f850df6e09dc6f16241f6d607b02f2ab796c",
+          "set_match": true
+        },
+        {
+          "id": "dev106_turn2",
+          "user": "Can you show me only those government forms whose average life expectancy is greater than 72?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT GovernmentForm, AVG(LifeExpectancy) AS AverageLifeExpectancy FROM country GROUP BY GovernmentForm HAVING AVG(LifeExpectancy) > 72 ORDER BY GovernmentForm",
+          "columns": [
+            "GovernmentForm",
+            "AverageLifeExpectancy"
+          ],
+          "rows": 17,
+          "table_sha256": "77a54e8feede466e3aa0606830f4394d05c9c7b93e3f6ea57ee6b9c4808ed294",
+          "set_match": false
+        },
+        {
+          "id": "dev106_turn3",
+          "user": "What is the population of each of those?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT GovernmentForm, SUM(Population) AS TotalPopulation FROM country GROUP BY GovernmentForm HAVING AVG(LifeExpectancy) > 72 ORDER BY GovernmentForm",
+          "columns": [
+            "GovernmentForm",
+            "TotalPopulation"
+          ],
+          "rows": 17,
+          "table_sha256": "c12731de070433db26ee8893972db27b6b0110c640293bdc55577632133c9f81",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "636d73688ecf595e9b0982470a996a62",
+      "arm": "contrast",
+      "structure_sha256": "8d09cee499acfa149ced0de44373ace9e89a6e905721983df78cfbcfcaa5a7b2",
+      "database": "flight_2",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 2,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev111_turn1",
+          "user": "How many flights are arriving in the city called Aberdeen?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS flight_count FROM flights f JOIN airports a ON f.DestAirport = a.AirportCode WHERE a.City = 'Aberdeen'",
+          "columns": [
+            "flight_count"
+          ],
+          "rows": 1,
+          "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387",
+          "set_match": false
+        },
+        {
+          "id": "dev111_turn2",
+          "user": "How many flights are there departing Aberdeen?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS flight_count FROM flights f JOIN airports a ON f.SourceAirport = a.AirportCode WHERE a.City = 'Aberdeen'",
+          "columns": [
+            "flight_count"
+          ],
+          "rows": 1,
+          "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387",
+          "set_match": false
+        }
+      ]
+    },
+    {
+      "ticket": "f04cb4d3434e506c995bc30a23b2086c",
+      "arm": "v3",
+      "structure_sha256": "36ec7219a0b01ce5fd9f2c3a4089b39e6a1228c5480875dd9b2d859780dc479d",
+      "database": "flight_2",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 2,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev111_turn1",
+          "user": "How many flights are arriving in the city called Aberdeen?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS arriving_flights FROM flights f WHERE EXISTS (SELECT 1 FROM airports a WHERE TRIM(a.AirportCode)=TRIM(f.DestAirport) AND TRIM(a.City)='Aberdeen')",
+          "columns": [
+            "arriving_flights"
+          ],
+          "rows": 1,
+          "table_sha256": "977fcd5eeec0244935064e75ac0ed382b82b2c3eb4df34f0497181d08e0efdcf",
+          "set_match": true
+        },
+        {
+          "id": "dev111_turn2",
+          "user": "How many flights are there departing Aberdeen?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS departing_flights FROM flights f WHERE EXISTS (SELECT 1 FROM airports a WHERE TRIM(a.AirportCode)=TRIM(f.SourceAirport) AND TRIM(a.City)='Aberdeen')",
+          "columns": [
+            "departing_flights"
+          ],
+          "rows": 1,
+          "table_sha256": "977fcd5eeec0244935064e75ac0ed382b82b2c3eb4df34f0497181d08e0efdcf",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "4611001922cf59e394dc34a47e2bc0a3",
+      "arm": "contrast",
+      "structure_sha256": "f9c886b5afbf7f148a94519a002a4f101632c1b5f74ddf862657828af695cf10",
+      "database": "flight_2",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 3,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev137_turn1",
+          "user": "How many 'United Airlines' flights go to the Airport 'ASY'?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS flight_count FROM flights AS f JOIN airlines AS a ON a.uid = f.Airline WHERE a.Airline = 'United Airlines' AND f.DestAirport = 'ASY'",
+          "columns": [
+            "flight_count"
+          ],
+          "rows": 1,
+          "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387",
+          "set_match": false
+        },
+        {
+          "id": "dev137_turn2",
+          "user": "What is the airline ID of United Airlines?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT uid AS airline_id FROM airlines WHERE Airline = 'United Airlines'",
+          "columns": [
+            "airline_id"
+          ],
+          "rows": 1,
+          "table_sha256": "043f347c2cdc0d8ce70c38775d24e556c0290acf6d0c87a3a52aa85471cb8d02",
+          "set_match": true
+        },
+        {
+          "id": "dev137_turn3",
+          "user": "How many airlines with airline id 1 go to the destination airport ASY?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(DISTINCT Airline) AS airline_count FROM flights WHERE Airline = 1 AND DestAirport = 'ASY'",
+          "columns": [
+            "airline_count"
+          ],
+          "rows": 1,
+          "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387",
+          "set_match": false
+        }
+      ]
+    },
+    {
+      "ticket": "a6b4f68267e45fb19b029839ae428016",
+      "arm": "v3",
+      "structure_sha256": "270813861a6f2d6ea306afc372d32055447fa23760618ecb930af21ecb90fee6",
+      "database": "flight_2",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 4,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev137_turn1",
+          "user": "How many 'United Airlines' flights go to the Airport 'ASY'?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS flight_count FROM flights f JOIN airlines a ON f.Airline=a.uid WHERE a.Airline='United Airlines' AND TRIM(f.DestAirport)='ASY'",
+          "columns": [
+            "flight_count"
+          ],
+          "rows": 1,
+          "table_sha256": "043f347c2cdc0d8ce70c38775d24e556c0290acf6d0c87a3a52aa85471cb8d02",
+          "set_match": true
+        },
+        {
+          "id": "dev137_turn2",
+          "user": "What is the airline ID of United Airlines?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT uid AS airline_id FROM airlines WHERE Airline = 'United Airlines'",
+          "columns": [
+            "airline_id"
+          ],
+          "rows": 1,
+          "table_sha256": "043f347c2cdc0d8ce70c38775d24e556c0290acf6d0c87a3a52aa85471cb8d02",
+          "set_match": true
+        },
+        {
+          "id": "dev137_turn3",
+          "user": "How many airlines with airline id 1 go to the destination airport ASY?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(DISTINCT a.uid) AS airline_count FROM airlines a JOIN flights f ON f.Airline=a.uid WHERE a.uid=1 AND TRIM(f.DestAirport)='ASY'",
+          "columns": [
+            "airline_count"
+          ],
+          "rows": 1,
+          "table_sha256": "043f347c2cdc0d8ce70c38775d24e556c0290acf6d0c87a3a52aa85471cb8d02",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "8bf434e2afaa52449acd397ded565bf8",
+      "arm": "contrast",
+      "structure_sha256": "5e7f9686dc5fccde43af21b4d00172c8ccdb1c48412e594843f01d80c5d0006d",
+      "database": "student_transcripts_tracking",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 4,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev172_turn1",
+          "user": "how many students live in North Carolina?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS student_count FROM Students s JOIN Addresses a ON a.address_id=s.current_address_id WHERE a.state_province_county='NorthCarolina'",
+          "columns": [
+            "student_count"
+          ],
+          "rows": 1,
+          "table_sha256": "a9ae641b7f052c0994d31111f1bb92a40340e57b57c984bf99f03949206426a1",
+          "set_match": true
+        },
+        {
+          "id": "dev172_turn2",
+          "user": "What are their first and last names?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT s.first_name, s.last_name FROM Students s JOIN Addresses a ON a.address_id = s.current_address_id WHERE a.state_province_county = 'NorthCarolina'",
+          "columns": [
+            "first_name",
+            "last_name"
+          ],
+          "rows": 3,
+          "table_sha256": "34c82975651f94608987d463bc07f5936ddec9bd131b3ac7a0dda53c49f9a648",
+          "set_match": true
+        },
+        {
+          "id": "dev172_turn3",
+          "user": "Which of those do not have degree program id?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT s.first_name, s.last_name FROM Students s JOIN Addresses a ON a.address_id = s.current_address_id WHERE a.state_province_county = 'NorthCarolina' AND NOT EXISTS (SELECT 1 FROM Student_Enrolment e WHERE e.student_id = s.student_id AND e.degree_program_id IS NOT NULL)",
+          "columns": [
+            "first_name",
+            "last_name"
+          ],
+          "rows": 2,
+          "table_sha256": "7b10d68661cd0030dd0e3f719bb6f2ca3a591b1304775306a763994e00121559",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "57e67f8700045a7890b5ff8beaedb925",
+      "arm": "v3",
+      "structure_sha256": "4ddf1dc265fed465dbff3b01e569baace36e5e3d7ebe03d1fe279c6d91b8664e",
+      "database": "student_transcripts_tracking",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 4,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev172_turn1",
+          "user": "how many students live in North Carolina?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS student_count FROM Students s JOIN Addresses a ON s.current_address_id=a.address_id WHERE lower(replace(trim(a.state_province_county),' ',''))='northcarolina'",
+          "columns": [
+            "student_count"
+          ],
+          "rows": 1,
+          "table_sha256": "a9ae641b7f052c0994d31111f1bb92a40340e57b57c984bf99f03949206426a1",
+          "set_match": true
+        },
+        {
+          "id": "dev172_turn2",
+          "user": "What are their first and last names?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT s.first_name,s.last_name FROM Students s JOIN Addresses a ON s.current_address_id=a.address_id WHERE lower(replace(trim(a.state_province_county),' ',''))='northcarolina'",
+          "columns": [
+            "first_name",
+            "last_name"
+          ],
+          "rows": 3,
+          "table_sha256": "34c82975651f94608987d463bc07f5936ddec9bd131b3ac7a0dda53c49f9a648",
+          "set_match": true
+        },
+        {
+          "id": "dev172_turn3",
+          "user": "Which of those do not have degree program id?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT s.first_name,s.last_name FROM Students s JOIN Addresses a ON a.address_id=s.current_address_id WHERE lower(replace(trim(a.state_province_county),' ',''))='northcarolina' AND NOT EXISTS (SELECT 1 FROM Student_Enrolment e WHERE e.student_id=s.student_id AND NULLIF(trim(e.degree_program_id),'') IS NOT NULL)",
+          "columns": [
+            "first_name",
+            "last_name"
+          ],
+          "rows": 2,
+          "table_sha256": "7b10d68661cd0030dd0e3f719bb6f2ca3a591b1304775306a763994e00121559",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "60a9c509288554de81593e7a9061e9f1",
+      "arm": "contrast",
+      "structure_sha256": "a748e4f9bd27cc678eb9f75ebe9256062ee840329a28e06342c4d18129ed13e9",
+      "database": "cre_Doc_Template_Mgt",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 3,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev2_turn1",
+          "user": "Hi!  Can you tell me how many unique template IDs there are?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(DISTINCT Template_ID) AS unique_template_ids FROM Templates",
+          "columns": [
+            "unique_template_ids"
+          ],
+          "rows": 1,
+          "table_sha256": "f2715dd605b7502ff4d35ec4613d864a78786d7bb2b73cd9cca0ca76ee5777c9",
+          "set_match": true
+        },
+        {
+          "id": "dev2_turn2",
+          "user": "How many of those 12 template IDs are used by more than one document?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS template_ids_used_by_multiple_documents FROM (SELECT Template_ID FROM Documents WHERE Template_ID IS NOT NULL GROUP BY Template_ID HAVING COUNT(*) > 1)",
+          "columns": [
+            "template_ids_used_by_multiple_documents"
+          ],
+          "rows": 1,
+          "table_sha256": "a9ae641b7f052c0994d31111f1bb92a40340e57b57c984bf99f03949206426a1",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "3a09b3fea95554228761aabebcd8a7ed",
+      "arm": "v3",
+      "structure_sha256": "b604bdb3cb319ab08ff437c7d156512f6b87a6c2a354fc8618b252eaae2cab5f",
+      "database": "cre_Doc_Template_Mgt",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 3,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev2_turn1",
+          "user": "Hi!  Can you tell me how many unique template IDs there are?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(DISTINCT Template_ID) AS Unique_Template_IDs FROM Templates",
+          "columns": [
+            "Unique_Template_IDs"
+          ],
+          "rows": 1,
+          "table_sha256": "f2715dd605b7502ff4d35ec4613d864a78786d7bb2b73cd9cca0ca76ee5777c9",
+          "set_match": true
+        },
+        {
+          "id": "dev2_turn2",
+          "user": "How many of those 12 template IDs are used by more than one document?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS Template_IDs_Used_By_Multiple_Documents FROM (SELECT Template_ID FROM Documents WHERE Template_ID IS NOT NULL GROUP BY Template_ID HAVING COUNT(*) > 1)",
+          "columns": [
+            "Template_IDs_Used_By_Multiple_Documents"
+          ],
+          "rows": 1,
+          "table_sha256": "a9ae641b7f052c0994d31111f1bb92a40340e57b57c984bf99f03949206426a1",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "8a5199dbbbf35bb1a8a4461edab684b5",
+      "arm": "contrast",
+      "structure_sha256": "c5deac6daa173e11a9135dbea3dc532b22dbdb0f7b2fbd614311f090afd76e25",
+      "database": "wta_1",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 1,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev206_turn1",
+          "user": "What is the player id for the youngest player?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT player_id FROM players WHERE birth_date = (SELECT MAX(birth_date) FROM players WHERE birth_date IS NOT NULL AND birth_date <> '')",
+          "columns": [
+            "player_id"
+          ],
+          "rows": 1,
+          "table_sha256": "f90c8199a17009a86b95aa64af11452622a4b309699ab6d323709b04630624af",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "233669017bac5e2ba62979ee91903165",
+      "arm": "v3",
+      "structure_sha256": "65a5cf46abe2f3096a96908d79073f593fc893cb2a35422df118f0d23eca6206",
+      "database": "wta_1",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 1,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev206_turn1",
+          "user": "What is the player id for the youngest player?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT player_id FROM players WHERE birth_date = (SELECT MAX(birth_date) FROM players WHERE typeof(birth_date) = 'integer')",
+          "columns": [
+            "player_id"
+          ],
+          "rows": 1,
+          "table_sha256": "f90c8199a17009a86b95aa64af11452622a4b309699ab6d323709b04630624af",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "bdc6999f742b50bea4030d6b8e9ccbef",
+      "arm": "contrast",
+      "structure_sha256": "9b8f0228ff2641faaae3cbee565a40983a9e914b3404d210bc52a1be2a88972d",
+      "database": "flight_2",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 2,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev235_turn1",
+          "user": "Can you list all the flight numbers that have a source airport value of AHD?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT FlightNo FROM flights WHERE SourceAirport = 'AHD'",
+          "columns": [
+            "FlightNo"
+          ],
+          "rows": 0,
+          "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "set_match": false
+        },
+        {
+          "id": "dev235_turn2",
+          "user": "Can you list the names of all the unique airlines that belong to those flight numbers?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT DISTINCT a.Airline FROM airlines a JOIN flights f ON a.uid = f.Airline WHERE f.FlightNo IN (SELECT FlightNo FROM flights WHERE SourceAirport = 'AHD')",
+          "columns": [
+            "Airline"
+          ],
+          "rows": 0,
+          "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "set_match": false
+        }
+      ]
+    },
+    {
+      "ticket": "e7debf1360af5d1fa094819a89498ca5",
+      "arm": "v3",
+      "structure_sha256": "7c2195dba73fe0313690e3451a3e0fa5ea698e33dc5261350259a1c087bc5bbd",
+      "database": "flight_2",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 2,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev235_turn1",
+          "user": "Can you list all the flight numbers that have a source airport value of AHD?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT FlightNo FROM flights WHERE TRIM(SourceAirport) = 'AHD' ORDER BY FlightNo",
+          "columns": [
+            "FlightNo"
+          ],
+          "rows": 10,
+          "table_sha256": "a5bc1c8e08cd97475181cbd1d5c20adebdbe332a2fcaf68a66a3824e578c859e",
+          "set_match": true
+        },
+        {
+          "id": "dev235_turn2",
+          "user": "Can you list the names of all the unique airlines that belong to those flight numbers?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT DISTINCT a.Airline FROM flights f JOIN airlines a ON f.Airline = a.uid WHERE TRIM(f.SourceAirport) = 'AHD' ORDER BY a.Airline",
+          "columns": [
+            "Airline"
+          ],
+          "rows": 8,
+          "table_sha256": "c150b8b375a9ee388c180ca36aff1d2891ee36bb08b68e1464e298d6472a25de",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "e15a77f818de57debb8add9897ef2026",
+      "arm": "contrast",
+      "structure_sha256": "9d70b41594be40cf88f63e4021f63dda4bd32af34dde057c09088f51d9e7710e",
+      "database": "dog_kennels",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 3,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev238_turn1",
+          "user": "Hello!  Can you tell me how many dogs have not gone through any treatment?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS dogs_without_treatment FROM Dogs AS d WHERE NOT EXISTS (SELECT 1 FROM Treatments AS t WHERE t.dog_id = d.dog_id)",
+          "columns": [
+            "dogs_without_treatment"
+          ],
+          "rows": 1,
+          "table_sha256": "a9aa85acf18adf4f2e42f1cb876a854cf82b70587922457d888db0e2df100099",
+          "set_match": true
+        },
+        {
+          "id": "dev238_turn2",
+          "user": "Thank you for that!  Can you tell me how many of these dogs were abandoned?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS abandoned_dogs_without_treatment FROM Dogs AS d WHERE UPPER(d.abandoned_yn) = 'Y' AND NOT EXISTS (SELECT 1 FROM Treatments AS t WHERE t.dog_id = d.dog_id)",
+          "columns": [
+            "abandoned_dogs_without_treatment"
+          ],
+          "rows": 1,
+          "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387",
+          "set_match": true
+        },
+        {
+          "id": "dev238_turn3",
+          "user": "Can you provide me with a list of all dog Ids for all of the abandoned dogs, as well as their associated treatment type code?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT d.dog_id, t.treatment_type_code FROM Dogs AS d LEFT JOIN Treatments AS t ON t.dog_id = d.dog_id WHERE UPPER(d.abandoned_yn) = 'Y' ORDER BY d.dog_id, t.treatment_type_code",
+          "columns": [
+            "dog_id",
+            "treatment_type_code"
+          ],
+          "rows": 0,
+          "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "set_match": false
+        }
+      ]
+    },
+    {
+      "ticket": "62911742da7a54d4a72d30b488c74263",
+      "arm": "v3",
+      "structure_sha256": "96f4b8bce3896967292e960a4fd130ba67bcf0f9ae693aea8d26b6587bdd414a",
+      "database": "dog_kennels",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 3,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev238_turn1",
+          "user": "Hello!  Can you tell me how many dogs have not gone through any treatment?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS dogs_without_treatment FROM Dogs d WHERE NOT EXISTS (SELECT 1 FROM Treatments t WHERE t.dog_id = d.dog_id)",
+          "columns": [
+            "dogs_without_treatment"
+          ],
+          "rows": 1,
+          "table_sha256": "a9aa85acf18adf4f2e42f1cb876a854cf82b70587922457d888db0e2df100099",
+          "set_match": true
+        },
+        {
+          "id": "dev238_turn2",
+          "user": "Thank you for that!  Can you tell me how many of these dogs were abandoned?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(CASE WHEN d.abandoned_yn='1' THEN 1 END) AS code_1_count, COUNT(CASE WHEN d.abandoned_yn='0' THEN 1 END) AS code_0_count FROM Dogs d WHERE NOT EXISTS (SELECT 1 FROM Treatments t WHERE t.dog_id=d.dog_id)",
+          "columns": [
+            "code_1_count",
+            "code_0_count"
+          ],
+          "rows": 1,
+          "table_sha256": "a2faaf7621329d52dc3e1a7da122fd5a43707b0b0ea768bc1365ca2230d178d4",
+          "set_match": false
+        },
+        {
+          "id": "dev238_turn3",
+          "user": "Can you provide me with a list of all dog Ids for all of the abandoned dogs, as well as their associated treatment type code?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT DISTINCT d.abandoned_yn AS abandonment_flag, d.dog_id, t.treatment_type_code FROM Dogs d LEFT JOIN Treatments t ON t.dog_id=d.dog_id WHERE d.abandoned_yn IN ('0','1') ORDER BY abandonment_flag DESC,d.dog_id,t.treatment_type_code",
+          "columns": [
+            "abandonment_flag",
+            "dog_id",
+            "treatment_type_code"
+          ],
+          "rows": 19,
+          "table_sha256": "e2bb6e6207191e63d09b38ffd6b835f86ca3f49d42927ee91b4d2988909f322f",
+          "set_match": false
+        }
+      ]
+    },
+    {
+      "ticket": "33195e59c71b531da9c85fe5ee170ca5",
+      "arm": "contrast",
+      "structure_sha256": "85f77ac641ae2c6da22141a6df596ef0ee85beac1a7331fbc3f50a6e5c218dc6",
+      "database": "wta_1",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 2,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev252_turn1",
+          "user": "Could you list the average ranking for each player with their first name?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT p.first_name, AVG(r.ranking) AS average_ranking FROM players AS p LEFT JOIN rankings AS r ON r.player_id = p.player_id GROUP BY p.player_id, p.first_name",
+          "columns": [
+            "first_name",
+            "average_ranking"
+          ],
+          "rows": 20662,
+          "table_sha256": "983346d8ceaf22f841258fcbf510ad3f11ce2d2650331fc9f0e088b19787d38e",
+          "set_match": false
+        },
+        {
+          "id": "dev252_turn2",
+          "user": "Could you add in their last names please?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT p.first_name, p.last_name, AVG(r.ranking) AS average_ranking FROM players AS p LEFT JOIN rankings AS r ON r.player_id = p.player_id GROUP BY p.player_id, p.first_name, p.last_name",
+          "columns": [
+            "first_name",
+            "last_name",
+            "average_ranking"
+          ],
+          "rows": 20662,
+          "table_sha256": "3fc323bd328f335efcbe69126cea4e4906efa9646f79f48a0ae2840def2feff7",
+          "set_match": false
+        }
+      ]
+    },
+    {
+      "ticket": "76b8dfc1e2d85f629bd2afab5c36495d",
+      "arm": "v3",
+      "structure_sha256": "1e2a5793d67df64cfd2f5abb93b434e071ee50ac15f267a6c64a3e895578d3ae",
+      "database": "wta_1",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 2,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev252_turn1",
+          "user": "Could you list the average ranking for each player with their first name?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT TRIM(p.first_name) AS first_name, AVG(r.ranking) AS average_ranking FROM players AS p LEFT JOIN rankings AS r ON r.player_id = p.player_id AND TRIM(CAST(r.player_id AS TEXT)) <> '' GROUP BY p.player_id ORDER BY first_name, p.player_id",
+          "columns": [
+            "first_name",
+            "average_ranking"
+          ],
+          "rows": 20662,
+          "table_sha256": "1e3b078b72243a89923482c5a6655d71255468eb4eb161b982eb3c5ff54cab63",
+          "set_match": false
+        },
+        {
+          "id": "dev252_turn2",
+          "user": "Could you add in their last names please?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT TRIM(p.first_name) AS first_name, TRIM(p.last_name) AS last_name, AVG(r.ranking) AS average_ranking FROM players p LEFT JOIN rankings r ON r.player_id = p.player_id AND TRIM(CAST(r.player_id AS TEXT)) <> '' GROUP BY p.player_id ORDER BY first_name, last_name, p.player_id",
+          "columns": [
+            "first_name",
+            "last_name",
+            "average_ranking"
+          ],
+          "rows": 20662,
+          "table_sha256": "a132ac2d5bb89c687023078f41581a44aaabb0dc80766ab29d2855673c70ca49",
+          "set_match": false
+        }
+      ]
+    },
+    {
+      "ticket": "72647905cbf652b99d6c0eb56e30f988",
+      "arm": "contrast",
+      "structure_sha256": "9966c022a9e772bc4401069eb620953c0ebbe79ac321f31d962a8cc52e4de040",
+      "database": "student_transcripts_tracking",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 5,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev261_turn1",
+          "user": "Could you tell me the last names of all the students who live in the state of North Carolina?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT s.last_name FROM Students s JOIN Addresses a ON a.address_id = s.current_address_id WHERE a.state_province_county = 'NorthCarolina'",
+          "columns": [
+            "last_name"
+          ],
+          "rows": 3,
+          "table_sha256": "fe36d449fb5f9f6f7193fcc458cb46ee718866c606ced6aef23b6219ccc9beee",
+          "set_match": true
+        },
+        {
+          "id": "dev261_turn2",
+          "user": "What about their first names?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT s.first_name FROM Students s JOIN Addresses a ON a.address_id = s.current_address_id WHERE a.state_province_county = 'NorthCarolina'",
+          "columns": [
+            "first_name"
+          ],
+          "rows": 3,
+          "table_sha256": "c55b4325c217a3017f97de3ac4a572b22a05e2909418e11b41e1c45b304b1e97",
+          "set_match": true
+        },
+        {
+          "id": "dev261_turn3",
+          "user": "What are the last names of the students who live in North Carolina but have not registered in any degree program?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT s.last_name FROM Students s JOIN Addresses a ON a.address_id = s.current_address_id WHERE a.state_province_county = 'NorthCarolina' AND NOT EXISTS (SELECT 1 FROM Student_Enrolment e JOIN Degree_Programs d ON d.degree_program_id = e.degree_program_id WHERE e.student_id = s.student_id)",
+          "columns": [
+            "last_name"
+          ],
+          "rows": 2,
+          "table_sha256": "0664e85cd441eca9d152170e7d3a172e430da176938f3701fdae5cd16d6ee55d",
+          "set_match": true
+        },
+        {
+          "id": "dev261_turn4",
+          "user": "What are their first names?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT s.first_name FROM Students s JOIN Addresses a ON a.address_id = s.current_address_id WHERE a.state_province_county = 'NorthCarolina' AND NOT EXISTS (SELECT 1 FROM Student_Enrolment e JOIN Degree_Programs d ON d.degree_program_id = e.degree_program_id WHERE e.student_id = s.student_id)",
+          "columns": [
+            "first_name"
+          ],
+          "rows": 2,
+          "table_sha256": "9ee3bbf8eb7d831e5ed6d5dc45ef3008ba3c46ad87894d3b05d63af6f4ed76cb",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "1dfc22fb19b8568b99481ca5fbfb8564",
+      "arm": "v3",
+      "structure_sha256": "a94477ab1dd9dda9540d893d06fe4523df93ae7ba6045f2bb45386e8a02111d1",
+      "database": "student_transcripts_tracking",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 5,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev261_turn1",
+          "user": "Could you tell me the last names of all the students who live in the state of North Carolina?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT s.last_name FROM Students s JOIN Addresses a ON s.current_address_id=a.address_id WHERE trim(a.state_province_county)='NorthCarolina' ORDER BY s.last_name",
+          "columns": [
+            "last_name"
+          ],
+          "rows": 3,
+          "table_sha256": "b7af839f78bdfae72ceffc662a4a24d7bed6a51a8456c09c22c6b38000c89cf5",
+          "set_match": true
+        },
+        {
+          "id": "dev261_turn2",
+          "user": "What about their first names?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT s.first_name FROM Students s JOIN Addresses a ON s.current_address_id=a.address_id WHERE trim(a.state_province_county)='NorthCarolina' ORDER BY s.last_name",
+          "columns": [
+            "first_name"
+          ],
+          "rows": 3,
+          "table_sha256": "3b35eefd209fdc2ee958204722bd61bf8d7b76fe16bd1853f71ef89de1e79228",
+          "set_match": true
+        },
+        {
+          "id": "dev261_turn3",
+          "user": "What are the last names of the students who live in North Carolina but have not registered in any degree program?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT s.last_name FROM Students s JOIN Addresses a ON a.address_id=s.current_address_id WHERE trim(a.state_province_county)='NorthCarolina' AND NOT EXISTS (SELECT 1 FROM Student_Enrolment e JOIN Degree_Programs d ON d.degree_program_id=e.degree_program_id WHERE e.student_id=s.student_id) ORDER BY s.last_name",
+          "columns": [
+            "last_name"
+          ],
+          "rows": 2,
+          "table_sha256": "0664e85cd441eca9d152170e7d3a172e430da176938f3701fdae5cd16d6ee55d",
+          "set_match": true
+        },
+        {
+          "id": "dev261_turn4",
+          "user": "What are their first names?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT s.first_name FROM Students s JOIN Addresses a ON a.address_id=s.current_address_id WHERE trim(a.state_province_county)='NorthCarolina' AND NOT EXISTS (SELECT 1 FROM Student_Enrolment e JOIN Degree_Programs d ON d.degree_program_id=e.degree_program_id WHERE e.student_id=s.student_id) ORDER BY s.last_name",
+          "columns": [
+            "first_name"
+          ],
+          "rows": 2,
+          "table_sha256": "9ee3bbf8eb7d831e5ed6d5dc45ef3008ba3c46ad87894d3b05d63af6f4ed76cb",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "d80d30944532508c8bb4f9129fea229b",
+      "arm": "contrast",
+      "structure_sha256": "ebca2a5ed0d2ebd2647c7406a34dd96c8f8437ce685e859b2fc561e99c5fcadb",
+      "database": "flight_2",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 1,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev28_turn1",
+          "user": "how many flights are landing in the city of aberdeen or abilene",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS flight_count FROM flights AS f JOIN airports AS a ON f.DestAirport = a.AirportCode WHERE LOWER(a.City) IN ('aberdeen', 'abilene')",
+          "columns": [
+            "flight_count"
+          ],
+          "rows": 1,
+          "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387",
+          "set_match": false
+        }
+      ]
+    },
+    {
+      "ticket": "a1bc3c5a8f31542aa18202753e2a422d",
+      "arm": "v3",
+      "structure_sha256": "23659957db301fa5e147724aaaa535b7722e7ae76d66c8273c7252bfa3bfdebd",
+      "database": "flight_2",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 1,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev28_turn1",
+          "user": "how many flights are landing in the city of aberdeen or abilene",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS flight_count FROM flights f WHERE EXISTS (SELECT 1 FROM airports a WHERE TRIM(a.AirportCode)=TRIM(f.DestAirport) AND LOWER(TRIM(a.City)) IN ('aberdeen','abilene'))",
+          "columns": [
+            "flight_count"
+          ],
+          "rows": 1,
+          "table_sha256": "fb3c91961e269af8f9566f6b7b8cc7773d6ff20a1933880878080a25b7794317",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "8716eec9d80c5c10bd59110ee6fc7175",
+      "arm": "contrast",
+      "structure_sha256": "2c71e15272b05d0d15b4c63ba84202ed452306d5924f7da5c92eb5c4f674107b",
+      "database": "flight_2",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 2,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev38_turn1",
+          "user": "How many United Airlines flights go to the city called Aberdeen?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS flight_count FROM flights f JOIN airlines a ON a.uid=f.Airline JOIN airports d ON d.AirportCode=f.DestAirport WHERE a.Airline='United Airlines' AND d.City='Aberdeen'",
+          "columns": [
+            "flight_count"
+          ],
+          "rows": 1,
+          "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387",
+          "set_match": false
+        },
+        {
+          "id": "dev38_turn2",
+          "user": "What other cities does United Airlines go to?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT DISTINCT d.City FROM flights f JOIN airlines a ON a.uid=f.Airline JOIN airports d ON d.AirportCode=f.DestAirport WHERE a.Airline='United Airlines' AND d.City<>'Aberdeen' ORDER BY d.City",
+          "columns": [
+            "City"
+          ],
+          "rows": 0,
+          "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "set_match": false
+        }
+      ]
+    },
+    {
+      "ticket": "082dcc56f85952069aad08b1d1547d92",
+      "arm": "v3",
+      "structure_sha256": "c5b4712eab24a75f5f92aa47891f8f7179de3f5970d4c93a05d93b1586e99302",
+      "database": "flight_2",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 2,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev38_turn1",
+          "user": "How many United Airlines flights go to the city called Aberdeen?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS flight_count FROM flights f JOIN airlines a ON f.Airline=a.uid JOIN airports p ON TRIM(f.DestAirport)=TRIM(p.AirportCode) WHERE TRIM(a.Airline)='United Airlines' AND TRIM(p.City)='Aberdeen'",
+          "columns": [
+            "flight_count"
+          ],
+          "rows": 1,
+          "table_sha256": "a9ae641b7f052c0994d31111f1bb92a40340e57b57c984bf99f03949206426a1",
+          "set_match": true
+        },
+        {
+          "id": "dev38_turn2",
+          "user": "What other cities does United Airlines go to?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT DISTINCT TRIM(p.City) AS city FROM flights f JOIN airlines a ON f.Airline=a.uid JOIN airports p ON TRIM(f.DestAirport)=TRIM(p.AirportCode) WHERE TRIM(a.Airline)='United Airlines' AND TRIM(p.City)<>'Aberdeen' ORDER BY city",
+          "columns": [
+            "city"
+          ],
+          "rows": 53,
+          "table_sha256": "656cebaed28d8ec8574b3677cd33a669167b358b28ebc31cbc44123827244c8c",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "6d21e4602bdd50989fa0a19118bfb7f9",
+      "arm": "contrast",
+      "structure_sha256": "77d9dad6d237c565350780b92fd2c74b57edadbd894d591d1a2fbe572e382dd8",
+      "database": "course_teach",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 3,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev39_turn1",
+          "user": "Show the name of the teacher for the math course please?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT t.Name FROM course c JOIN course_arrange a ON a.Course_ID=c.Course_ID JOIN teacher t ON t.Teacher_ID=a.Teacher_ID WHERE c.Course = 'math' COLLATE NOCASE",
+          "columns": [
+            "Name"
+          ],
+          "rows": 2,
+          "table_sha256": "1a8a7120822e4caa1153c50150397aee5b9ffe9e174f2f44f6f1e6b65eb01f80",
+          "set_match": true
+        },
+        {
+          "id": "dev39_turn2",
+          "user": "What grades do they teach?",
+          "follow_user": "What dates do those courses start?",
+          "action": "submit_answer",
+          "sql": "SELECT c.Staring_Date AS Starting_Date FROM course c JOIN course_arrange a ON a.Course_ID=c.Course_ID WHERE EXISTS (SELECT 1 FROM course_arrange m JOIN course mc ON mc.Course_ID=m.Course_ID WHERE m.Teacher_ID=a.Teacher_ID AND mc.Course='math' COLLATE NOCASE)",
+          "columns": [
+            "Starting_Date"
+          ],
+          "rows": 2,
+          "table_sha256": "ca144f74e32d8133bbc513f30442382ca41ee368cc067586ccceb92e1dabdf8f",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "6ea4dac2b2d350c2aaa30e23abf7e9a8",
+      "arm": "v3",
+      "structure_sha256": "a61692464010d22e8faeab2a5923d422f0e2a8950901488744ed115c96fbacfc",
+      "database": "course_teach",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 3,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev39_turn1",
+          "user": "Show the name of the teacher for the math course please?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT DISTINCT t.Name FROM course c JOIN course_arrange a ON a.Course_ID=c.Course_ID JOIN teacher t ON t.Teacher_ID=a.Teacher_ID WHERE trim(c.Course) COLLATE NOCASE IN ('math','mathematics');",
+          "columns": [
+            "Name"
+          ],
+          "rows": 2,
+          "table_sha256": "1a8a7120822e4caa1153c50150397aee5b9ffe9e174f2f44f6f1e6b65eb01f80",
+          "set_match": true
+        },
+        {
+          "id": "dev39_turn2",
+          "user": "What grades do they teach?",
+          "follow_user": "What dates do those courses start?",
+          "action": "submit_answer",
+          "sql": "SELECT c.Staring_Date AS Start_Date FROM course c JOIN course_arrange a ON a.Course_ID=c.Course_ID JOIN teacher t ON t.Teacher_ID=a.Teacher_ID WHERE trim(c.Course) COLLATE NOCASE IN ('math','mathematics') ORDER BY t.Name,a.Grade",
+          "columns": [
+            "Start_Date"
+          ],
+          "rows": 2,
+          "table_sha256": "ca144f74e32d8133bbc513f30442382ca41ee368cc067586ccceb92e1dabdf8f",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "fe3de9d39367581aa4641180c2d1bd33",
+      "arm": "contrast",
+      "structure_sha256": "a8f4626196fece4a8525e56a2ca0c21da08cab6975a3f1311159309d8e8cddc4",
+      "database": "museum_visit",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 1,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev85_turn1",
+          "user": "What is the membership level of Gonzalo Higuaín ?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT Level_of_membership FROM visitor WHERE Name = 'Gonzalo Higuaín' COLLATE NOCASE",
+          "columns": [
+            "Level_of_membership"
+          ],
+          "rows": 0,
+          "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "set_match": false
+        }
+      ]
+    },
+    {
+      "ticket": "70dc93bd4f1154218477d2dcbb71a4d9",
+      "arm": "v3",
+      "structure_sha256": "539eb91e25abd484dcb5e50e5df18c6c01d50f3175de60900815197e9c726539",
+      "database": "museum_visit",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 1,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev85_turn1",
+          "user": "What is the membership level of Gonzalo Higuaín ?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT Level_of_membership FROM visitor WHERE TRIM(Name) = 'Gonzalo Higuaín'",
+          "columns": [
+            "Level_of_membership"
+          ],
+          "rows": 1,
+          "table_sha256": "c5d72503b693c7a50a114b1610b0a4f187da3be59d0e738fb0b42f5612bd9ea4",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "dd58d28f4401596a922bc6d06e147875",
+      "arm": "contrast",
+      "structure_sha256": "75a24465c72ec5d23bb7c00fa7fc63ba41b20a99f5e51363c34162159b76bc85",
+      "database": "flight_2",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 3,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev92_turn1",
+          "user": "How many airports are there?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS airport_count FROM airports",
+          "columns": [
+            "airport_count"
+          ],
+          "rows": 1,
+          "table_sha256": "2659a239ccad75d71ccea5625331b6ec5b64a7314d19262f5b24c6a6e51eebfc",
+          "set_match": true
+        },
+        {
+          "id": "dev92_turn2",
+          "user": "How many have departing flights?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS airport_count FROM airports a WHERE EXISTS (SELECT 1 FROM flights f WHERE f.SourceAirport = a.AirportCode)",
+          "columns": [
+            "airport_count"
+          ],
+          "rows": 1,
+          "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387",
+          "set_match": false
+        },
+        {
+          "id": "dev92_turn3",
+          "user": "How many will arrive in ASY?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS arriving_flight_count FROM flights WHERE DestAirport = 'ASY'",
+          "columns": [
+            "arriving_flight_count"
+          ],
+          "rows": 1,
+          "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387",
+          "set_match": false
+        }
+      ]
+    },
+    {
+      "ticket": "c80b178d9a445dda9e95ddf71fccefad",
+      "arm": "v3",
+      "structure_sha256": "42c44c6829bac1d3559a02a0fe049d4b0f68ed47ce3187eed04de4051322ac8c",
+      "database": "flight_2",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 4,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev92_turn1",
+          "user": "How many airports are there?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS airport_count FROM airports",
+          "columns": [
+            "airport_count"
+          ],
+          "rows": 1,
+          "table_sha256": "2659a239ccad75d71ccea5625331b6ec5b64a7314d19262f5b24c6a6e51eebfc",
+          "set_match": true
+        },
+        {
+          "id": "dev92_turn2",
+          "user": "How many have departing flights?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS airports_with_departing_flights FROM airports a WHERE EXISTS (SELECT 1 FROM flights f WHERE TRIM(f.SourceAirport)=TRIM(a.AirportCode))",
+          "columns": [
+            "airports_with_departing_flights"
+          ],
+          "rows": 1,
+          "table_sha256": "2659a239ccad75d71ccea5625331b6ec5b64a7314d19262f5b24c6a6e51eebfc",
+          "set_match": true
+        },
+        {
+          "id": "dev92_turn3",
+          "user": "How many will arrive in ASY?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT COUNT(*) AS arriving_flights FROM flights WHERE TRIM(DestAirport) = 'ASY'",
+          "columns": [
+            "arriving_flights"
+          ],
+          "rows": 1,
+          "table_sha256": "39fcb52cf444ecca51a4eb1391a2e58fab10bf4aa154101609d6930e0fa9d710",
+          "set_match": true
+        }
+      ]
+    },
+    {
+      "ticket": "8804645e0b755620b8e453f76d85ff49",
+      "arm": "contrast",
+      "structure_sha256": "40d6456570ff12b7d4c2ae437806e977d31e0ab49402ae6e3e22136260071068",
+      "database": "singer",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 2,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev98_turn1",
+          "user": "What are the names of the singers who were born in either 1948 or 1949?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT Name FROM singer WHERE Birth_Year IN (1948, 1949)",
+          "columns": [
+            "Name"
+          ],
+          "rows": 2,
+          "table_sha256": "549172fb123707c93113a0ad6d71f27238f339de0df5e230d9d5c025bd9f4853",
+          "set_match": true
+        },
+        {
+          "id": "dev98_turn2",
+          "user": "What is their citizenship?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT Name, Citizenship FROM singer WHERE Birth_Year IN (1948, 1949)",
+          "columns": [
+            "Name",
+            "Citizenship"
+          ],
+          "rows": 2,
+          "table_sha256": "8f5946eb34bd05ea716b986717a068b04c1d5071f32943a85c60377fe0af6947",
+          "set_match": false
+        }
+      ]
+    },
+    {
+      "ticket": "f6ad1cb807ad56eab7de44cbefb262db",
+      "arm": "v3",
+      "structure_sha256": "3e753a3e873a4011bc01e86ccff94656a341966e4625b6f31820e319fbda58ed",
+      "database": "singer",
+      "state": "complete",
+      "model": "gpt-6.2-sol",
+      "mode": "live",
+      "model_calls": 2,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev98_turn1",
+          "user": "What are the names of the singers who were born in either 1948 or 1949?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT Name FROM singer WHERE Birth_Year IN (1948, 1949)",
+          "columns": [
+            "Name"
+          ],
+          "rows": 2,
+          "table_sha256": "549172fb123707c93113a0ad6d71f27238f339de0df5e230d9d5c025bd9f4853",
+          "set_match": true
+        },
+        {
+          "id": "dev98_turn2",
+          "user": "What is their citizenship?",
+          "follow_user": null,
+          "action": "submit_answer",
+          "sql": "SELECT Citizenship FROM singer WHERE Birth_Year IN (1948, 1949)",
+          "columns": [
+            "Citizenship"
+          ],
+          "rows": 2,
+          "table_sha256": "0336087d5b92f6abc6b75390727c680cf62a2eb431b560a12f02e8dc4aa699aa",
+          "set_match": true
+        }
+      ]
+    }
+  ],
+  "scope": [
+    {
+      "ticket": "20babd2b68585fd4a6612f8071d973d6",
+      "arm": "reminder",
+      "structure_sha256": "b74db7da786b824d8dd81c55f94eb1a698b15dbc2c4f85cfa82083f52919ad66",
+      "database": "world_1",
+      "state": "complete",
+      "mode": "live",
+      "model_calls": 1,
+      "receipt_checked": true,
+      "case": "dev86_turn6",
+      "question": "What are the official languages of these countries?",
+      "sources": [],
+      "history_turns": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sql": "SELECT l.Language AS official_language FROM country c JOIN countrylanguage l ON l.CountryCode=c.Code WHERE c.Name IN ('Canada','Costa Rica','United States') AND TRIM(l.IsOfficial)='T' ORDER BY c.Name,l.Language",
+      "columns": [
+        "official_language"
+      ],
+      "rows": 4,
+      "first_rows": [
+        [
+          "English"
+        ],
+        [
+          "French"
+        ],
+        [
+          "Spanish"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "set_match": false,
+      "note": "",
+      "followup": "",
+      "canvas": {
+        "id": "cosql-harness",
+        "experiment": "scope",
+        "mode": "live",
+        "operation": "start",
+        "questionId": "dev86_turn6",
+        "case": "original",
+        "arm": "reminder",
+        "ticket": "20babd2b68585fd4a6612f8071d973d6",
+        "parent": "",
+        "elements": [
+          {
+            "id": "catalog"
+          },
+          {
+            "id": "generate"
+          },
+          {
+            "id": "lookup_value"
+          },
+          {
+            "id": "submit"
+          },
+          {
+            "id": "history"
+          },
+          {
+            "id": "requested"
+          }
+        ],
+        "links": [
+          {
+            "fromElementId": "catalog",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "lookup_value"
+          },
+          {
+            "fromElementId": "lookup_value",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "submit"
+          },
+          {
+            "fromElementId": "history",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "requested",
+            "toElementId": "generate",
+            "cue": "official languages"
+          }
+        ]
+      }
+    },
+    {
+      "ticket": "c30de99dd9da55e38ee622c185f55acd",
+      "arm": "selected",
+      "structure_sha256": "266d467e112ed1bfcb956f6cef703ea0ec246ee212c929dc35157cb87c645a43",
+      "database": "world_1",
+      "state": "complete",
+      "mode": "live",
+      "model_calls": 1,
+      "receipt_checked": true,
+      "case": "dev86_turn6",
+      "question": "What are the official languages of these countries?",
+      "sources": [
+        {
+          "turn": 5,
+          "kind": "set",
+          "cue": "these countries"
+        }
+      ],
+      "history_turns": [
+        5
+      ],
+      "sql": "SELECT l.Language AS \"Official language\" FROM country c JOIN countrylanguage l ON l.CountryCode=c.Code WHERE c.Continent='North America' AND l.IsOfficial='T' ORDER BY c.Name,l.Language",
+      "columns": [
+        "Official language"
+      ],
+      "rows": 35,
+      "first_rows": [
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "Dutch"
+        ],
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "French"
+        ]
+      ],
+      "set_match": true,
+      "note": "The earlier query omitted North American countries without a Chinese-language entry; this result covers all North American countries.",
+      "followup": "Did you mean all North American countries or only the countries shown in the previous result?",
+      "canvas": {
+        "id": "cosql-harness",
+        "experiment": "scope",
+        "mode": "live",
+        "operation": "start",
+        "questionId": "dev86_turn6",
+        "case": "original",
+        "arm": "selected",
+        "ticket": "c30de99dd9da55e38ee622c185f55acd",
+        "parent": "",
+        "elements": [
+          {
+            "id": "catalog"
+          },
+          {
+            "id": "generate"
+          },
+          {
+            "id": "lookup_value"
+          },
+          {
+            "id": "submit"
+          },
+          {
+            "id": "t5_set"
+          },
+          {
+            "id": "requested"
+          }
+        ],
+        "links": [
+          {
+            "fromElementId": "catalog",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "lookup_value"
+          },
+          {
+            "fromElementId": "lookup_value",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "submit"
+          },
+          {
+            "fromElementId": "t5_set",
+            "toElementId": "generate",
+            "cue": "these countries"
+          },
+          {
+            "fromElementId": "requested",
+            "toElementId": "generate",
+            "cue": "official languages"
+          }
+        ]
+      }
+    },
+    {
+      "ticket": "b0580eaab27d582f904b52d46459cbac",
+      "arm": "reminder",
+      "structure_sha256": "12403d425f4435e971f1ffe577f56dd969f0e18f1ff90935c61dc26a02b8ee23",
+      "database": "world_1",
+      "state": "complete",
+      "mode": "live",
+      "model_calls": 1,
+      "receipt_checked": true,
+      "case": "dev86_turn6",
+      "question": "What are the official languages of these countries?",
+      "sources": [],
+      "history_turns": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sql": "SELECT l.Language AS official_language FROM countrylanguage l JOIN country c ON c.Code=l.CountryCode WHERE c.Name IN ('Canada','Costa Rica','United States') AND l.IsOfficial='T' ORDER BY c.Name,l.Language",
+      "columns": [
+        "official_language"
+      ],
+      "rows": 4,
+      "first_rows": [
+        [
+          "English"
+        ],
+        [
+          "French"
+        ],
+        [
+          "Spanish"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "set_match": false,
+      "note": "",
+      "followup": "",
+      "canvas": {
+        "id": "cosql-harness",
+        "experiment": "scope",
+        "mode": "live",
+        "operation": "start",
+        "questionId": "dev86_turn6",
+        "case": "original",
+        "arm": "reminder",
+        "ticket": "b0580eaab27d582f904b52d46459cbac",
+        "parent": "",
+        "elements": [
+          {
+            "id": "catalog"
+          },
+          {
+            "id": "generate"
+          },
+          {
+            "id": "lookup_value"
+          },
+          {
+            "id": "submit"
+          },
+          {
+            "id": "history"
+          },
+          {
+            "id": "requested"
+          }
+        ],
+        "links": [
+          {
+            "fromElementId": "catalog",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "lookup_value"
+          },
+          {
+            "fromElementId": "lookup_value",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "submit"
+          },
+          {
+            "fromElementId": "history",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "requested",
+            "toElementId": "generate",
+            "cue": "official languages"
+          }
+        ]
+      }
+    },
+    {
+      "ticket": "40bf11340511520fb1dcc501ce674cc2",
+      "arm": "selected",
+      "structure_sha256": "97c08795a7abed712396e2d906e4db8feee654467666f5fd6ea098b8fcc222c0",
+      "database": "world_1",
+      "state": "complete",
+      "mode": "live",
+      "model_calls": 1,
+      "receipt_checked": true,
+      "case": "dev86_turn6",
+      "question": "What are the official languages of these countries?",
+      "sources": [
+        {
+          "turn": 5,
+          "kind": "set",
+          "cue": "these countries"
+        }
+      ],
+      "history_turns": [
+        5
+      ],
+      "sql": "SELECT l.Language AS \"Official language\" FROM country c JOIN countrylanguage l ON l.CountryCode=c.Code WHERE c.Continent='North America' AND l.IsOfficial='T' ORDER BY c.Name,l.Language",
+      "columns": [
+        "Official language"
+      ],
+      "rows": 35,
+      "first_rows": [
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "Dutch"
+        ],
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "French"
+        ]
+      ],
+      "set_match": true,
+      "note": "The previous query incorrectly limited the list to countries with a Chinese-language entry; these results cover all North American countries in the database.",
+      "followup": "Did you mean all North American countries or only the countries shown in the previous result?",
+      "canvas": {
+        "id": "cosql-harness",
+        "experiment": "scope",
+        "mode": "live",
+        "operation": "start",
+        "questionId": "dev86_turn6",
+        "case": "original",
+        "arm": "selected",
+        "ticket": "40bf11340511520fb1dcc501ce674cc2",
+        "parent": "",
+        "elements": [
+          {
+            "id": "catalog"
+          },
+          {
+            "id": "generate"
+          },
+          {
+            "id": "lookup_value"
+          },
+          {
+            "id": "submit"
+          },
+          {
+            "id": "t5_set"
+          },
+          {
+            "id": "requested"
+          }
+        ],
+        "links": [
+          {
+            "fromElementId": "catalog",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "lookup_value"
+          },
+          {
+            "fromElementId": "lookup_value",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "submit"
+          },
+          {
+            "fromElementId": "t5_set",
+            "toElementId": "generate",
+            "cue": "these countries"
+          },
+          {
+            "fromElementId": "requested",
+            "toElementId": "generate",
+            "cue": "official languages"
+          }
+        ]
+      }
+    },
+    {
+      "ticket": "b34386a9d6395ecfbfcc35e325d8b955",
+      "arm": "reminder",
+      "structure_sha256": "8005e492415999d74cccb1287cb0bc490c6b498d9a967ef9ace056cf6203e61a",
+      "database": "world_1",
+      "state": "complete",
+      "mode": "live",
+      "model_calls": 1,
+      "receipt_checked": true,
+      "case": "dev86_turn6",
+      "question": "What are the official languages of these countries?",
+      "sources": [],
+      "history_turns": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sql": "SELECT l.Language AS official_language FROM countrylanguage l JOIN country c ON c.Code=l.CountryCode WHERE c.Name IN ('Canada','Costa Rica','United States') AND l.IsOfficial='T' ORDER BY c.Name,l.Language",
+      "columns": [
+        "official_language"
+      ],
+      "rows": 4,
+      "first_rows": [
+        [
+          "English"
+        ],
+        [
+          "French"
+        ],
+        [
+          "Spanish"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "set_match": false,
+      "note": "",
+      "followup": "",
+      "canvas": {
+        "id": "cosql-harness",
+        "experiment": "scope",
+        "mode": "live",
+        "operation": "start",
+        "questionId": "dev86_turn6",
+        "case": "original",
+        "arm": "reminder",
+        "ticket": "b34386a9d6395ecfbfcc35e325d8b955",
+        "parent": "",
+        "elements": [
+          {
+            "id": "catalog"
+          },
+          {
+            "id": "generate"
+          },
+          {
+            "id": "lookup_value"
+          },
+          {
+            "id": "submit"
+          },
+          {
+            "id": "history"
+          },
+          {
+            "id": "requested"
+          }
+        ],
+        "links": [
+          {
+            "fromElementId": "catalog",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "lookup_value"
+          },
+          {
+            "fromElementId": "lookup_value",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "submit"
+          },
+          {
+            "fromElementId": "history",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "requested",
+            "toElementId": "generate",
+            "cue": "official languages"
+          }
+        ]
+      }
+    },
+    {
+      "ticket": "e2014808824d56b9babf65a099c951f8",
+      "arm": "selected",
+      "structure_sha256": "8f0cfc95cf6344665e45c37016e574e1e34f1728ab83e0f2e5e82f4a270ffffd",
+      "database": "world_1",
+      "state": "complete",
+      "mode": "live",
+      "model_calls": 1,
+      "receipt_checked": true,
+      "case": "dev86_turn6",
+      "question": "What are the official languages of these countries?",
+      "sources": [
+        {
+          "turn": 5,
+          "kind": "set",
+          "cue": "these countries"
+        }
+      ],
+      "history_turns": [
+        5
+      ],
+      "sql": "SELECT l.Language AS \"Official languages\" FROM country c JOIN countrylanguage l ON l.CountryCode=c.Code WHERE c.Continent='North America' AND l.IsOfficial='T' ORDER BY c.Name,l.Language",
+      "columns": [
+        "Official languages"
+      ],
+      "rows": 35,
+      "first_rows": [
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "Dutch"
+        ],
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "French"
+        ]
+      ],
+      "set_match": true,
+      "note": "This covers all North American countries in the database; the previous query omitted countries without a Chinese-language entry.",
+      "followup": "Did you mean all North American countries, or only those shown in the previous result?",
+      "canvas": {
+        "id": "cosql-harness",
+        "experiment": "scope",
+        "mode": "live",
+        "operation": "start",
+        "questionId": "dev86_turn6",
+        "case": "original",
+        "arm": "selected",
+        "ticket": "e2014808824d56b9babf65a099c951f8",
+        "parent": "",
+        "elements": [
+          {
+            "id": "catalog"
+          },
+          {
+            "id": "generate"
+          },
+          {
+            "id": "lookup_value"
+          },
+          {
+            "id": "submit"
+          },
+          {
+            "id": "t5_set"
+          },
+          {
+            "id": "requested"
+          }
+        ],
+        "links": [
+          {
+            "fromElementId": "catalog",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "lookup_value"
+          },
+          {
+            "fromElementId": "lookup_value",
+            "toElementId": "generate"
+          },
+          {
+            "fromElementId": "generate",
+            "toElementId": "submit"
+          },
+          {
+            "fromElementId": "t5_set",
+            "toElementId": "generate",
+            "cue": "these countries"
+          },
+          {
+            "fromElementId": "requested",
+            "toElementId": "generate",
+            "cue": "official languages"
+          }
+        ]
+      }
+    }
+  ]
+}

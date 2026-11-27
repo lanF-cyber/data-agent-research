@@ -1,0 +1,33 @@
+﻿题号,数据库,历史用户原句,当前题面,原错因,历史业务核验,现行可比性,旧版现行整表,存值版现行整表,答后补问可比性,答后补问现行整表,可计整套版本错转对
+dev5_turn1,dog_kennels,how many female dogs have gone through treatment,,性别实际是 0 和 1，用 f/female 过滤必定为零，无法证明没有受治母犬。,False,现行题单外,,,现行题单外,,False
+dev5_turn2,dog_kennels,what are their ages,,沿用不存在的性别文本筛选，空表不足以回答这些狗的年龄。,False,现行题单外,,,现行题单外,,False
+dev25_turn2,flight_2,what country is their destination of the first three?,,始发和目的机场代码有边缘空格；直接等值连接漏掉三家航司的目的地国家。,True,现行题单外,,,,,False
+dev28_turn1,flight_2,how many flights are landing in the city of aberdeen or abilene,how many flights are landing in the city of aberdeen or abilene,模型和原参考均答 0，规范机场代码和城市名后，实际有 47 班抵达 Aberdeen 或 Abilene。,True,同一用户输入序列,False,True,,,True
+dev36_turn3,flight_2,Where is flight 28 going to?,Where is flight 28 going to?,承接 United Airlines 正确，但机场代码前有空格，直接连接导致空表，实际目的地是 ASY。,True,前文或本轮用户输入变化,False,True,,,False
+dev38_turn1,flight_2,How many United Airlines flights go to the city called Aberdeen?,How many United Airlines flights go to the city called Aberdeen?,原参考与模型均为 0；联合航空实际有 3 班飞往 Aberdeen。,True,同一用户输入序列,False,True,,,True
+dev38_turn2,flight_2,What other cities does United Airlines go to?,What other cities does United Airlines go to?,继续用未修整的机场代码连接，返回空表；联合航空还飞往 53 个其他城市。,True,同一用户输入序列,False,True,,,True
+dev85_turn1,museum_visit,What is the membership level of Gonzalo Higuaín ?,What is the membership level of Gonzalo Higuaín ?,库内姓名末尾有空格，NOCASE 不会消除空格；返回空，原库等级为 8。,True,同一用户输入序列,False,True,,,True
+dev92_turn2,flight_2,How many have departing flights?,How many have departing flights?,航班始发代码带空格，未规范连接导致 0；表中有 100 个不同始发机场。,True,同一用户输入序列,False,True,同一用户输入序列,True,True
+dev92_turn3,flight_2,How many will arrive in ASY?,How many will arrive in ASY?,用 ASY 与带前导空格的目的地代码比较，报 0，实际抵达 19 班。,True,同一用户输入序列,False,True,同一用户输入序列,True,True
+dev92_turn4,flight_2,"Of those flights, how many come from APG and ABR?","Of those flights arriving in ASY, how many in total depart from either APG or ABR?",起终点都未修整空格，漏掉从指定两个机场飞到 ASY 的航班。,False,前文或本轮用户输入变化,False,False,前文或本轮用户输入变化,False,False
+dev104_turn3,flight_2,"how many of those flights go to airport ""ASY""?","how many of those flights go to airport ""ASY""?",目的地 ASY 字面少了前导空格，原参考与模型都报零，联合航空实际有一班。,True,两版实际收到的用户消息不同,False,True,,,False
+dev111_turn1,flight_2,How many flights are arriving in the city called Aberdeen?,How many flights are arriving in the city called Aberdeen?,机场代码和城市名边缘有空格，模型报零，原库有 21 班抵达 Aberdeen。,True,同一用户输入序列,False,True,,,True
+dev111_turn2,flight_2,How many flights are there departing Aberdeen?,How many flights are there departing Aberdeen?,同样的机场连接错误使始发数为零，实际从 Aberdeen 起飞 21 班。,True,同一用户输入序列,False,True,,,True
+dev117_turn3,flight_2,Find the flight number of APG?,,模型明确声称没有从 APG 出发或抵达的航班；修整代码后这两方向合计 22 条航班记录。,True,现行题单外,,,,,False
+dev134_turn4,student_transcripts_tracking,what is Timothy Anna Ward's date first registered?,what is Timothy Anna Ward's date first registered?,题面 Timothy 对应原库唯一的 Timmothy Anna Ward，逐字匹配报空。,True,前文或本轮用户输入变化,False,True,,,False
+dev137_turn1,flight_2,How many 'United Airlines' flights go to the Airport 'ASY'?,How many 'United Airlines' flights go to the Airport 'ASY'?,联合航空实际有一班抵达 ASY，模型和参考都因代码空格误报零。,True,同一用户输入序列,False,True,,,True
+dev137_turn3,flight_2,How many airlines with airline id 1 go to the destination airport ASY?,How many airlines with airline id 1 go to the destination airport ASY?,未处理目的地代码 ASY 的前导空格，漏掉联合航空实际的一班。,True,同一用户输入序列,False,True,,,True
+dev172_turn1,student_transcripts_tracking,how many students live in North Carolina?,how many students live in North Carolina?,原库州名存成 NorthCarolina，过滤 north carolina 或 nc 报 0，实际三人。,True,同一用户输入序列,False,True,,,True
+dev172_turn2,student_transcripts_tracking,What are their first and last names?,What are their first and last names?,继续使用错误的州名，漏掉三位学生的名和姓。,True,同一用户输入序列,False,True,,,True
+dev172_turn3,student_transcripts_tracking,Which of those do not have degree program id?,Which of those do not have degree program id?,同一州名问题传到第三轮，漏掉三位学生中无项目记录的两位。,True,同一用户输入序列,False,True,,,True
+dev204_turn3,flight_2,Which airlines have flight from CVO?,Which airlines have at least one flight departing from airport CVO? List one name per airline.,CVO 的库内代码有前导空格，模型交空名单；修整后有 11 家不同航司。,True,前文或本轮用户输入变化,False,True,,,False
+dev206_turn1,wta_1,What is the player id for the youngest player?,What is the player id for the youngest player?,生日列混有 518 个空字符串，直接取 MAX 误将它们选为最年轻；限制为整数编码后应为球员 220156。,True,同一用户输入序列,False,True,,,True
+dev226_turn1,flight_2,What is the destination airport of  United Airlines?,List the distinct destination airport codes of all United Airlines flights. Omit surrounding spaces from the codes.,机场代码未经清洗，连接未命中，返回空表，United Airlines 实有到达机场。,True,前文或本轮用户输入变化,False,False,,,False
+dev226_turn2,flight_2,How many airlines have flights departing from APG?,How many airlines have flights departing from APG?,APG 未修整空格报 0。修整后是 11 班航班、7 家不同航司，题目数航司。,True,前文或本轮用户输入变化,False,True,,,False
+dev235_turn1,flight_2,Can you list all the flight numbers that have a source airport value of AHD?,Can you list all the flight numbers that have a source airport value of AHD?,原参考和模型都报空，实际从 AHD 出发有 10 个航班号。,True,同一用户输入序列,False,True,同一用户输入序列,True,True
+dev235_turn2,flight_2,Can you list the names of all the unique airlines that belong to those flight numbers?,Can you list the names of all the unique airlines that belong to those flight numbers?,AHD 与实际带空格的始发代码未匹配，模型还声称不存在这些航班。,False,同一用户输入序列,False,False,同一用户输入序列,True,True
+dev238_turn3,dog_kennels,"Can you provide me with a list of all dog Ids for all of the abandoned dogs, as well as their associated treatment type code?","Can you provide me with a list of all dog Ids for all of the abandoned dogs, as well as their associated treatment type code?",遗弃标记存 0/1，过滤 Y/YES 使狗与治疗类型全部漏掉。,True,同一用户输入序列,False,True,,,True
+dev261_turn1,student_transcripts_tracking,Could you tell me the last names of all the students who live in the state of North Carolina?,Could you tell me the last names of all the students who live in the state of North Carolina?,原库存 NorthCarolina，州名过滤错误，漏掉三人的姓。,True,同一用户输入序列,False,True,,,True
+dev261_turn2,student_transcripts_tracking,What about their first names?,What about their first names?,承接同一错误的北卡筛选，漏掉三人的名。,True,同一用户输入序列,False,True,,,True
+dev261_turn3,student_transcripts_tracking,What are the last names of the students who live in North Carolina but have not registered in any degree program?,What are the last names of the students who live in North Carolina but have not registered in any degree program?,同一州名问题漏掉两位没注册项目的北卡学生。,True,同一用户输入序列,False,True,,,True
+dev261_turn4,student_transcripts_tracking,What are their first names?,What are their first names?,正确集合包括 Warren、Deon，错误的州名比较继续返回空表。,True,同一用户输入序列,False,True,,,True

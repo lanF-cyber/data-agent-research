@@ -1,0 +1,20 @@
+﻿题号,目标存值题,用户原句,可比性,关,开
+dev36_turn1,False,what is the source airport for United Airlines?,前文或本轮用户输入变化,False,False
+dev36_turn2,False,What are the flight numbers for United Airlines?,前文或本轮用户输入变化,True,False
+dev36_turn3,True,Where is flight 28 going to?,前文或本轮用户输入变化,False,False
+dev36_turn4,False,What about flight 29?,前文或本轮用户输入变化,False,False
+dev85_turn1,True,What is the membership level of Gonzalo Higuaín ?,同一用户输入序列,True,True
+dev85_turn2,False,whose membership level is 5?,同一用户输入序列,True,True
+dev85_turn3,False,how many numbers of persons whose membership level is greater than 5?,同一用户输入序列,True,True
+dev85_turn4,False,What is the age of membership level 8?,同一用户输入序列,False,False
+dev85_turn5,False,how many persons who have membership level greater than 4?,同一用户输入序列,True,True
+dev85_turn6,False,please sort the names of persons whose age from old to young according to the membership level?,前文或本轮用户输入变化,False,False
+dev172_turn1,True,how many students live in North Carolina?,同一用户输入序列,True,True
+dev172_turn2,True,What are their first and last names?,同一用户输入序列,True,True
+dev172_turn3,True,Which of those do not have degree program id?,同一用户输入序列,True,True
+dev204_turn1,False,Find Flight from CVO to SNA,同一用户输入序列,True,True
+dev204_turn2,False,Flight from CVO to DFW,同一用户输入序列,True,True
+dev204_turn3,True,Which airlines have flight from CVO?,前文或本轮用户输入变化,True,False
+dev238_turn1,False,Hello!  Can you tell me how many dogs have not gone through any treatment?,同一用户输入序列,True,True
+dev238_turn2,False,Thank you for that!  Can you tell me how many of these dogs were abandoned?,同一用户输入序列,False,False
+dev238_turn3,True,"Can you provide me with a list of all dog Ids for all of the abandoned dogs, as well as their associated treatment type code?",同一用户输入序列,False,False

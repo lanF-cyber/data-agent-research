@@ -1,6 +1,10 @@
 # 数据 Agent 研究
 
-## 第 4 周 · RSI 数据平台与 CoSQL Harness 联调
+## 第 4 周 4.2 · 数据 Agent 的多轮指代消解
+
+从“使用中文的国家”转问“北美有哪些国家”时，一项沿用过久的筛选把名单从 37 项缩到了 3 项。本周在 RSI 平台上研究何时继承上轮条件、何时重新确定范围，以及如何纠正上一答的遗漏。按本地修订题意，9 段对话有 14 个具体问题由错转对。报告附原始发布参考的复算、失败项和下一阶段的自动编排方案。[挑战档研究报告](weeks/week-04/reference-resolution/README.md) · [14 题前后对照](evidence/week-04/reference-cases.csv)
+
+## 第 4 周 4.1 · RSI 数据平台与 CoSQL Harness 联调
 
 五节点画布调度了一道 CoSQL 原题。现场生成的 SQL 返回 62 个始发机场，与独立查询的完整机场代码集合一致。[运行截图与实验结果](weeks/week-04/README.md) · [启动命令与依赖版本](weeks/week-04/reproduce.md)
 

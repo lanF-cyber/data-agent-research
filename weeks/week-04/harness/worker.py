@@ -6,6 +6,7 @@ import json
 import os
 import re
 import sqlite3
+import sys
 import threading
 import time
 from contextlib import closing
@@ -28,6 +29,7 @@ WHERE f.Airline IN (SELECT uid FROM airlines WHERE trim(Airline) = 'United Airli
 LOCK = threading.Lock()
 ACTIVE = {}
 RUNS = None
+scope_dispatch = None
 
 
 class NoRedirect(HTTPRedirectHandler):
@@ -154,6 +156,15 @@ def finish(ticket, arm, mode):
 
 
 def dispatch(canvas):
+    if canvas.get("experiment") == "versions":
+        if scope_dispatch is None:
+            raise ValueError("Version comparison is not configured")
+        from week4.version_pair import dispatch as versions_dispatch
+        return versions_dispatch(canvas)
+    if canvas.get("experiment") == "scope":
+        if scope_dispatch is None:
+            raise ValueError("Scope experiment is not configured")
+        return scope_dispatch(canvas)
     ticket = canvas.get("ticket", "")
     if canvas.get("id") != FLOW_ID or not isinstance(ticket, str) or not re.fullmatch(r"[0-9a-f]{32}", ticket):
         raise ValueError("画布或运行编号无效")
@@ -210,11 +221,15 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--db", type=Path, required=True)
     parser.add_argument("--runs", type=Path, required=True)
+    parser.add_argument("--scope-project", type=Path, help="CoSQL project with the scope experiment installed")
     args = parser.parse_args()
     core.DATABASE = args.db.resolve(strict=True)
     if hashlib.sha256(core.DATABASE.read_bytes()).hexdigest() != core.DATABASE_SHA256:
         parser.error("flight_2.sqlite SHA-256 mismatch")
     RUNS = args.runs.resolve()
     RUNS.mkdir(parents=True, exist_ok=True)
+    if args.scope_project:
+        sys.path.insert(0, str(args.scope_project.resolve(strict=True)))
+        from week4.scope_service import dispatch as scope_dispatch
     print("CoSQL harness ready on 127.0.0.1:3216", flush=True)
     ThreadingHTTPServer(("127.0.0.1", 3216), Handler).serve_forever()

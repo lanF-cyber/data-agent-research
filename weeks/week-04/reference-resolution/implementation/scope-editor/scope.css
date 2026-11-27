@@ -1,0 +1,15 @@
+.s-work {padding-bottom: 3rem}
+.s-grid {display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:1rem; max-width:88rem}
+.s-form, .s-result {border:0; margin:0; padding:1.15rem; min-width:0; display:grid; gap:.85rem}
+.s-work label {display:grid; gap:.3rem; font-size:.9rem; font-weight:550}
+.s-work select, .s-work input {border:1px solid #b6c8bb; padding:.45rem .6rem; background:white; color:inherit; border-radius:4px; max-width:100%; width:100%}
+.s-work blockquote {margin:0; border-left:3px solid #48826d; padding:.55rem .8rem; background:#eef5ee}
+.s-work p,.s-work h3 {margin:0}
+.s-work pre {white-space:pre-wrap; overflow-wrap:anywhere; padding:.7rem; background:#f3f6f2}
+.s-edges {display:flex; flex-wrap:wrap; gap:.4rem; align-items:center; font-size:.85rem}
+.s-edges span {background:#e8f0eb; padding:.25rem .5rem; border-radius:3px}
+.s-result table {border-collapse:collapse; font-size:.85rem; width:100%}
+.s-result td,.s-result th {text-align:left; border-bottom:1px solid #cfdbd3; padding:.32rem .45rem}
+.s-result caption {text-align:left; color:#50635a; margin-bottom:.4rem}
+.s-work a {color:#165843; text-decoration:underline}
+@media (max-width:850px) {.s-grid {grid-template-columns:1fr}}
