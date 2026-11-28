@@ -2,13 +2,13 @@
 
 ## 第 4 周 4.2 · 数据 Agent 的多轮指代消解
 
-从“使用中文的国家”转问“北美有哪些国家”时，一项沿用过久的筛选把名单从 37 项缩到了 3 项。本周在 RSI 平台上研究何时继承上轮条件、何时重新确定范围，以及如何纠正上一答的遗漏。按本地修订题意，9 段对话有 14 个具体问题由错转对。报告附原始发布参考的复算、失败项和下一阶段的自动编排方案。[挑战档研究报告](weeks/week-04/reference-resolution/README.md) · [14 题前后对照](evidence/week-04/reference-cases.csv)
+本研究使用 CoSQL 多轮数据库问答。用户连续用英语提问，系统根据对话生成 SQL，并在原始数据库中执行。研究关注查询范围、库内存值和输出字段怎样影响结果。例如，上一轮问的是北美有哪些国家，错误答案只列出三国。下一轮查询“这些国家的官方语言”时，引用三国名单得到 4 行，引用北美全体得到 35 行。[专项研究报告](weeks/week-04/reference-resolution/README.md) · [14 道修复的前后对照](evidence/week-04/reference-cases.csv)
 
 **我的后端项目**　[rsi-data-spring-boot](https://github.com/lanF-cyber/rsi-data-spring-boot)
 
 **我的前端项目**　[rsi-data-platform](https://github.com/lanF-cyber/rsi-data-platform)
 
-**本次验收的十个 Case**　逐题清单列出问句、人工调整、修复前后结果和原因，并链接到各自的前端与后端 JSON。启动后可逐题复跑归档 SQL，或让模型现场生成。第 9 题记录了同国籍的两名歌手被合并为一行，以及怎样保住两行。[十个 Case 与文件](https://github.com/lanF-cyber/rsi-data-spring-boot/blob/homework/harness/cases.md) · [公开版本运行记录](evidence/week-04/numbered-cases.json)
+**评审入口**　本次专项实际测试了 184 个 CoSQL 问次、2 个人工对照输入和 10 个报表续问场景，共 196 个案例。其中 14 个问次有明确的修复前后对照，前 10 项沿用课程验收编号。界面另列本次分析引用的 86 个历史题号。启动后可按编号或题号运行，查看输入、流程、SQL 和结果。[编号案例](https://github.com/lanF-cyber/rsi-data-spring-boot/blob/homework/harness/cases.md) · [全部专项实验](https://github.com/lanF-cyber/rsi-data-spring-boot/blob/homework/harness/studies.md) · [本次公开版本复验](evidence/week-04/study-review.json)
 
 ## 第 4 周 4.1 · RSI 数据平台与 CoSQL Harness 联调
 

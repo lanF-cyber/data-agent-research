@@ -1,0 +1,1766 @@
+{
+  "项目": "第四周 4.2 CoSQL 多轮指代消解",
+  "复验时间_UTC": "2026-11-28T12:44:48+00:00",
+  "公开仓库": {
+    "backend": {
+      "repository": "https://github.com/lanF-cyber/rsi-data-spring-boot",
+      "commit": "e209410a2ceb3f983abf3b968f27d1ff7394e23b",
+      "default_branch": "homework",
+      "visibility": "public",
+      "review_files_checked": 879,
+      "file_groups": {
+        "numbered_course_flows": 14,
+        "study_course_flows": 282,
+        "numbered_results": 14,
+        "study_results": 282,
+        "question_records": 272
+      }
+    },
+    "frontend": {
+      "repository": "https://github.com/lanF-cyber/rsi-data-platform",
+      "commit": "4e931662664015ef7093590e9ee2a93a8771f3cb",
+      "default_branch": "homework",
+      "visibility": "public",
+      "review_files_checked": 302,
+      "file_groups": {
+        "numbered_views": 14,
+        "study_views": 282,
+        "study_index": 1
+      }
+    }
+  },
+  "构建": {
+    "方式": "从空目录克隆公开后端。准备脚本取得课程视觉组件和个人前端，使用课程下发的两个材料文件和本机工具依赖缓存。前端快进至记录的最终提交后重新构建。",
+    "操作系统": "Windows 11 AMD64",
+    "PowerShell": "7.6.9",
+    "Python": "3.13.7",
+    "Node": "v24.14.1",
+    "课程视觉组件提交": "b80f121c3752f5cb2b566983f0ba664c57c9d13c",
+    "数据库": "20 个 CoSQL 发布包中的原始 SQLite 文件均通过 SHA-256 校验。",
+    "Spring可执行包内已核对的课程流程": {
+      "Cases": 14,
+      "Studies": 282
+    },
+    "页面": [
+      "/harness",
+      "/harness/cases",
+      "/harness/studies",
+      "/harness/versions",
+      "/harness/scope"
+    ]
+  },
+  "覆盖": {
+    "专项实测案例": 196,
+    "CoSQL问次": 184,
+    "人工对照": [
+      "explicit-full",
+      "explicit-missing"
+    ],
+    "报表续问场景": 10,
+    "另行引用的历史题号": 86,
+    "目录条目": 282,
+    "有修复前后对照的问次": 14,
+    "对话数": 9,
+    "课程验收编号": "Case 1–10"
+  },
+  "执行": {
+    "浏览器": "Chromium 156.0.8078.4",
+    "编号页逐项点击": 14,
+    "专项目录逐项点击": 282,
+    "浏览器页面异常": 0,
+    "命令行编号页复跑": 14,
+    "命令行专项目录复跑": 282,
+    "上述公开版本复跑使用的模型调用数": 0,
+    "操作检查": "逐项读取画布并点击运行，核对发往课程接口的节点、连线、RSI 流程和运行号。页面显示结果后，将其与执行器回执和公开记录核对。",
+    "现场生成": {
+      "模型": "gpt-6.2-sol",
+      "编号案例整表通过": 14,
+      "报表场景操作和整表通过": 10,
+      "场景": [
+        {
+          "id": "tennis-ambiguous",
+          "action": "clarify",
+          "rows": 0,
+          "model_calls_including_parents": 1
+        },
+        {
+          "id": "tennis-confirm",
+          "action": "add_column",
+          "rows": 487,
+          "model_calls_including_parents": 2
+        },
+        {
+          "id": "tennis-detail",
+          "action": "show_details",
+          "rows": 35615,
+          "model_calls_including_parents": 1
+        },
+        {
+          "id": "tennis-latest",
+          "action": "add_column",
+          "rows": 487,
+          "model_calls_including_parents": 1
+        },
+        {
+          "id": "tennis-no-evidence",
+          "action": "clarify",
+          "rows": 0,
+          "model_calls_including_parents": 1
+        },
+        {
+          "id": "tennis-explicit-carry",
+          "action": "add_column",
+          "rows": 487,
+          "model_calls_including_parents": 1
+        },
+        {
+          "id": "teachers-count",
+          "action": "add_column",
+          "rows": 7,
+          "model_calls_including_parents": 1
+        },
+        {
+          "id": "world-compound",
+          "action": "add_column",
+          "rows": 25,
+          "model_calls_including_parents": 1
+        },
+        {
+          "id": "world-select",
+          "action": "select_columns",
+          "rows": 25,
+          "model_calls_including_parents": 2
+        },
+        {
+          "id": "teachers-new-query",
+          "action": "new_query",
+          "rows": 10,
+          "model_calls_including_parents": 2
+        }
+      ]
+    }
+  },
+  "问次归档的原库复算": {
+    "说明": "同一题号按版本、前文或重复试验分别计一次。比对列数、所有记录及重复次数，题目要求有序时核对行序。",
+    "各实验记录数": {
+      "RSI 连续对话": 72,
+      "历史失分题定向复测": 45,
+      "候选策略版本对照": 45,
+      "专项引用的续问版本对照": 188,
+      "专项引用的存值历史对照": 71,
+      "指代与范围筛查": 71,
+      "缺项与报表范围对照": 190,
+      "专项引用的查值工具对照": 38,
+      "北美范围自然对话": 18,
+      "RSI 历史引用": 50
+    },
+    "专项原实验": {
+      "记录": 491,
+      "与参考一致": 372,
+      "与参考有差异": 119
+    },
+    "专项引用的历史对照": {
+      "记录": 297,
+      "与参考一致": 201,
+      "与参考有差异": 59,
+      "仅核对历史交付": 37
+    },
+    "合计": {
+      "记录": 788,
+      "与参考一致": 573,
+      "与参考有差异": 178,
+      "仅核对历史交付": 37
+    },
+    "旧记录未提供可比判定而本次可评分": {
+      "与参考一致": 44,
+      "与参考有差异": 7
+    },
+    "与历史评分不同的零行结果": [
+      {
+        "question": "dev204_turn1",
+        "condition": "关",
+        "old": true,
+        "rescored": false,
+        "rows": 0,
+        "returned_columns": 4,
+        "reference_columns": 1
+      },
+      {
+        "question": "dev204_turn1",
+        "condition": "开",
+        "old": true,
+        "rescored": false,
+        "rows": 0,
+        "returned_columns": 2,
+        "reference_columns": 1
+      },
+      {
+        "question": "dev204_turn2",
+        "condition": "开",
+        "old": true,
+        "rescored": false,
+        "rows": 0,
+        "returned_columns": 2,
+        "reference_columns": 4
+      }
+    ],
+    "编号案例现场生成的已知失败": {
+      "case": 9,
+      "ticket": "e222278325324f99b622e6e70eb7b859",
+      "实际行数": 1,
+      "所需行数": 2,
+      "原因": "两名歌手国籍相同，DISTINCT 将两人合并成一行。"
+    }
+  },
+  "运行号说明": "browser_ticket 来自在页面点击发起的原库复跑，cli_ticket 来自公开版本的命令行复跑。live_ticket 对应逐例结果文件中的现场生成记录。",
+  "编号案例": [
+    {
+      "case": 1,
+      "question": "dev85_turn1",
+      "database": "museum_visit",
+      "rows": 1,
+      "browser_ticket": "c7078a31991d466c8612b6c997e79932",
+      "cli_ticket": "5d55e2c9d30a46ff909de5e82d5ea753",
+      "live_ticket": "fc69a1f26de8493f8d8b3d63499318b6"
+    },
+    {
+      "case": 2,
+      "question": "dev92_turn2",
+      "database": "flight_2",
+      "rows": 1,
+      "browser_ticket": "aa353b9eac6a4a6c94f623292e07383c",
+      "cli_ticket": "d3d214814cf749348d43bc90bf868fbf",
+      "live_ticket": "9e65b6b1f72440788cece3d15149a596"
+    },
+    {
+      "case": 3,
+      "question": "dev92_turn3",
+      "database": "flight_2",
+      "rows": 1,
+      "browser_ticket": "24a190d3fab34d4881e44ff853661b58",
+      "cli_ticket": "f68f0d2a0b5a4acaa11066b7e967c921",
+      "live_ticket": "64796390c3bb4be48b1d5b247535eb92"
+    },
+    {
+      "case": 4,
+      "question": "dev38_turn2",
+      "database": "flight_2",
+      "rows": 53,
+      "browser_ticket": "9b1274dff51348c29669ac37cd7e501b",
+      "cli_ticket": "252fad4b4c4f4856858df1088b01b9c3",
+      "live_ticket": "182e9567c5fe4803ae5575e461ad21da"
+    },
+    {
+      "case": 5,
+      "question": "dev111_turn2",
+      "database": "flight_2",
+      "rows": 1,
+      "browser_ticket": "6320b0b8c3e54706b3a97fc43b10f23d",
+      "cli_ticket": "314c6bb1e7b04b739453e23be4d8cf53",
+      "live_ticket": "b5941aafe5ff47da85fb336126bfb12e"
+    },
+    {
+      "case": 6,
+      "question": "dev137_turn3",
+      "database": "flight_2",
+      "rows": 1,
+      "browser_ticket": "f8a7a57bf33744da9d05c53ad4aaaf6c",
+      "cli_ticket": "9cf1479223cb4740bb44e7f8f687aca4",
+      "live_ticket": "44cb78f254254ecb957d9eeb3471b710"
+    },
+    {
+      "case": 7,
+      "question": "dev235_turn1",
+      "database": "flight_2",
+      "rows": 10,
+      "browser_ticket": "73b1ed59662f44a38d3e1e08f13c72bd",
+      "cli_ticket": "c7b3ebbc77844643a3a200dd0fc2fee8",
+      "live_ticket": "eb89336ae3e84099a3688760488c7cdd"
+    },
+    {
+      "case": 8,
+      "question": "dev235_turn2",
+      "database": "flight_2",
+      "rows": 8,
+      "browser_ticket": "f007eb87847a45b081d43101262754b5",
+      "cli_ticket": "447dba8954354aad8980191c4de85858",
+      "live_ticket": "46944ae16c904b21a5c54d67e8f9ec3a"
+    },
+    {
+      "case": 9,
+      "question": "dev98_turn2",
+      "database": "singer",
+      "rows": 2,
+      "browser_ticket": "7c5e48d9e7eb4acfb52a6b9532b22dfe",
+      "cli_ticket": "be2234e341d743aabd5d1a3fd539b578",
+      "live_ticket": "8b8320156a6f4f87af4671e4922476b3"
+    },
+    {
+      "case": 10,
+      "question": "dev86_turn6",
+      "database": "world_1",
+      "rows": 35,
+      "browser_ticket": "49567cbe69aa43a6b9f41ff97015bcc4",
+      "cli_ticket": "aa87e351d28a42ef9f7bbd3addbf88f9",
+      "live_ticket": "034a442123764c0588dd03c1618c523f"
+    },
+    {
+      "case": 11,
+      "question": "dev28_turn1",
+      "database": "flight_2",
+      "rows": 1,
+      "browser_ticket": "2abd95fa70fc45a983aa24c62b284822",
+      "cli_ticket": "214cbbac4a784befab78f60ed18d5b24",
+      "live_ticket": "72a9acf0f0fe4ad59607c190acefe0c6"
+    },
+    {
+      "case": 12,
+      "question": "dev38_turn1",
+      "database": "flight_2",
+      "rows": 1,
+      "browser_ticket": "fb4a12de578c470aa36b0a389b7f56ee",
+      "cli_ticket": "beff159238bc44cda355a4ebeba5c695",
+      "live_ticket": "f03b503d5db34269a9ed806958f81681"
+    },
+    {
+      "case": 13,
+      "question": "dev111_turn1",
+      "database": "flight_2",
+      "rows": 1,
+      "browser_ticket": "bcd6bf7e93d341c7b5d466ae621f1ff1",
+      "cli_ticket": "4496bab578ea424197e4099222b7452c",
+      "live_ticket": "e388252cbfc54a0a886feee1a31a17b7"
+    },
+    {
+      "case": 14,
+      "question": "dev137_turn1",
+      "database": "flight_2",
+      "rows": 1,
+      "browser_ticket": "ffabde9c3e504783a76d65e33de3c9f0",
+      "cli_ticket": "804e45d0207a44b1b2639df47999303d",
+      "live_ticket": "8329f3e3b3b940f4a3ba0f892178fd64"
+    }
+  ],
+  "专项目录": [
+    {
+      "id": "dev2_turn1",
+      "browser_ticket": "3f68b458152942d3a8e6f075c7a8856d",
+      "cli_ticket": "c2254257dcdb4208a33e34880ae4ed4d"
+    },
+    {
+      "id": "dev2_turn2",
+      "browser_ticket": "5e23ca5111734e85a9bd7e0bbdb4e6bd",
+      "cli_ticket": "862a6ab943ae43c0b88e894f5128d63e"
+    },
+    {
+      "id": "dev2_turn3",
+      "browser_ticket": "5870f887a08d4d5c8156b5ddf780e2fd",
+      "cli_ticket": "f4f1702989eb403e951584cd291e8e32"
+    },
+    {
+      "id": "dev5_turn1",
+      "browser_ticket": "5ff0c045d2a84475af770d903249cab5",
+      "cli_ticket": "4a2005beff33439faf4f7111dd4656fe"
+    },
+    {
+      "id": "dev5_turn2",
+      "browser_ticket": "7b6852533a384db1a2a792e927681910",
+      "cli_ticket": "b8f8671ebc444940906db6932fff811b"
+    },
+    {
+      "id": "dev6_turn1",
+      "browser_ticket": "ebfbc303b505426b87ba35043430b048",
+      "cli_ticket": "42cee6cf388b4119910135dae981670a"
+    },
+    {
+      "id": "dev6_turn2",
+      "browser_ticket": "3e0dd3377dd645eea49f042fc90f34f5",
+      "cli_ticket": "b72a9b7d6a8945619afded4e789e90f2"
+    },
+    {
+      "id": "dev6_turn3",
+      "browser_ticket": "24f79f816a6244368e92493fe95cdfd8",
+      "cli_ticket": "bc10a0ae6b064b71878a8cf6b5dd1c5f"
+    },
+    {
+      "id": "dev6_turn4",
+      "browser_ticket": "da95374196b144139891025684ecbfe8",
+      "cli_ticket": "b9b59666df3346558865627bb826e7e2"
+    },
+    {
+      "id": "dev12_turn1",
+      "browser_ticket": "ca9291ecbdd0460c8e7977d4cbc0682e",
+      "cli_ticket": "4d062d1dd1fa41fb8cce98852efa0c27"
+    },
+    {
+      "id": "dev12_turn2",
+      "browser_ticket": "02ae219340684379be8ae7a4028fd600",
+      "cli_ticket": "3aaaef2269d341ccbe461025acdb91f6"
+    },
+    {
+      "id": "dev12_turn3",
+      "browser_ticket": "f8164826b85041aeaebdbab39baaaf2b",
+      "cli_ticket": "86abdf7c3835444aa0a206abf5753dc1"
+    },
+    {
+      "id": "dev13_turn1",
+      "browser_ticket": "27114a537e134931adced81113e92e46",
+      "cli_ticket": "d21ee562fcdc4ca08694396f6560861d"
+    },
+    {
+      "id": "dev13_turn2",
+      "browser_ticket": "d6dd9272761f4c298d27ceaa92adea98",
+      "cli_ticket": "f7f2d1d29b2545959aa6574b1930a2de"
+    },
+    {
+      "id": "dev13_turn3",
+      "browser_ticket": "2db72fbf188943c38127695a1f97515e",
+      "cli_ticket": "548d1e1364fe44dd92aa6423ae45a179"
+    },
+    {
+      "id": "dev17_turn1",
+      "browser_ticket": "8a01913b20d643e2aa3aa0a499cca5ac",
+      "cli_ticket": "88bc5fb3541a44ef8a9300f755aab5f3"
+    },
+    {
+      "id": "dev17_turn2",
+      "browser_ticket": "a47b8fdf555e4b7f80f05b3b3cfabc15",
+      "cli_ticket": "744b7cdaa10842089b9fab5564f7b2b8"
+    },
+    {
+      "id": "dev17_turn3",
+      "browser_ticket": "f05dc637a04e4146b44a6e71d0ef8ede",
+      "cli_ticket": "3e16612db7cf4432ad000540d3c33d00"
+    },
+    {
+      "id": "dev18_turn2",
+      "browser_ticket": "39a8b93155474275b719e7056e38b08d",
+      "cli_ticket": "22e07186813145f5a0aaf3d2a9865066"
+    },
+    {
+      "id": "dev18_turn4",
+      "browser_ticket": "3a3aae00afbc4ad3aac60538248c4b8a",
+      "cli_ticket": "295df1e601514c3d8689ab3eb1741cd9"
+    },
+    {
+      "id": "dev21_turn1",
+      "browser_ticket": "174f74e5953c42e6982328f3f64d4c39",
+      "cli_ticket": "b11b138b07234c789c47f2005305289c"
+    },
+    {
+      "id": "dev21_turn2",
+      "browser_ticket": "e3eb9f68bf994b71aecdf63e5e481323",
+      "cli_ticket": "95680c94aaa74892b88a3df00d0faea8"
+    },
+    {
+      "id": "dev22_turn1",
+      "browser_ticket": "8a56decb798049c2bb8ee201f6778191",
+      "cli_ticket": "51d0ffa0daf04feabe24ab03e8489fed"
+    },
+    {
+      "id": "dev22_turn2",
+      "browser_ticket": "6866f936c9954eac9567dcd471e7fde4",
+      "cli_ticket": "04b7021a8e084e99afac9fa8fff3a3c2"
+    },
+    {
+      "id": "dev23_turn1",
+      "browser_ticket": "73c72772e22045c4921eb2a5705e7529",
+      "cli_ticket": "48c92878e5ca4b73b6115fcb11b30248"
+    },
+    {
+      "id": "dev23_turn2",
+      "browser_ticket": "e96d5ceb55ea4e5ebb59d90f90a9e470",
+      "cli_ticket": "85b7bb94755640fcba66b292eae92fb5"
+    },
+    {
+      "id": "dev23_turn3",
+      "browser_ticket": "e52d23cb8bc1487eb7ccffc80fb4e4fd",
+      "cli_ticket": "6bed9db944cf4bf6ab7d15868b48319c"
+    },
+    {
+      "id": "dev23_turn4",
+      "browser_ticket": "231e1dace82e4af6998423d275cde27c",
+      "cli_ticket": "64c792414e8d4130a14a7be4228b4bd3"
+    },
+    {
+      "id": "dev24_turn1",
+      "browser_ticket": "b1323d8dd69b40de8bfa5d5ad327795d",
+      "cli_ticket": "0faf37283b02420790af8795c165fd41"
+    },
+    {
+      "id": "dev24_turn2",
+      "browser_ticket": "487be55f2d4e4a21bb51860ae4200118",
+      "cli_ticket": "ec690a7f55a24102a400b2067c1e2b44"
+    },
+    {
+      "id": "dev24_turn3",
+      "browser_ticket": "7b506621ad984392ba48ed531a939916",
+      "cli_ticket": "ac7ca4fb8e0b47d28ad5f8c8bb30e133"
+    },
+    {
+      "id": "dev25_turn2",
+      "browser_ticket": "761ffe78ef674304b5530c9d305284e0",
+      "cli_ticket": "6f53881f77754e0bb1deb5fc6f622b54"
+    },
+    {
+      "id": "dev28_turn1",
+      "browser_ticket": "a6d975a9f562433b93c79dc29499c6fb",
+      "cli_ticket": "9e95c93e52c941808335b34f666ccd81"
+    },
+    {
+      "id": "dev30_turn2",
+      "browser_ticket": "86872d2cafd24444aed762edf49695af",
+      "cli_ticket": "3cc9304825314deba548e08f0581bc86"
+    },
+    {
+      "id": "dev30_turn3",
+      "browser_ticket": "5b86521d0ada472fa08985dab172b7ae",
+      "cli_ticket": "76d04f6793f04a0bafc5cec3b62a9baf"
+    },
+    {
+      "id": "dev32_turn2",
+      "browser_ticket": "fac0e7e2f09541b2ba701018d1624a01",
+      "cli_ticket": "03014283ee994c608e1e8a1a21bbcbab"
+    },
+    {
+      "id": "dev34_turn2",
+      "browser_ticket": "7b07aa8ba6d446f186f3d58c68412497",
+      "cli_ticket": "da807877fac34b2e873206752a63aa29"
+    },
+    {
+      "id": "dev34_turn3",
+      "browser_ticket": "96a75dbd4db14d2dac38915cc446421c",
+      "cli_ticket": "1ff9cd738393445d9c81b5d6468111d4"
+    },
+    {
+      "id": "dev36_turn1",
+      "browser_ticket": "e0fa3e16569a426895890eaf5618d8ab",
+      "cli_ticket": "c213104a5a0847dc940cb7f913b04003"
+    },
+    {
+      "id": "dev36_turn2",
+      "browser_ticket": "a1b3ad504527424fb76dd170fb8cf9ea",
+      "cli_ticket": "d6d68e3ec3e841369bb1ad0effd06513"
+    },
+    {
+      "id": "dev36_turn3",
+      "browser_ticket": "1f63a5592b2e43baadedcf5b723c6570",
+      "cli_ticket": "cac2f56f6772447ab5d2ba5564475b81"
+    },
+    {
+      "id": "dev36_turn4",
+      "browser_ticket": "17bd7d216a934a13970cda94f7bead37",
+      "cli_ticket": "15a366f2d85a406d9ca55a2ab5f157c7"
+    },
+    {
+      "id": "dev38_turn1",
+      "browser_ticket": "462b0fe72bed4ff2a461eb26e68f1bd3",
+      "cli_ticket": "1e35831245ba4321acc7b0d8a71b0b0a"
+    },
+    {
+      "id": "dev38_turn2",
+      "browser_ticket": "98deaec587a643738d884c9c7586ae97",
+      "cli_ticket": "197f46b3f8da4cb9b684625993ff09b2"
+    },
+    {
+      "id": "dev39_turn1",
+      "browser_ticket": "7a41c7c6b56c419c887aab4717a3292b",
+      "cli_ticket": "e1c1a79664c94a838df64db5593b1092"
+    },
+    {
+      "id": "dev39_turn2",
+      "browser_ticket": "9c2123813c8e4e9e9b59bb5fd03e9d0b",
+      "cli_ticket": "7acd7029ee744f319369c67a656fb8c4"
+    },
+    {
+      "id": "dev44_turn1",
+      "browser_ticket": "81d9f719f38b4bceb23637dee65d10dd",
+      "cli_ticket": "c28b285a09b44442a620730ccf3243af"
+    },
+    {
+      "id": "dev44_turn2",
+      "browser_ticket": "f3b566cdf66549a082020a639b2b68cc",
+      "cli_ticket": "32006cfec9874191b1125ec575c9e35f"
+    },
+    {
+      "id": "dev49_turn2",
+      "browser_ticket": "ae905808d8204c6593907805c2a35242",
+      "cli_ticket": "a7ff7c6633d841f18e649729c05d213c"
+    },
+    {
+      "id": "dev57_turn1",
+      "browser_ticket": "d84c5059aade41fe9f82a8418a1e144a",
+      "cli_ticket": "7c9fcb07235a4b34b8f70226b16bfc3d"
+    },
+    {
+      "id": "dev68_turn2",
+      "browser_ticket": "7df5a5d1744f4e568f21bb270b1a1df0",
+      "cli_ticket": "e2bbf953a9324898880ff787f8a7b2c5"
+    },
+    {
+      "id": "dev68_turn3",
+      "browser_ticket": "c74bb5e2eb9747b5aa753b03ea66de13",
+      "cli_ticket": "b03eb9de632c450389480adc01a2f535"
+    },
+    {
+      "id": "dev70_turn2",
+      "browser_ticket": "1dd23b04c5224c6d990a3260cfb3b7b2",
+      "cli_ticket": "d4513842e0644ec59a28d24d4f32ac33"
+    },
+    {
+      "id": "dev71_turn1",
+      "browser_ticket": "e5c6064e0c4e4aeb9610c4a27dada4c5",
+      "cli_ticket": "9cc14f7e8f0d45dca5f1160e4a707a5f"
+    },
+    {
+      "id": "dev71_turn2",
+      "browser_ticket": "4f0560d6c4944cc4879d0401b7e07adf",
+      "cli_ticket": "53a702dc826748cf8587031397560e28"
+    },
+    {
+      "id": "dev72_turn2",
+      "browser_ticket": "479c2578f55549e3ad460beb57ce548b",
+      "cli_ticket": "ce49f088544d476ca0fa04ea3109945c"
+    },
+    {
+      "id": "dev72_turn3",
+      "browser_ticket": "e2a21b7867024ccc856918defd0ad7f2",
+      "cli_ticket": "06be69544f1b41f0b4ef128bf5a8f8d2"
+    },
+    {
+      "id": "dev76_turn1",
+      "browser_ticket": "b3c8ad9c1e4d498f89020873bf51e3c9",
+      "cli_ticket": "05dbdffa304549eeabe00c095c380797"
+    },
+    {
+      "id": "dev76_turn2",
+      "browser_ticket": "d1bea235073a4434998bd509ace69ea5",
+      "cli_ticket": "5430d879fe8e44ac8ba2bfebec887710"
+    },
+    {
+      "id": "dev76_turn3",
+      "browser_ticket": "4993d06e4fa94680817b78dc4402c1ee",
+      "cli_ticket": "3c397aa0f46e40329af561ac0006c34d"
+    },
+    {
+      "id": "dev76_turn4",
+      "browser_ticket": "8a4754bfc6344b9abb8ca1f9478e5193",
+      "cli_ticket": "66147ada92f5436bb2ad976e0ae50da3"
+    },
+    {
+      "id": "dev76_turn5",
+      "browser_ticket": "970869e92e8c40448492ab119f517109",
+      "cli_ticket": "6001dd797c034187a83d6a928db8f088"
+    },
+    {
+      "id": "dev78_turn2",
+      "browser_ticket": "98cc99129ba84d04bb8373890b7665f3",
+      "cli_ticket": "1a25ca9f13b24c3bbb3c7baa1c81cdcc"
+    },
+    {
+      "id": "dev85_turn1",
+      "browser_ticket": "60d6016620634cbd813184abcbe18924",
+      "cli_ticket": "5437f6a232a9418183b0793102a56c8d"
+    },
+    {
+      "id": "dev85_turn2",
+      "browser_ticket": "cef9bd6c68ba44e0a4dd9cfd4178f48b",
+      "cli_ticket": "98a5eacf4daa4966ad4e4019de69afa5"
+    },
+    {
+      "id": "dev85_turn3",
+      "browser_ticket": "40c7c330c93043a9a64f61f40c8c8ee6",
+      "cli_ticket": "dedf5895c1fb42acb39a75412f525b25"
+    },
+    {
+      "id": "dev85_turn4",
+      "browser_ticket": "9d37bba4e0ac4f008c7012e16ce33e7f",
+      "cli_ticket": "d5a66d07953340ddb72fd803dd6e1f70"
+    },
+    {
+      "id": "dev85_turn5",
+      "browser_ticket": "930c0beb5f764fdc8421cac6391dc028",
+      "cli_ticket": "b3aff74d72e5426b9d07b922f20f20fe"
+    },
+    {
+      "id": "dev85_turn6",
+      "browser_ticket": "931941556d8d46f1b404da41d6544dd9",
+      "cli_ticket": "627e40fe1ce14d99b4aba421008a7db8"
+    },
+    {
+      "id": "dev86_turn1",
+      "browser_ticket": "40c68cb5f3a94b509bcb2032e09e25ef",
+      "cli_ticket": "7cf64ff05ab14c9e8e8d15f240bfd518"
+    },
+    {
+      "id": "dev86_turn2",
+      "browser_ticket": "4171a1a9303a4d6686e1488c8f69e0a0",
+      "cli_ticket": "fdd0b56c9d7a48f291e5177c52b02728"
+    },
+    {
+      "id": "dev86_turn3",
+      "browser_ticket": "65ef5fe56fd54f769457040c1e5ed9b4",
+      "cli_ticket": "51bf5efed27a4da69c51e79145ba6f39"
+    },
+    {
+      "id": "dev86_turn4",
+      "browser_ticket": "6b5336a82f224c72afc3ce0fe75fc037",
+      "cli_ticket": "2fb18f68fc33426c86b590e5f19929ee"
+    },
+    {
+      "id": "dev86_turn5",
+      "browser_ticket": "a6fd9bb7474340b4a4e66eb21e561542",
+      "cli_ticket": "32f6e9d9d2b94856a13d29cf94d94a38"
+    },
+    {
+      "id": "dev86_turn6",
+      "browser_ticket": "16a88074c115411d8c19845675351146",
+      "cli_ticket": "aa5d6f7bd424440384b7a0e1d64f98be"
+    },
+    {
+      "id": "dev87_turn2",
+      "browser_ticket": "75461ae131b548188ba1faee382e05b0",
+      "cli_ticket": "44d5b9994462490ea0dab9dd173ee83e"
+    },
+    {
+      "id": "dev88_turn2",
+      "browser_ticket": "b0d8ba5c55724274a8706ddcb16a2343",
+      "cli_ticket": "d3105170f25f47bca2d45f380a200c90"
+    },
+    {
+      "id": "dev89_turn3",
+      "browser_ticket": "90c206294ad24cd3a24174329f86653b",
+      "cli_ticket": "3371af60b2324aefad62a6b11a2a90ed"
+    },
+    {
+      "id": "dev90_turn1",
+      "browser_ticket": "6d0d4bb163a6408e8b16c16781f9dcb8",
+      "cli_ticket": "99453dc50fe84d3da7ecab10e78d25e2"
+    },
+    {
+      "id": "dev90_turn2",
+      "browser_ticket": "fbbed0d72a5f4cadb7b3461d296d75db",
+      "cli_ticket": "a5abadf234b447e6bd12044a2c2c62b8"
+    },
+    {
+      "id": "dev90_turn3",
+      "browser_ticket": "eedc0edc1daa48a39ffa2bf01e395e3c",
+      "cli_ticket": "4643b3149a1f46369c74316bbc1bb28e"
+    },
+    {
+      "id": "dev90_turn4",
+      "browser_ticket": "ce5e583322a44a75b8943ea3bc5a94d4",
+      "cli_ticket": "a57543e62eb6455da245561e1d413265"
+    },
+    {
+      "id": "dev90_turn5",
+      "browser_ticket": "f835b329469343f5a5f25a0a16f3e078",
+      "cli_ticket": "6452e611202f47f0953fe8c8fd64ce6b"
+    },
+    {
+      "id": "dev91_turn1",
+      "browser_ticket": "e4335e0b05c54a3c9b480c28aa7bdfba",
+      "cli_ticket": "a87371d86147400c8efb42290f2bab85"
+    },
+    {
+      "id": "dev91_turn2",
+      "browser_ticket": "0ad7d88d41874a52a4683f0794594135",
+      "cli_ticket": "68f7f1bb3d35403b9b038a9061259c1d"
+    },
+    {
+      "id": "dev91_turn3",
+      "browser_ticket": "962c3bcd05d44b1c828e06f3ebc14195",
+      "cli_ticket": "e75d965b2e1a461ca234c242d879a450"
+    },
+    {
+      "id": "dev92_turn1",
+      "browser_ticket": "f231f07305784adba838edacff368e7a",
+      "cli_ticket": "09f10cb4d9ce46e0bee977682802aaeb"
+    },
+    {
+      "id": "dev92_turn2",
+      "browser_ticket": "0ffa03de88544671852b3a1a26ff928a",
+      "cli_ticket": "51789cbcdee64dac8ec705aedb0a2749"
+    },
+    {
+      "id": "dev92_turn3",
+      "browser_ticket": "35d214d7341d4d2db36ce4b5368e53e4",
+      "cli_ticket": "eb7fe1c0f44a485d937aac61e85d9351"
+    },
+    {
+      "id": "dev92_turn4",
+      "browser_ticket": "12fb3a5b1f3c4f5298246346f125cfec",
+      "cli_ticket": "b0dab1d1d5f1479d983e552754232c49"
+    },
+    {
+      "id": "dev94_turn2",
+      "browser_ticket": "fcb2667f3b5c4f6e84a1021d38416fa6",
+      "cli_ticket": "5b6f5cda5f4d4cab8fdfe951ed92a5f3"
+    },
+    {
+      "id": "dev98_turn1",
+      "browser_ticket": "a2e87991f6d44d628232218897803e3f",
+      "cli_ticket": "9516a2febeb14a02ad0e75864b57f81a"
+    },
+    {
+      "id": "dev98_turn2",
+      "browser_ticket": "fb2d0d822a754a75a7542967493b2a5e",
+      "cli_ticket": "27ab7d0da8f742598a1dab46e7b1c645"
+    },
+    {
+      "id": "dev101_turn3",
+      "browser_ticket": "3d5bc6a25f6246ccb837e81f77cff273",
+      "cli_ticket": "bfde75025881421ea6af2e6cc34c6f76"
+    },
+    {
+      "id": "dev102_turn2",
+      "browser_ticket": "11a2b3d0be564a778d7f496933dd5706",
+      "cli_ticket": "cb7287c00aaf46fc88e173ca86cccc86"
+    },
+    {
+      "id": "dev102_turn3",
+      "browser_ticket": "7eb80da756ff4d29878ea140fb75b634",
+      "cli_ticket": "324afae5800041ab8d8081824ebd20c2"
+    },
+    {
+      "id": "dev104_turn3",
+      "browser_ticket": "b1b703b81f7d4f5283969380f4a1f0a2",
+      "cli_ticket": "8e8507af238042e6a15105dcbef9deda"
+    },
+    {
+      "id": "dev106_turn1",
+      "browser_ticket": "179661f9ef6b4033b1af03244a464ba2",
+      "cli_ticket": "dc74ca1415234f8887f47c72e98edc97"
+    },
+    {
+      "id": "dev106_turn2",
+      "browser_ticket": "d05366cc95584ac4aeb5ab32bdbf047b",
+      "cli_ticket": "25716acbd1654b0da525afb02198251e"
+    },
+    {
+      "id": "dev106_turn3",
+      "browser_ticket": "d32776387b8d42fc852db40f9ac9000a",
+      "cli_ticket": "d027a3749cb946b0984dcc2d06b1fbe7"
+    },
+    {
+      "id": "dev107_turn1",
+      "browser_ticket": "fe7d57f972a545e88199bf3adffad2c8",
+      "cli_ticket": "dbd65673f0b14a6197c83459da5dafa6"
+    },
+    {
+      "id": "dev107_turn2",
+      "browser_ticket": "98f4ca7ba5a14c9eafdb0f8110eeb457",
+      "cli_ticket": "b4e2ed2305ae4602b35d07f8d440b99e"
+    },
+    {
+      "id": "dev107_turn3",
+      "browser_ticket": "9f336fa967f74d37bacc31e0d8fa4d51",
+      "cli_ticket": "96868294f3bf42e5a3308f44916e0658"
+    },
+    {
+      "id": "dev111_turn1",
+      "browser_ticket": "5ca8ab9dea67428d9fc67f466a34c8ab",
+      "cli_ticket": "9e5d6f7634e94845bb50871ee60f327f"
+    },
+    {
+      "id": "dev111_turn2",
+      "browser_ticket": "775c4530beb84159a8fa8b771ec33262",
+      "cli_ticket": "d72b612588a14a83b522f4fa2f7a90ef"
+    },
+    {
+      "id": "dev112_turn1",
+      "browser_ticket": "9334ff98399144eba582049004480499",
+      "cli_ticket": "4fe4ca308f2e408eab01e257cf141b29"
+    },
+    {
+      "id": "dev112_turn2",
+      "browser_ticket": "94562fde3bca4ca69ca5a0b508fb2d90",
+      "cli_ticket": "acb0ca7f6728435695a3022b7ed2cd1b"
+    },
+    {
+      "id": "dev117_turn3",
+      "browser_ticket": "971832cb570e46d7976150b8a3f6a4f7",
+      "cli_ticket": "3c3d69e8d5244a5394ffe340eb1e2a18"
+    },
+    {
+      "id": "dev118_turn1",
+      "browser_ticket": "b0066d503a7b4eb1b8a4a8610249b4d9",
+      "cli_ticket": "3c9e4cdabdeb46c0816e895858472c47"
+    },
+    {
+      "id": "dev118_turn2",
+      "browser_ticket": "27ed88e85cf54136929b29e9d111b19c",
+      "cli_ticket": "c64e112cd3be48ac9701fd581c14ac2f"
+    },
+    {
+      "id": "dev118_turn3",
+      "browser_ticket": "4565130dfe934eb080311f95fe98c005",
+      "cli_ticket": "bac56c95205c46fa9194381d7f529c32"
+    },
+    {
+      "id": "dev118_turn4",
+      "browser_ticket": "fac5cf21c9624f2f93d2e9f6520021a2",
+      "cli_ticket": "31fde00f7422411b9565768662ac88e6"
+    },
+    {
+      "id": "dev118_turn5",
+      "browser_ticket": "b3c2e208507144d690512d8ac3bfa465",
+      "cli_ticket": "3615d61df3cc485d8219d60e09e28dcf"
+    },
+    {
+      "id": "dev119_turn1",
+      "browser_ticket": "eeaf9889145f48b8b7bd7abcd76f8977",
+      "cli_ticket": "f5d5c36ddc4b420bae77a4d989ce4525"
+    },
+    {
+      "id": "dev119_turn2",
+      "browser_ticket": "379f9c672d534fb48ce3991ed939bb94",
+      "cli_ticket": "772c81cfb47244f38ef3e58e88dede49"
+    },
+    {
+      "id": "dev119_turn3",
+      "browser_ticket": "343721fd5c594fdf92a8662da4bd2303",
+      "cli_ticket": "ae0795b4d85640a9980ceb2db6ad95dd"
+    },
+    {
+      "id": "dev119_turn4",
+      "browser_ticket": "448ef0f462c44e83a98edae6c2600079",
+      "cli_ticket": "e301432185bc4cd1bb2e521dda3020df"
+    },
+    {
+      "id": "dev119_turn5",
+      "browser_ticket": "a3a4691dd91a4b539d24588827636a51",
+      "cli_ticket": "acf8a438379447c384c4a87b1bbace2d"
+    },
+    {
+      "id": "dev122_turn1",
+      "browser_ticket": "818106c3910d427ea55bc6e8311ab093",
+      "cli_ticket": "7d2bd24bfec24debaa4d5e8fbc31f2e1"
+    },
+    {
+      "id": "dev122_turn2",
+      "browser_ticket": "087362a71759478da85ad6b2fcca16fd",
+      "cli_ticket": "f1b8353b780641c09421927b54c2a9ac"
+    },
+    {
+      "id": "dev122_turn3",
+      "browser_ticket": "90232769cbf14ee997f0cd4478ecc357",
+      "cli_ticket": "63f42ff38c9a49c0b6863960fe9427c3"
+    },
+    {
+      "id": "dev126_turn1",
+      "browser_ticket": "0038b44cd7cc43e3b4da5b8d88328ae9",
+      "cli_ticket": "d0551def6a184443ba3edd4ab1713b92"
+    },
+    {
+      "id": "dev126_turn2",
+      "browser_ticket": "669ef85c6ba84c95bf853536e1ef75cc",
+      "cli_ticket": "5b784d633bef4700a32acf44954da051"
+    },
+    {
+      "id": "dev126_turn3",
+      "browser_ticket": "c3ac60c1ebe846d0a8ff6cb34f526321",
+      "cli_ticket": "d6dd5975f769471699d0514f75fbd0db"
+    },
+    {
+      "id": "dev129_turn1",
+      "browser_ticket": "007865eda75443bda22cf3ee2351e357",
+      "cli_ticket": "64eb07ff24654c589f90744698df07ef"
+    },
+    {
+      "id": "dev129_turn2",
+      "browser_ticket": "6fb7a8e482f648639ba0298394b04b63",
+      "cli_ticket": "ad0de3f00caa444fb04daf1a763b2eea"
+    },
+    {
+      "id": "dev129_turn3",
+      "browser_ticket": "9605364e384b46ee8cef5c9fdcc97b43",
+      "cli_ticket": "c338636d70754ea5a38677ff52552f41"
+    },
+    {
+      "id": "dev129_turn4",
+      "browser_ticket": "c6638c2c11024635adf78f78adcb23ad",
+      "cli_ticket": "bb1c5198579e4c5ea5d7bc2aca095604"
+    },
+    {
+      "id": "dev129_turn5",
+      "browser_ticket": "e33da9d62e3e4740a3071119e4fbce14",
+      "cli_ticket": "4280636630684204982cbdd08893edd6"
+    },
+    {
+      "id": "dev130_turn2",
+      "browser_ticket": "b9b0bb0e199c4d9c832424a65eaad8aa",
+      "cli_ticket": "212d2890bacf41eaa22f99f466abae7a"
+    },
+    {
+      "id": "dev130_turn3",
+      "browser_ticket": "41ba2169ff234bee9b9a8e989d908e92",
+      "cli_ticket": "5b66397b069e46b48b07170bc2ff1377"
+    },
+    {
+      "id": "dev134_turn4",
+      "browser_ticket": "f9fc688a25c44046bc53d870a5b2778c",
+      "cli_ticket": "8055f1599a6f4313828cc61c177c8f03"
+    },
+    {
+      "id": "dev135_turn1",
+      "browser_ticket": "eb44c480b3b041e5a1adcaaa7c756349",
+      "cli_ticket": "756eb0203c184c85ac021eb5f2756b2f"
+    },
+    {
+      "id": "dev135_turn2",
+      "browser_ticket": "0b60f3e6078547a5af00152545c9882c",
+      "cli_ticket": "8e58a39dd433465c93c77498322ea628"
+    },
+    {
+      "id": "dev135_turn3",
+      "browser_ticket": "e54fe45808e84057880237a9e9bc7174",
+      "cli_ticket": "bd72a0a0028143158ff9268bed8c96dd"
+    },
+    {
+      "id": "dev135_turn4",
+      "browser_ticket": "9941a9ec34a3495f812070945f799151",
+      "cli_ticket": "8faf8ba82c5a42e386e12839aed866a0"
+    },
+    {
+      "id": "dev135_turn5",
+      "browser_ticket": "b924829564a84e99a90521b455c3563e",
+      "cli_ticket": "a5af7c7dadd14c2cbda4d70572401a13"
+    },
+    {
+      "id": "dev137_turn1",
+      "browser_ticket": "ec5f2673939b44128cdff27217a9388c",
+      "cli_ticket": "a3d0a34c8c6347b882597efb0904022f"
+    },
+    {
+      "id": "dev137_turn2",
+      "browser_ticket": "ceb9bc0c83fe4467aafcf4f12bb37172",
+      "cli_ticket": "535eb312dfbf41ec9efc2b2d1e1fec82"
+    },
+    {
+      "id": "dev137_turn3",
+      "browser_ticket": "29c8593248fb4e7db9544600e2875ab3",
+      "cli_ticket": "e477b954f130412ebd0c93adb5761d9c"
+    },
+    {
+      "id": "dev145_turn3",
+      "browser_ticket": "0316654fc4354c34af3977813e3b128f",
+      "cli_ticket": "8ec673598747423c933bee5dad8a39e8"
+    },
+    {
+      "id": "dev145_turn4",
+      "browser_ticket": "f9cce4ddedbc4e52b88cb42107e47385",
+      "cli_ticket": "1adb92baa7c74016bc6e1643bf55859b"
+    },
+    {
+      "id": "dev147_turn5",
+      "browser_ticket": "a34dbbade77b4e388115b0af1f04d91a",
+      "cli_ticket": "a279bc1a4e134915a142827d2fd55f49"
+    },
+    {
+      "id": "dev147_turn6",
+      "browser_ticket": "4b43db2a09a9409f9146c4b87da55d74",
+      "cli_ticket": "e3803371c4a24b828fe9dcc50a491a78"
+    },
+    {
+      "id": "dev150_turn1",
+      "browser_ticket": "c7aa426d4864406dadf9075c77cc158d",
+      "cli_ticket": "378d997c5cbe435ea23ff31292c39846"
+    },
+    {
+      "id": "dev150_turn2",
+      "browser_ticket": "5d9daa4e22864389bad7262a9d632130",
+      "cli_ticket": "b2f4a2233b99430585a0de7f059661b0"
+    },
+    {
+      "id": "dev150_turn3",
+      "browser_ticket": "2b072db554724386a2c0cf0ee86cf441",
+      "cli_ticket": "2425544f3754484bb096077e63a42348"
+    },
+    {
+      "id": "dev154_turn1",
+      "browser_ticket": "8b49b650bb2e423ca945a1d96b3520de",
+      "cli_ticket": "f2645b4e02644dc28138c22aaccaea58"
+    },
+    {
+      "id": "dev154_turn2",
+      "browser_ticket": "d12bc38ab12f4751b405c19d9b9661b4",
+      "cli_ticket": "8443d0b3d62d4684a7127a6e4ff081c7"
+    },
+    {
+      "id": "dev155_turn2",
+      "browser_ticket": "03da0772e4a248048297e6fe979e71f2",
+      "cli_ticket": "ff3b84482091417eab7319159158f95d"
+    },
+    {
+      "id": "dev155_turn3",
+      "browser_ticket": "a2d821d51d834d4b8758e8388b6780d4",
+      "cli_ticket": "0746956c26b44c459285ae28932e2580"
+    },
+    {
+      "id": "dev155_turn4",
+      "browser_ticket": "957f0912e63f40ee938cd022b7821975",
+      "cli_ticket": "dd2d19ad80bb4b4fa945697b0722683e"
+    },
+    {
+      "id": "dev157_turn2",
+      "browser_ticket": "f3bbff4d807240cc8cba170de65d8e9d",
+      "cli_ticket": "fb12401463a842a581e24ac53ed68d3e"
+    },
+    {
+      "id": "dev158_turn1",
+      "browser_ticket": "3e01fe22275a4cfb963900d25867482c",
+      "cli_ticket": "ed31c1486df744919918c634af8a1c98"
+    },
+    {
+      "id": "dev158_turn2",
+      "browser_ticket": "1f78baa11b214ed7837916af4d463a90",
+      "cli_ticket": "8e1e0d45e5054f7a808c42db6f180ad9"
+    },
+    {
+      "id": "dev158_turn3",
+      "browser_ticket": "beebb8fdfb7b4146bb1035ceab013dcb",
+      "cli_ticket": "cba9d2f3029140528da922a85ddb08e8"
+    },
+    {
+      "id": "dev159_turn1",
+      "browser_ticket": "004da9be50f4430182e7424c5c8b156b",
+      "cli_ticket": "729b8312656a462eb69172ebfcfd5593"
+    },
+    {
+      "id": "dev159_turn2",
+      "browser_ticket": "47561e01343449b59b956c44e7d382ad",
+      "cli_ticket": "e29980f199c143abbec187548d5cba0f"
+    },
+    {
+      "id": "dev163_turn2",
+      "browser_ticket": "88c0607c3e544348bab3b5002d814c59",
+      "cli_ticket": "bd3343c8ff1645eb8eaa7e8a950c04e3"
+    },
+    {
+      "id": "dev165_turn1",
+      "browser_ticket": "c8e69eb26bc24c858a4a2148b11e9d99",
+      "cli_ticket": "cf13f960fab94b1caa76d756ff78e681"
+    },
+    {
+      "id": "dev165_turn2",
+      "browser_ticket": "5e2b81e734734cc694bbb0b5761e564f",
+      "cli_ticket": "58466922f163421682d4cd4756965fb2"
+    },
+    {
+      "id": "dev172_turn1",
+      "browser_ticket": "4a8cddd128884ec695c267a298868ff9",
+      "cli_ticket": "61400261b8ee4bafbcf8eccd198df813"
+    },
+    {
+      "id": "dev172_turn2",
+      "browser_ticket": "52be48f409574b5197be73acb0fbedde",
+      "cli_ticket": "e7735190333047e0b2cccd8c5ff032d9"
+    },
+    {
+      "id": "dev172_turn3",
+      "browser_ticket": "22fbe3f31e1b46308bbc30213007972b",
+      "cli_ticket": "008072e97d3f4d23bd1deaf896d79728"
+    },
+    {
+      "id": "dev178_turn3",
+      "browser_ticket": "a3b1dddde8394bfebd1c709030665b3f",
+      "cli_ticket": "9152c8ee3a6445ef892ab7f476271665"
+    },
+    {
+      "id": "dev181_turn3",
+      "browser_ticket": "c22c7c545e6549afbfe095e8ea2d541b",
+      "cli_ticket": "5686eed0d9e14787a1d95f021944226d"
+    },
+    {
+      "id": "dev181_turn5",
+      "browser_ticket": "bca910c58a434accaae07216dd5eccf7",
+      "cli_ticket": "8982d4bac6614b2cbc0449a84543d561"
+    },
+    {
+      "id": "dev186_turn1",
+      "browser_ticket": "513b680c9c044351aff9a7f6b36f243e",
+      "cli_ticket": "4a8ff4e3395948bd9a1f16671ebbe4f3"
+    },
+    {
+      "id": "dev186_turn2",
+      "browser_ticket": "ce5222557a1d422895600a28dabfe704",
+      "cli_ticket": "120456165fa646d8bf94e87b80c452e4"
+    },
+    {
+      "id": "dev189_turn1",
+      "browser_ticket": "6ecf499886d94b4397f3e1184de1b9da",
+      "cli_ticket": "cd7dbc4e741e408684baf46fd9776cfc"
+    },
+    {
+      "id": "dev189_turn2",
+      "browser_ticket": "8da54d568f9345409d99d6abca68e72f",
+      "cli_ticket": "cd9fe279f0b3402ca57d0896319d72ce"
+    },
+    {
+      "id": "dev190_turn2",
+      "browser_ticket": "a10b9aabca4b4eb2947da99a8745bc43",
+      "cli_ticket": "d2aa2490297a4d968ae4249e083d82d4"
+    },
+    {
+      "id": "dev190_turn3",
+      "browser_ticket": "da1ebac2e96b4cbf965a759d661b53b0",
+      "cli_ticket": "535dffdfa0c84037bf78533343a65ce4"
+    },
+    {
+      "id": "dev191_turn2",
+      "browser_ticket": "02c853a0032e4ef89b94546d1fb2a27b",
+      "cli_ticket": "bd0e4e7f17574c70896450759bf33844"
+    },
+    {
+      "id": "dev195_turn1",
+      "browser_ticket": "7f2d5d987eaa4229aaaaa24a3b9ef65a",
+      "cli_ticket": "69f0a69863b245d3942db8e490ef07f5"
+    },
+    {
+      "id": "dev195_turn2",
+      "browser_ticket": "9f3ba0c7b4314875b02c490d1452eef9",
+      "cli_ticket": "faa92484c3154891a5360d4877d42f7b"
+    },
+    {
+      "id": "dev195_turn3",
+      "browser_ticket": "bbf8ce25b75b4e43a10ec05d9e8db81c",
+      "cli_ticket": "cc6b04e0c9cd49f1b8c26fd48fece1fa"
+    },
+    {
+      "id": "dev199_turn2",
+      "browser_ticket": "ab870f0376df461998c74b01c8fa26cf",
+      "cli_ticket": "8b9d3057eeee4120b83a0437cba02b6d"
+    },
+    {
+      "id": "dev199_turn3",
+      "browser_ticket": "ee52bde5cf894183814e667b7b0de7a1",
+      "cli_ticket": "62ccf2ca279648abb1b212998242b0a6"
+    },
+    {
+      "id": "dev202_turn1",
+      "browser_ticket": "11e745cd687944728a7cfdeee1e96a91",
+      "cli_ticket": "721ab92111d6448cb15b2bf0f9a5b87a"
+    },
+    {
+      "id": "dev202_turn2",
+      "browser_ticket": "1a8cabe79faf41e5956c19b35839b72c",
+      "cli_ticket": "a59ecd8f570845c0b083344479f73491"
+    },
+    {
+      "id": "dev202_turn3",
+      "browser_ticket": "c4503d221c964146ba5990968e367676",
+      "cli_ticket": "14984952170a4b45a249703a31cec013"
+    },
+    {
+      "id": "dev202_turn4",
+      "browser_ticket": "629e9728a0e74a05a3b5ded94ba6dbb5",
+      "cli_ticket": "d2a9a91dd8a745009fb882e6f4f8928b"
+    },
+    {
+      "id": "dev203_turn2",
+      "browser_ticket": "847313495d76492c9e5c22bcc1cea516",
+      "cli_ticket": "b867832415a94e9885ebec478ee97611"
+    },
+    {
+      "id": "dev204_turn1",
+      "browser_ticket": "c63c73d0cfea4ee6bb681d9620f48966",
+      "cli_ticket": "7f13454c08754ff6a05586eff47b17f0"
+    },
+    {
+      "id": "dev204_turn2",
+      "browser_ticket": "c7e6b8b4ecce4e7cbee35356bcef0de7",
+      "cli_ticket": "fc84e0b81592491cbd12c2e3561777a9"
+    },
+    {
+      "id": "dev204_turn3",
+      "browser_ticket": "a84088808fbd4b93a25d0e64d21b371b",
+      "cli_ticket": "f427e2b6d2034db3a60b6b337a085e71"
+    },
+    {
+      "id": "dev206_turn1",
+      "browser_ticket": "07434733616d4558a6b05698da879e09",
+      "cli_ticket": "2eeb00c6ba694fb5b2f8d2a2a938d5d9"
+    },
+    {
+      "id": "dev206_turn2",
+      "browser_ticket": "772b04f51f304772a858c65716e8ff09",
+      "cli_ticket": "3aaf92d299c14e0c9a0707ec05c4c622"
+    },
+    {
+      "id": "dev206_turn3",
+      "browser_ticket": "ab0bc6e207ae45fd8487d852f0929bc0",
+      "cli_ticket": "c30a75b7d2a2401092b6f8874e9478ef"
+    },
+    {
+      "id": "dev209_turn2",
+      "browser_ticket": "5047307599bf47ada542abd06cf153ae",
+      "cli_ticket": "c973fdaefd404ab797687e0f2c817d1c"
+    },
+    {
+      "id": "dev211_turn2",
+      "browser_ticket": "9977ece600c24a3fb5e2a45e042ad960",
+      "cli_ticket": "82d7dccec3e447329f2ee6b1d27fcd43"
+    },
+    {
+      "id": "dev215_turn1",
+      "browser_ticket": "e6dd3885d6f44a9f9a1429461f4ec3e7",
+      "cli_ticket": "e0a0888d3b984a19ba32a0dc1485f43a"
+    },
+    {
+      "id": "dev215_turn2",
+      "browser_ticket": "221ff8a584734cc7b756b600f02ccf9d",
+      "cli_ticket": "b5085280a14f48d59b4cf2ecd69e3fcf"
+    },
+    {
+      "id": "dev216_turn1",
+      "browser_ticket": "4d34af498fb942bd919cde3c3d1f675c",
+      "cli_ticket": "bc0a178a764e476fb5124a84e62203d5"
+    },
+    {
+      "id": "dev216_turn2",
+      "browser_ticket": "d97c7093eb7d4482b15bc996e5047320",
+      "cli_ticket": "586f799ef71f4e688c4b8954287fef99"
+    },
+    {
+      "id": "dev216_turn3",
+      "browser_ticket": "0ac8f571bedc4bbca2f0efa0069183fa",
+      "cli_ticket": "adbfe0df12fa47238d86d989f75bdbbe"
+    },
+    {
+      "id": "dev217_turn2",
+      "browser_ticket": "ef568f9d81b641199b0c0e1b91abd65d",
+      "cli_ticket": "a089ba64dc6d4341aeee5f07a0312848"
+    },
+    {
+      "id": "dev221_turn2",
+      "browser_ticket": "fec5a85c80c047afbf0b5cbe438a7b07",
+      "cli_ticket": "6982bede0129488d8f8360d2b2444ea2"
+    },
+    {
+      "id": "dev226_turn1",
+      "browser_ticket": "b7a9fe4124ab45faa9b2adb8d9d9e35e",
+      "cli_ticket": "4501976ad5e149dbbe629c6eef53534f"
+    },
+    {
+      "id": "dev226_turn2",
+      "browser_ticket": "f685e26de3b047929d6862f06681fa9b",
+      "cli_ticket": "d8aa0dcb40254786a7f4b52c82102613"
+    },
+    {
+      "id": "dev228_turn1",
+      "browser_ticket": "9df9870f458c4435b2109872ee3bfe9b",
+      "cli_ticket": "9c43eecaf34e4a94b49ff9608e4f4554"
+    },
+    {
+      "id": "dev228_turn2",
+      "browser_ticket": "a97ab73c89ea4285ad5ddff8ad99c63f",
+      "cli_ticket": "6ff8ad03c13a43a792a08b69e956cb07"
+    },
+    {
+      "id": "dev228_turn3",
+      "browser_ticket": "5e31a1c196cc45b986bfa027ac883fee",
+      "cli_ticket": "0fdd85c8038a4094a0e7231b76897244"
+    },
+    {
+      "id": "dev229_turn1",
+      "browser_ticket": "cc0b72d28bfe49a4a2828f93032555b1",
+      "cli_ticket": "0fc8a8ff27e342b395259fc248ffd7e4"
+    },
+    {
+      "id": "dev229_turn2",
+      "browser_ticket": "c6fb4ff3867b4c22bdfebd7254d9d67e",
+      "cli_ticket": "2a078f2400614d799ac0f18e3736bb09"
+    },
+    {
+      "id": "dev229_turn3",
+      "browser_ticket": "33f5a7baaebc4a75ab013dd41b33876c",
+      "cli_ticket": "79c29f84c93b4446bbb4638072ad3cc1"
+    },
+    {
+      "id": "dev231_turn4",
+      "browser_ticket": "28751cb8d478483dada7fae8a8f86dda",
+      "cli_ticket": "5017a29647074bedb182ed6775083652"
+    },
+    {
+      "id": "dev235_turn1",
+      "browser_ticket": "1615cb2155a2413f9c3b5341900212e8",
+      "cli_ticket": "d35554770e684850b862cbfbc8f55e9a"
+    },
+    {
+      "id": "dev235_turn2",
+      "browser_ticket": "bcb5e27556334ce188b0cdd587c18696",
+      "cli_ticket": "690ccc1b7dc24ccd8b4fb936632fa57d"
+    },
+    {
+      "id": "dev236_turn3",
+      "browser_ticket": "d16e15bea18847d39432d97d00024e64",
+      "cli_ticket": "9d5fe272a99d488c9ecdfeb46555cebd"
+    },
+    {
+      "id": "dev238_turn1",
+      "browser_ticket": "89b5cfcbf6264abf9e68cab21168d5bf",
+      "cli_ticket": "4f3700e273e44ae0a4cc435fd4dae36e"
+    },
+    {
+      "id": "dev238_turn2",
+      "browser_ticket": "83171629db4e4824b4fc91717810394d",
+      "cli_ticket": "44466d5eedc8406c9bdca4a458b1d454"
+    },
+    {
+      "id": "dev238_turn3",
+      "browser_ticket": "f96038c3449c4bfb8704073677dd635d",
+      "cli_ticket": "8e81cf74083f4cff999d70c2ca1b8c40"
+    },
+    {
+      "id": "dev240_turn1",
+      "browser_ticket": "553dbdb3fccc434ab3402206a6c1c3e7",
+      "cli_ticket": "b8df4ceefd914ef886425e28f2e765eb"
+    },
+    {
+      "id": "dev240_turn2",
+      "browser_ticket": "648ef75bd7db421fbccff20fd7ed75e8",
+      "cli_ticket": "3057bc580f524b72987f0d85dc5de8e6"
+    },
+    {
+      "id": "dev240_turn3",
+      "browser_ticket": "3fad8d08b002430f8b6ece05a9372de7",
+      "cli_ticket": "dfe61cce0df04f78ac6dbc71a1429009"
+    },
+    {
+      "id": "dev240_turn4",
+      "browser_ticket": "afeb8633268d445ca1b7f60de1f3b0f5",
+      "cli_ticket": "ab718a2fe8ba4a5caf2e5e80702696aa"
+    },
+    {
+      "id": "dev240_turn5",
+      "browser_ticket": "a1d39dceb7ec4f96be461000b830abe1",
+      "cli_ticket": "7137074e8b2d4937b03d757a1aa9c287"
+    },
+    {
+      "id": "dev242_turn2",
+      "browser_ticket": "16be97725f8244f99e286e93865e1fa1",
+      "cli_ticket": "3b1ba4bfcc7649929b254432ad256c45"
+    },
+    {
+      "id": "dev243_turn3",
+      "browser_ticket": "e3444cafa75b42a29e10afeeba84037d",
+      "cli_ticket": "333c07edb2c6473680567f243d87bf6b"
+    },
+    {
+      "id": "dev245_turn1",
+      "browser_ticket": "f554dee57e38472f87ff2e4846973293",
+      "cli_ticket": "4af9cf27a889493db15f4294d02eed8d"
+    },
+    {
+      "id": "dev245_turn2",
+      "browser_ticket": "3a33df4b979946aeb0ef27d2a5801ebb",
+      "cli_ticket": "cb7456863e224f1783e0ad191ee2097f"
+    },
+    {
+      "id": "dev245_turn3",
+      "browser_ticket": "2509833331f949bca1ff497c1a150087",
+      "cli_ticket": "30ae2522b32b40fa9be7cd0ae08a4497"
+    },
+    {
+      "id": "dev245_turn4",
+      "browser_ticket": "ffc81c22e12a4c2bb7334f40d18c102e",
+      "cli_ticket": "8b7ef254d45a45409cbf411d218b5070"
+    },
+    {
+      "id": "dev245_turn5",
+      "browser_ticket": "5029a699eaea4bcd95724e886e667919",
+      "cli_ticket": "bb87695ae1f44de2969cefceb05d0137"
+    },
+    {
+      "id": "dev247_turn2",
+      "browser_ticket": "58de99af543f44a6b1b307134669321f",
+      "cli_ticket": "b73e012b13c7427eae32bffd341f58d4"
+    },
+    {
+      "id": "dev247_turn3",
+      "browser_ticket": "541a22e7c68e415589d16515dd9f4dfe",
+      "cli_ticket": "85ce1040f66044558f0b06e400917203"
+    },
+    {
+      "id": "dev249_turn1",
+      "browser_ticket": "5193795ca76f49a99df17bb20b192b99",
+      "cli_ticket": "61bfe7204f02414593ba931e07d7a13d"
+    },
+    {
+      "id": "dev249_turn2",
+      "browser_ticket": "042948435fb84343936201dde352fb43",
+      "cli_ticket": "13cc37e961d14f2081504910f87e405d"
+    },
+    {
+      "id": "dev249_turn3",
+      "browser_ticket": "fcae3f57bc3546bf816944567b8112ab",
+      "cli_ticket": "12df884bebc848b1b8a9f2d50e95587b"
+    },
+    {
+      "id": "dev249_turn6",
+      "browser_ticket": "33e78ab6501d4dff9395606e3f8855eb",
+      "cli_ticket": "18b6141c2ba04af981fc2bc53d50bdc5"
+    },
+    {
+      "id": "dev251_turn2",
+      "browser_ticket": "6899b4f094a04b0ea02e4a8805dd7ab9",
+      "cli_ticket": "03d027d8475b4f1f9e0d2957a0bad5f4"
+    },
+    {
+      "id": "dev252_turn1",
+      "browser_ticket": "d17328d3c73f4c2aac112d98f05a775d",
+      "cli_ticket": "394c322272804f6fa73c31f66b7bdb98"
+    },
+    {
+      "id": "dev252_turn2",
+      "browser_ticket": "16fae4d03d4b41bebe87ad18cba3f14b",
+      "cli_ticket": "75bfe4e51b604dc0989f4b1718e54178"
+    },
+    {
+      "id": "dev252_turn3",
+      "browser_ticket": "da3c0aef9dfc4806af9ecabafbbdfac0",
+      "cli_ticket": "fd4b793c728e4279b4ddc3390b4a0ba8"
+    },
+    {
+      "id": "dev252_turn4",
+      "browser_ticket": "08a3739eb86546f4addaba3e55c8e991",
+      "cli_ticket": "9c9c81c5423c4eceacd5f505ceebf3cb"
+    },
+    {
+      "id": "dev252_turn5",
+      "browser_ticket": "f2199c823a8a4bf3ae72f939bcf4909b",
+      "cli_ticket": "05b7b9dc6776439cbccb130e1c556e22"
+    },
+    {
+      "id": "dev253_turn1",
+      "browser_ticket": "51c10cbef7a547eabdd5a36476059b2c",
+      "cli_ticket": "a4efe05b8a72493a94b1a1047281cd4f"
+    },
+    {
+      "id": "dev253_turn2",
+      "browser_ticket": "85481555a374491aa4d41f134a6c734e",
+      "cli_ticket": "35fc351409dc46d2be9d98f899d63662"
+    },
+    {
+      "id": "dev253_turn3",
+      "browser_ticket": "012268a5a9df42bfbc1bce9b45cc2ea2",
+      "cli_ticket": "938b2c23304642269fce8e83b25320e5"
+    },
+    {
+      "id": "dev253_turn4",
+      "browser_ticket": "b1a83f7777b14f729668e89e60642da3",
+      "cli_ticket": "07ee7b7345154dc48a295b8ff1534735"
+    },
+    {
+      "id": "dev260_turn2",
+      "browser_ticket": "912e129e0cdf473180f90929d200275f",
+      "cli_ticket": "725028dc085d4e7897d1f0b92c360bb5"
+    },
+    {
+      "id": "dev261_turn1",
+      "browser_ticket": "49acc0f0caae43dc971bdef915f27b6d",
+      "cli_ticket": "77286b1751e84e29bd494bc496cb24b0"
+    },
+    {
+      "id": "dev261_turn2",
+      "browser_ticket": "a56f5251112e48c6857dc82c3480525e",
+      "cli_ticket": "e287176285b74da9882b3b0ba1f14ace"
+    },
+    {
+      "id": "dev261_turn3",
+      "browser_ticket": "b66251792d3b4a43807aeff25b246be8",
+      "cli_ticket": "c8b7b756280648599b3afaa56762c499"
+    },
+    {
+      "id": "dev261_turn4",
+      "browser_ticket": "e96305701f044c479d87c089c19e6b27",
+      "cli_ticket": "53c1496d16d74063b567c264717756e8"
+    },
+    {
+      "id": "dev266_turn1",
+      "browser_ticket": "655e8a03c2b4464ead272a42fc79ed90",
+      "cli_ticket": "966ecdf882424e96b693999e1b9c3220"
+    },
+    {
+      "id": "dev268_turn1",
+      "browser_ticket": "efe198cd008747e8bdb23d4cb799868e",
+      "cli_ticket": "a3b952ab3f0147c8a0ec63a7ca28f532"
+    },
+    {
+      "id": "dev268_turn2",
+      "browser_ticket": "131422c76f15409594d77f43ffc8608e",
+      "cli_ticket": "af1b5d7d686d4e92b7ad58c8ce67d741"
+    },
+    {
+      "id": "dev268_turn3",
+      "browser_ticket": "b730a0ba41f64a4e83818ae31d01c41d",
+      "cli_ticket": "c7dec8a190de49c284a3809ad17488f1"
+    },
+    {
+      "id": "dev268_turn4",
+      "browser_ticket": "d6461529a5c24e89a331a3906f0dbee3",
+      "cli_ticket": "62202f7430874742aecef5f8903389da"
+    },
+    {
+      "id": "dev268_turn5",
+      "browser_ticket": "110bf4c5833e46959927d5e37282f936",
+      "cli_ticket": "91f8ce8dc87c4ad0aa01aa6fc587cc3d"
+    },
+    {
+      "id": "dev269_turn2",
+      "browser_ticket": "52b8692d2e9547c580753d36af480f23",
+      "cli_ticket": "5c2069ac2f324513b2f8589779fbfd1e"
+    },
+    {
+      "id": "dev269_turn3",
+      "browser_ticket": "2416da9444664ca4a105e410f14a24de",
+      "cli_ticket": "9c2f3136468f4e89b17fd188cafd31d2"
+    },
+    {
+      "id": "dev269_turn4",
+      "browser_ticket": "5f2da241b76f4c7d9ce0e12a034bbcf8",
+      "cli_ticket": "5e9bdb15d40c494d89326440a61e1395"
+    },
+    {
+      "id": "dev269_turn6",
+      "browser_ticket": "47907b8db7f34e288ec2f5ef620a8712",
+      "cli_ticket": "bc31b19522b34e91914179e558a2bd7b"
+    },
+    {
+      "id": "dev269_turn7",
+      "browser_ticket": "c2d56f9dee10438ca5dc3e3a2c1d6fe4",
+      "cli_ticket": "5a330ce6086e4044949fe853e8061670"
+    },
+    {
+      "id": "dev275_turn3",
+      "browser_ticket": "032d6c215dc94ddeb60df358031bb3bc",
+      "cli_ticket": "23ca5e3e904e49d2998f61ee8d9088f8"
+    },
+    {
+      "id": "dev275_turn4",
+      "browser_ticket": "43fac9d37a8e4a0496455d1e23276250",
+      "cli_ticket": "eaade300716e4caabd1f847f3d9f6d39"
+    },
+    {
+      "id": "dev277_turn1",
+      "browser_ticket": "4271db4a5d13422b952fddcfdd0d1386",
+      "cli_ticket": "2ba9d92d1b504c00a581c969c8597469"
+    },
+    {
+      "id": "dev280_turn1",
+      "browser_ticket": "6a57ae8460184ce2bea969d8e0b8321d",
+      "cli_ticket": "b500ab11be1b4b418087f3906079b1c8"
+    },
+    {
+      "id": "dev280_turn2",
+      "browser_ticket": "b90a06cce1914eb3b21d57ab5d9b4694",
+      "cli_ticket": "78df5391eec9428b8187bb3361190545"
+    },
+    {
+      "id": "dev282_turn2",
+      "browser_ticket": "fe31284e5e9341aab33fb496bc87f289",
+      "cli_ticket": "9d185819eada41a6b791ba41d72ddd8c"
+    },
+    {
+      "id": "dev285_turn1",
+      "browser_ticket": "1549fbca36d64c61a158fcc6b4d02d4a",
+      "cli_ticket": "f9f0d222031241478adbfdd885b85b70"
+    },
+    {
+      "id": "dev285_turn2",
+      "browser_ticket": "902d1ee9b7944a6c9be1ab9a822cc1a9",
+      "cli_ticket": "a34cfeaf3fc04f3ba4238d630f447fb9"
+    },
+    {
+      "id": "dev285_turn3",
+      "browser_ticket": "0404651db355496a9f9b0edc83c6ac4f",
+      "cli_ticket": "386a2ad0ba954fe4aafe4a56f2567dff"
+    },
+    {
+      "id": "dev286_turn3",
+      "browser_ticket": "6d2e3227be9d4360b2544e17cfb2131b",
+      "cli_ticket": "04e3561410b2498297b90bb4469fb0a5"
+    },
+    {
+      "id": "dev286_turn4",
+      "browser_ticket": "f336f71fd0de4c19b9fdcd538109538c",
+      "cli_ticket": "38f50b6ba36b43f9a7ef784684485cfa"
+    },
+    {
+      "id": "dev288_turn2",
+      "browser_ticket": "724413d92efc41a99cbb4bf1245a7a2d",
+      "cli_ticket": "a825bfae26ad4552b72b91db2d23756b"
+    },
+    {
+      "id": "explicit-full",
+      "browser_ticket": "9a9dd1e4db5e497b80c7060ef1ca78b3",
+      "cli_ticket": "8cb6c133d1d4409b9f3758894f80d0da"
+    },
+    {
+      "id": "explicit-missing",
+      "browser_ticket": "4a59a555200b4bfa93a4770aaa241b28",
+      "cli_ticket": "82c676cd4d0b4978a7bece69dc9acc1f"
+    },
+    {
+      "id": "tennis-ambiguous",
+      "browser_ticket": "b834135c480e41c9be9489f02da061a0",
+      "cli_ticket": "58efb2a4745a4f23a47e8e7edfec94b5",
+      "live_ticket": "f8b4463081f3471190b660e754e24ed7"
+    },
+    {
+      "id": "tennis-confirm",
+      "browser_ticket": "e5b7e25aa07341468119360e4849e3d9",
+      "cli_ticket": "218302da58ea469f91846a5279c3064d",
+      "live_ticket": "eb8a941d116a42718ee324f0350de66f"
+    },
+    {
+      "id": "tennis-detail",
+      "browser_ticket": "36a05c693d7e44f6a1c47917b51d2bd8",
+      "cli_ticket": "c22b69d3a46e45a0a8c56b857a89f8d7",
+      "live_ticket": "9cd737d5faaa457c849e09f7dbf6e485"
+    },
+    {
+      "id": "tennis-latest",
+      "browser_ticket": "d5ab68145ee14416a8019fe82c2de467",
+      "cli_ticket": "1d2c7e374e084381a17f3282a68bd821",
+      "live_ticket": "2fff6afa83cd4c9d9031f6c18051a54f"
+    },
+    {
+      "id": "tennis-no-evidence",
+      "browser_ticket": "0795c1ed17f84d43a4d0a41f67fdb0a5",
+      "cli_ticket": "3a72d101488a42848a4eb8e0a9dafe39",
+      "live_ticket": "cc366742c74546a58bd14c1256608ac5"
+    },
+    {
+      "id": "tennis-explicit-carry",
+      "browser_ticket": "9f4468bbc5d1452a8b823ab4df5f6e55",
+      "cli_ticket": "07517886c1e144258a0a8f6185375d20",
+      "live_ticket": "7af42b65881e4f4598b5db28f5910ece"
+    },
+    {
+      "id": "teachers-count",
+      "browser_ticket": "58f7e0bfcf3749518f6a5a45ae52c668",
+      "cli_ticket": "9b0481f57853497c8a8935c0ca521335",
+      "live_ticket": "a2f174098f0b491483b23e868eca6151"
+    },
+    {
+      "id": "world-compound",
+      "browser_ticket": "98658269e52c48bb843e52aa68b566a9",
+      "cli_ticket": "bfb8f0cf861c4e6186463ae62991d28c",
+      "live_ticket": "4b98bf49ce8d4f39b203eed9a874f0c0"
+    },
+    {
+      "id": "world-select",
+      "browser_ticket": "cbb21cd8cd994b32b318fd969a54ac3e",
+      "cli_ticket": "930a23af8b654f94b2a20ffe0ee89334",
+      "live_ticket": "39a181527e34457a8e4fa373855ff2ae"
+    },
+    {
+      "id": "teachers-new-query",
+      "browser_ticket": "d10e2cfa4d004f2f92c7945cf348de00",
+      "cli_ticket": "abc1b63d33cb48ac8678f45009dff452",
+      "live_ticket": "84fec2897b1c413f88669de9f63efe83"
+    }
+  ]
+}
