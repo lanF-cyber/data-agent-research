@@ -1,5 +1,7 @@
 # RSI 数据平台与 CoSQL Harness 联调
 
+第四周 4.2 的版本对照、人工选源和原库复跑从[个人后端](https://github.com/lanF-cyber/rsi-data-spring-boot)与[个人前端](https://github.com/lanF-cyber/rsi-data-platform)启动。下文记录第四周 4.1 当时的环境。
+
 第四周 4.2 研究用户在连续查询中何时另起范围、何时沿用上一问。9 段 CoSQL 对话提供了 14 个修复前后对照，另附评分分歧、剩余失分与自动编排方案。[4.2 多轮指代研究报告](reference-resolution/README.md) · [14 题逐项证据](../../evidence/week-04/reference-cases.csv)
 
 在 RSI 画布上调度 CoSQL 的现有查询框架，回答“联合航空有哪些始发机场？”浏览器发起请求，Java 流程把画布交给调度器，SQL 在 CoSQL 原始 `flight_2` 库执行。现场生成的查询返回 **62 个不同的机场代码**，与独立查询逐项一致。题号为 `dev36_turn1`。[启动命令与依赖版本](reproduce.md) · [结构化验收记录](../../evidence/week-04/verification.json)
@@ -37,4 +39,4 @@
 
 后端原始提交 `58051d9` 可以启动，首次执行流程却返回 HTTP 700，提示 `FLOW_NODE_RUN` 缺少必填输出 `result`。示例实现将该值置为空。补丁在同一节点注册执行回执，保留原有控制器和流程定义。本机运行使用 H2 内存库，设置非空临时口令和 Druid 校验查询 `SELECT 1`。本次验收覆盖画布调度与 SQLite 只读查询。[固定的后端源码](https://github.com/ymxiong/rsi-data-spring-boot/commit/58051d9b7e679e9730e0a431fc5229cc01f972dd)
 
-新增页面单独通过 TypeScript 检查。平台全仓运行 `tsc --noEmit` 仍报告上游组件的类型或模块声明错误。与固定提交对照，本次观察到的 85 条源码诊断均可在原版复现。
+新增页面单独通过 TypeScript 检查。平台全仓运行 `tsc --noEmit` 会报告上游组件的类型或模块声明错误。与固定提交对照，本次观察到的 85 条源码诊断均可在原版复现。

@@ -1,0 +1,1404 @@
+{
+  "checked_at_utc": "2026-11-28T09:09:42+00:00",
+  "repositories": {
+    "rsi-data-spring-boot": {
+      "url": "https://github.com/lanF-cyber/rsi-data-spring-boot",
+      "sha": "b6f80313fe797cba56495c1549b88fa51b4e2cd8",
+      "default_branch": "homework",
+      "course_base": "f6d6dba8267d1753676b684118de800c4066bf2b",
+      "clean_worktree": true
+    },
+    "rsi-data-platform": {
+      "url": "https://github.com/lanF-cyber/rsi-data-platform",
+      "sha": "9e43a1e5dfe147ca7519cd071eb139edc478c5bd",
+      "default_branch": "homework",
+      "course_base": "29ecb6c0b3abe32a5df2a649b22085377c86fce7",
+      "clean_worktree": true
+    }
+  },
+  "setup": {
+    "os": "Windows x64",
+    "checkout": "git clone of both public default branches",
+    "source_patches_after_clone": 0,
+    "maven_local_repository_before_install": "empty",
+    "pnpm_store_before_install": "empty",
+    "system_prerequisites": [
+      "Git",
+      "PowerShell 7.4+",
+      "Node.js 24",
+      "Python 3.10+"
+    ],
+    "course_materials": [
+      "settings.xml",
+      "0.1.2.zip"
+    ],
+    "original_database_count": 11,
+    "source": "https://yale-lily.github.io/cosql",
+    "cached_distributions_with_checked_sha256": [
+      "Corretto 8",
+      "Maven 3.9.16",
+      "H2 1.4.199"
+    ],
+    "backend": "clean install -pl core-starter -am",
+    "frontend": "tsc -p tsconfig.harness.json; next build; next start",
+    "frontend_project_wide_tsc": {
+      "exit_code": 2,
+      "diagnostics": 85,
+      "location": "course src/",
+      "homework_diagnostics": 0
+    }
+  },
+  "offline": {
+    "command": "python -B harness/verify.py --coverage",
+    "output": [
+      "Verified 14 distinct wrong-to-right turns, 5 failed or regressed turns, 38 platform receipts, and the selected history for dev86_turn6.",
+      "Replayed the SQL for 95 paired deliveries in the Python follow-up."
+    ]
+  },
+  "production": {
+    "entry": "/rsi-skills/api/engine/flow",
+    "flow": "@training.cosql/FLOW_HARNESS",
+    "pages": {
+      "/harness": 200,
+      "/harness/versions": 200,
+      "/harness/scope": 200
+    },
+    "course_examples_passed": 16,
+    "lookup": [
+      {
+        "case": "dev36_turn1",
+        "ticket": "3a3fa2f8839e4c959772de93161c88cd",
+        "lookup": "on",
+        "checks_used": 2,
+        "rows": 62,
+        "set_match": true,
+        "model_calls": 0,
+        "receipt_checked": true
+      },
+      {
+        "case": "dev36_turn1",
+        "ticket": "5c07c7ad80f143698b1b83b1df1e8040",
+        "lookup": "off",
+        "checks_used": 1,
+        "rows": 62,
+        "set_match": true,
+        "model_calls": 0,
+        "receipt_checked": true
+      }
+    ],
+    "replayed_dialogues": [
+      {
+        "ticket": "fd93cbf2ab07477aa805a43f7336785e",
+        "recording": "ee66af08814252a29fa3a57a87c0efaf",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev106_turn1",
+            "rows": 35,
+            "set_match": true,
+            "table_sha256": "c27371e073d531a4512024d4f8e3f850df6e09dc6f16241f6d607b02f2ab796c"
+          },
+          {
+            "id": "dev106_turn2",
+            "rows": 17,
+            "set_match": false,
+            "table_sha256": "77a54e8feede466e3aa0606830f4394d05c9c7b93e3f6ea57ee6b9c4808ed294"
+          },
+          {
+            "id": "dev106_turn3",
+            "rows": 17,
+            "set_match": true,
+            "table_sha256": "c12731de070433db26ee8893972db27b6b0110c640293bdc55577632133c9f81"
+          }
+        ]
+      },
+      {
+        "ticket": "51579030e4d244b2a0c07c3bc7ab50a6",
+        "recording": "5dbdec85085b5a3c8722a65866d7762f",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev106_turn1",
+            "rows": 35,
+            "set_match": true,
+            "table_sha256": "c27371e073d531a4512024d4f8e3f850df6e09dc6f16241f6d607b02f2ab796c"
+          },
+          {
+            "id": "dev106_turn2",
+            "rows": 17,
+            "set_match": false,
+            "table_sha256": "77a54e8feede466e3aa0606830f4394d05c9c7b93e3f6ea57ee6b9c4808ed294"
+          },
+          {
+            "id": "dev106_turn3",
+            "rows": 17,
+            "set_match": true,
+            "table_sha256": "c12731de070433db26ee8893972db27b6b0110c640293bdc55577632133c9f81"
+          }
+        ]
+      },
+      {
+        "ticket": "a8003717d7b247aaaed5be7160844e75",
+        "recording": "636d73688ecf595e9b0982470a996a62",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev111_turn1",
+            "rows": 1,
+            "set_match": false,
+            "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387"
+          },
+          {
+            "id": "dev111_turn2",
+            "rows": 1,
+            "set_match": false,
+            "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387"
+          }
+        ]
+      },
+      {
+        "ticket": "562b16fe5b1441eb882774b2aeb76bc3",
+        "recording": "f04cb4d3434e506c995bc30a23b2086c",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev111_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "977fcd5eeec0244935064e75ac0ed382b82b2c3eb4df34f0497181d08e0efdcf"
+          },
+          {
+            "id": "dev111_turn2",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "977fcd5eeec0244935064e75ac0ed382b82b2c3eb4df34f0497181d08e0efdcf"
+          }
+        ]
+      },
+      {
+        "ticket": "f2092682e74b4a278f55708c3c614f3a",
+        "recording": "4611001922cf59e394dc34a47e2bc0a3",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev137_turn1",
+            "rows": 1,
+            "set_match": false,
+            "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387"
+          },
+          {
+            "id": "dev137_turn2",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "043f347c2cdc0d8ce70c38775d24e556c0290acf6d0c87a3a52aa85471cb8d02"
+          },
+          {
+            "id": "dev137_turn3",
+            "rows": 1,
+            "set_match": false,
+            "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387"
+          }
+        ]
+      },
+      {
+        "ticket": "e3a623401dc3428aa27e8d52c08ee89c",
+        "recording": "a6b4f68267e45fb19b029839ae428016",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev137_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "043f347c2cdc0d8ce70c38775d24e556c0290acf6d0c87a3a52aa85471cb8d02"
+          },
+          {
+            "id": "dev137_turn2",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "043f347c2cdc0d8ce70c38775d24e556c0290acf6d0c87a3a52aa85471cb8d02"
+          },
+          {
+            "id": "dev137_turn3",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "043f347c2cdc0d8ce70c38775d24e556c0290acf6d0c87a3a52aa85471cb8d02"
+          }
+        ]
+      },
+      {
+        "ticket": "37603ff4dda34342bb9b3c1bddac5a44",
+        "recording": "8bf434e2afaa52449acd397ded565bf8",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev172_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "a9ae641b7f052c0994d31111f1bb92a40340e57b57c984bf99f03949206426a1"
+          },
+          {
+            "id": "dev172_turn2",
+            "rows": 3,
+            "set_match": true,
+            "table_sha256": "34c82975651f94608987d463bc07f5936ddec9bd131b3ac7a0dda53c49f9a648"
+          },
+          {
+            "id": "dev172_turn3",
+            "rows": 2,
+            "set_match": true,
+            "table_sha256": "7b10d68661cd0030dd0e3f719bb6f2ca3a591b1304775306a763994e00121559"
+          }
+        ]
+      },
+      {
+        "ticket": "e57c6e6680be49fdb5a1641a1dc59c52",
+        "recording": "57e67f8700045a7890b5ff8beaedb925",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev172_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "a9ae641b7f052c0994d31111f1bb92a40340e57b57c984bf99f03949206426a1"
+          },
+          {
+            "id": "dev172_turn2",
+            "rows": 3,
+            "set_match": true,
+            "table_sha256": "34c82975651f94608987d463bc07f5936ddec9bd131b3ac7a0dda53c49f9a648"
+          },
+          {
+            "id": "dev172_turn3",
+            "rows": 2,
+            "set_match": true,
+            "table_sha256": "7b10d68661cd0030dd0e3f719bb6f2ca3a591b1304775306a763994e00121559"
+          }
+        ]
+      },
+      {
+        "ticket": "7ab56b51414e4f5ea2310b0a4433f9ab",
+        "recording": "60a9c509288554de81593e7a9061e9f1",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev2_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "f2715dd605b7502ff4d35ec4613d864a78786d7bb2b73cd9cca0ca76ee5777c9"
+          },
+          {
+            "id": "dev2_turn2",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "a9ae641b7f052c0994d31111f1bb92a40340e57b57c984bf99f03949206426a1"
+          }
+        ]
+      },
+      {
+        "ticket": "b402a744f7394c6fb81d7926007e666f",
+        "recording": "3a09b3fea95554228761aabebcd8a7ed",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev2_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "f2715dd605b7502ff4d35ec4613d864a78786d7bb2b73cd9cca0ca76ee5777c9"
+          },
+          {
+            "id": "dev2_turn2",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "a9ae641b7f052c0994d31111f1bb92a40340e57b57c984bf99f03949206426a1"
+          }
+        ]
+      },
+      {
+        "ticket": "28c8665c0c50477cb33786e98ffc896f",
+        "recording": "8a5199dbbbf35bb1a8a4461edab684b5",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev206_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "f90c8199a17009a86b95aa64af11452622a4b309699ab6d323709b04630624af"
+          }
+        ]
+      },
+      {
+        "ticket": "0a0451c50e6d4098b60a76cc768a7c85",
+        "recording": "233669017bac5e2ba62979ee91903165",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev206_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "f90c8199a17009a86b95aa64af11452622a4b309699ab6d323709b04630624af"
+          }
+        ]
+      },
+      {
+        "ticket": "fede3498374740cba62d15f6dde46fea",
+        "recording": "bdc6999f742b50bea4030d6b8e9ccbef",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev235_turn1",
+            "rows": 0,
+            "set_match": false,
+            "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "id": "dev235_turn2",
+            "rows": 0,
+            "set_match": false,
+            "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        ]
+      },
+      {
+        "ticket": "4fb89bf403a245d19273b0070bd2f872",
+        "recording": "e7debf1360af5d1fa094819a89498ca5",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev235_turn1",
+            "rows": 10,
+            "set_match": true,
+            "table_sha256": "a5bc1c8e08cd97475181cbd1d5c20adebdbe332a2fcaf68a66a3824e578c859e"
+          },
+          {
+            "id": "dev235_turn2",
+            "rows": 8,
+            "set_match": true,
+            "table_sha256": "c150b8b375a9ee388c180ca36aff1d2891ee36bb08b68e1464e298d6472a25de"
+          }
+        ]
+      },
+      {
+        "ticket": "d622c9b2798f4df2b35ea9bc75a60056",
+        "recording": "e15a77f818de57debb8add9897ef2026",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev238_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "a9aa85acf18adf4f2e42f1cb876a854cf82b70587922457d888db0e2df100099"
+          },
+          {
+            "id": "dev238_turn2",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387"
+          },
+          {
+            "id": "dev238_turn3",
+            "rows": 0,
+            "set_match": false,
+            "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        ]
+      },
+      {
+        "ticket": "6ae95001617c43adb1c83c537e8ad30a",
+        "recording": "62911742da7a54d4a72d30b488c74263",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev238_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "a9aa85acf18adf4f2e42f1cb876a854cf82b70587922457d888db0e2df100099"
+          },
+          {
+            "id": "dev238_turn2",
+            "rows": 1,
+            "set_match": false,
+            "table_sha256": "a2faaf7621329d52dc3e1a7da122fd5a43707b0b0ea768bc1365ca2230d178d4"
+          },
+          {
+            "id": "dev238_turn3",
+            "rows": 19,
+            "set_match": false,
+            "table_sha256": "e2bb6e6207191e63d09b38ffd6b835f86ca3f49d42927ee91b4d2988909f322f"
+          }
+        ]
+      },
+      {
+        "ticket": "f76de58b967646c3aa3afed9742e8f88",
+        "recording": "33195e59c71b531da9c85fe5ee170ca5",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev252_turn1",
+            "rows": 20662,
+            "set_match": false,
+            "table_sha256": "983346d8ceaf22f841258fcbf510ad3f11ce2d2650331fc9f0e088b19787d38e"
+          },
+          {
+            "id": "dev252_turn2",
+            "rows": 20662,
+            "set_match": false,
+            "table_sha256": "3fc323bd328f335efcbe69126cea4e4906efa9646f79f48a0ae2840def2feff7"
+          }
+        ]
+      },
+      {
+        "ticket": "007945b09b9b47d4b1a01d4bffa25cf7",
+        "recording": "76b8dfc1e2d85f629bd2afab5c36495d",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev252_turn1",
+            "rows": 20662,
+            "set_match": false,
+            "table_sha256": "1e3b078b72243a89923482c5a6655d71255468eb4eb161b982eb3c5ff54cab63"
+          },
+          {
+            "id": "dev252_turn2",
+            "rows": 20662,
+            "set_match": false,
+            "table_sha256": "a132ac2d5bb89c687023078f41581a44aaabb0dc80766ab29d2855673c70ca49"
+          }
+        ]
+      },
+      {
+        "ticket": "1eb17319968b4c639193c8c791218cc5",
+        "recording": "72647905cbf652b99d6c0eb56e30f988",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev261_turn1",
+            "rows": 3,
+            "set_match": true,
+            "table_sha256": "fe36d449fb5f9f6f7193fcc458cb46ee718866c606ced6aef23b6219ccc9beee"
+          },
+          {
+            "id": "dev261_turn2",
+            "rows": 3,
+            "set_match": true,
+            "table_sha256": "c55b4325c217a3017f97de3ac4a572b22a05e2909418e11b41e1c45b304b1e97"
+          },
+          {
+            "id": "dev261_turn3",
+            "rows": 2,
+            "set_match": true,
+            "table_sha256": "0664e85cd441eca9d152170e7d3a172e430da176938f3701fdae5cd16d6ee55d"
+          },
+          {
+            "id": "dev261_turn4",
+            "rows": 2,
+            "set_match": true,
+            "table_sha256": "9ee3bbf8eb7d831e5ed6d5dc45ef3008ba3c46ad87894d3b05d63af6f4ed76cb"
+          }
+        ]
+      },
+      {
+        "ticket": "08abb186ba954de9a4ef04c09383042f",
+        "recording": "1dfc22fb19b8568b99481ca5fbfb8564",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev261_turn1",
+            "rows": 3,
+            "set_match": true,
+            "table_sha256": "b7af839f78bdfae72ceffc662a4a24d7bed6a51a8456c09c22c6b38000c89cf5"
+          },
+          {
+            "id": "dev261_turn2",
+            "rows": 3,
+            "set_match": true,
+            "table_sha256": "3b35eefd209fdc2ee958204722bd61bf8d7b76fe16bd1853f71ef89de1e79228"
+          },
+          {
+            "id": "dev261_turn3",
+            "rows": 2,
+            "set_match": true,
+            "table_sha256": "0664e85cd441eca9d152170e7d3a172e430da176938f3701fdae5cd16d6ee55d"
+          },
+          {
+            "id": "dev261_turn4",
+            "rows": 2,
+            "set_match": true,
+            "table_sha256": "9ee3bbf8eb7d831e5ed6d5dc45ef3008ba3c46ad87894d3b05d63af6f4ed76cb"
+          }
+        ]
+      },
+      {
+        "ticket": "f999bd835d27443f8f0c9d42183cc0e3",
+        "recording": "d80d30944532508c8bb4f9129fea229b",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev28_turn1",
+            "rows": 1,
+            "set_match": false,
+            "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387"
+          }
+        ]
+      },
+      {
+        "ticket": "35e8531794fd451f8d8a331445ca91ca",
+        "recording": "a1bc3c5a8f31542aa18202753e2a422d",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev28_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "fb3c91961e269af8f9566f6b7b8cc7773d6ff20a1933880878080a25b7794317"
+          }
+        ]
+      },
+      {
+        "ticket": "dd46eee6c6ba4c69b97e266a68a7724a",
+        "recording": "8716eec9d80c5c10bd59110ee6fc7175",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev38_turn1",
+            "rows": 1,
+            "set_match": false,
+            "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387"
+          },
+          {
+            "id": "dev38_turn2",
+            "rows": 0,
+            "set_match": false,
+            "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        ]
+      },
+      {
+        "ticket": "0a2ac33ba3a349a9b93688317c257d38",
+        "recording": "082dcc56f85952069aad08b1d1547d92",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev38_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "a9ae641b7f052c0994d31111f1bb92a40340e57b57c984bf99f03949206426a1"
+          },
+          {
+            "id": "dev38_turn2",
+            "rows": 53,
+            "set_match": true,
+            "table_sha256": "656cebaed28d8ec8574b3677cd33a669167b358b28ebc31cbc44123827244c8c"
+          }
+        ]
+      },
+      {
+        "ticket": "209b4e020a5d4fc8a4274765e5eb692c",
+        "recording": "6d21e4602bdd50989fa0a19118bfb7f9",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev39_turn1",
+            "rows": 2,
+            "set_match": true,
+            "table_sha256": "1a8a7120822e4caa1153c50150397aee5b9ffe9e174f2f44f6f1e6b65eb01f80"
+          },
+          {
+            "id": "dev39_turn2",
+            "rows": 2,
+            "set_match": true,
+            "table_sha256": "ca144f74e32d8133bbc513f30442382ca41ee368cc067586ccceb92e1dabdf8f"
+          }
+        ]
+      },
+      {
+        "ticket": "a6a051ed966c462296a92ecfb318f9cc",
+        "recording": "6ea4dac2b2d350c2aaa30e23abf7e9a8",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev39_turn1",
+            "rows": 2,
+            "set_match": true,
+            "table_sha256": "1a8a7120822e4caa1153c50150397aee5b9ffe9e174f2f44f6f1e6b65eb01f80"
+          },
+          {
+            "id": "dev39_turn2",
+            "rows": 2,
+            "set_match": true,
+            "table_sha256": "ca144f74e32d8133bbc513f30442382ca41ee368cc067586ccceb92e1dabdf8f"
+          }
+        ]
+      },
+      {
+        "ticket": "0b76951605a94ee8b15a428697dc009c",
+        "recording": "fe3de9d39367581aa4641180c2d1bd33",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev85_turn1",
+            "rows": 0,
+            "set_match": false,
+            "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        ]
+      },
+      {
+        "ticket": "960fad73465d49f58539c344eb913bb7",
+        "recording": "70dc93bd4f1154218477d2dcbb71a4d9",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev85_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "c5d72503b693c7a50a114b1610b0a4f187da3be59d0e738fb0b42f5612bd9ea4"
+          }
+        ]
+      },
+      {
+        "ticket": "ea2c90bab1d240278baf7adff339d761",
+        "recording": "dd58d28f4401596a922bc6d06e147875",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev92_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "2659a239ccad75d71ccea5625331b6ec5b64a7314d19262f5b24c6a6e51eebfc"
+          },
+          {
+            "id": "dev92_turn2",
+            "rows": 1,
+            "set_match": false,
+            "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387"
+          },
+          {
+            "id": "dev92_turn3",
+            "rows": 1,
+            "set_match": false,
+            "table_sha256": "db407f11d7ede59abaab0e98e097ff2dae10a048207b801745d7199ef19c2387"
+          }
+        ]
+      },
+      {
+        "ticket": "4269eba57eb8410c82a4b626cc011d7f",
+        "recording": "c80b178d9a445dda9e95ddf71fccefad",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev92_turn1",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "2659a239ccad75d71ccea5625331b6ec5b64a7314d19262f5b24c6a6e51eebfc"
+          },
+          {
+            "id": "dev92_turn2",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "2659a239ccad75d71ccea5625331b6ec5b64a7314d19262f5b24c6a6e51eebfc"
+          },
+          {
+            "id": "dev92_turn3",
+            "rows": 1,
+            "set_match": true,
+            "table_sha256": "39fcb52cf444ecca51a4eb1391a2e58fab10bf4aa154101609d6930e0fa9d710"
+          }
+        ]
+      },
+      {
+        "ticket": "033fb66be73d456fa303f08ee626889c",
+        "recording": "8804645e0b755620b8e453f76d85ff49",
+        "arm": "contrast",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev98_turn1",
+            "rows": 2,
+            "set_match": true,
+            "table_sha256": "549172fb123707c93113a0ad6d71f27238f339de0df5e230d9d5c025bd9f4853"
+          },
+          {
+            "id": "dev98_turn2",
+            "rows": 2,
+            "set_match": false,
+            "table_sha256": "8f5946eb34bd05ea716b986717a068b04c1d5071f32943a85c60377fe0af6947"
+          }
+        ]
+      },
+      {
+        "ticket": "391a71c06bbc4a18addcacf3ffc58d45",
+        "recording": "f6ad1cb807ad56eab7de44cbefb262db",
+        "arm": "v3",
+        "mode": "replay",
+        "model_calls": 0,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev98_turn1",
+            "rows": 2,
+            "set_match": true,
+            "table_sha256": "549172fb123707c93113a0ad6d71f27238f339de0df5e230d9d5c025bd9f4853"
+          },
+          {
+            "id": "dev98_turn2",
+            "rows": 2,
+            "set_match": true,
+            "table_sha256": "0336087d5b92f6abc6b75390727c680cf62a2eb431b560a12f02e8dc4aa699aa"
+          }
+        ]
+      }
+    ],
+    "replayed_scope": [
+      {
+        "ticket": "eff6a91acead40738c7c6d8658cfb203",
+        "recording": "20babd2b68585fd4a6612f8071d973d6",
+        "arm": "reminder",
+        "rows": 4,
+        "set_match": false,
+        "model_calls": 0,
+        "receipt_checked": true
+      },
+      {
+        "ticket": "2dfdd79d249043f6817c645761acf396",
+        "recording": "c30de99dd9da55e38ee622c185f55acd",
+        "arm": "selected",
+        "rows": 35,
+        "set_match": true,
+        "model_calls": 0,
+        "receipt_checked": true
+      },
+      {
+        "ticket": "b1de28dc66a04617add9d1626a2099a9",
+        "recording": "b0580eaab27d582f904b52d46459cbac",
+        "arm": "reminder",
+        "rows": 4,
+        "set_match": false,
+        "model_calls": 0,
+        "receipt_checked": true
+      },
+      {
+        "ticket": "947de8bb2696465a96ee7d641054629e",
+        "recording": "40bf11340511520fb1dcc501ce674cc2",
+        "arm": "selected",
+        "rows": 35,
+        "set_match": true,
+        "model_calls": 0,
+        "receipt_checked": true
+      },
+      {
+        "ticket": "762eb186609c4f9d98e499185f4cfc07",
+        "recording": "b34386a9d6395ecfbfcc35e325d8b955",
+        "arm": "reminder",
+        "rows": 4,
+        "set_match": false,
+        "model_calls": 0,
+        "receipt_checked": true
+      },
+      {
+        "ticket": "649d291a4d4042f2a0f08265838c98b3",
+        "recording": "e2014808824d56b9babf65a099c951f8",
+        "arm": "selected",
+        "rows": 35,
+        "set_match": true,
+        "model_calls": 0,
+        "receipt_checked": true
+      }
+    ],
+    "parent_chain": [
+      {
+        "ticket": "bbb3f128d2f54a10b603a13a1bf01332",
+        "parent": "",
+        "case": "dev86_turn5",
+        "rows": 37,
+        "set_match": true,
+        "sources": []
+      },
+      {
+        "ticket": "6812df64eee1491da913246c9d7640d2",
+        "parent": "bbb3f128d2f54a10b603a13a1bf01332",
+        "case": "dev86_turn6",
+        "rows": 35,
+        "set_match": true,
+        "sources": [
+          {
+            "turn": 5,
+            "kind": "set",
+            "cue": "these countries"
+          }
+        ]
+      }
+    ],
+    "new_model_runs": [
+      {
+        "ticket": "89eebf7fa6ea4a0b9effc835b5a2b95e",
+        "arm": "contrast",
+        "mode": "live",
+        "model": "gpt-6.2-sol",
+        "model_calls": 2,
+        "case": "dev235_turn2",
+        "rows": 0,
+        "set_match": false,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev235_turn1",
+            "user": "Can you list all the flight numbers that have a source airport value of AHD?",
+            "follow_user": null,
+            "sql": "SELECT FlightNo FROM flights WHERE SourceAirport = 'AHD'",
+            "columns": [
+              "FlightNo"
+            ],
+            "rows": 0,
+            "first_rows": [],
+            "set_match": false,
+            "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "checks_used": 0
+          },
+          {
+            "id": "dev235_turn2",
+            "user": "Can you list the names of all the unique airlines that belong to those flight numbers?",
+            "follow_user": null,
+            "sql": "SELECT DISTINCT a.Airline FROM airlines AS a JOIN flights AS f ON a.uid = f.Airline WHERE f.FlightNo IN (SELECT FlightNo FROM flights WHERE SourceAirport = 'AHD')",
+            "columns": [
+              "Airline"
+            ],
+            "rows": 0,
+            "first_rows": [],
+            "set_match": false,
+            "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "checks_used": 0
+          }
+        ]
+      },
+      {
+        "ticket": "4c15fbc8280949e2a11ae11ddcfe9619",
+        "arm": "v3",
+        "mode": "live",
+        "model": "gpt-6.2-sol",
+        "model_calls": 5,
+        "case": "dev235_turn2",
+        "rows": 8,
+        "set_match": true,
+        "receipt_checked": true,
+        "turns": [
+          {
+            "id": "dev235_turn1",
+            "user": "Can you list all the flight numbers that have a source airport value of AHD?",
+            "follow_user": null,
+            "sql": "SELECT FlightNo FROM flights WHERE TRIM(SourceAirport) = 'AHD' ORDER BY FlightNo",
+            "columns": [
+              "FlightNo"
+            ],
+            "rows": 10,
+            "first_rows": [
+              [
+                54
+              ],
+              [
+                209
+              ],
+              [
+                461
+              ],
+              [
+                469
+              ],
+              [
+                557
+              ],
+              [
+                644
+              ],
+              [
+                653
+              ],
+              [
+                787
+              ]
+            ],
+            "set_match": true,
+            "table_sha256": "a5bc1c8e08cd97475181cbd1d5c20adebdbe332a2fcaf68a66a3824e578c859e",
+            "checks_used": 2
+          },
+          {
+            "id": "dev235_turn2",
+            "user": "Can you list the names of all the unique airlines that belong to those flight numbers?",
+            "follow_user": null,
+            "sql": "SELECT DISTINCT a.Airline FROM flights f JOIN airlines a ON a.uid=f.Airline WHERE TRIM(f.SourceAirport)='AHD' ORDER BY a.Airline",
+            "columns": [
+              "Airline"
+            ],
+            "rows": 8,
+            "first_rows": [
+              [
+                "AirTran Airways"
+              ],
+              [
+                "Delta Airlines"
+              ],
+              [
+                "Frontier Airlines"
+              ],
+              [
+                "JetBlue Airways"
+              ],
+              [
+                "Northwest Airlines"
+              ],
+              [
+                "US Airways"
+              ],
+              [
+                "United Airlines"
+              ],
+              [
+                "Virgin America"
+              ]
+            ],
+            "set_match": true,
+            "table_sha256": "c150b8b375a9ee388c180ca36aff1d2891ee36bb08b68e1464e298d6472a25de",
+            "checks_used": 1
+          }
+        ]
+      },
+      {
+        "ticket": "827ca1f03e2448c9aa14191930e2b1d8",
+        "arm": "reminder",
+        "mode": "live",
+        "model": "gpt-6.2-sol",
+        "model_calls": 1,
+        "case": "dev86_turn6",
+        "variant": "original",
+        "question": "What are the official languages of these countries?",
+        "sources": [],
+        "history_turns": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "parent": "",
+        "output_span": "official languages",
+        "note": "The previous answer listed only North American countries where Chinese is recorded, not all North American countries. These are the official-language records for the three countries shown.",
+        "followup": "Did you mean the three countries shown or all countries in North America?",
+        "columns": [
+          "official_language"
+        ],
+        "sql": "SELECT l.Language AS official_language FROM country c JOIN countrylanguage l ON c.Code=l.CountryCode WHERE c.Name IN ('Canada','Costa Rica','United States') AND TRIM(l.IsOfficial)='T' ORDER BY c.Name,l.Language",
+        "rows": 4,
+        "first_rows": [
+          [
+            "English"
+          ],
+          [
+            "French"
+          ],
+          [
+            "Spanish"
+          ],
+          [
+            "English"
+          ]
+        ],
+        "set_match": false,
+        "receipt_checked": true
+      },
+      {
+        "ticket": "f0d48fbab1b94eae836a5132c003ef2d",
+        "arm": "selected",
+        "mode": "live",
+        "model": "gpt-6.2-sol",
+        "model_calls": 1,
+        "case": "dev86_turn6",
+        "variant": "original",
+        "question": "What are the official languages of these countries?",
+        "sources": [
+          {
+            "turn": 5,
+            "kind": "set",
+            "cue": "these countries"
+          }
+        ],
+        "history_turns": [
+          5
+        ],
+        "parent": "",
+        "output_span": "official languages",
+        "note": "The previous query omitted North American countries without a Chinese-language entry; this result covers all North American countries in the database.",
+        "followup": "Did you mean only the countries shown in the previous result?",
+        "columns": [
+          "Official language"
+        ],
+        "sql": "SELECT TRIM(l.Language) AS \"Official language\" FROM country c JOIN countrylanguage l ON l.CountryCode=c.Code WHERE c.Continent='North America' AND TRIM(l.IsOfficial)='T' ORDER BY c.Name, l.Language",
+        "rows": 35,
+        "first_rows": [
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "Dutch"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "English"
+          ],
+          [
+            "French"
+          ]
+        ],
+        "set_match": true,
+        "receipt_checked": true
+      }
+    ],
+    "browser": {
+      "dev235": [
+        "dev235_turn1 · 整表通过 · 10 行",
+        "dev235_turn2 · 整表通过 · 8 行"
+      ],
+      "selected_table_rows": 35,
+      "reminder_table_rows": 4,
+      "browser": "156.0.8078.4",
+      "page_errors": [],
+      "screenshot": "scope-production.png",
+      "screenshot_sha256": "825640b5dc3124d7725fba20e9409f041bc90779fea016607d38d21b6dcc3631"
+    }
+  },
+  "development_new_model_runs": [
+    {
+      "ticket": "81c88b1d564546edba36fbbc58f0d9d9",
+      "arm": "contrast",
+      "mode": "live",
+      "model": "gpt-6.2-sol",
+      "model_calls": 2,
+      "case": "dev235_turn2",
+      "rows": 0,
+      "set_match": false,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev235_turn1",
+          "user": "Can you list all the flight numbers that have a source airport value of AHD?",
+          "follow_user": null,
+          "sql": "SELECT FlightNo FROM flights WHERE SourceAirport = 'AHD'",
+          "columns": [
+            "FlightNo"
+          ],
+          "rows": 0,
+          "first_rows": [],
+          "set_match": false,
+          "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "checks_used": 0
+        },
+        {
+          "id": "dev235_turn2",
+          "user": "Can you list the names of all the unique airlines that belong to those flight numbers?",
+          "follow_user": null,
+          "sql": "SELECT DISTINCT a.Airline FROM airlines a JOIN flights f ON a.uid = f.Airline WHERE f.FlightNo IN (SELECT FlightNo FROM flights WHERE SourceAirport = 'AHD')",
+          "columns": [
+            "Airline"
+          ],
+          "rows": 0,
+          "first_rows": [],
+          "set_match": false,
+          "table_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "checks_used": 0
+        }
+      ]
+    },
+    {
+      "ticket": "690cdbf99050421bb462a71c3542a164",
+      "arm": "v3",
+      "mode": "live",
+      "model": "gpt-6.2-sol",
+      "model_calls": 5,
+      "case": "dev235_turn2",
+      "rows": 8,
+      "set_match": true,
+      "receipt_checked": true,
+      "turns": [
+        {
+          "id": "dev235_turn1",
+          "user": "Can you list all the flight numbers that have a source airport value of AHD?",
+          "follow_user": null,
+          "sql": "SELECT FlightNo FROM flights WHERE TRIM(SourceAirport) = 'AHD' ORDER BY FlightNo",
+          "columns": [
+            "FlightNo"
+          ],
+          "rows": 10,
+          "first_rows": [
+            [
+              54
+            ],
+            [
+              209
+            ],
+            [
+              461
+            ],
+            [
+              469
+            ],
+            [
+              557
+            ],
+            [
+              644
+            ],
+            [
+              653
+            ],
+            [
+              787
+            ]
+          ],
+          "set_match": true,
+          "table_sha256": "a5bc1c8e08cd97475181cbd1d5c20adebdbe332a2fcaf68a66a3824e578c859e",
+          "checks_used": 2
+        },
+        {
+          "id": "dev235_turn2",
+          "user": "Can you list the names of all the unique airlines that belong to those flight numbers?",
+          "follow_user": null,
+          "sql": "SELECT DISTINCT TRIM(a.Airline) AS Airline FROM flights f JOIN airlines a ON a.uid=f.Airline WHERE TRIM(f.SourceAirport)='AHD' ORDER BY Airline",
+          "columns": [
+            "Airline"
+          ],
+          "rows": 8,
+          "first_rows": [
+            [
+              "AirTran Airways"
+            ],
+            [
+              "Delta Airlines"
+            ],
+            [
+              "Frontier Airlines"
+            ],
+            [
+              "JetBlue Airways"
+            ],
+            [
+              "Northwest Airlines"
+            ],
+            [
+              "US Airways"
+            ],
+            [
+              "United Airlines"
+            ],
+            [
+              "Virgin America"
+            ]
+          ],
+          "set_match": true,
+          "table_sha256": "c150b8b375a9ee388c180ca36aff1d2891ee36bb08b68e1464e298d6472a25de",
+          "checks_used": 1
+        }
+      ]
+    },
+    {
+      "ticket": "5dad706ac37349319ece9e78ccc55870",
+      "arm": "reminder",
+      "mode": "live",
+      "model": "gpt-6.2-sol",
+      "model_calls": 1,
+      "case": "dev86_turn6",
+      "variant": "original",
+      "question": "What are the official languages of these countries?",
+      "sources": [],
+      "history_turns": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "parent": "",
+      "output_span": "official languages",
+      "note": "These are the official-language records for the three countries previously shown; the previous answer omitted North American entries by filtering for Chinese.",
+      "followup": "Did you mean the three countries shown or all North American entries in the database?",
+      "columns": [
+        "official_language"
+      ],
+      "sql": "SELECT l.Language AS official_language FROM countrylanguage l JOIN country c ON c.Code=l.CountryCode WHERE c.Name IN ('Canada','Costa Rica','United States') AND l.IsOfficial='T' ORDER BY c.Name,l.Language",
+      "rows": 4,
+      "first_rows": [
+        [
+          "English"
+        ],
+        [
+          "French"
+        ],
+        [
+          "Spanish"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "set_match": false,
+      "receipt_checked": true
+    },
+    {
+      "ticket": "452c41696c874b738d0456fff1cbcefb",
+      "arm": "selected",
+      "mode": "live",
+      "model": "gpt-6.2-sol",
+      "model_calls": 1,
+      "case": "dev86_turn6",
+      "variant": "original",
+      "question": "What are the official languages of these countries?",
+      "sources": [
+        {
+          "turn": 5,
+          "kind": "set",
+          "cue": "these countries"
+        }
+      ],
+      "history_turns": [
+        5
+      ],
+      "parent": "",
+      "output_span": "official languages",
+      "note": "The previous query omitted North American countries without a recorded Chinese-speaking population; this result covers all North American countries in the database.",
+      "followup": "Did you mean all North American countries or only those shown in the previous result?",
+      "columns": [
+        "Official language"
+      ],
+      "sql": "SELECT TRIM(l.Language) AS \"Official language\" FROM countrylanguage l JOIN country c ON c.Code=l.CountryCode WHERE c.Continent='North America' AND TRIM(l.IsOfficial)='T' ORDER BY c.Name, TRIM(l.Language)",
+      "rows": 35,
+      "first_rows": [
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "Dutch"
+        ],
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "English"
+        ],
+        [
+          "French"
+        ]
+      ],
+      "set_match": true,
+      "receipt_checked": true
+    }
+  ]
+}

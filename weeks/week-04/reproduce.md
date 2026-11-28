@@ -1,5 +1,7 @@
 # 启动命令与依赖版本
 
+第四周 4.2 的版本对照、人工选源和原库复跑从[个人后端](https://github.com/lanF-cyber/rsi-data-spring-boot)与[个人前端](https://github.com/lanF-cyber/rsi-data-platform)启动。下文记录第四周 4.1 当时的环境。
+
 适用 Windows x64 和 PowerShell 7.3 及以上。Next.js 页面使用本机 3000 端口，Spring Boot 使用 30845 端口，Python 调度器使用 3216 端口。首次复现可选择“记录动作复跑”，直接核验工具动作和原库结果。
 
 ## 依赖
