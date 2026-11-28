@@ -8,6 +8,7 @@
 
 ## 项目与启动
 
+- 本次验收选取 10 个问次。每个编号对应前端画布、后端流程、原库结果和原因。浏览器入口是 `/harness/cases`。[十个 Case 的对照与文件](https://github.com/lanF-cyber/rsi-data-spring-boot/blob/homework/harness/cases.md) · [公开版本逐项运行记录](../../../evidence/week-04/numbered-cases.json) · [Case 10 运行截图](../../../evidence/week-04/numbered-case10.png)
 - 我的后端项目　[rsi-data-spring-boot](https://github.com/lanF-cyber/rsi-data-spring-boot)。Spring 注册并组合调度和回执校验两个 Skill，Python 在原始 SQLite 库执行交付。
 - 我的前端项目　[rsi-data-platform](https://github.com/lanF-cyber/rsi-data-platform)。可运行整段对话、修改生成节点引用的前文、对照修复前后的交付。
 

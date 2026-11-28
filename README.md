@@ -8,7 +8,7 @@
 
 **我的前端项目**　[rsi-data-platform](https://github.com/lanF-cyber/rsi-data-platform)
 
-从后端 README 可以启动整个平台，复跑归档 SQL，或从空会话生成新交付。[本次仓库验收](evidence/week-04/repository-check.json)
+**本次验收的十个 Case**　逐题清单列出问句、人工调整、修复前后结果和原因，并链接到各自的前端与后端 JSON。启动后可逐题复跑归档 SQL，或让模型现场生成。第 9 题记录了同国籍的两名歌手被合并为一行，以及怎样保住两行。[十个 Case 与文件](https://github.com/lanF-cyber/rsi-data-spring-boot/blob/homework/harness/cases.md) · [公开版本运行记录](evidence/week-04/numbered-cases.json)
 
 ## 第 4 周 4.1 · RSI 数据平台与 CoSQL Harness 联调
 

@@ -1,0 +1,343 @@
+{
+  "verified_at": "2026-11-28T11:55:14+00:00",
+  "backend": {
+    "commit": "813994ecd6856f51af6365f5a38c896e04b6fa21",
+    "public_files_checked": 21
+  },
+  "frontend": {
+    "commit": "482aea1805162d72618ce55687295d2ed69b312a",
+    "public_files_checked": 10
+  },
+  "visual_core": "b80f121c3752f5cb2b566983f0ba664c57c9d13c",
+  "environment": "Windows x64，两个项目从 GitHub 默认分支重新克隆。首次构建该工作目录时使用本机已有的 Maven、pnpm 依赖缓存以及课程下发的 settings.xml 与 0.1.2.zip。",
+  "commands": [
+    "./scripts/prepare.ps1 -Materials \"<课程材料目录>\"",
+    "./scripts/start.ps1",
+    "python -B harness/review_cases.py"
+  ],
+  "endpoint": "Next /harness/cases → /rsi-skills/api/engine/flow → Spring @training.cosql/FLOW_CASE1…10 → Python worker → CoSQL 原始 SQLite 库。",
+  "browser": "156.0.8078.4",
+  "browser_page_errors": [],
+  "scoring": "逐题按本地修订题意核对原库整表，计入重复行及参考指定的顺序。Case 10 固定三国错答前文。原始发布参考评分见后端逐题 JSON。",
+  "live_model": "gpt-6.2-sol",
+  "screenshot": "numbered-case10.png",
+  "cases": [
+    {
+      "case": 1,
+      "question_id": "dev85_turn1",
+      "database": "museum_visit",
+      "browser_click": {
+        "flow": "@training.cosql/FLOW_CASE1",
+        "nodes": 6,
+        "links": 5,
+        "ticket": "7978231acc954e18ae77c55fc7da20ab",
+        "result": "整表通过 · 1 行"
+      },
+      "clean_replay": {
+        "ticket": "9fc7332f26dd4892b128acc11976d36f",
+        "model_calls": 0,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "first_live": {
+        "ticket": "aa6137ec90714f9a8198db291b30d8b3",
+        "model_calls": 1,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "final_live": {
+        "ticket": "8caced81a86243608c31646e3dfb5fe0",
+        "model_calls": 1,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "result_file": "https://github.com/lanF-cyber/rsi-data-spring-boot/blob/813994ecd6856f51af6365f5a38c896e04b6fa21/harness/results/case1.json"
+    },
+    {
+      "case": 2,
+      "question_id": "dev92_turn2",
+      "database": "flight_2",
+      "browser_click": {
+        "flow": "@training.cosql/FLOW_CASE2",
+        "nodes": 6,
+        "links": 5,
+        "ticket": "7f7aadaa80a74b148350dc3b8ee36d0e",
+        "result": "整表通过 · 1 行"
+      },
+      "clean_replay": {
+        "ticket": "3a8cb4ab3de941b18e794425c877fa55",
+        "model_calls": 0,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "first_live": {
+        "ticket": "527d81e22e40460185b5ddce397f0635",
+        "model_calls": 2,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "final_live": {
+        "ticket": "644916868b514064935b9a65d67fa7fe",
+        "model_calls": 2,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "result_file": "https://github.com/lanF-cyber/rsi-data-spring-boot/blob/813994ecd6856f51af6365f5a38c896e04b6fa21/harness/results/case2.json"
+    },
+    {
+      "case": 3,
+      "question_id": "dev92_turn3",
+      "database": "flight_2",
+      "browser_click": {
+        "flow": "@training.cosql/FLOW_CASE3",
+        "nodes": 6,
+        "links": 5,
+        "ticket": "448e7d7819c2422f84a3adc8c3b6e29a",
+        "result": "整表通过 · 1 行"
+      },
+      "clean_replay": {
+        "ticket": "0a7bbf8cdc0b423c95385b7408deef90",
+        "model_calls": 0,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "first_live": {
+        "ticket": "321b1e7497f14c7c9c9bd21f5168013a",
+        "model_calls": 3,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "final_live": {
+        "ticket": "644e1bd2a59e4960b3971cb3b0c68314",
+        "model_calls": 3,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "result_file": "https://github.com/lanF-cyber/rsi-data-spring-boot/blob/813994ecd6856f51af6365f5a38c896e04b6fa21/harness/results/case3.json"
+    },
+    {
+      "case": 4,
+      "question_id": "dev38_turn2",
+      "database": "flight_2",
+      "browser_click": {
+        "flow": "@training.cosql/FLOW_CASE4",
+        "nodes": 6,
+        "links": 5,
+        "ticket": "1e9961a4134e4a15920e59e07bd4071c",
+        "result": "整表通过 · 53 行"
+      },
+      "clean_replay": {
+        "ticket": "bf3143704d4448b4a8f34826a686931a",
+        "model_calls": 0,
+        "rows_count": 53,
+        "set_match": true
+      },
+      "first_live": {
+        "ticket": "f0ab28e7b3ac45e8bfbb95d4fb6f766a",
+        "model_calls": 3,
+        "rows_count": 53,
+        "set_match": true
+      },
+      "final_live": {
+        "ticket": "817d97c08c8142e780e848eb10f18b02",
+        "model_calls": 3,
+        "rows_count": 53,
+        "set_match": true
+      },
+      "result_file": "https://github.com/lanF-cyber/rsi-data-spring-boot/blob/813994ecd6856f51af6365f5a38c896e04b6fa21/harness/results/case4.json"
+    },
+    {
+      "case": 5,
+      "question_id": "dev111_turn2",
+      "database": "flight_2",
+      "browser_click": {
+        "flow": "@training.cosql/FLOW_CASE5",
+        "nodes": 6,
+        "links": 5,
+        "ticket": "0b78110d009c4084851daffdd4cee3c2",
+        "result": "整表通过 · 1 行"
+      },
+      "clean_replay": {
+        "ticket": "035a6788877244528f7cf3bb013c66f1",
+        "model_calls": 0,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "first_live": {
+        "ticket": "d19e13a86f6743d5a4af604c07b75ae5",
+        "model_calls": 2,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "final_live": {
+        "ticket": "49b5c2eb3f844c30814a35513eebfe6f",
+        "model_calls": 3,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "result_file": "https://github.com/lanF-cyber/rsi-data-spring-boot/blob/813994ecd6856f51af6365f5a38c896e04b6fa21/harness/results/case5.json"
+    },
+    {
+      "case": 6,
+      "question_id": "dev137_turn3",
+      "database": "flight_2",
+      "browser_click": {
+        "flow": "@training.cosql/FLOW_CASE6",
+        "nodes": 6,
+        "links": 5,
+        "ticket": "4b5dd012da0044a0b77618608374f4dd",
+        "result": "整表通过 · 1 行"
+      },
+      "clean_replay": {
+        "ticket": "4ca19a57a89a4e13a550b6502f069269",
+        "model_calls": 0,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "first_live": {
+        "ticket": "ae2b831fbf374bda866667f86222aaae",
+        "model_calls": 4,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "final_live": {
+        "ticket": "225a988a1d3d4e59a2b9578318a0564b",
+        "model_calls": 3,
+        "rows_count": 1,
+        "set_match": true
+      },
+      "result_file": "https://github.com/lanF-cyber/rsi-data-spring-boot/blob/813994ecd6856f51af6365f5a38c896e04b6fa21/harness/results/case6.json"
+    },
+    {
+      "case": 7,
+      "question_id": "dev235_turn1",
+      "database": "flight_2",
+      "browser_click": {
+        "flow": "@training.cosql/FLOW_CASE7",
+        "nodes": 6,
+        "links": 5,
+        "ticket": "890dbef9b3aa4abd93f6277c5e0e8a89",
+        "result": "整表通过 · 10 行"
+      },
+      "clean_replay": {
+        "ticket": "ec7c61bbf9d447098b2cd1c86164c605",
+        "model_calls": 0,
+        "rows_count": 10,
+        "set_match": true
+      },
+      "first_live": {
+        "ticket": "4bcecbd4fc9848a98cfdec46c05f968c",
+        "model_calls": 2,
+        "rows_count": 10,
+        "set_match": true
+      },
+      "final_live": {
+        "ticket": "491e3685440b450f9c5dcf01932dcbb2",
+        "model_calls": 1,
+        "rows_count": 10,
+        "set_match": true
+      },
+      "result_file": "https://github.com/lanF-cyber/rsi-data-spring-boot/blob/813994ecd6856f51af6365f5a38c896e04b6fa21/harness/results/case7.json"
+    },
+    {
+      "case": 8,
+      "question_id": "dev235_turn2",
+      "database": "flight_2",
+      "browser_click": {
+        "flow": "@training.cosql/FLOW_CASE8",
+        "nodes": 6,
+        "links": 5,
+        "ticket": "423af20e964b47609102cb66c714e80b",
+        "result": "整表通过 · 8 行"
+      },
+      "clean_replay": {
+        "ticket": "664d9ee26cc043c1a789cc9f588bf9ae",
+        "model_calls": 0,
+        "rows_count": 8,
+        "set_match": true
+      },
+      "first_live": {
+        "ticket": "f019aa8e05644b59978e96550b907fef",
+        "model_calls": 3,
+        "rows_count": 8,
+        "set_match": true
+      },
+      "final_live": {
+        "ticket": "3ada6baadb6c4cc68880c85cc28c80c8",
+        "model_calls": 2,
+        "rows_count": 8,
+        "set_match": true
+      },
+      "result_file": "https://github.com/lanF-cyber/rsi-data-spring-boot/blob/813994ecd6856f51af6365f5a38c896e04b6fa21/harness/results/case8.json"
+    },
+    {
+      "case": 9,
+      "question_id": "dev98_turn2",
+      "database": "singer",
+      "browser_click": {
+        "flow": "@training.cosql/FLOW_CASE9",
+        "nodes": 7,
+        "links": 6,
+        "ticket": "6d0bc86e10ff415bb2a3a03d0906d078",
+        "result": "整表通过 · 2 行"
+      },
+      "clean_replay": {
+        "ticket": "9ff0e06442a042a9adbe4335b6f5dc79",
+        "model_calls": 0,
+        "rows_count": 2,
+        "set_match": true
+      },
+      "first_live": {
+        "ticket": "e222278325324f99b622e6e70eb7b859",
+        "model_calls": 2,
+        "rows_count": 1,
+        "set_match": false
+      },
+      "final_live": {
+        "ticket": "71d9bee05d4641ee8cb1f87cf22eb5db",
+        "model_calls": 2,
+        "rows_count": 2,
+        "set_match": true
+      },
+      "result_file": "https://github.com/lanF-cyber/rsi-data-spring-boot/blob/813994ecd6856f51af6365f5a38c896e04b6fa21/harness/results/case9.json"
+    },
+    {
+      "case": 10,
+      "question_id": "dev86_turn6",
+      "database": "world_1",
+      "browser_click": {
+        "flow": "@training.cosql/FLOW_CASE10",
+        "nodes": 6,
+        "links": 6,
+        "ticket": "f21208a470534213a553b1408ba7ae9b",
+        "result": "整表通过 · 35 行"
+      },
+      "clean_replay": {
+        "ticket": "64ed0748a3ac42498f5d48b35d817562",
+        "model_calls": 0,
+        "rows_count": 35,
+        "set_match": true
+      },
+      "first_live": {
+        "ticket": "2691490ddca94c14a66b180c59d76c32",
+        "model_calls": 1,
+        "rows_count": 35,
+        "set_match": true
+      },
+      "final_live": {
+        "ticket": "7ad1bba8655a4924aad02fe1d88f85e0",
+        "model_calls": 1,
+        "rows_count": 35,
+        "set_match": true
+      },
+      "result_file": "https://github.com/lanF-cyber/rsi-data-spring-boot/blob/813994ecd6856f51af6365f5a38c896e04b6fa21/harness/results/case10.json"
+    }
+  ],
+  "totals": {
+    "cases": 10,
+    "browser_completed": 10,
+    "clean_replay_passed": 10,
+    "first_live_passed": 9,
+    "final_live_passed": 10
+  }
+}
